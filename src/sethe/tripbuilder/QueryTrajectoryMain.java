@@ -133,6 +133,7 @@ public class QueryTrajectoryMain {
 	@SuppressWarnings("rawtypes")
 	public static CompositeQuery loadQuery(Properties properties) {
 		CompositeQuery query = new CompositeQuery();
+		String distFun = properties.getProperty("dist_func");
 		String split = properties.getProperty("split");
 		int arraySize = 0;
 
@@ -149,6 +150,7 @@ public class QueryTrajectoryMain {
 
 		for(String fname : filters.keySet()) {
 			Query f = new Query(fname);
+			f.setDistanceFunction(distFun);
 			f.setQuery(query);
 
 			//Getting PoIs
@@ -211,58 +213,58 @@ public class QueryTrajectoryMain {
 	}
 	
 
-	@SuppressWarnings("rawtypes")
-	public static void loadQuery_old(Query query, Properties properties) {
-		String split = properties.getProperty("split");
-		int arraySize = 0;
-		
-		//Getting PoIs
-		String p = properties.getProperty("asp_poi");
-		String[] arrayPoi = p != null ? p.split(split) : new String[0];
-		if(p != null ) arraySize = arrayPoi.length;
-
-		//Getting category
-		String c = properties.getProperty("asp_cat");
-		String[] arrayCat = c != null? c.split(split) : new String[0];
-		if(c != null ) arraySize = arrayCat.length;
-
-		query.init(arraySize);
-
-		for(int i = 0; i < arraySize; i++) {
-			String cat = arrayCat.length > 0 ? arrayCat[i].trim() : null;
-			String poi = arrayPoi.length > 0 ? arrayPoi[i].trim() : null;
-			query.addExpression(i, cat, poi);
-		}
-
-		//Getting proximity
-		String proximity = properties.getProperty("proximity");
-		String[] proximityValues = proximity.split(split);
-		for(int i = 0; i < proximityValues.length; i++) {
-			query.addProximityExpression(i, proximityValues[i]);
-		}
-
-		//Getting aspects
-		for(Enumeration e = properties.keys();e.hasMoreElements();) {
-			String key = e.nextElement().toString();
-			if(key.startsWith("asp_") && !key.equals("asp_poi") && !key.equals("asp_cat")) {
-				String[] aspValues = properties.getProperty(key).split(";");
-				key = key.replace("asp_", "");
-				for(int i = 0; i < aspValues.length; i++) {
-					query.addAspectExpression(i, key, aspValues[i]);
-				}
-			} else if (key.startsWith("weight_")) {
-				String asp = key.substring(key.indexOf("_") + 1);
-				Double value = Double.parseDouble(properties.getProperty(key));
-				query.addWeight(asp, value);
-			} else if (key.startsWith("distance_")) {
-				String asp = key.substring(key.indexOf("_") + 1);
-				String value = properties.getProperty(key);
-				query.addDistanceFunction(asp, value);
-			} else if (key.startsWith("limit_")) {
-				String asp = key.substring(key.indexOf("_") + 1);
-				Double value = Double.parseDouble(properties.getProperty(key));
-				query.addLimitAspValue(asp, value);
-			}
-		}
-	}
+//	@SuppressWarnings("rawtypes")
+//	public static void loadQuery_old(Query query, Properties properties) {
+//		String split = properties.getProperty("split");
+//		int arraySize = 0;
+//		
+//		//Getting PoIs
+//		String p = properties.getProperty("asp_poi");
+//		String[] arrayPoi = p != null ? p.split(split) : new String[0];
+//		if(p != null ) arraySize = arrayPoi.length;
+//
+//		//Getting category
+//		String c = properties.getProperty("asp_cat");
+//		String[] arrayCat = c != null? c.split(split) : new String[0];
+//		if(c != null ) arraySize = arrayCat.length;
+//
+//		query.init(arraySize);
+//
+//		for(int i = 0; i < arraySize; i++) {
+//			String cat = arrayCat.length > 0 ? arrayCat[i].trim() : null;
+//			String poi = arrayPoi.length > 0 ? arrayPoi[i].trim() : null;
+//			query.addExpression(i, cat, poi);
+//		}
+//
+//		//Getting proximity
+//		String proximity = properties.getProperty("proximity");
+//		String[] proximityValues = proximity.split(split);
+//		for(int i = 0; i < proximityValues.length; i++) {
+//			query.addProximityExpression(i, proximityValues[i]);
+//		}
+//
+//		//Getting aspects
+//		for(Enumeration e = properties.keys();e.hasMoreElements();) {
+//			String key = e.nextElement().toString();
+//			if(key.startsWith("asp_") && !key.equals("asp_poi") && !key.equals("asp_cat")) {
+//				String[] aspValues = properties.getProperty(key).split(";");
+//				key = key.replace("asp_", "");
+//				for(int i = 0; i < aspValues.length; i++) {
+//					query.addAspectExpression(i, key, aspValues[i]);
+//				}
+//			} else if (key.startsWith("weight_")) {
+//				String asp = key.substring(key.indexOf("_") + 1);
+//				Double value = Double.parseDouble(properties.getProperty(key));
+//				query.addWeight(asp, value);
+//			} else if (key.startsWith("distance_")) {
+//				String asp = key.substring(key.indexOf("_") + 1);
+//				String value = properties.getProperty(key);
+//				query.addDistanceFunction(asp, value);
+//			} else if (key.startsWith("limit_")) {
+//				String asp = key.substring(key.indexOf("_") + 1);
+//				Double value = Double.parseDouble(properties.getProperty(key));
+//				query.addLimitAspValue(asp, value);
+//			}
+//		}
+//	}
 }

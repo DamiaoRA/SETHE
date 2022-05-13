@@ -159,12 +159,13 @@ public class Trajectory implements Comparable<Trajectory>{
 		createSubTrajectories();
 	}
 
-	private void createSubTrajectories() {
+	private void createSubTrajectories() throws Exception {
 		List<LinkedList<PoI>> ll = graph.createListListPoI();
 		for(LinkedList<PoI> lk : ll) {
 			SubTrajectory st = new SubTrajectory();
 			st.setTrajectory(this);
 			st.setPois(lk);
+			st.setDistanceFunction(query.getDistanceFunction());
 			st.calcCoefficient(query);
 			subTrajectories.add(st);
 		}

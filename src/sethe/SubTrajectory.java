@@ -9,6 +9,7 @@ public class SubTrajectory implements Comparable<SubTrajectory>{
 	private Double[] vector;
 	private Double[] vectorCoef; //vector of the query
 	private Double coefficient;
+	private String distanceFunction;
 
 	public SubTrajectory() {
 		pois = new ArrayList<PoI>();
@@ -43,18 +44,19 @@ public class SubTrajectory implements Comparable<SubTrajectory>{
 		return this.coefficient.compareTo(o.coefficient);
 	}
 
-	public void calcCoefficient(Query query) {
+	public void calcCoefficient(Query query) throws Exception {
 		createVector(query);
+		coefficient = Distance.similarity(vector, vectorCoef, distanceFunction);
 
 		//TODO permitir outros tipos de medições
 		//jaccard
-		double sumMin = 0;
-		double sumMax = 0;
-		for(int i = 0; i < vector.length; i++) {
-			sumMin += vector[i] <= vectorCoef[i] ? vector[i] : vectorCoef[i];
-			sumMax += vector[i] <= vectorCoef[i] ? vectorCoef[i] : vector[i];
-		}
-		coefficient = sumMin/sumMax;
+//		double sumMin = 0;
+//		double sumMax = 0;
+//		for(int i = 0; i < vector.length; i++) {
+//			sumMin += vector[i] <= vectorCoef[i] ? vector[i] : vectorCoef[i];
+//			sumMax += vector[i] <= vectorCoef[i] ? vectorCoef[i] : vector[i];
+//		}
+//		coefficient = sumMin/sumMax;
 	}
 
 	/**
@@ -99,6 +101,14 @@ public class SubTrajectory implements Comparable<SubTrajectory>{
 			sumMax += vector[i] <= vectorCoef[i] ? vectorCoef[i] : vector[i];
 		}
 		coefficient = sumMin/sumMax;
+	}
+
+	public String getDistanceFunction() {
+		return distanceFunction;
+	}
+
+	public void setDistanceFunction(String distanceFunction) {
+		this.distanceFunction = distanceFunction;
 	}
 
 	public void print() {

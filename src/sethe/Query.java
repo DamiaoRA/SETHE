@@ -19,6 +19,8 @@ public class Query {
 
 	private Map<String, Trajectory> mapResultQuery;  //Armazena o resultado da consulta <id, trajetória>
 
+	private String distanceFunction;
+
 	public Query(String name) {
 		this.name = name;
 		mapWeight = new HashMap<String, Double>();
@@ -220,5 +222,13 @@ public class Query {
 
 	public void addTrajectory(Trajectory t) {
 		mapResultQuery.put(t.getId(), t);
+	}
+
+	public void setDistanceFunction(String distFun) {
+		this.distanceFunction = distFun;
+	}
+
+	public String getDistanceFunction() {
+		return distanceFunction;
 	}
 }

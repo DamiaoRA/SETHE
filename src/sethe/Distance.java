@@ -1,5 +1,7 @@
 package sethe;
 
+import java.lang.reflect.Method;
+
 import sethe.util.Constants;
 
 /**
@@ -44,5 +46,23 @@ public class Distance {
 	public static double proximity (int positionP2, int positionP1, Double weight) {
 		double result = 1/Math.abs(positionP2-positionP1);
 		return result;
+	}
+
+	public static double jaccard(Double vector[], Double vectorCoef[]) {
+		double sumMin = 0;
+		double sumMax = 0;
+		for(int i = 0; i < vector.length; i++) {
+			sumMin += vector[i] <= vectorCoef[i] ? vector[i] : vectorCoef[i];
+			sumMax += vector[i] <= vectorCoef[i] ? vectorCoef[i] : vector[i];
+		}
+		return sumMin/sumMax;
+	}
+	
+	public static Double similarity(Double[] vec1, Double[] vec2, String distanceFunction) throws Exception {
+		Class<Distance> clazz = Distance.class;
+	    Method method = clazz.getMethod(distanceFunction, Double[].class, Double[].class);
+
+	    Object result = method.invoke(null, vec1, vec2);
+	    return (Double)result;
 	}
 }
