@@ -22,6 +22,7 @@ import sethe.Trajectory;
  * Converte o BD de trajetórias Foursquare no BD de textos
  *
  */
+@Deprecated
 public class TrajectoryFoursquare {
 //	private Connection con;
 //	private Statement st;

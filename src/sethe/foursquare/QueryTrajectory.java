@@ -21,6 +21,7 @@ import sethe.Query;
 import sethe.PoI;
 import sethe.Trajectory;
 
+@Deprecated
 public class QueryTrajectory {
 //	private Connection con;
 //	private Statement st;

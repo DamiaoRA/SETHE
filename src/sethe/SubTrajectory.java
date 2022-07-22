@@ -47,16 +47,6 @@ public class SubTrajectory implements Comparable<SubTrajectory>{
 	public void calcCoefficient(Query query) throws Exception {
 		createVector(query);
 		coefficient = Distance.similarity(vector, vectorCoef, distanceFunction);
-
-		//TODO permitir outros tipos de medições
-		//jaccard
-//		double sumMin = 0;
-//		double sumMax = 0;
-//		for(int i = 0; i < vector.length; i++) {
-//			sumMin += vector[i] <= vectorCoef[i] ? vector[i] : vectorCoef[i];
-//			sumMax += vector[i] <= vectorCoef[i] ? vectorCoef[i] : vector[i];
-//		}
-//		coefficient = sumMin/sumMax;
 	}
 
 	/**

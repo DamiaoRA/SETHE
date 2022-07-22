@@ -14,7 +14,7 @@ import java.util.Properties;
  * transformadas em regex
  *
  */
-public class QueryRegex {
+public class QueryRegexMain {
 	private static Connection con;
 	private static Statement st;
 	private static String schema = "tripbuilder";
