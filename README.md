@@ -8,7 +8,7 @@ Similarity Search On Semantic Trajectories Using Text Processing
 sethe\tripbuilder\semantic.properties
 
 - Main Query Class:<br/>
-sethe\tripbuilder\QueryTrajectoryMain.java
+sethe\tripbuilder\test\QuerySetheTripBuilderMain.java
 
 - Script database
 sethe\scripts\scripts.zip
