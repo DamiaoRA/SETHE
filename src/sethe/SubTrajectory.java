@@ -7,7 +7,7 @@ public class SubTrajectory implements Comparable<SubTrajectory>{
 	private Trajectory trajectory;
 	private List<PoI> pois;
 	private Double[] vector;
-	private Double[] vectorCoef; //vector of the query
+	private Double[] vectorQuery; //vector of the query
 	private Double coefficient;
 	private String distanceFunction;
 
@@ -46,7 +46,7 @@ public class SubTrajectory implements Comparable<SubTrajectory>{
 
 	public void calcCoefficient(Query query) throws Exception {
 		createVector(query);
-		coefficient = Distance.similarity(vector, vectorCoef, distanceFunction);
+		coefficient = Distance.similarity(vector, vectorQuery, distanceFunction);
 	}
 
 	/**
@@ -55,9 +55,9 @@ public class SubTrajectory implements Comparable<SubTrajectory>{
 	 * @return
 	 */
 	public Double[] createVector(Query filter) {
-																 //proximity
+
 		vector = new Double[pois.size()* (filter.getNumAspects()) + pois.size()];
-		vectorCoef = new Double[vector.length];
+		vectorQuery = new Double[vector.length];
 		int k = 0;
 		for(int indexPoiSub = 0; indexPoiSub < pois.size(); indexPoiSub++) {
 			PoI p2 = pois.get(indexPoiSub);
@@ -67,7 +67,7 @@ public class SubTrajectory implements Comparable<SubTrajectory>{
 			for(String key : p2.getAspects().keySet()) {
 				String aspect = p2.getAspects().get(key);
 				vector[k] = filter.distance(key, aspect, indexPoiSub, p1, p2, trajectory); //calcula a distancia entre o aspecto e o valor fornecido na consulta
-				vectorCoef[k] = filter.weight(key);
+				vectorQuery[k] = filter.weight(key);
 				k++;
 			}
 
@@ -77,7 +77,7 @@ public class SubTrajectory implements Comparable<SubTrajectory>{
 					1;
 
 			vector[k] = (1d/dist);
-			vectorCoef[k] = 1d;
+			vectorQuery[k] = 1d;
 			k++;
 		}
 		return vector;

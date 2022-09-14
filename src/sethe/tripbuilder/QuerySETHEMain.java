@@ -57,7 +57,7 @@ public class QuerySETHEMain {
 	private void searchTrajectories(Query filter) throws Exception {
 		String sql = filter.createSqlQuery(schema);
 
-		ResultSet rs = st.executeQuery(sql); //TODO pensar em como fazer paginação
+		ResultSet rs = st.executeQuery(sql);
 		while(rs.next()) {
 			Trajectory t = new Trajectory();
 			t.setId(rs.getString(1));

@@ -136,8 +136,6 @@ public class Trajectory implements Comparable<Trajectory>{
 	}
 
 	public void calcSubtrajectory() throws Exception {
-		if(id.equals("http://localhost:8080/resource/TP2522"))
-			System.out.println("Trajectory.calcSubtrajectory()");
 		for(Expression e : query.getArrayExp()) {
 			String text = textPoi;
 			if(e.isCategory()) {
@@ -170,7 +168,7 @@ public class Trajectory implements Comparable<Trajectory>{
 			subTrajectories.add(st);
 		}
 
-		Collections.sort(subTrajectories); //TODO remover esse sort
+		Collections.sort(subTrajectories);
 		if(!subTrajectories.isEmpty())
 			this.coefficient = subTrajectories.get(subTrajectories.size() - 1).getCoefficient();
 	}
