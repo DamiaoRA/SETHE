@@ -16,7 +16,7 @@ public class StringUtils {
     return null;
   }
 
-  public static String clearString(String string) {
+  public static String sanitize(String string) {
     int countSpace = 0;
     String stringCleaned = "";
 
