@@ -5,6 +5,7 @@ import java.util.Objects;
 import java.util.Properties;
 
 public class CsvToSql {
+
   private static final String TRAJECTORY_ID = "trajectory_id";
   private static final String TRAJECTORY_VALUE = "trajectory_value";
   private static final String delimit = ",";
@@ -27,7 +28,7 @@ public class CsvToSql {
     BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileSql));
 
     String createTableSql = String.format(
-      "CREATE TABLE %s (%s varchar(30) UNIQUE NOT NULL, %s TEXT NOT NULL);\n",
+      "CREATE TABLE IF NOT EXISTS %s (%s varchar(30) UNIQUE NOT NULL, %s TEXT NOT NULL);\n",
       tableName,
       TRAJECTORY_ID,
       TRAJECTORY_VALUE
@@ -48,17 +49,25 @@ public class CsvToSql {
         Properties next = getPointTrajectory(bufferedReader.readLine());
 
         while (!next.isEmpty()) {
-          if(countLine > maxLine) {
+          if (countLine > maxLine) {
             bufferedWriter.flush();
             countLine = 0;
           }
 
-          if (Objects.equals( current.getProperty(TRAJECTORY_ID), next.getProperty(TRAJECTORY_ID))) {
+          if (
+            Objects.equals(
+              current.getProperty(TRAJECTORY_ID),
+              next.getProperty(TRAJECTORY_ID)
+            )
+          ) {
             trajectoryId = current.getProperty(TRAJECTORY_ID);
-            trajectory += delimitTrajectory + next.getProperty(TRAJECTORY_VALUE);
+            trajectory +=
+              delimitTrajectory + next.getProperty(TRAJECTORY_VALUE);
             current = (Properties) next.clone();
           } else {
-            bufferedWriter.write(createInsertSql(tableName, trajectoryId, trajectory));
+            bufferedWriter.write(
+              createInsertSql(tableName, trajectoryId, trajectory)
+            );
 
             current = (Properties) next.clone();
             trajectoryId = current.getProperty(TRAJECTORY_ID);
@@ -69,7 +78,9 @@ public class CsvToSql {
           countLine++;
         }
 
-        bufferedWriter.write(createInsertSql(tableName, trajectoryId, trajectory));
+        bufferedWriter.write(
+          createInsertSql(tableName, trajectoryId, trajectory)
+        );
       }
     } finally {
       bufferedReader.close();
@@ -82,16 +93,26 @@ public class CsvToSql {
 
     if (line != null) {
       String[] point = line.split(delimit);
-      pointTrajectory.setProperty(TRAJECTORY_ID, point[0]);
-      pointTrajectory.setProperty(TRAJECTORY_VALUE, point[1]);
+      pointTrajectory.setProperty(
+        TRAJECTORY_ID,
+        StringUtils.sanitize(point[0])
+      );
+      pointTrajectory.setProperty(
+        TRAJECTORY_VALUE,
+        StringUtils.sanitize(point[1])
+      );
     }
 
     return pointTrajectory;
   }
 
-  private static String createInsertSql(String tableName, String trajectoryId, String trajectory) {
+  private static String createInsertSql(
+    String tableName,
+    String trajectoryId,
+    String trajectory
+  ) {
     String insertSql = "INSERT INTO %s VALUES ('%s', '%s');\n";
 
-    return String.format(insertSql, tableName, StringUtils.sanitize(trajectoryId), StringUtils.sanitize(trajectory));
+    return String.format(insertSql, tableName, trajectoryId, trajectory);
   }
 }

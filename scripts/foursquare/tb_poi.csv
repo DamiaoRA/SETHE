@@ -1,4 +1,13 @@
 "trajectory_id","trajectory_value"
+"1266",The Lair Of Modern Strange Cowboy
+"1266",Galaxy Gourmet Deli
+"1266",The Lair Of Modern Strange Cowboy
+"1266",Popeyes Louisiana Kitchen
+"1266",MTA Bus Operations Depot - LaGuardia
+"1266",MTA Subway - 63rd Dr/Rego Park (M/R)
+"1266",MTA Subway - 34th St/Herald Sq (B/D/F/M/N/Q/R/W)
+"1266",NYCT Transit Survey Unit
+"1266",The Lair Of Modern Strange Cowboy
 "1266",MTA - Church St & Barclay St (BM1/BM2/BM3/BM4)
 "1266","MTA MaBSTOA & Bee-Line Bus at Riverdale Ave & W. 263rd St: (Bx7, Bx10, BxM1, BxM2, BxM18 & BL 8)"
 "1266",MTA Subway - 33rd St (6)
@@ -33,7 +42,6 @@
 "1286",MTA Subway - Howard Beach/JFK Airport (A)
 "1286",MTA Bus - Q53
 "1286",Queens Center Mall
-"295631070",Starbucks
 "1286",MTA Bus - Q11/Q21/Q29/Q52LTD/Q53LTD/Q59/Q60 - Queens Blvd & 59th Av
 "1286","MTABus Q19, Q49 (Astoria Blvd/94th St)"
 "1286",Port Authority Bus Terminal
@@ -100,7 +108,6 @@
 "1316",Q3 Bus Stop
 "1316","Q7, Q8"
 "1316",MTA Regional Bus Operations - Manhattanville Depot
-"23429842",Laundry Center
 "1316",MTA Subway - Parkchester (6)
 "1316",NYCT Transit Survey Unit
 "1316",MTA Subway - 74th St/Roosevelt Ave/Jackson Hts (E/F/M/R/7)
@@ -200,7 +207,6 @@
 "1386",Broadway/Nightmare Drive
 "1386",MTA Subway - 42nd St/Times Square/Port Authority Bus Terminal (A/C/E/N/Q/R/S/W/1/2/3/7)
 "1386",NYCT Transit Survey Unit
-"23435842",My Casa
 "1386",MTA Subway - DeKalb Ave (B/Q/R)
 "1386",MTA Subway - 125th St (1)
 "1396",MTA Subway - 42nd St/Times Square/Port Authority Bus Terminal (A/C/E/N/Q/R/S/W/1/2/3/7)
@@ -402,7 +408,6 @@
 "28512",Sukarak
 "28512",Great Wall Supermarket 大中華
 "28612",La Coral Cafe
-"3291120",Dunkin Donuts
 "28612",Great Wall Supermarket 大中華
 "28612",Jose's Colombian Coffee Truck
 "28612",Chang Jiang Supermarket
@@ -427,7 +432,6 @@
 "28612",Boulder Creek Steakhouse
 "28612",BJ's Wholesale Club
 "28612",Dunkin' Donuts
-"28912",Whole Foods Market
 "28612",Great Wall Supermarket 大中華
 "28612",Hong Kong Supermarket 香港超级市場
 "28712",Dunkin Donuts
@@ -488,6 +492,7 @@
 "28912",DSW Designer Shoe Warehouse
 "28912",Starbucks
 "28912",Paris Sandwich
+"28912",Whole Foods Market
 "28912",Starbucks
 "28912",Q25Ltd - Parsons Blvd & Jamaica Ave
 "28912",Regal Cinemas Battery Park 11
@@ -602,7 +607,6 @@
 "29512",Q25 limited - College Point / 14 Ave. via Kissena Blvd. / 127 St.
 "29512",Chang Jiang Supermarket
 "29512",La Coral Cafe
-"23452842",Regina's Pizzeria
 "29512",Q25Ltd - Parsons Blvd & Jamaica Ave
 "29512",Jose's Colombian Coffee Truck
 "29512",Q25 limited - College Point / 14 Ave. via Kissena Blvd. / 127 St.
@@ -751,7 +755,6 @@
 "33814",Regal Cinemas Union Square 14
 "33814",Madison Square Park
 "33814",Caffe Lavazza @ Eataly
-"25288913",Dunkin Donuts
 "33814",Madison Square Park
 "33814",Cinépolis Chelsea
 "33814",Waldy’s Wood Fired Pizza & Penne
@@ -829,7 +832,6 @@
 "35414",Benvenuto Cafe Restaurant
 "35414",Madison Square Park
 "35414",Caffe Lavazza @ Eataly
-"24099868",Urge Lounge
 "35414",Madison Square Park
 "35414",Caffe Lavazza @ Eataly
 "35414",Madison Square Park
@@ -906,8 +908,8 @@
 "47119",US Post Office
 "47119",Shipyard Cleaners
 "47119",Empire Realty Group LLC
-"63225",Shake Shack
 "47119",Ecover Earth Day
+"47119",Turning Point
 "47119",The Lenox
 "47219",The Office
 "47219",ShopRite
@@ -943,7 +945,6 @@
 "47319",It's Greek To Me
 "47319",Massage Envy - Hoboken
 "47319",Robert DeRuggiero Inc. Realtors
-"24099868",Fineline Tattoo
 "47319",Museum of Modern Art (MoMA)
 "47319",NJT - Lincoln Harbor Light Rail Station
 "47319",Chart House
@@ -1084,6 +1085,7 @@
 "63225",Banana Republic
 "63225",Halloween City
 "63225",Urban Outfitters
+"63225",Shake Shack
 "63225",Potbelly Sandwich Shop
 "63225",Modell's Sporting Goods
 "63225",Staples - CLOSED
@@ -1495,7 +1497,6 @@
 "92034",United Artists Kaufman Astoria 14
 "92034",House Of Jello
 "92034",NYC Office of Emergency Management (OEM)
-"93234",House Of Jello
 "92034",NYC Office of Emergency Management (OEM)
 "92034",House Of Jello
 "92034",The Coffee Bean & Tea Leaf
@@ -1553,6 +1554,7 @@
 "93234",Big Six Bagels
 "93234",House Of Jello
 "93234",New York Sports Clubs
+"93234",House Of Jello
 "93234",House Of Jello
 "93234",St. John's University
 "93234",Brooklyn Bagel & Coffee Company
@@ -1791,7 +1793,6 @@
 "134550",Munoz Deli Grocery Corp.
 "134550",NYC EMS Hospital 27
 "134550",Bellevue Hospital Ambulance Bay
-"24101868",Starbucks
 "134550",NYC EMS Hospital 03
 "134550",Artichoke Basille’s Pizza & Brewery
 "134550",New York Public Library - Ottendorfer Library
@@ -2322,6 +2323,7 @@
 "173965",mi casita
 "173965",Wicked Wolf Tavern
 "173965",Society Hill
+"173965",TGI Fridays
 "173965",Junior's Restaurant & Bakery
 "173965",mi casita
 "173965",Moe's Southwest Grill
@@ -2604,7 +2606,6 @@
 "182869",Middle Village
 "182869",MTA Bus - B26 - Halsey St & Marcy Av
 "182869",B26 Local - Ridgewood Intermodal Terminal via Halsey St.  / Wyckoff Av.
-"187270","7-Eleven"
 "182869",MTA Subway - Myrtle/Wyckoff Ave (L/M)
 "182869",Cadman Plaza West
 "182869",Middle Village
@@ -2828,7 +2829,6 @@
 "186170",MTA Subway - Parkchester (6)
 "186170",MTA Subway - 6 Train
 "186170",MTA Subway - D Train
-"192673",THE SUTTON
 "186170",MTA Subway - Parkchester (6)
 "186170",MTA Subway - 50th St (D)
 "186170",MTA Subway - Manhattan Bridge (B/D/N/Q)
@@ -3045,6 +3045,7 @@
 "187170",MTA Subway - Parkchester (6)
 "187170",MTA Bx 36
 "187270",MTA Subway - Parkchester (6)
+"187270","7-Eleven"
 "187270",MTA Subway - 6 Train
 "187270",MTA Bx 36
 "187270",MTA Subway - 6 Train
@@ -3161,6 +3162,7 @@
 "192573",THE SUTTON
 "192673",PS/MS 279
 "192673",PS/MS 279
+"192673",THE SUTTON
 "192673",THE SUTTON
 "192673",MTA Subway - 182nd/183rd Sts (B/D)
 "192673",PS/MS 279
@@ -3422,7 +3424,6 @@
 "215680",Eddie's Hair Style
 "215680",Tiffany & Co.
 "215680",Beyond Bespoke
-"217481",Zeytinz
 "215680",Rockefeller Center
 "215680",Duane Reade
 "215680",Bread Market Cafe
@@ -3482,6 +3483,7 @@
 "217481",Szechuan Gourmet
 "217481",Mr. Clean
 "217481",MTA Subway - 96th St (6)
+"217481",Zeytinz
 "217481",Bryant Park
 "217481",Grand Sichuan
 "217481",MTA Subway - 96th St (6)
@@ -3561,7 +3563,6 @@
 "217881",MTA Subway - 96th St (6)
 "217881",Zeytinz
 "217881",Kodama Sushi
-"218581",Trader Joe's
 "217881",DoubleTree by Hilton Hotel Metropolitan - New York City
 "217981",Saburi
 "217981",MTA Subway - 96th St (6)
@@ -3619,6 +3620,7 @@
 "218581",Chase Bank
 "218581",MTA Subway - 96th St (6)
 "218581",Zabar's
+"218581",Trader Joe's
 "218581",HomeGoods
 "218581",Whole Foods Market
 "218581",Congee Bowery 粥之家
@@ -3668,6 +3670,7 @@
 "219681",Terminal 2
 "219681",MTA Subway - 96th St (6)
 "219681",MTA Subway - 96th St (6)
+"219681",Zeytinz
 "219681",MTA Subway - 86th St (4/5/6)
 "219681",Victoria's Secret PINK
 "219681",MTA Subway - 96th St (6)
@@ -3890,7 +3893,6 @@
 "221782",Yonderville
 "221782",Satan's Lair
 "221782",Starbucks
-"228584",Ozu
 "221782",Satan's Lair
 "221782",Starbucks
 "221782",Satan's Lair
@@ -3904,6 +3906,7 @@
 "221782",Satan's Lair
 "221782",Victoria's Secret PINK
 "221782",Sams Oasis
+"221782",Taco Bell
 "221782",Starbucks
 "221882",The Bay Terrace at Bayside
 "221882",Satan's Lair
@@ -4239,7 +4242,6 @@
 "227884",TIA CREF Cafeteria
 "227884",Hofbräu Bierhaus NYC
 "227884","At work busy as hell, pulling my hair!!!....how long till Friday??"
-"229184",El Omda
 "227884",The Perfect Pint
 "227884",Ditmas Grocery Store Inc
 "227884",Jamesoninthehood
@@ -4760,6 +4762,7 @@
 "228584",Jimmy's Steinway Collision
 "228584",Anthrax's Petting Zoo
 "228584",ML Lounge
+"228584",Ozu
 "228584",Mamajuana Cafe
 "228584",MTA Subway - Astoria Blvd/Hoyt Ave (N/W)
 "228584",The Coffee Bean and Tea Leaf
@@ -4792,7 +4795,6 @@
 "228684",Trade Fair
 "228684",Dunkin' Donuts
 "228684",MTA - 30th Avenue Bus Stop
-"229684",Caverna Do Rodrigo
 "228684",Sentry Coat Check!
 "228684",Facebook Mobile Hack NYC
 "228684",Men's Restroom
@@ -4861,7 +4863,6 @@
 "228784",Sentry Coat Check!
 "228784",Midtown Hardware
 "228784",Chubby Burgers & Chicken
-"249691",Pan Asian
 "228784",rod
 "228784",Chubby Burgers & Chicken
 "228784",Melody Lounge
@@ -5138,6 +5139,7 @@
 "229184",Chez MoScoe
 "229184",Caverna Do Rodrigo
 "229184",Favela Grill
+"229184",El Omda
 "229184",Rapture Lounge
 "229184",Joe Coffee
 "229184",Graybar
@@ -5263,6 +5265,7 @@
 "229584",Cypriana Liquor Store
 "229684",Breaking Bad
 "229684",I Whupped Gaby
+"229684",Caverna Do Rodrigo
 "229684",MTA Subway - 30th Ave (N/W)
 "229684",Midtown Hardware
 "229684",TIA CREF Cafeteria
@@ -5321,7 +5324,6 @@
 "229884",Breaking Bad
 "229884",the nicest morning!
 "229884",MexiBBQ Kitchen & Draught
-"229984",Caverna Do Rodrigo
 "229884","Beagle Kitten Outpost 10, Queens Division"
 "229884",Gnomeville
 "229884","25-64 35th Street"
@@ -5380,6 +5382,7 @@
 "229984",the nicest morning!
 "229984",Breaking Bad
 "229984",I Whupped Gaby
+"229984",Caverna Do Rodrigo
 "229984",Chez MoScoe
 "229984",Work #4 Mario Sotirov
 "229984",Beagle Kitten Command Centre
@@ -5426,7 +5429,6 @@
 "230184",Work #4 Mario Sotirov
 "230184",Hotel 48LEX Lounge
 "230184",Hotel 48LEX New York
-"23198834",Feathers
 "230184","At work busy as hell, pulling my hair!!!....how long till Friday??"
 "230184","27th Floor Vip"
 "230184",Blarney Stone
@@ -5510,6 +5512,7 @@
 "245790",QQ Nails & Spa
 "245790",Gregory's Coffee
 "245790",Apple Grand Central
+"245790",Penelope
 "245890",New York Sports Clubs
 "245890",Redken 5th Avenue NYC
 "245890",Gregory's Coffee
@@ -5777,7 +5780,6 @@
 "248090",Redken 5th Avenue NYC
 "248090",Talent Thai Kitchen
 "248090",Melt Shop
-"24244872",Crumbs Bake Shop
 "248090",Equinox East 44th Street
 "248090",L'Oreal USA
 "248090",Banc Cafe
@@ -5839,6 +5841,7 @@
 "248590",Gregory's Coffee
 "248590",Starbucks
 "248590",Redken 5th Avenue NYC
+"248590",Press
 "248590",QQ Nails & Spa
 "248590",Gregory's Coffee
 "248590",Redken 5th Avenue NYC
@@ -5901,6 +5904,7 @@
 "249691",Chipotle Mexican Grill
 "249691",Duane Reade
 "249691",H&D Physical Therapy
+"249691",Pan Asian
 "249691",Dunkin Donuts
 "249691",Neofytos
 "250091",McDonald's
@@ -6013,7 +6017,6 @@
 "257694",Talmud Torah
 "257694",Carlos & Gabby's
 "257694",Masbia
-"24244872",Amir
 "257694",Talmud Torah
 "257694",Dunkin Donuts
 "257694","99 Cent Store"
@@ -6068,7 +6071,6 @@
 "258994",R' Landau's Shul
 "258994",Walgreens
 "258994",New York Presbyterian Hospital Weill Cornell Medical Center
-"24245872",Saji's
 "258994","NewYork-Presbyterian/Weill Cornell Starr Pavilion (Department of Surgery, 8th Floor)"
 "258994",Greenberg 14 S
 "258994",NewYork-Presbyterian Hospital- NeuroScience ICU
@@ -6180,7 +6182,6 @@
 "260595",Track 15
 "260595",House of Hercules
 "260595",NJT - Exchange Place Light Rail Station
-"24247872",My Block
 "260595","Mack-Cali, Harborside Plaza 5"
 "260595","Mack-Cali, Harborside Plaza 2"
 "260595",Harborside Club
@@ -6303,6 +6304,7 @@
 "260895",MTA Subway - Queensboro Plaza (N/W/7)
 "260895",MTA Subway - 61st St/Woodside (7)
 "260895",Guitar Center
+"260895",Wendy's
 "260895",Schitzengigglez
 "260895",House of Hercules
 "260895",All Saints Episcopal Church
@@ -6395,7 +6397,6 @@
 "261295",MTA Subway - Queensboro Plaza (N/W/7)
 "261295",MTA Subway - Mets/Willets Point (7)
 "261295",Citi Field Parking Lot
-"24247872",Absolute Bagels
 "261295",Citi Field
 "261295",Mets Press box
 "261295",House of Hercules
@@ -6628,6 +6629,7 @@
 "262895",MTA Subway - 61st St/Woodside (7)
 "262895",MTA Subway - Court Square (E/G/M/7)
 "262895",Schitzengigglez
+"262895",Wendy's
 "262995",All Saints Episcopal Church
 "262995",Citi Field Parking Lot
 "262995",MTA Subway - Court Square (E/G/M/7)
@@ -6824,7 +6826,6 @@
 "271199",North Jersey Orthopedics Specialists
 "271199",Spine Center
 "271199",Dumont High School
-"24250872",Maoz Vegetarian
 "271199",St. Mary R.C. Church
 "271199",St. Mary's Carnival
 "271199",The Howard Estate
@@ -7002,7 +7003,6 @@
 "273599",NBCUniversal
 "273599",NBC Commissary
 "273599",Rockefeller Center
-"3252119",Starbucks
 "273599","30 Rockefeller Plaza"
 "273599",Saks Fifth Avenue
 "273599",New York Public Library
@@ -7029,7 +7029,6 @@
 "273699",The Howard Estate
 "273699",The Howard Estate
 "273699",Blackout Central (Haus of Gaga)
-"3253119",Starbucks
 "273799","106 Grand Plaza"
 "273799",Blackout Central (Haus of Gaga)
 "273799","106 Grand Plaza"
@@ -7119,6 +7118,7 @@
 "3252119",Vogue Magazine
 "3252119",Saks Fifth Avenue
 "3252119",Starbucks
+"3252119",Starbucks
 "3252119",Vogue Magazine
 "3252119","4 Times Square"
 "3252119",Starbucks
@@ -7144,6 +7144,7 @@
 "3253119",Bryant Park
 "3253119",Starbucks
 "3253119",Stumptown Coffee Roasters
+"3253119",Starbucks
 "3253119",Starbucks
 "3253119",Breakfast Cart
 "3253119",Silk Cakes
@@ -7355,7 +7356,6 @@
 "3287120",Con Edison
 "3287120",Buffalo Wild Wings
 "3287120",Tanjia
-"3292120",Target
 "3287120",MTA Bus - Bay Parkway & 86th Street (B6/B6LTD/B82/B82LTD)
 "3287120",Fabians House
 "3287120",Newkirk Plaza
@@ -7411,9 +7411,9 @@
 "3288120",Con Edison
 "3288120",MTA Subway - 9th Ave (D)
 "3288120",MTA Subway - 62nd St/New Utrecht Ave (D/N)
-"3292120",Chase Bank
 "3288120",MTA Subway - Bay Parkway (D)
 "3288120",Parent's House
+"3289120",Petco
 "3289120",Parent's House
 "3289120",MTA Bus - Bay Parkway & 86th Street (B6/B6LTD/B82/B82LTD)
 "3289120",MTA Subway - Bay Parkway (D)
@@ -7494,9 +7494,9 @@
 "3291120",Con Edison
 "3291120",MTA Subway - DeKalb Ave (B/Q/R)
 "3291120",Parent's House
-"24250872","109 St. Gourmet Deli"
 "3291120",Pier 17 Professional Medical Mgmt
 "3291120",MTA Subway - Nevins St (2/3/4/5)
+"3291120",Dunkin Donuts
 "3291120",Con Edison
 "3291120",Con Edison
 "3291120",Parent's House
@@ -7524,6 +7524,8 @@
 "3292120",Pho Tay Ho
 "3292120",MTA Subway - Atlantic Ave/Barclays Center (B/D/N/Q/R/2/3/4/5)
 "3292120",Burlington Coat Factory
+"3292120",Target
+"3292120",Chase Bank
 "3292120",Con Edison
 "3292120",Con Edison
 "3292120",MTA Subway - DeKalb Ave (B/Q/R)
@@ -7534,7 +7536,6 @@
 "3292120",MTA Bus - Bay Parkway & 86th Street (B6/B6LTD/B82/B82LTD)
 "3292120",Parent's House
 "3292120",MTA Bus - Bay Parkway & 86th Street (B6/B6LTD/B82/B82LTD)
-"3304120",Parent's House
 "3292120",Pier 17 Professional Medical Mgmt
 "3292120",Johny's Place
 "3292120",MTA Subway - Bay Parkway (D)
@@ -7602,7 +7603,6 @@
 "3294120",MTA Subway - Avenue J (Q)
 "3294120",MTA Bus - B6/B6LTD/B11 - Avenue J & E 16 St
 "3294120",MTA Bus - Bay Parkway & 86th Street (B6/B6LTD/B82/B82LTD)
-"24250872",My Block
 "3294120",MTA B6/B82 (Bay Pky & Bath Av)
 "3294120",MTA Bus - Bay Parkway & 86th Street (B6/B6LTD/B82/B82LTD)
 "3294120",Pho Tay Ho
@@ -7657,7 +7657,6 @@
 "3296120",Starbucks
 "3296120",MTA Subway - Nevins St (2/3/4/5)
 "3296120",Con Edison
-"23198834",Platinum Fitness
 "3296120",MTA Bus - Bay Parkway & 86th Street (B6/B6LTD/B82/B82LTD)
 "3296120",Parent's House
 "3296120",Pier 17 Professional Medical Mgmt
@@ -7698,6 +7697,7 @@
 "3304120",TGI Fridays
 "3304120",Tanjia
 "3304120",United Artists Sheepshead Bay 14 IMAX & RPX
+"3304120",Parent's House
 "3304120",Parent's House
 "3304120",Resorts World Casino - New York City
 "3304120",Parent's House
@@ -7863,7 +7863,6 @@
 "3327121",Park
 "3327121",MTA-B4 Bay Parkway
 "3327121",MTA Bus - Bay Py & 67 St (B6)
-"3328121",Mi Casa Nana
 "3327121",MTA Subway - 14th St (A/C/E/L)
 "3327121",Google New York
 "3327121",Lincoln Center 4D324
@@ -7922,6 +7921,7 @@
 "3328121",My Comfy King Size Bed
 "3328121",Potter :/
 "3328121",Walking Peter Pan <3
+"3328121",Mi Casa Nana
 "3328121",My Comfy King Size Bed
 "3328121",Cheeburger Cheeburger
 "3328121",Mommy & Baby Petey Time ❤
@@ -8214,7 +8214,6 @@
 "3868138",Hammer Of Funk
 "3868138",Le Gourmet
 "3868138",Lenox Hill Neighborhood House
-"24250872",Famous Deli
 "3868138",Robert Louis Stevenson PS 183
 "3868138",Lenox Hill Neighborhood House
 "3868138",Le Gourmet
@@ -8313,7 +8312,6 @@
 "3875138",Lenox Hill Neighborhood House
 "3875138",Center @ Lenox Hill Neighborhood House
 "3875138",MTA Subway - Saratoga Ave (3)
-"3880138",Hammer Of Funk
 "3875138",Lenox Hill Neighborhood House
 "3875138",Robert Louis Stevenson PS 183
 "3875138",Lenox Hill Neighborhood House
@@ -8421,6 +8419,7 @@
 "3880138",Lenox Hill Neighborhood House
 "3880138",Lenox Hill Neighborhood House
 "3880138",MTA Subway - Saratoga Ave (3)
+"3880138",Hammer Of Funk
 "3880138",MTA Subway - Saratoga Ave (3)
 "4005144",My House
 "4005144",John Jay College - New Building
@@ -8489,6 +8488,7 @@
 "4009144",John Jay College - New Building
 "4009144","John Jay College of Criminal Justice, T Building"
 "4009144",My House
+"4009144",Crave Astoria
 "4009144",The Vitamin Shoppe
 "4009144",T-Mobile
 "4009144",KFC
@@ -8700,7 +8700,6 @@
 "4193150",AMC Empire 25
 "4193150",Central Park
 "4193150",Somethin' Jazz Club
-"5101182",Le Chéile
 "4193150",Carnegie Hall
 "4193150",Cafe Fiorello
 "4193150",AMC Loews Lincoln Square 13
@@ -8710,7 +8709,6 @@
 "4197150",Columbus Circle
 "4197150",The Shops at Columbus Circle
 "4197150",goodburger
-"4271153",Chelsea Market
 "4197150",Charles B. Benenson Grove
 "4197150",Josie Robertson Plaza (Lincoln Center Plaza)
 "4197150",David H. Koch Theater
@@ -8829,6 +8827,7 @@
 "4271153",Food Network
 "4271153",Food Network
 "4271153",Cookshop
+"4271153",Chelsea Market
 "4271153",AMC Loews 34th Street 14
 "4271153",Buddakan
 "4271153",Tonelli Cafe & Bar
@@ -8889,6 +8888,7 @@
 "4278153",Tonelli Cafe & Bar
 "4278153",Most Worshipful Prince Hall Grand Lodge of New York
 "4285153",NYU Bookstore
+"4285153",Cafetasia
 "4285153",First Presbyterian Church
 "4285153",UWAY Cafe
 "4285153",Meatball Obsession
@@ -9680,7 +9680,6 @@
 "4982178",GN Gourmet Deli
 "4982178",Walgreens
 "4982178",MTA Subway - Nereid Ave (2/5)
-"4984178",INA
 "4982178",MTA BX 31/ BX 16 Bus Stop
 "4983178",Gary & Gino's Pizzeria
 "4983178",Anik Boutique
@@ -9740,6 +9739,7 @@
 "4984178",Dunkin' Donuts
 "4984178",Anik Boutique
 "4984178",Screme Gelato Truck
+"4984178",INA
 "4984178",Riverside Park Basketball Courts
 "4984178",West End Superette
 "4984178",Bx16 Bus Stop
@@ -9964,7 +9964,6 @@
 "4988178",Greenland Deli
 "4988178",Dunkin' Donuts
 "4988178",Gary & Gino's Pizzeria
-"4995178",Screme Gelato Truck
 "4988178",MTA Subway - Woodlawn (4)
 "4988178",Anik Boutique
 "4988178",Lincoln Towers Playground
@@ -10085,7 +10084,6 @@
 "4993178",Anik Boutique
 "4993178",Carl's Steaks
 "4993178",Screme Gelato Truck
-"4995178",AT&T
 "4993178",Riverside Park Basketball Courts
 "4993178",Robert Ray Hamilton Fountain
 "4993178",West End Superette
@@ -10145,7 +10143,6 @@
 "4994178",Screme Gelato Truck
 "4994178",New Image Unisex Saloon
 "4994178",Dunkin' Donuts
-"4995178",Starbucks
 "4994178",MTA Subway - Woodlawn (4)
 "4994178",Anik Boutique
 "4994178",Rite Aid
@@ -10201,10 +10198,12 @@
 "4995178",Riverside Park Basketball Courts
 "4995178",Greenland Deli
 "4995178",Dunkin' Donuts
-"24250872",Famous Deli
 "4995178",MTA Subway - Woodlawn (4)
 "4995178",Anik Boutique
 "4995178",Trump Place Dog Run
+"4995178",Screme Gelato Truck
+"4995178",AT&T
+"4995178",Starbucks
 "4995178",Rite Aid
 "4996178",Dunkin' Donuts
 "4996178",Anik Boutique
@@ -10261,7 +10260,6 @@
 "4997178",Anik Boutique
 "4997178",Sheep Meadow
 "4997178",Rite Aid
-"5214185",King Pizza
 "4997178",Starbucks
 "4997178",West End Superette
 "4997178",CVS Pharmacy
@@ -10318,7 +10316,6 @@
 "5000178",Dunkin' Donuts
 "5000178",MTA Subway - Woodlawn (4)
 "5000178",Anik Boutique
-"5215185",Bonefish Grill
 "5000178",Lincoln Towers Playground
 "5000178",New York Public Library - Riverside Library
 "5000178",Bally Total Fitness
@@ -10527,7 +10524,6 @@
 "5074181",MTA Subway - 103rd St/Corona Plaza (7)
 "5074181",MTA Subway - Junction Blvd (7)
 "5074181",Tacos y Quesadillas Mexico
-"5100182",Caffe Storico
 "5074181",MTA Subway - 61st St/Woodside (7)
 "5074181",MTA Subway - Avenue J (Q)
 "5074181",MTA Subway - Avenue M (Q)
@@ -10580,6 +10576,7 @@
 "5099182",Pop's Burger
 "5099182",McCarren Park
 "5100182",Highbridge Park
+"5100182",Caffe Storico
 "5100182",Riverside Drive Dog Run
 "5100182",AnVilEntertainmentRecorders World HQ
 "5100182",AnVilEntertainmentRecorders World HQ
@@ -10600,6 +10597,7 @@
 "5101182",West Harlem Piers Park
 "5101182",Trailer Park Lounge & Grill
 "5101182",SVA Theatre
+"5101182",Le Chéile
 "5102182",Smash Studios NYC
 "5102182",AnVilEntertainmentRecorders World HQ
 "5102182",Caffe Storico
@@ -10625,7 +10623,6 @@
 "5104182",Don Giovanni Ristorante
 "5104182",Highbridge Park
 "5104182",AnVilEntertainmentRecorders World HQ
-"24250872",Crumbs Bake Shop
 "5104182",AnVilEntertainmentRecorders World HQ
 "5105182",The Windsor
 "5105182",Sushi West
@@ -10796,6 +10793,7 @@
 "5174184",TJ Byrnes Bar and Restaurant
 "5174184",Ryan Maguire's Ale House
 "5174184",YOTEL New York
+"5174184","44 & X"
 "5174184",Antibes Bistro
 "5174184",Gathering of the Tribes Gallery
 "5174184",Exit 9 Gift Emporium
@@ -10853,7 +10851,6 @@
 "5176184",Adinah's Farm
 "5176184",Capital One Bank
 "5176184",Tompkins Square Park
-"5299188",Starbucks
 "5176184",MTA Subway - M Train
 "5176184",New York Grill & Deli
 "5176184",Adinah's Farm
@@ -11262,7 +11259,6 @@
 "5187185",Four Seasons
 "5187185",The Hang Out
 "5187185",YJCC
-"24251872",Amir
 "5187185",Parkway Elementary School
 "5187185",Garden State Parkway Park & Ride
 "5187185",Chase Bank
@@ -11307,6 +11303,7 @@
 "5188185",Chase Bank
 "5188185",Sunoco
 "5188185",Capital One Bank
+"5188185",King Pizza
 "5188185",my bed
 "5188185",Bergen County Vocational High School
 "5188185",Parkway Elementary School
@@ -11377,7 +11374,6 @@
 "5189185",AT&T
 "5189185",Mariner's Bank
 "5189185",Oak Ale House Restaurant
-"24251872",My Block
 "5189185",Moon Doggie Coffee Roasters
 "5189185",The Hang Out
 "5189185",Four Seasons
@@ -11722,7 +11718,6 @@
 "5196185",nanas :)
 "5196185",Four Seasons
 "5196185",The Hang Out
-"6914246",BonChon
 "5196185",YJCC
 "5196185",Chase Bank
 "5196185",My uncomfortable shitty bed :(
@@ -11900,6 +11895,7 @@
 "5199185",a womans place: the kitchen
 "5199185",YJCC
 "5199185",The Bush Hideout
+"5199185",Central Lounge
 "5199185",New York Sports Clubs
 "5199185",Hofbräu Bierhaus NYC
 "5199185",Cohn Lifland Pearlman Herrmann & Knopf
@@ -11950,8 +11946,6 @@
 "5200185",Four Seasons
 "5200185",a womans place: the kitchen
 "5200185",YJCC
-"24251872",Crumbs Bake Shop
-"6935246",Joe Coffee
 "5200185",Garden State Parkway Park & Ride
 "5200185",Hottest Woman On Earth Hitting On Me
 "5200185",AT&T
@@ -12250,7 +12244,6 @@
 "5210185",Gardner Field
 "5210185",AT&T
 "5210185",King Pizza
-"5215185",The Bush Hideout
 "5210185",The Hang Out
 "5210185",Crowne Plaza Paramus
 "5210185",Paramus Pharmacy Inc.
@@ -12273,6 +12266,7 @@
 "5211185",Chase Bank
 "5211185",US Post Office
 "5211185",The Bush Hot Tub :)
+"5211185",my bed
 "5211185",a womans place: the kitchen
 "5211185",Sunoco
 "5211185",The Hang Out
@@ -12424,11 +12418,11 @@
 "5214185",The Hang Out
 "5214185",Ashley Furniture HomeStore
 "5214185",Chase Bank
-"5215185",Fantastic Sams
 "5214185",Gardner Field
 "5214185",My uncomfortable shitty bed :(
 "5214185",Mack-Cali Centre II
 "5214185",Parkway Elementary School
+"5214185",King Pizza
 "5214185",YJCC
 "5215185",a womans place: the kitchen
 "5215185",Four Seasons
@@ -12479,6 +12473,9 @@
 "5215185",Mack-Cali Centre II
 "5215185",Parkway Elementary School
 "5215185",Paramus Veteran Home
+"5215185",The Bush Hideout
+"5215185",Bonefish Grill
+"5215185",Fantastic Sams
 "5215185",AT&T
 "5215185",Gardner Field
 "5216185",My uncomfortable shitty bed :(
@@ -12705,7 +12702,6 @@
 "5221185",Philibosian Phunction
 "5221185",YJCC
 "5221185",Crowne Plaza Paramus
-"5224185",The Hang Out
 "5221185",Parkway Elementary School
 "5221185",Jons House
 "5221185",Crowne Plaza Paramus
@@ -12763,6 +12759,7 @@
 "5223185",The Hang Out
 "5224185","Movado Group, Inc."
 "5224185",Mack-Cali Centre II
+"5224185",The Hang Out
 "5224185",Four Seasons
 "5224185",Gardner Field
 "5224185",Philibosian Phunction
@@ -12904,6 +12901,7 @@
 "5266187",Dunkin Donuts
 "5266187",CVS/pharmacy
 "5266187",Douglaston Delicatessen
+"5267187",Zeytinz
 "5267187",Track 20
 "5267187",The Coffee Bean & Tea Leaf
 "5267187","1065 Ave of the Americas"
@@ -12988,7 +12986,6 @@
 "5270187",Stop & Shop
 "5270187",The Coffee Bean & Tea Leaf
 "5270187","1065 Ave of the Americas"
-"5273187",KFC
 "5270187","4A's | American Association of Advertising Agencies"
 "5270187",Track 18
 "5271187",Douglaston Delicatessen
@@ -13045,6 +13042,7 @@
 "5273187","1065 Ave of the Americas"
 "5273187","4A's | American Association of Advertising Agencies"
 "5273187",The Madison
+"5273187",KFC
 "5276187",The Coffee Bean & Tea Leaf
 "5276187","1065 Ave of the Americas"
 "5276187","4A's | American Association of Advertising Agencies"
@@ -13178,6 +13176,7 @@
 "5299188",NJT - Hoboken Light Rail Station
 "5299188",Alison's Bachlorette Pad
 "5299188","23rd Street PATH Station"
+"5299188",Starbucks
 "5301188",NJT - Hoboken Light Rail Station
 "5301188",Alison's Bachlorette Pad
 "5301188",NJT - Hoboken Light Rail Station
@@ -13193,7 +13192,6 @@
 "5302188",NJT - Hoboken Light Rail Station
 "5302188",Lenwich by Lenny's
 "5302188",Sudler & Hennessey
-"5656201",Forever 21
 "5302188",NJT - Hoboken Light Rail Station
 "5302188",Alison's Bachlorette Pad
 "5302188",NJT - Hoboken Light Rail Station
@@ -13303,6 +13301,7 @@
 "5656201",The Giving Tree Yoga Studio
 "5656201",T.J. Maxx
 "5656201",M&M's World
+"5656201",Forever 21
 "5657201",Kips Bay Gynecology
 "5657201",Dunkin' Donuts
 "5657201",Chipotle Mexican Grill
@@ -13639,7 +13638,6 @@
 "5836207",Child Care And Learning Center At Hackensack University Mefical Center
 "5836207",Sarkis & Sarin Gabriellian Child Care And Learning Center
 "5836207",Hackensack University Medical Center
-"23198834",Styertowne Apartments
 "5836207",Child Care And Learning Center At Hackensack University Mefical Center
 "5836207",Sarkis & Sarin Gabriellian Child Care And Learning Center
 "5836207",Mount Plesant Apartments
@@ -13811,7 +13809,6 @@
 "5850208",Numero 28
 "5853208",The Bean
 "5853208",Chipotle Mexican Grill
-"23198834",Home
 "5853208",Portofino Sun & Solar SalonSolar
 "5853208",Agata & Valentina
 "5853208",Prodigy Coffee
@@ -13894,7 +13891,6 @@
 "6630236",CVS/pharmacy
 "6630236",Rite Aid
 "6630236",FIT Cafeteria
-"6913246",Barnes & Noble
 "6630236",US Post Office - James A Farley Station
 "6630236",Tick Tock Diner
 "6630236",Staples
@@ -13962,7 +13958,6 @@
 "6634236",Denny Moe's Superstar Barbershop
 "6634236",MTA Subway - 137th St/City College (1)
 "6634236",Kimpton Hotel Eventi
-"6644236",Super Foodtown
 "6634236",Brighton (Intelligencia/Go Burger/Fish Shack/Tiki Bar)
 "6634236",Tower 31 Roof Deck
 "6634236",AYZA Wine & Chocolate Bar
@@ -14010,7 +14005,6 @@
 "6639236",Sexydredmon/Zxaviers- My Quiet Apartment
 "6639236",Sexydredmon@Home
 "6640236",Sexydredmon/Zxaviers- My Quiet Apartment
-"7165254",Rite Aid
 "6640236",St. Nicholas Park
 "6640236",Denny Moe's Superstar Barbershop
 "6640236",Denny Moe's Superstar Barbershop
@@ -14031,6 +14025,7 @@
 "6641236",Sexydredmon@in The Crib/Home
 "6641236",NY.TV
 "6641236",Crown Fried Chicken
+"6641236",McDonald's
 "6641236",Sea & Sea
 "6641236",The Hood
 "6641236",Apollo Theater
@@ -14073,6 +14068,7 @@
 "6644236",Lenox Fish Market
 "6644236",Sexydredmon@Home
 "6644236",Popeyes Louisiana Kitchen
+"6644236",Super Foodtown
 "6644236",Sexydredmon@in The Crib/Home
 "6644236",Charles' Country Pan Fried Chicken
 "6644236","305 West 150th"
@@ -14124,9 +14120,11 @@
 "6913246",Café Olympia
 "6913246",The Health Nuts
 "6913246",Heartland Brewery
+"6913246",Barnes & Noble
 "6913246",MTA Bus - 1 Av & E 14 St (M15/M15-SBS)
 "6913246",Saint Thomas Church
 "6913246",Bally Total Fitness
+"6913246",Starbucks
 "6913246",Parnell's Pub
 "6913246",Smith & Wollensky
 "6913246",Dos Caminos
@@ -14147,6 +14145,7 @@
 "6914246",Dr. Ian Lustbadder
 "6914246",Bally Total Fitness
 "6914246",Townhouse Bar New York
+"6914246",BonChon
 "6914246",Urban Outfitters
 "6914246",Anything but the banana stand
 "6914246",Glossi HQ
@@ -14358,9 +14357,7 @@
 "6929246",The Sin Bin
 "6929246",M57 - 57th & 2nd ave
 "6929246",Townhouse of NY
-"6934246",Yale Club of New York City
 "6929246",Laura Pels Theatre at the Harold & Miriam Steinberg Center for Theatre
-"7180254",Starbucks
 "6929246",If There Is I Haven't Found It Yet at Laura Pels Theatre
 "6929246",Cafe Un Deux Trois
 "6929246",Sutton View
@@ -14415,6 +14412,7 @@
 "6934246",NBCUniversal
 "6934246",American First Liquors
 "6934246",The Food Emporium
+"6934246",Yale Club of New York City
 "6934246",The Carnegie Club
 "6934246",American First Liquors
 "6934246",Phyto Universe
@@ -14426,6 +14424,7 @@
 "6934246",Nom Wah Tea Parlor
 "6934246",Sutton Place Park - Sutton Sq
 "6934246",Saint Thomas Church
+"6935246",Joe Coffee
 "6935246",Sutton View
 "6935246",Bally Total Fitness
 "6935246",Crunch - 59th Street
@@ -14475,6 +14474,7 @@
 "7165254",Arturo's
 "7165254",McDonald's
 "7165254",Montefiore Medical Center
+"7165254",Rite Aid
 "7166254",Fordham Plaza
 "7166254",NYC Health + Hospitals/Jacobi
 "7166254",MTA Subway - 242nd St/Van Cortlandt Park (1)
@@ -14529,6 +14529,7 @@
 "7180254",MTA Subway - 242nd St/Van Cortlandt Park (1)
 "7180254",MTA Subway - 225th St/Marble Hill (1)
 "7180254",Mita Mine
+"7180254",Starbucks
 "7180254",MTA Subway - 242nd St/Van Cortlandt Park (1)
 "7181254",MTA Subway - 242nd St/Van Cortlandt Park (1)
 "7181254",MTA Subway - Broadway/Lafayette St (B/D/F/M/6)
@@ -14628,7 +14629,6 @@
 "7193254",Golden Bridge Yoga NYC
 "7193254",MTA Subway - Broadway/Lafayette St (B/D/F/M/6)
 "7193254",American Classic
-"7388262",Michaels
 "7197254",MTA Subway - Broadway/Lafayette St (B/D/F/M/6)
 "7197254",D&D Deli & Grocery
 "7197254",Next Cleaners
@@ -14738,6 +14738,7 @@
 "7388262",Bebe
 "7388262",Walgreens
 "7388262",Bx Uptown Caribbean Taste
+"7388262",Michaels
 "7388262",Golden Krust Caribbean Bakery and Grill
 "7388262",Bx Uptown Caribbean Taste
 "7388262",Radio City Music Hall
@@ -14912,7 +14913,6 @@
 "7511267",My Block
 "7512267",Workmen's Circle MultiCare Center
 "7512267",SUBWAY
-"23198834",Pier 1 Imports
 "7512267","MTA MaBSTOA Bus at Pelham Parkway & Williamsbridge Rd: (Bx8, Bx12 & +Select [SBS])"
 "7512267",Workmen's Circle MultiCare Center
 "7512267",Workmen's Circle MultiCare Center
@@ -15705,7 +15705,6 @@
 "8212293",United Cigars Inc.
 "8212293",Deli Grocery Lorimer & Jackson
 "8213293",MTA B46 To Kings Plaza
-"8215293",Chase Bank
 "8213293",Casa Senor Cigar
 "8213293",My house
 "8213293",Lexington Ave
@@ -15770,7 +15769,6 @@
 "8214293",Frederick Douglass Circle
 "8214293",Drug Shoppe Pharmacy
 "8214293",MTA Subway - 110th St/Cathedral Parkway (B/C)
-"24252872",D'Agostino
 "8214293",MTA Subway - Spring St (C/E)
 "8214293",Father Fagan Park
 "8214293",WNYC Radio
@@ -15819,6 +15817,7 @@
 "8215293",Casa Senor Cigar
 "8215293",My house
 "8215293",Lexington Ave
+"8215293",Chase Bank
 "8215293",MTA B46 Bus Stop
 "8215293",Lorimer Market
 "8215293",Deli Grocery Lorimer & Jackson
@@ -15875,7 +15874,6 @@
 "8217293",United Cigars Inc.
 "8217293",MTA B46 To Kings Plaza
 "8217293",MTA Subway - Utica Ave (A/C)
-"8219293",My house
 "8217293",MTA Subway - Spring St (C/E)
 "8217293",Father Fagan Park
 "8217293",WNYC Radio
@@ -15990,6 +15988,7 @@
 "8219293",Key Food
 "8219293",United Cigars Inc.
 "8219293",MTA B46 To Kings Plaza
+"8219293",My house
 "8219293",Lexington Ave
 "8219293",MTA Bus - B15
 "8219293",Western Beef
@@ -16631,7 +16630,6 @@
 "8237293",United Cigars Inc.
 "8237293",Broadway Deli
 "8237293",Halloweenpocalypse 2012
-"9825347",Teavana
 "8237293",Casa Senor Cigar
 "8237293",My house
 "8237293",Lexington Ave
@@ -16689,7 +16687,6 @@
 "8238293",MTA Subway - L Train
 "8238293",MTA Subway - Lorimer St (L)
 "8238293",San Marco Pizzeria
-"9828347",Cask 171
 "8238293",United Cigars Inc.
 "8239293",Broadway Deli
 "8239293",Casa Senor Cigar
@@ -17010,10 +17007,10 @@
 "8243293",MECHY FOOD STORE
 "8243293",MTA Subway - Utica Ave (A/C)
 "8243293",MTA Subway - Spring St (C/E)
-"8244293",Dilruba Deli & Grocery
 "8243293",Father Fagan Park
 "8243293",WNYC Radio
 "8243293",King Pong Soho
+"8243293",Vandam Diner
 "8243293",Walgreens
 "8243293",The Cigar Inn
 "8243293",MTA Subway - Lexington Ave/53rd St (E/M/6)
@@ -17038,7 +17035,6 @@
 "8244293",Lexington Ave
 "8244293",Ghamdam Food Corp
 "8244293",MECHY FOOD STORE
-"8244293",Bagelsmith
 "8244293",MTA Subway - Utica Ave (A/C)
 "8244293",WNYC Radio
 "8244293",WNYC Cafe
@@ -17071,6 +17067,7 @@
 "8244293",MTA Subway - 14th St (A/C/E/L)
 "8244293",Settepani Bakery
 "8244293",United Cigars Inc.
+"8244293",Dilruba Deli & Grocery
 "8244293",Bagelsmith
 "8244293",Sternberg Park
 "8244293",Broadway Deli
@@ -17097,6 +17094,7 @@
 "8244293",Xiang Xin
 "8244293",Ghamdam Food Corp
 "8244293",Deli Grocery Lorimer & Jackson
+"8244293",Bagelsmith
 "8244293",Sternberg Park
 "8244293",Lorimer street
 "8244293",Casa Senor Cigar
@@ -17974,7 +17972,6 @@
 "8928315",Bolla Market - Conduit & Liberty
 "8928315",NYC HRA- FAMILY INDEPENDENCE ADMINISTRATION
 "8928315",Key Food Supermarket
-"8931315",Sutter Grocery
 "8928315","Brookdale University Hospital & Medical Center, Brookdale Family Care Center"
 "8928315",Cypress Hills - NYCHA
 "8928315",Melao Barber Shop
@@ -18151,6 +18148,7 @@
 "8931315",Napoli's Pizza
 "8931315",Bolla Market - Conduit & Liberty
 "8931315",May May Restaurant
+"8931315",Sutter Grocery
 "8931315",B14 (Euclid Ave)
 "8931315",Melao Barber Shop
 "8931315",Citi Field
@@ -19184,7 +19182,6 @@
 "8958315",Dave's Jamaican Restaurant
 "8958315",Sutter Grocery
 "8958315",May May Restaurant
-"10045354",McDonald's
 "8958315",Fine Fare
 "8958315",Krutick's Pharmacy
 "8958315",Key Food Supermarket
@@ -19686,7 +19683,6 @@
 "9705343",Terminal 7
 "9705343",McDonald's
 "9705343",Starbucks
-"24252872",Crumbs Bake Shop
 "9705343",United Airlines
 "9705343",Pathmark
 "9705343",Dunkin' Donuts
@@ -19744,7 +19740,6 @@
 "9708343",MTA Subway - 59th St/Columbus Circle (A/B/C/D/1)
 "9708343",Starbucks
 "9708343",Burger King
-"10186359",BP
 "9708343",Rochdale Village Management Office
 "9708343",Chase Bank
 "9708343",Rochdale Village Management Office
@@ -19756,7 +19751,7 @@
 "9708343",Terminal 7
 "9710343",BP
 "9710343",Starbucks
-"9718344",McDonald's
+"9710343",Burger King
 "9710343",Rochdale Village Management Office
 "9710343",LGA Employee Parking
 "9710343",Terminal B (Central Terminal)
@@ -19814,6 +19809,7 @@
 "9718344",Queens College - Dining Hall
 "9718344",Q Cafe
 "9718344",I Building
+"9718344",McDonald's
 "9718344",Brooklyn Boulders
 "9718344",Brooklyn Boulders
 "9718344",Carlo's House
@@ -19914,7 +19910,6 @@
 "9739344",Carlo's House
 "9739344",MTA Subway - Lexington Ave/59th St (4/5/6/N/R/W)
 "9739344",MTA Subway - Forest Hills/71st Ave (E/F/M/R)
-"10217359",Hot Kitchen
 "9739344",MTA - Q64 (Electchester/Jewel Ave Bound)
 "9739344",Science Building
 "9739344",Naked Pear Cafe
@@ -19935,6 +19930,7 @@
 "9740344",Naked Pear Cafe
 "9740344",Queens College
 "9740344",Queens College
+"9740344",McDonald's
 "9740344",MTA Subway - 86th St (4/5/6)
 "9740344",Eastside Grocery
 "9740344",Chipotle Mexican Grill
@@ -20092,7 +20088,6 @@
 "9749344",Queens Hall
 "9749344",Delany Hall
 "9749344",The Burger Bistro
-"9820347",Houston's
 "9749344",Queens College - Dining Hall
 "9749344",Benjamin S. Rosenthal Library
 "9749344",C-Town Supermarkets
@@ -20102,7 +20097,6 @@
 "9751344",Carlo's House
 "9751344",Carlo's House
 "9751344",Carlo's House
-"9755344",King Hall
 "9751344",MTA Subway - Lexington Ave/59th St (4/5/6/N/R/W)
 "9751344",MTA Subway - Lexington Ave/63rd St (F/Q)
 "9751344",Queens College
@@ -20131,7 +20125,6 @@
 "9752344",MTA Subway - Lexington Ave/59th St (4/5/6/N/R/W)
 "9752344",MTA Subway - Lexington Ave/63rd St (F/Q)
 "9752344",Starbucks
-"24252872",Kim's Fruit & Vegetable
 "9752344",Queens College - Dining Hall
 "9753344",Jacqueline Kennedy Onassis Reservoir
 "9753344",Eastside Grocery
@@ -20157,6 +20150,7 @@
 "9755344",MTA Subway - Forest Hills/71st Ave (E/F/M/R)
 "9755344",MTA - Q64 (Electchester/Jewel Ave Bound)
 "9755344",Naked Pear Cafe
+"9755344",King Hall
 "9755344",McDonald's
 "9755344",McDonald's
 "9755344",C-Town Supermarkets
@@ -20201,6 +20195,7 @@
 "9820347",Teavana
 "9820347",Gold's Gym
 "9820347",The Chamber Of Secrets
+"9820347",Houston's
 "9820347",Total Wine & More
 "9820347","Memorial Park, River Edge"
 "9821347",Forrest Cleaners
@@ -20266,6 +20261,7 @@
 "9825347",Kiku Hibachi Grill & Sushi Bar
 "9825347",GRABBAGPOCALYPSE 2012
 "9825347",L.L.Bean
+"9825347",Teavana
 "9825347",Teavana
 "9825347",Gold's Gym
 "9825347",Greenland Nursery & Landscape
@@ -20336,6 +20332,7 @@
 "9828347",The Soldier's Monument
 "9828347",RELL Memorial Park South
 "9828347",RELL Memorial Park North Field
+"9828347",Cask 171
 "9828347",Bowler City
 "9828347",Da Range
 "9828347",C. Kloeber Farm
@@ -20390,6 +20387,7 @@
 "9829347",The Soldier's Monument
 "9829347",RELL Memorial Park South
 "9861349",Chinamans Crib
+"9861349",Health King
 "9861349",Micros
 "9861349",TD Bank
 "9861349",Gulf
@@ -20655,6 +20653,7 @@
 "9867349",Convenience Express
 "9867349",Lincoln Tunnel
 "9867349",NJT - Lincoln Harbor Light Rail Station
+"9867349",Circo
 "9867349",Stage Star Deli
 "9867349",Pazza Notte
 "9867349",Benash Delicatessen
@@ -20667,7 +20666,6 @@
 "9867349",Convenience Express
 "9867349",Dunkin' Donuts
 "9867349",Ocean Grill
-"9868349",Bread Tribeca
 "9867349",Patron's Lounge at The Metropolitan Museum of Art
 "9867349",The Metropolitan Museum of Art (Metropolitan Museum of Art)
 "9867349",Central Park - Miner's Gate - E 79th St
@@ -20727,6 +20725,7 @@
 "9868349",Blue Ribbon Sushi
 "9868349",Milady's Bar & Restaurant
 "9868349",Il Corallo Trattoria
+"9868349",Bread Tribeca
 "9868349",Crowne Plaza
 "9868349",Chase Bank
 "9868349",Starbucks
@@ -20755,6 +20754,7 @@
 "9869349",The Dead Poet
 "9869349",Good Enough to Eat
 "9869349",NJT - Lincoln Harbor Light Rail Station
+"9869349",Houlihan's
 "9869349",Lincoln Tunnel
 "9869349",Weehawken Waterfront Park and Recreation Center
 "9869349",Yankee Clipper
@@ -20993,6 +20993,7 @@
 "9877349",Olio e Piú
 "9877349",Astor Wines & Spirits
 "9877349",NYU Undergraduate Admissions
+"9877349",Le Basket
 "9877349",La Colombe Torrefaction
 "9877349",Blick Art Materials
 "9877349",Yoga Vida
@@ -21293,7 +21294,6 @@
 "9890349",Fairview Cemetery
 "9890349",Taco Bell
 "9890349",GameStop
-"24356877",Something Else
 "9891349","MTA MaBSTOA Bus at East 167th St & Morris Ave: (Bx32, Bx35)"
 "9891349",Slam Dunk
 "9891349",The Mothaship
@@ -21492,7 +21492,6 @@
 "9895349",Spice Market
 "9895349",TOY New York
 "9895349",Equinox Printing House
-"9896349",The Beatrice Inn
 "9895349",Deluxe NY
 "9895349",Hilton Garden Inn New York/West 35th Street
 "9895349",Avra Estiatorio
@@ -21551,6 +21550,7 @@
 "9896349",Centrico
 "9896349",Vapiano
 "9896349",Spice
+"9896349",The Beatrice Inn
 "9896349","5 Ninth"
 "9896349",Theory
 "9896349",Catch
@@ -21664,7 +21664,6 @@
 "10022354",MTA Subway - Classon Ave (G)
 "10022354",MTA Subway - Fulton St (G)
 "10022354",MTA Subway - Bergen St (F/G)
-"10068355",Dunkin' Donuts
 "10022354",MTA Subway - Hoyt/Schermerhorn Sts (A/C/G)
 "10022354",MTA Subway - Carroll St (F/G)
 "10022354",MTA Subway - Smith/9th St (F/G)
@@ -22034,7 +22033,6 @@
 "10024354",Manhattan Bridge
 "10024354",MTA Subway - Manhattan Bridge (B/D/N/Q)
 "10024354",MTA Subway - Canal St (6/J/N/Q/R/W/Z)
-"10027354",McDonald's
 "10024354",MTA Subway - Metropolitan Ave (G)
 "10024354",MTA Subway - 21st St/Van Alst (G)
 "10024354",MTA Subway - Court Square (E/G/M/7)
@@ -22344,6 +22342,7 @@
 "10027354",MTA Subway - Bay Parkway (D)
 "10027354",MTA Subway - Coney Island/Stillwell Ave (D/F/N/Q)
 "10027354",Coney Island Beach & Boardwalk
+"10027354",McDonald's
 "10027354",Agape Love International
 "10027354",MTA Subway - Hewes St (J/M/Z)
 "10027354",MTA Subway - Marcy Ave (J/M/Z)
@@ -22512,7 +22511,6 @@
 "10029354",MTA Subway - Neptune Ave (F)
 "10029354",MTA Subway - Bay Pkwy (F)
 "10029354",MTA Subway - Fort Hamilton Pkwy (F/G)
-"10030354",Queens Center Mall
 "10029354",MTA Subway - 4th Ave/9th St (F/G/R)
 "10029354",MTA Bus Q39 Court Square
 "10029354",MTA Subway - Court Square (E/G/M/7)
@@ -22568,6 +22566,7 @@
 "10029354",MTA Subway - 42nd St/Times Square/Port Authority Bus Terminal (A/C/E/N/Q/R/S/W/1/2/3/7)
 "10029354",Hudson News
 "10030354",MTA Subway - Woodhaven Blvd/Slattery Plaza (M/R)
+"10030354",Queens Center Mall
 "10030354",MTA Subway - 74th St/Roosevelt Ave/Jackson Hts (E/F/M/R/7)
 "10030354",MTA Subway - 69th St/Fisk Ave (7)
 "10030354",MTA Subway - 61st St/Woodside (7)
@@ -22757,7 +22756,6 @@
 "10031354",MTA Subway - Broadway (G)
 "10031354",MTA Subway - 88th St/Boyd Ave (A)
 "10031354",Resorts World Casino - New York City
-"10049354",McDonald's
 "10031354",MTA Subway - Howard Beach/JFK Airport (A)
 "10031354",John F. Kennedy International Airport (JFK) (John F. Kennedy International Airport)
 "10031354",MTA Subway - Beach 67th St/Arverne By The Sea (A)
@@ -22879,7 +22877,6 @@
 "10034354",MTA Subway - 4th Ave/9th St (F/G/R)
 "10034354",MTA Subway - Smith/9th St (F/G)
 "10034354",MTA Subway - 36th St (D/N/R)
-"24356877",Stop 1 Super Market
 "10034354",MTA Subway - Coney Island/Stillwell Ave (D/F/N/Q)
 "10034354",McDonald's
 "10034354",Coney Island Beach & Boardwalk
@@ -23015,7 +23012,6 @@
 "10036354",Luna Park
 "10036354",MTA Subway - Atlantic Ave/Barclays Center (B/D/N/Q/R/2/3/4/5)
 "10036354",MTA Subway - 14th St/Union Square (4/5/6/L/N/Q/R/W)
-"10051354",McDonald's
 "10036354",MTA Subway - 42nd St/Grand Central (4/5/6/7/S)
 "10036354",Apple Grand Central
 "10036354",McDonald's
@@ -23259,6 +23255,7 @@
 "10044354",Agape Love International
 "10044354",MTA Subway - 14th St (F/L/M)
 "10045354",Agape Love International
+"10045354",McDonald's
 "10045354",Dunkin Donuts
 "10045354",T-Mobile
 "10045354",Shopper's World
@@ -23338,6 +23335,7 @@
 "10049354",MTA Subway - 42nd St/Times Square/Port Authority Bus Terminal (A/C/E/N/Q/R/S/W/1/2/3/7)
 "10049354",Times Square
 "10049354",Rockefeller Center
+"10049354",McDonald's
 "10049354",Times Square
 "10049354",McDonald's
 "10049354",McDonald's
@@ -23391,6 +23389,7 @@
 "10051354",McDonald's
 "10051354",Agape Love International
 "10051354",Agape Love International
+"10051354",McDonald's
 "10051354",MTA Subway - 42nd St/Times Square/Port Authority Bus Terminal (A/C/E/N/Q/R/S/W/1/2/3/7)
 "10051354",McDonald's
 "10051354",Bryant Park
@@ -23673,6 +23672,7 @@
 "10068355",Chimi Truck @E174 St. & Jerome Ave
 "10068355",Citibank
 "10068355",Rmp 170
+"10068355",Dunkin' Donuts
 "10068355",La Casa
 "10068355",City Alarms & Communications
 "10068355","3a"
@@ -23745,12 +23745,12 @@
 "10072355",LaGuardia Airport (LGA) (LaGuardia Airport)
 "10072355",McDonald's
 "10072355",Dunkin Donuts
-"24431881",Hubs L'Shish Deli
 "10072355",Getting soapy in The shower (=
 "10072355","3a"
 "10072355","1661 West Farm Rd. Bx3a"
 "10072355",Dunkin' Donuts
 "10072355",Best Buy
+"10072355",Wendy's
 "10072355",Dunkin' Donuts
 "10072355",Pickles & Pies Food Market & Deli
 "10073355","3a"
@@ -23926,6 +23926,7 @@
 "10186359",New Rochelle YMCA
 "10186359",Avalon Dogpatch
 "10186359",The Home Depot
+"10186359",BP
 "10186359",W 131st Street between 5th & Lenox
 "10188359",Starbucks
 "10188359",R&M SOCIAL MEDIA
@@ -24022,7 +24023,6 @@
 "10208359",Family Dollar
 "10209359",P.S. 76
 "10209359",New York State DMV
-"24431881",The Grinnell
 "10209359","1900 lexington ave"
 "10209359",Harlem Meer
 "10209359","121 Lenox Gourmet Deli"
@@ -24073,7 +24073,6 @@
 "10213359",R&M SOCIAL MEDIA
 "10213359",Dunkin' Donuts
 "10213359",MTA Subway - 161st St/Yankee Stadium (4/B/D)
-"10217359",McDonald's
 "10213359",Golden Krust Caribbean Bakery and Grill
 "10213359",HarlemExpressInc
 "10213359","MTA MaBSTOA Bus at Burnside Ave & Jerome Ave: (Bx32, Bx40, Bx42)"
@@ -24129,11 +24128,12 @@
 "10217359",MTA Subway - 161st St/Yankee Stadium (4/B/D)
 "10217359",MTA Subway - 14th St/Union Square (4/5/6/L/N/Q/R/W)
 "10217359",Webster Hall
+"10217359",Hot Kitchen
 "10217359",The Mud Truck
+"10217359",McDonald's
 "10217359",MTA Subway - 176th St (4)
 "10217359",Kingsbridge & Jerome Ave
 "10217359",MTA Subway - Mount Eden Ave (4)
-"24431881",The Grinnell
 "10217359",HarlemExpressInc
 "10217359",Dunkin Donuts
 "10370365",Shake Shack
@@ -24443,6 +24443,7 @@
 "10561371",Smoke Corner
 "10561371",Momma Dukes House
 "10561371",Super Comfy Chair
+"10561371",TD Bank
 "10561371",Momma Dukes House
 "10561371",Strawberry Farms
 "10561371",Sergimmo Salumeria at Strawberry Farms
@@ -24493,6 +24494,7 @@
 "10562371",The Porcelli Casa :)
 "10562371",Our Living Room
 "10562371",Sitting On My Comfy Couch
+"10562371",TD Bank
 "10562371",Safari Beach Club
 "10563371",Clearview Gardens
 "10563371",In My Comfy Bed<3
@@ -24591,7 +24593,6 @@
 "10564371",AMC Fresh Meadows 7
 "10564371",Smoke Corner
 "10564371",Momma Dukes House
-"12527443",Hero Champ
 "10564371",Super Comfy Chair
 "10564371",Clearview Gardens
 "10564371",The Porcelli Casa :)
@@ -25024,7 +25025,6 @@
 "10579372",Crif Dogs
 "10579372",Barbarian Group - NYC
 "10579372",Munchie Mobile
-"10592372",Dixon Mills
 "10579372",The Barbarian Group: Roof Deck
 "10579372",Park Avenue Armory
 "10579372",El Cantinero
@@ -25056,7 +25056,6 @@
 "10581372",Blink Fitness Noho
 "10581372",Barbarian Group - NYC
 "10581372",Barbarian Group - NYC
-"24449881",The Grinnell
 "10581372",The Barbarian Group: Roof Deck
 "10581372",The Organic Grill
 "10581372",Baoguette Cafe
@@ -25173,7 +25172,6 @@
 "10588372",Whole Foods Market
 "10588372",Barbarian Group - NYC
 "10588372",Taïm Mobile Falafel & Smoothie Truck
-"24527885",Mi Casa
 "10588372",MSLGROUP in New York
 "10588372",Blink Fitness Noho
 "10588372",Whole Foods Market
@@ -25207,6 +25205,7 @@
 "10591372",American Apparel Warehouse
 "10592372",Barbarian Group - NYC
 "10592372",Alleva
+"10592372",Dixon Mills
 "10592372",The Club at Dixon Mills
 "10592372",Pão!
 "10592372",La Colombe Torrefaction
@@ -25224,7 +25223,6 @@
 "10592372",Murray's Bagels
 "10592372",The Container Store
 "10592372",Trader Joe's
-"10602372",Mama's Empanadas
 "10592372","111 Lex Wine & Liquors"
 "10592372",Deals
 "10592372",The Brickyard
@@ -25283,6 +25281,7 @@
 "10601372",Hudson Clearwater
 "10601372",Kettle of Fish
 "10601372",AMC Loews Newport Centre 11
+"10602372",Mama's Empanadas
 "10602372",The Queens Kickshaw
 "10602372",The Weasley House
 "10602372",Calypso
@@ -25400,7 +25399,6 @@
 "10609372",Red Mango
 "10609372",Warehouse Wines & Spirits
 "10609372",BambooTori
-"10890384",Anita's Delicatessen
 "10609372",Barbarian Group - NYC
 "10609372",May Wah Pork Chop Fast Food
 "10609372",Barbarian Group - NYC
@@ -25460,7 +25458,6 @@
 "10613372",Shake Shack
 "10613372",Rai Rai Ken
 "10613372",Duane Reade
-"10892384",Turkish Kitchen
 "10613372",Blink Fitness Noho
 "10613372",Wells Fargo
 "10613372",Rye House
@@ -25578,6 +25575,7 @@
 "10890384",Les Halles
 "10890384",Red Ball Garage
 "10890384",Chase Bank
+"10890384",Anita's Delicatessen
 "10890384","2 MetroTech Center"
 "10890384",Au Bon Pain
 "10890384",NYCDOE/DIIT Renaissance Conference Room
@@ -25806,6 +25804,7 @@
 "10892384",The Mad Hatter Pub & Eatery
 "10892384",Turkish Kitchen
 "10892384",East Japanese Restaurant (Japas 27)
+"10892384",Turkish Kitchen
 "10892384",Umi Sushi
 "10892384",Penelope
 "10892384",Grind
@@ -25842,6 +25841,7 @@
 "10893384",Anita's Delicatessen
 "10893384",The Pierpont
 "10893384","200 Chambers Street"
+"10893384",Bouley
 "10893384",Jungsik
 "10893384",TD Bank
 "10893384",Brian's Home
@@ -25985,7 +25985,6 @@
 "10896384",PS 450
 "10896384",Synergy Fitness Clubs
 "10896384",Bread & Butter
-"10897384",The Pierpont
 "10896384",Red Ball Garage
 "10896384",Anita's Delicatessen
 "10896384",Chase Bank
@@ -26049,6 +26048,7 @@
 "10897384",Park Avenue Audio
 "10897384",Chase Bank
 "10897384",Pierpont Condo workout room
+"10897384",The Pierpont
 "10897384","555 Club"
 "10897384",Eata Pita
 "10897384",Brian's Home
@@ -26298,6 +26298,7 @@
 "10904384",Les Halles
 "10904384",Chase Bank
 "10905384",TD Bank
+"10905384",Subway
 "10905384",Red Ball Garage
 "10905384",The Pierpont
 "10905384",The Pierpont
@@ -26596,6 +26597,7 @@
 "10929386",Broad Street Cafe
 "10929386",Belleville Elementary School 5
 "10929386",Star Career Academy
+"10929386",Crown
 "10929386",Belleville Elementary School 5
 "10929386",QuickChek
 "10929386",Star Career Academy
@@ -26745,7 +26747,6 @@
 "10948386",Taco Bell
 "10948386",The Steakhouse
 "10948386",Star Career Academy
-"10952386",Walgreens
 "10948386",Belleville Elementary School 5
 "10948386",Raceway Gas Station
 "10948386",Belleville Elementary School 5
@@ -26804,6 +26805,7 @@
 "10952386",Ritacco Brothers
 "10952386",Raceway Gas Station
 "10952386",Belleville Elementary School 5
+"10952386",Walgreens
 "10952386",QuickChek
 "10952386",Home
 "10952386",Dunkin' Donuts
@@ -26914,7 +26916,6 @@
 "11034390",Harry Fox Agency
 "11034390",Harry Fox Agency
 "11034390",City College (CWE)
-"24540885",Starbucks
 "11034390",City College (CWE)
 "11034390",Ryan Maguire's Ale House
 "11034390","480 St Marks Avenue"
@@ -26973,7 +26974,6 @@
 "11037390",Cordato's
 "11037390",Harry Fox Agency
 "11037390","480 St Marks Avenue"
-"11250398",Dunkin' Donuts
 "11037390",Elegant Dominican Barbershop
 "11037390",Neptune Diner II
 "11039390","480 St Marks Avenue"
@@ -27007,7 +27007,6 @@
 "11044390",Regal Cinemas Union Square 14
 "11044390",Ryan Maguire's Ale House
 "11044390",Brooklyn Museum
-"11204396",Starbucks
 "11044390",Keith Haring Exhibit Brooklyn Museum
 "11044390",national fried chicken day
 "11045390",Trump Building
@@ -27025,7 +27024,6 @@
 "11045390",The Crown Inn
 "11045390",Elegant Dominican Barbershop
 "11045390","480 St Marks Avenue"
-"13326472",Dallas BBQ
 "11047390",Trader Joe's
 "11047390",Trump Building
 "11047390","480 St Marks Avenue"
@@ -27178,6 +27176,7 @@
 "11204396",J. Hood Wright Dog Park
 "11204396",Jay Hood Wright Park
 "11204396",MTA Subway - 168th St (A/C/1)
+"11204396",Starbucks
 "11204396",Interchurch Center
 "11204396",Starbucks
 "11204396",MTA Subway - 116th St/Columbia University (1)
@@ -27461,7 +27460,6 @@
 "11250398",Yankee Stadium
 "11250398",St. Luke's Roman Catholic Church
 "11250398",McDonald's
-"24540885",Duane Reade
 "11250398",Deno's 5
 "11250398",The Home Depot
 "11250398",Rockaway Beach  - 120th Street
@@ -27469,6 +27467,7 @@
 "11250398",Old Coast Guard Building
 "11250398",Venezia Pizzeria & Restaurant
 "11250398",United Artists Sheepshead Bay 14 IMAX & RPX
+"11250398",Dunkin' Donuts
 "11250398",North Shore Diner
 "11250398","7-Eleven"
 "11250398",Zion Episcopal Church
@@ -27558,6 +27557,7 @@
 "11258398",Queens College
 "11258398",Carvel Ice Cream
 "11258398",AutoZone
+"11258398",Okinawa
 "11258398",North Shore Diner
 "11258398",Rockaway Beach  - 120th Street
 "11258398",Wendy's
@@ -27872,7 +27872,6 @@
 "11983422",Shell
 "11983422","Montclair Child Development Center, Orange, NJ 07052"
 "11983422",Walgreens
-"11993422","2nd home"
 "11983422",Berkeley Terrace Elementary School
 "11983422",Wendy's
 "11983422",Holy Sepulchre Cemetery
@@ -27933,7 +27932,6 @@
 "11985422",Berkeley Terrace Elementary School
 "11985422",Holy Sepulchre Cemetery
 "11985422",Elmwood Park
-"11993422",The Hood
 "11986422",Berkeley Terrace Elementary School
 "11986422",The Hood
 "11986422",VA Medical Center - East Orange
@@ -27992,7 +27990,6 @@
 "11988422",Irvington Public Library
 "11988422",Prudential Center
 "11988422",The Hood
-"12233432","283 Ave C"
 "11988422",VA Medical Center - East Orange
 "11988422",Supremo Food Market
 "11988422",Maple Gardens
@@ -28000,6 +27997,7 @@
 "11988422",Elmwood Park
 "11989422",The Hood
 "11989422",Holy Sepulchre Cemetery
+"11989422",Wendy's
 "11989422",Holy Sepulchre Cemetery
 "11989422",Maple Gardens
 "11989422",home
@@ -28045,10 +28043,12 @@
 "11993422",Prudential Center
 "11993422",Pacific Apartments
 "11993422",Essex County College
+"11993422","2nd home"
 "11993422",Prudential Center
 "11993422",Essex County College
 "11993422",South 11th
 "11993422",Elmwood Park
+"11993422",The Hood
 "11993422",Prudential Center
 "11993422",home
 "11993422",home
@@ -28107,7 +28107,6 @@
 "12022425",Team Brootal HQ
 "12022425",Team Brootal HQ
 "12022425","7-Eleven"
-"12235432",YAI
 "12022425",The Joker's Child Comics
 "12023425",Team Brootal HQ
 "12023425",Team Brootal HQ
@@ -28373,7 +28372,6 @@
 "12039425",ShopRite
 "12039425",Team Brootal HQ
 "12219432",YU Schottenstein Residence Hall
-"24562885",SUBWAY
 "12219432",YU STERN COLLEGE FOR WOMEN
 "12219432",Yeshiva University - Beren Campus
 "12219432","Heustein Sy, MD"
@@ -28385,7 +28383,6 @@
 "12219432",Syms Art Cave
 "12219432",Schottenstein Residence Hall 8th Floor Lounge
 "12219432",YU Schottenstein Residence Hall
-"12233432",D&D Laundromat
 "12219432",YU Schottenstein Residence Hall
 "12219432",YU STERN COLLEGE FOR WOMEN
 "12219432","Heustein Sy, MD"
@@ -28545,6 +28542,7 @@
 "12231432",Yeshiva University - Wilf Campus
 "12233432",Wurzweiler Computer Lab
 "12233432",Audubon Avenue
+"12233432",D&D Laundromat
 "12233432",Laundry Place
 "12233432",Rachel's Pad
 "12233432",The Heights Lounge
@@ -28559,6 +28557,8 @@
 "12233432",Audubon Avenue
 "12233432",Rachel's Pad
 "12233432",Train Playground
+"12233432","283 Ave C"
+"12235432",YAI
 "12235432",The Corner For The YU Shuttle
 "12235432",Audubon Avenue
 "12235432",Audubon Avenue
@@ -28796,6 +28796,7 @@
 "12404438",Starbucks
 "12404438","275 Madison Ave"
 "12404438",Massey Knakal
+"12404438",Franchia
 "12404438",Massey Knakal
 "12404438","275 Madison Ave"
 "12404438",Olympic Pita - Manhattan
@@ -28938,7 +28939,6 @@
 "12423439",Dimitria's Casa
 "12423439",Target
 "12423439",T.J. Maxx
-"14295509",Shake Shack
 "12423439",The Home Depot
 "12423439",In Bed Watching TV
 "12423439",In bed sleeping zzzzzzzzzzzzzz
@@ -28995,7 +28995,6 @@
 "12424439",United States Postal Service
 "12424439",Tina's House
 "12424439",Dimitria's Casa
-"24562885",Starbucks
 "12424439",Poppenhuesen Triangle Park
 "12424439",VFW College Point
 "12424439",Dimitria's Casa
@@ -29414,7 +29413,6 @@
 "12450440",MTA Subway - Court Sq/23rd St (E/M)
 "12450440",Duane Reade
 "12450440",World Boxing Gym
-"12451440",World Boxing Gym
 "12450440",J. No Lounge at the Regal Beagle (J. No Lounge at Kensington Court)
 "12450440",Starbucks
 "12450440",MTA Subway - Court Sq/23rd St (E/M)
@@ -29469,6 +29467,7 @@
 "12451440",Citigroup Cafeteria
 "12451440",L.A. Gourmet
 "12451440",Duane Reade
+"12451440",World Boxing Gym
 "12451440",J. No Lounge at the Regal Beagle (J. No Lounge at Kensington Court)
 "12451440","23rd Street PATH Station"
 "12451440",MTA Subway - Court Sq/23rd St (E/M)
@@ -29628,7 +29627,6 @@
 "12455440",World Boxing Gym
 "12455440",Delenio
 "12455440",J. No Lounge at the Regal Beagle (J. No Lounge at Kensington Court)
-"12458440",Pint
 "12455440",J. No Lounge at the Regal Beagle (J. No Lounge at Kensington Court)
 "12455440","23rd Street PATH Station"
 "12455440",MTA Subway - Court Sq/23rd St (E/M)
@@ -29664,7 +29662,6 @@
 "12456440",L.A. Gourmet
 "12456440",Citicorp
 "12456440",Citigroup Cafeteria
-"24664889",Macy's
 "12456440",Duane Reade
 "12456440",Groove On Grove
 "12456440",World Boxing Gym
@@ -29736,6 +29733,7 @@
 "12458440",Citicorp
 "12458440",Groove On Grove
 "12458440",Creative Grove Artist Market
+"12458440",Pint
 "12458440",El Sason de las Americas
 "12458440",Manna Liquor
 "12458440",J. No Lounge at the Regal Beagle (J. No Lounge at Kensington Court)
@@ -29770,7 +29768,6 @@
 "12459440",Citicorp
 "12459440",Fitzgerald-Holota Memorial Plaza
 "12459440",White Star Bar
-"14665521",Market Cafe
 "12459440",J. No Lounge at the Regal Beagle (J. No Lounge at Kensington Court)
 "12459440",Village Wines & Liquors
 "12460440",J. No Lounge at the Regal Beagle (J. No Lounge at Kensington Court)
@@ -29876,7 +29873,6 @@
 "12525443",the basement
 "12525443",Hero Champ
 "12525443",The Oasis @ Englewood
-"23199834",Platinum Fitness
 "12525443",New Jersey Army National Guard Armory
 "12525443",Casa Del Gay: Englewood
 "12525443",Hero Champ
@@ -29933,7 +29929,6 @@
 "12526443",TGEC
 "12526443",the basement
 "12526443",Hero Champ
-"24664889",Charlotte Russe
 "12527443",New Jersey Army National Guard Armory
 "12527443",NJT - 167/177/186/753 Bus Stop
 "12527443",Hero Champ
@@ -29942,6 +29937,7 @@
 "12527443",the basement
 "12527443",Casa Del Gay: Englewood
 "12527443",the basement
+"12527443",Hero Champ
 "12527443",NJT - 167/177/186/753 Bus Stop
 "12527443",NJT - Bus Stop
 "12527443",Hero Champ
@@ -30017,7 +30013,6 @@
 "12529443",New Jersey Army National Guard Armory
 "12529443",Hero Champ
 "12529443",Health Plus
-"12532443",The Cheesecake Factory
 "12529443","241 37th St"
 "12529443",The Dumbo Loft
 "12529443",Port Authority Bus Terminal
@@ -30101,7 +30096,6 @@
 "12531443",Hero Champ
 "12531443",Lincoln Tunnel
 "12531443",Wendy's
-"14800527",D & F Deli
 "12531443",Casa Del Gay: Englewood
 "12531443",Casa Del Gay: Englewood
 "12531443",New Jersey Army National Guard Armory
@@ -30123,7 +30117,6 @@
 "12531443",the basement
 "12532443",Casa Del Gay: Englewood
 "12532443",New Jersey Army National Guard Armory
-"12543443",Cuban Eddies
 "12532443",Teterboro Chrysler Plymouth Jeep Eagle
 "12532443",Centerfolds Go-Go
 "12532443",Hero Champ
@@ -30134,6 +30127,7 @@
 "12532443",Hero Champ
 "12532443",Health Plus
 "12532443","241 37th St"
+"12532443",The Cheesecake Factory
 "12532443",Casa Del Gay: Englewood
 "12532443",Hero Champ
 "12532443",Port Authority Bus Terminal
@@ -30157,7 +30151,6 @@
 "12533443",Port Authority Bus Terminal
 "12533443",New Bridge Landing Historic Pk
 "12533443",Hyundai of Paramus
-"24664889",JCPenney
 "12533443",Working from home
 "12533443",New Jersey Army National Guard Armory
 "12533443",Dr. Delvalle
@@ -30405,6 +30398,7 @@
 "12543443",Hero Champ
 "12543443",Health Plus
 "12543443","241 37th St"
+"12543443",Cuban Eddies
 "12543443",Casa Del Gay: Englewood
 "12543443",Dr. Delvalle
 "12543443",Anna In The Tropics
@@ -30870,7 +30864,6 @@
 "12576445",MTA Subway - 145th St (1)
 "12576445","MTA MaBSTOA Bus at E. 149th Street & Morris Ave: (Bx2, Bx19, Bx32)"
 "12576445",UPS Customer Center
-"12580445","1776 Deli Grocery"
 "12576445",Miguelina's House
 "12576445","2025 Seward Ave"
 "12576445",MTA Subway - Jay St/MetroTech (A/C/F/R)
@@ -30986,6 +30979,7 @@
 "12580445","1776 Deli Grocery"
 "12580445",Mr Sandwich
 "12580445",Mt. Sinai Emergency Room
+"12580445","1776 Deli Grocery"
 "12580445",Mr Sandwich
 "12580445",Clean Action Laundromat
 "12580445",David & Moe Deli Grocery
@@ -31015,7 +31009,6 @@
 "12581445",Mr Sandwich
 "12581445","1776 Deli Grocery"
 "12581445","1776 Deli Grocery"
-"24664889",Garage
 "12581445",MTA Subway - 145th St (1)
 "12584445",NeverLand
 "12584445",Netflix
@@ -31273,6 +31266,7 @@
 "12594445",Chase Bank
 "12594445",US Post Office - Hamilton Grange Station
 "12594445",David & Moe Deli Grocery
+"12594445",Timo's
 "12594445",NeverLand
 "12594445",Netflix
 "12594445",N&W Deli
@@ -31446,7 +31440,6 @@
 "12657448",NJT Bus 156
 "12657448",NJT - Bus Stop
 "12657448",Cart Lady 48&bline (zuly)
-"12660448",Chase Bank
 "12657448",CVS/Pharmacy
 "12657448","48th Street"
 "12657448","LaGuardia Community College, E Building"
@@ -31563,6 +31556,7 @@
 "12660448","48th Street"
 "12660448",Port Authority Bus Terminal
 "12660448","The Ritz-Carlton New York, Central Park"
+"12660448",Chase Bank
 "12660448",US Post Office
 "12660448",CVS/Pharmacy
 "12660448",Popeyes Louisiana Kitchen
@@ -31853,6 +31847,7 @@
 "12947458",MTA Subway - 5th Ave/59th St (N/R/W)
 "12947458",Eastside Dental Medicine
 "12947458",Momofuku Milk Bar
+"12947458",Cafe Metro
 "12947458",MTA Subway - Broadway Junction (A/C/J/L/Z)
 "12947458",MTA Subway - Canarsie/Rockaway Pkwy (L)
 "12947458",Glenwood Gourment Deli & Grocery
@@ -31916,7 +31911,6 @@
 "12948458",Tingué Bungalow
 "12948458",Walgreens
 "12948458",Tingué Bungalow
-"24811895",Home
 "12948458",Fresh Creek Park
 "12948458",Bedford-Stuyvesant YMCA
 "12948458",Metropolitan City Market
@@ -31970,7 +31964,6 @@
 "12949458",MTA Subway - Broadway Junction (A/C/J/L/Z)
 "12949458",Morton Williams
 "12949458",Dr. Lantner's Office
-"23199834",The Sweaty Sauna
 "12949458",MTA Subway - Broadway Junction (A/C/J/L/Z)
 "12949458",MTA Subway - Canarsie/Rockaway Pkwy (L)
 "12949458",Taste Buds
@@ -32115,7 +32108,6 @@
 "12951458",Lili's 57
 "12951458",Dr. Lantner's Office
 "12951458",MTA Subway - Broadway Junction (A/C/J/L/Z)
-"12953458",Arnona Liquors
 "12951458",MTA Subway - Canarsie/Rockaway Pkwy (L)
 "12951458",Walgreens
 "12951458",Chai Thai Kitchen
@@ -32191,7 +32183,6 @@
 "12952458",Tingué Bungalow
 "12952458",Glenwood Gourment Deli & Grocery
 "12952458",MTA Subway - E 105th St (L)
-"24811895",Dunkin' Donuts
 "12952458",MTA Subway - Broadway Junction (A/C/J/L/Z)
 "12952458",MTA Subway - 57th St/7th Ave (N/Q/R/W)
 "12952458",Morton Williams
@@ -32225,6 +32216,7 @@
 "12953458",Kit Lo's Dome!
 "12953458",Tingué Bungalow
 "12953458",CVS/Pharmacy
+"12953458",Arnona Liquors
 "12953458",Boyd Chateau
 "12954458",Walgreens
 "12954458",Fresh Creek Park
@@ -32491,6 +32483,7 @@
 "12962458",Tingué Bungalow
 "12962458",Fresh Creek Park
 "12962458",Chase Bank
+"12962458",Golden Krust
 "12962458",Taste Buds
 "12962458",Fresh Creek Park
 "12962458",Tingué Bungalow
@@ -32827,6 +32820,7 @@
 "13326472","50 West 96 Street"
 "13326472",Central Park West - W 88th St
 "13326472","295 Central Park West"
+"13326472",Dallas BBQ
 "13326472",Q111 Bus
 "13326472",PS. 195Q
 "13326472",Jamaica Center - Parsons/Archer Bus Terminal
@@ -32932,7 +32926,6 @@
 "13338472","145 E 15th St"
 "13338472",New Taco Express
 "13338472","332 East 29 th street"
-"24814895",Dunkin' Donuts
 "13338472",Jamaica Center - Parsons/Archer Bus Terminal
 "13338472",Q111 Bus
 "13338472","332 East 29 th street"
@@ -33077,7 +33070,6 @@
 "13349472","24 Central Park South"
 "13349472",Q111 Bus
 "13349472","24 Central Park South"
-"13386474",Meatball Obsession
 "13349472",Times Square
 "13349472","575 8th Ave"
 "13349472",Midtown Comics
@@ -33246,7 +33238,6 @@
 "13384474",MTA Subway - 79th St (D)
 "13384474",Meatball Obsession
 "13384474",Grab & Go
-"13386474",Bally Total Fitness
 "13384474",MTA Subway - W. 4th Street/Washington Square (A/B/C/D/E/F/M)
 "13384474",MTA Subway - Manhattan Bridge (B/D/N/Q)
 "13384474",My Hood
@@ -33301,9 +33292,10 @@
 "13386474",My Hood
 "13386474",In Bed... Asleep
 "13386474",MTA Subway - Bay Parkway (D)
-"13413475",Earth Matters
 "13386474",MTA Subway - Manhattan Bridge (B/D/N/Q)
 "13386474",Sports Authority
+"13386474",Bally Total Fitness
+"13386474",Meatball Obsession
 "13386474",Barnes & Noble
 "13386474",MTA Subway - W. 4th Street/Washington Square (A/B/C/D/E/F/M)
 "13386474",My Hood
@@ -33355,7 +33347,6 @@
 "13388474",MTA Subway - Manhattan Bridge (B/D/N/Q)
 "13388474",Bally Total Fitness
 "13388474",MTA Subway - W. 4th Street/Washington Square (A/B/C/D/E/F/M)
-"13627484",Highland Park
 "13388474",MTA Subway - Manhattan Bridge (B/D/N/Q)
 "13388474",My Hood
 "13388474",MTA Subway - Bay Parkway (D)
@@ -33471,6 +33462,7 @@
 "13413475",Canvas
 "13413475",Bikram Yoga Lower East Side
 "13413475",Tiengarden Vegan Kitchen
+"13413475",Earth Matters
 "13413475",Canvas
 "13413475",Free People
 "13413475",Blockheads Burritos
@@ -33551,6 +33543,7 @@
 "13419475",Canvas
 "13419475",Blue Valley Deli & Grocery
 "13419475",Canvas
+"13419475",Boyd Thai
 "13419475",Vol de Nuit
 "13419475",Blue Valley Deli & Grocery
 "13419475",Canvas
@@ -33598,10 +33591,10 @@
 "13623484",Food Bazaar Supermarket
 "13624484",MTA Subway - Bedford/Nostrand Aves (G)
 "13624484",MTA Subway - 47th-50th St/Rockefeller Center (B/D/F/M)
+"13624484",Au Bon Pain
 "13624484",MTA Subway - 47th-50th St/Rockefeller Center (B/D/F/M)
 "13624484",Espinal Deli Grocery
 "13624484",Home
-"24814895",M & M Deli
 "13624484",MTA Subway - 47th-50th St/Rockefeller Center (B/D/F/M)
 "13624484",MTA Subway - Bedford/Nostrand Aves (G)
 "13624484",Espinal Deli Grocery
@@ -33653,7 +33646,6 @@
 "13626484",MTA Subway - 14th St (F/L/M)
 "13626484",MTA Subway - Bedford/Nostrand Aves (G)
 "13626484",MTA Subway - Bedford/Nostrand Aves (G)
-"25008901",Gate 1
 "13626484",MTA Subway - 47th-50th St/Rockefeller Center (B/D/F/M)
 "13626484",MTA Subway - Bedford/Nostrand Aves (G)
 "13626484",MTA Subway - 47th-50th St/Rockefeller Center (B/D/F/M)
@@ -33694,6 +33686,7 @@
 "13627484",MTA Subway - Bedford/Nostrand Aves (G)
 "13627484",Hill Country Chicken
 "13627484",Chase Bank
+"13627484",Highland Park
 "13627484",MTA Subway - 33rd St (6)
 "13627484",MTA Subway - Bedford/Nostrand Aves (G)
 "13627484",Home
@@ -33861,8 +33854,6 @@
 "13632484",MTA Subway - Bedford/Nostrand Aves (G)
 "13632484",MTA Subway - 47th-50th St/Rockefeller Center (B/D/F/M)
 "13632484",Barclays
-"13642484",Duane Reade
-"25025902",Archetypus Cafe
 "13632484",MTA Subway - Bedford/Nostrand Aves (G)
 "13632484",Tiger Cafe
 "13632484",Union Square Park
@@ -33905,7 +33896,6 @@
 "13633484",MTA Subway - Bedford/Nostrand Aves (G)
 "13633484",MTA Subway - Nostrand Ave (A/C)
 "13633484",MTA Subway - Grant Ave (A)
-"13647484",Barclays
 "13633484",Grace Funeral Home
 "13633484",MTA Subway - Grant Ave (A)
 "13633484",MTA Subway - Bedford/Nostrand Aves (G)
@@ -34074,7 +34064,6 @@
 "13640484",Nap Time
 "13640484",Rainapocalypse Brooklyn
 "13641484",MTA Subway - Bedford/Nostrand Aves (G)
-"23199834",Platinum Fitness
 "13641484",MTA Subway - 47th-50th St/Rockefeller Center (B/D/F/M)
 "13641484",Barclays
 "13641484",MTA Subway - Van Siclen Ave (3)
@@ -34082,7 +34071,6 @@
 "13641484",Chase Bank
 "13641484",Barclays
 "13641484",Barclays
-"13642484",Café Duke
 "13641484",MTA Subway - 47th-50th St/Rockefeller Center (B/D/F/M)
 "13641484",Home
 "13641484",G Line Grocery
@@ -34139,6 +34127,8 @@
 "13642484",MTA Subway - 14th St (F/L/M)
 "13642484",Tiger Cafe
 "13642484",MTA Subway - 14th St (F/L/M)
+"13642484",Duane Reade
+"13642484",Café Duke
 "13642484",MTA Subway - 49th St (N/Q/R/W)
 "13642484",MTA Subway - Van Siclen Ave (3)
 "13642484",Home
@@ -34177,6 +34167,7 @@
 "13647484",MTA Subway - Bedford/Nostrand Aves (G)
 "13647484",MTA Subway - 47th-50th St/Rockefeller Center (B/D/F/M)
 "13647484",Chase Bank
+"13647484",Barclays
 "13647484",MTA Subway - Bedford/Nostrand Aves (G)
 "13647484",Espinal Deli Grocery
 "13647484",Home
@@ -34194,7 +34185,6 @@
 "13649484",MTA Subway - 47th-50th St/Rockefeller Center (B/D/F/M)
 "13649484",MTA Subway - Bedford/Nostrand Aves (G)
 "13649484",MTA Subway - 34th St/Herald Sq (B/D/F/M/N/Q/R/W)
-"13731488",Optimo Cigar
 "13649484",MTA Subway - Bedford/Nostrand Aves (G)
 "13649484",Home
 "13649484",MTA Subway - 47th-50th St/Rockefeller Center (B/D/F/M)
@@ -34306,6 +34296,7 @@
 "13731488",Rite Aid
 "13731488",C-Town Supermarkets
 "13731488",pin pan
+"13731488",Optimo Cigar
 "13731488",Furry Fiends
 "13731488",Inwood Food Center
 "13731488",Around The Clock Grocery & Deli
@@ -34796,7 +34787,6 @@
 "13913495",Home
 "13913495",Starbucks
 "13913495",Six Corners Cafe
-"25025902",Club Cama
 "13913495",Columbia Park Liquors
 "13913495",Home
 "13914495",Bergen Cleaners
@@ -34848,7 +34838,6 @@
 "13915495",Babe's House
 "13915495",Six Corners Cafe
 "13915495",Lincoln Tunnel
-"13921495",Brian's Deli
 "13915495",Port Authority Bus Terminal
 "13915495",Social Security Office
 "13915495",Big Nick's Burger & Pizza Joint Too
@@ -34963,7 +34952,6 @@
 "13918495",Perfects Deli
 "13918495",Walmart Supercenter
 "13918495",Port Authority Bus Terminal
-"23199834",The Sweaty Sauna
 "13918495",MTA Subway - 42nd St/Times Square/Port Authority Bus Terminal (A/C/E/N/Q/R/S/W/1/2/3/7)
 "13918495",Babe's House
 "13918495",Lincoln Tunnel
@@ -35070,6 +35058,7 @@
 "13921495",Lincoln Tunnel
 "13921495",Port Authority Bus Terminal
 "13921495",MTA Subway - 42nd St/Times Square/Port Authority Bus Terminal (A/C/E/N/Q/R/S/W/1/2/3/7)
+"13921495",Brian's Deli
 "13921495",Fresco Tortillas Clinton
 "13921495",Columbus Circle
 "13921495",Central Park
@@ -35131,6 +35120,7 @@
 "14295509",Apple Fifth Avenue
 "14295509",The Pleasure Chest
 "14295509",Sugarland Nightclub
+"14295509",Shake Shack
 "14295509",Beacon Theatre
 "14295509",Union Square Park
 "14295509",Sylvia's Restaurant
@@ -35142,6 +35132,7 @@
 "14296509",The Labrynth
 "14296509",The Pleasure Chest
 "14296509",Stonewall Inn
+"14296509",Tacos Mexico
 "14296509",MTA Subway - Flushing Ave (J/M)
 "14296509",FedEx Office Print & Ship Center
 "14296509",The Pleasure Chest
@@ -35425,7 +35416,6 @@
 "14550518",The Addison
 "14550518",Café Sabarsky
 "14550518",Kinokuniya Bookstore
-"18094649",San Loco
 "14550518",Podunk
 "14550518",Cafe Mocha
 "14550518",The Addison
@@ -35548,6 +35538,7 @@
 "14574519",NewYork-Presbyterian Hospital/38th Street
 "14574519",Madison Square Park
 "14574519",CareerBuilder
+"14574519",Café Hestia
 "14574519",Madison Square Park
 "14574519",Artichoke Basille's Pizza & Bar
 "14574519",The Victoria @ Union Square
@@ -35598,7 +35589,6 @@
 "14577519",CareerBuilder
 "14577519",Trader Joe's
 "14577519",Union Square Park
-"14652521",Melt Shop
 "14577519",The Victoria @ Union Square
 "14577519",Garden of Eden Marketplace
 "14577519",CareerBuilder
@@ -35791,6 +35781,7 @@
 "14600519",Credit Suisse
 "14600519",Tavern29
 "14602519",Baked By Melissa
+"14602519",Cafe Metro
 "14602519",Holland Tunnel
 "14602519",The Victoria @ Union Square
 "14602519",The Perfect Pint
@@ -35941,6 +35932,7 @@
 "14652521",MTA Subway - 42nd St/Grand Central (4/5/6/7/S)
 "14652521",MTA Subway - Avenue U (Q)
 "14652521",Graybar
+"14652521",Melt Shop
 "14652521",MAC
 "14652521",MTA Subway - 42nd St/Grand Central (4/5/6/7/S)
 "14652521",MTA Subway - Avenue U (Q)
@@ -35996,7 +35988,6 @@
 "14654521",MTA Subway - 42nd St/Grand Central (4/5/6/7/S)
 "14654521",TD Bank
 "14654521",MTA Subway - Avenue U (Q)
-"14661521",GNC
 "14654521",MTA Subway - Manhattan Bridge (B/D/N/Q)
 "14654521",Crumbs Bake Shop
 "14654521",Graybar
@@ -36110,6 +36101,7 @@
 "14661521",MTA Subway - Manhattan Bridge (B/D/N/Q)
 "14661521",Graybar
 "14661521",Grand Central Market
+"14661521",GNC
 "14661521",MTA Subway - 42nd St/Grand Central (4/5/6/7/S)
 "14661521",MTA Subway - Avenue U (Q)
 "14661521",MTA Subway - Manhattan Bridge (B/D/N/Q)
@@ -36147,6 +36139,7 @@
 "14665521",MTA Subway - Manhattan Bridge (B/D/N/Q)
 "14665521",Crumbs Bake Shop
 "14665521",Graybar
+"14665521",Market Cafe
 "14665521",New York Sports Club
 "14669521",MTA Subway - Kings Highway (B/Q)
 "14669521",MTA Subway - Manhattan Bridge (B/D/N/Q)
@@ -36550,6 +36543,7 @@
 "14799527",Hudson News
 "14799527",MTA Subway - Lexington Ave/53rd St (E/M/6)
 "14799527",InFuse51
+"14800527",D & F Deli
 "14800527",Nadia's Apartment
 "14800527",Nadia's Apartment
 "14800527",Harlem Pride
@@ -36649,7 +36643,6 @@
 "14801527",MTA Subway - 23rd St (R/W)
 "14801527",Mangia
 "14801527",AppNexus
-"19164688",The Kunjip
 "14801527",AppNexus
 "14801527",Bank of America ATM
 "14801527",Energy Kitchen
@@ -36813,7 +36806,6 @@
 "14804527",Duane Reade
 "14804527",MTA Subway - 23rd St (R/W)
 "14804527",Rite Aid
-"19192688",E-Mo Kimbap
 "14804527",Frankies Dogs on the Go
 "14804527",Harlem Pride
 "14804527",D & F Deli
@@ -37212,7 +37204,6 @@
 "14832529","Winterfell ""Winter is Coming"""
 "14832529",Bronx Martial Arts Academy
 "14832529",Brooklyn Bridge
-"14898531",Paul's House Of Fish
 "14832529",New York City Police Department Headquarters
 "14832529",New York City Police Department Headquarters
 "14832529",Midtown Comics
@@ -37268,12 +37259,12 @@
 "14837529","Winterfell ""Winter is Coming"""
 "14837529",Brooklyn Bridge
 "14837529",Mrs Friggins Kitchen
-"14898531",Kings Food Markets
 "14837529",New York City Police Department Headquarters
 "14837529",New York City Police Department Headquarters
 "14837529","Winterfell ""Winter is Coming"""
 "14837529",Brooklyn Bridge
 "14837529",New York City Police Department Headquarters
+"14837529",Dante's
 "14837529",New York City Police Department Headquarters
 "14837529","Winterfell ""Winter is Coming"""
 "14837529",New York City Police Department Headquarters
@@ -37377,7 +37368,6 @@
 "14856529",Third & Long
 "14856529",New York City Police Department Headquarters
 "14856529",R&R Coffee
-"14898531",Mom's House
 "14856529",New York City Police Department Headquarters
 "14856529",R&R Coffee
 "14856529",Regal Cinemas New Roc 18 IMAX & RPX
@@ -37593,7 +37583,6 @@
 "14895531",Greg & Cheryl's Place
 "14895531",Paul's House Of Fish
 "14895531",US Post Office
-"19537699",CVS
 "14895531",Pepitone/Venturini Place
 "14895531",Paul's House Of Fish
 "14895531",Cresskill Bagel Café
@@ -37676,6 +37665,9 @@
 "14897531",Bergenfield Power
 "14897531",Loughney House
 "14897531",Loughney House
+"14898531",Paul's House Of Fish
+"14898531",Kings Food Markets
+"14898531",Mom's House
 "14898531",Mommy's House
 "14898531",My Comfy Cozy Bed
 "14898531",Amonica House
@@ -38471,7 +38463,6 @@
 "15995572",New French U2 Nail
 "15995572","16 Handles"
 "15995572",Amber
-"16212579",Mizumi
 "15998572",LaGuardia Airport (LGA) (LaGuardia Airport)
 "15998572",Equinox East 85th Street
 "15998572",The Churchill
@@ -38592,6 +38583,7 @@
 "16212579",Bellevue Hospital Center
 "16212579",Macy's
 "16212579",Bally Total Fitness
+"16212579",Mizumi
 "16212579",MTA Subway - Neck Rd (Q)
 "16212579",United Artists Sheepshead Bay 14 IMAX & RPX
 "16212579",Macy's
@@ -38642,6 +38634,7 @@
 "16215579",MTA Subway - Neck Rd (Q)
 "16215579",Macy's
 "16215579",Doughnut Plant
+"16215579",Nyonya
 "16215579",HK Tea & Sushi
 "16216579",MTA Subway - Neck Rd (Q)
 "16216579",Bellevue Hospital Center
@@ -38888,7 +38881,6 @@
 "16273582",Coney Island Avenue Bridge
 "16273582",Bally Total Fitness
 "16273582",The MotherShip
-"16344585",Shell
 "16273582",E-ZPass New York - Staten Island Service Center
 "16273582",Sunoco A Plus
 "16273582",Coney Island Avenue Bridge
@@ -38965,6 +38957,7 @@
 "16286582",Serpentine Commons
 "16286582",The MotherShip
 "16286582",Turkey Crossing
+"16286582",Starbucks
 "16286582",Silver Lake Park
 "16286582",The MotherShip
 "16286582",Staten Island Borough Hall
@@ -39064,6 +39057,7 @@
 "16344585",Doyle Park
 "16344585",D Block Car Wash\Gas Station
 "16344585",Oakland Cemetery
+"16344585",Shell
 "16344585",Dunwoodie Dairy and Deli
 "16344585",Empire City Casino
 "16344585",EDR @ Empire City
@@ -39123,7 +39117,6 @@
 "16350585",Doyle Park
 "16350585",Dunwoodie Dairy and Deli
 "16350585",Empire City Casino
-"16430589",Starbucks
 "16350585",D Block Car Wash\Gas Station
 "16350585",Empire City Casino
 "16350585",Mobil
@@ -39168,7 +39161,6 @@
 "16360585",Oakland Cemetery
 "16360585",Yonkers Raceway Paddock
 "16360585",Robert Jacobson Surgical Pharmacy
-"20138722",Lichee Nut
 "16360585",Public Storage
 "16360585",Robert Jacobson Surgical Pharmacy
 "16360585",Westchester Check Cashing
@@ -39240,6 +39232,7 @@
 "16368585",Oakland Cemetery
 "16368585","the bee-line system Bus Stop - Ashburton Av & Nepperhan Av (5, 25, 30, 78)"
 "16368585",D Block Car Wash\Gas Station
+"16430589",Starbucks
 "16430589",Bed
 "16430589",Veterans Memorial Park
 "16430589",Starbucks
@@ -39451,6 +39444,7 @@
 "16521593",Lincoln Tunnel
 "16521593",Mama Rosa Pizzeria
 "16522593","9th Ave Gourmet Deli"
+"16522593",Papaya Dog
 "16522593",Port Authority Bus Terminal
 "16522593",IKEA Paramus
 "16522593",IKEA Swedish Cafe
@@ -39461,7 +39455,6 @@
 "16522593",NJT - 190 Bus Stop
 "16522593",NJT - 190 Bus Stop
 "16522593",Posh Bar & Lounge
-"23199834",CUPS Frozen Yogurt
 "16522593",Posh Bar & Lounge
 "16522593","9th Ave Gourmet Deli"
 "16522593",Hampton Gourmet Deli
@@ -39723,7 +39716,6 @@
 "16535593",There's No Place Like Home
 "16535593",Town Pub
 "16535593",Lincoln Tunnel
-"16576595",Chase Bank
 "16535593",Port Authority Bus Terminal
 "16535593",Bamboo 52
 "16536593",There's No Place Like Home
@@ -39780,7 +39772,6 @@
 "16573595",Barnes & Noble
 "16573595",Tappen Park
 "16573595",MTA Bus - SI Ferry & Ramp D (S40/S42/S44/S52/S90/S94)
-"16576595",Deals
 "16573595",Staten Island Ferry - St. George Terminal
 "16573595",Barnes & Noble Cafe
 "16573595",MTA Bus - Post Av & Decker Av (S44/S57/S94)
@@ -39835,6 +39826,8 @@
 "16576595",Barnes & Noble Cafe
 "16576595",Staten Island Ferry - St. George Terminal
 "16576595",Tappen Park
+"16576595",Chase Bank
+"16576595",Deals
 "16576595",Bayview Laundromat
 "16576595",Mi Casa
 "16577595",Tappen Park
@@ -40470,7 +40463,6 @@
 "17186617",Fitness Factory Health Club
 "17186617",Chase Bank
 "17186617",Bennys Pizza
-"17283621",ACME Markets
 "17186617",John F. Kennedy International Airport (JFK) (John F. Kennedy International Airport)
 "17186617",Virgin America Terminal
 "17186617",Gate A2
@@ -40489,7 +40481,6 @@
 "17187617",Governors Beach Club
 "17187617",Governors Beach Club
 "17187617",Platters
-"25296913",Dunkin Donuts
 "17187617",George Washington Bridge
 "17187617",Da Basment #EmDub
 "17187617",La Casa De Lopez
@@ -40992,6 +40983,7 @@
 "17283621",Edgewater Commons
 "17283621",Marshalls
 "17283621",T.J. Maxx
+"17283621",ACME Markets
 "17283621",Pollo Kokorico
 "17283621",Mr. O's ❤
 "17283621",ShopRite
@@ -41846,7 +41838,6 @@
 "17771638",MTA Subway - 219th St (2/5)
 "17771638",MTA Subway - 219th St (2/5)
 "17771638",Giovanni's Famous Pizzeria
-"17891642",Szechuan Delight
 "17771638",American Museum of Natural History
 "17771638",Starbucks
 "17771638",G lounge & Gallery
@@ -41957,12 +41948,14 @@
 "17891642",AC Lawrence
 "17891642",The Amish Market
 "17891642","Maiorano & Fusco, Inc."
+"17891642",'sNice
 "17891642",The Amish Market
 "17891642",AC Lawrence
 "17891642",Jittery Joe's
 "17891642",AC Lawrence
 "17891642",The Amish Market
 "17891642",AC Lawrence
+"17891642",Szechuan Delight
 "17891642",Häagen-Dazs
 "17892642",AC Lawrence
 "17892642",Pizza Rustica
@@ -42233,6 +42226,7 @@
 "17930643",fabi's original habitat
 "17930643",rock spring way
 "17930643",fabi's original habitat
+"17930643",Jimmy Buff's
 "17930643",Ellengasm Time
 "17930643",fabi's original habitat
 "17930643",Ellengasm Time
@@ -42433,7 +42427,6 @@
 "17982645",CVS/pharmacy
 "17982645","Club ""B"""
 "17982645",CVS/pharmacy
-"25518922",M4 bus
 "17982645",Hudson County Community College Union City Campus
 "17982645",Hudson County Community College At Jose Marti Academy
 "17982645",Stop & Shop
@@ -42689,6 +42682,7 @@
 "18011646",STELLAAAAA!
 "18011646",STELLAAAAA!
 "18012646",NYU Stern - Sosnoff Lounge
+"18012646",Così
 "18012646",NYU Kaufman Management Center
 "18012646",NYU Stern - Sosnoff Lounge
 "18012646",NYU Kaufman Management Center
@@ -42704,7 +42698,6 @@
 "18012646",Amorino Gelato
 "18012646",STELLAAAAA!
 "18012646",NYU Stern School of Business
-"25518922",Pizza Prince
 "18013646",NYU Stern School of Business
 "18013646",NYU Kaufman Management Center
 "18013646",NYU Stern School of Business
@@ -42751,6 +42744,7 @@
 "18014646",Santos Party House
 "18014646",McDonald's
 "18014646",STELLAAAAA!
+"18014646",Alidoro
 "18014646",Emack & Bolio's SoHo
 "18014646",Washington Square Park
 "18014646",AMC Loews Village 7
@@ -42937,7 +42931,6 @@
 "18024646",STELLAAAAA!
 "18024646",Starbucks
 "18024646",Megabus Terminal - W 34th St & 11 Av
-"18100649",Parish Hall
 "18024646",Mega Bus - 7th Ave & 27th St
 "18024646",Chipotle Mexican Grill
 "18027646","Take-Two Interactive Software, Inc."
@@ -43039,7 +43032,6 @@
 "18052647",ESPN
 "18052647",Hamilton Park Small Breed Dog Run
 "18052647",ESPN
-"18094649",Stumptown Coffee Roasters
 "18052647",Hamilton Park Small Breed Dog Run
 "18052647",ESPN
 "18052647",Hamilton Park Small Breed Dog Run
@@ -43090,11 +43082,13 @@
 "18061647",Hamilton Park Small Breed Dog Run
 "18094649",Lucky's Famous Burgers
 "18094649",Dixon Place
+"18094649",San Loco
 "18094649",Jeromes at Rivington F+B
 "18094649",Think Coffee
 "18094649",Theodore Roosevelt Birthplace National Historic Site
 "18094649",Madison Square Park
 "18094649",Ace Hotel New York
+"18094649",Stumptown Coffee Roasters
 "18094649",Apple Seeds
 "18094649",Washington Square Park
 "18094649",Lee Strasberg Theatre & Film Institute
@@ -43215,6 +43209,7 @@
 "18100649","151"
 "18100649",Variety Coffee Roasters
 "18100649",Blue Bottle Coffee
+"18100649",Parish Hall
 "18102649",Let's YO! Yogurt
 "18102649",Port Authority Bus Terminal
 "18102649",Theatre Row Box Office
@@ -43368,6 +43363,7 @@
 "18170652",Hop Bar
 "18170652",My House
 "18170652",Wells Fargo Bank
+"18170652",Wendy's
 "18170652",Hoboken Vine
 "18170652",Eastside Ale House
 "18170652",My House
@@ -43663,6 +43659,7 @@
 "18396660",The New School 8th Fl Lab at Arnhold Hall
 "18396660",MTA Bus - M23
 "18396660",Bohemian National Hall
+"18396660",Souvlaki GR
 "18396660",Dreamland East
 "18396660",RE.MA.TA
 "18396660",Lockbird Palace
@@ -43868,7 +43865,6 @@
 "18408660",Home Sweet Home
 "18408660",Boiler Room
 "18408660",C&B Convenience Store
-"18450662",Sticky Rice
 "18408660",New York Eye and Ear Infirmary of Mount Sinai
 "18408660",Beauty Bar
 "18408660",Destination
@@ -43991,6 +43987,7 @@
 "18450662",Sticky Rice
 "18450662",Sticky Rice
 "18450662",Sticky Rice
+"18450662",Sticky Rice
 "18450662",Paris Sandwich
 "18450662",Capitalone bank
 "18450662",Georgia Diner
@@ -44106,7 +44103,6 @@
 "18725673",Satmar Shul
 "18725673",Shvuger's House
 "18725673",Whitehead Hall
-"25532922",Joe's Pizza
 "18725673",MTA Subway - D Train
 "18725673",MTA Subway - Coney Island/Stillwell Ave (D/F/N/Q)
 "18725673",Coney Island Beach & Boardwalk
@@ -44342,7 +44338,6 @@
 "18752673",Bobby's House
 "18752673",Ezra Medical Center
 "18752673",Rosenbaum's Food Center
-"25682928",Petco
 "18752673",Shomer Shabbos
 "18752673",Home
 "18752673",Brooklyn Mailing
@@ -44403,7 +44398,6 @@
 "18998682",The McGraw-Hill Companies
 "18998682",Quinn Emanuel
 "18998682",Shades of Green
-"19001682","435 E 79 St"
 "18998682",Little Owl the Venue
 "18998682",Lyon Bouchon Moderne
 "18998682",Jones Wood Foundry
@@ -44457,6 +44451,7 @@
 "19001682",Soba Totto
 "19001682",Fusha Asian Cuisine
 "19001682",Sojourn
+"19001682","435 E 79 St"
 "19001682","435 E 79 St"
 "19001682","435 E 79 St"
 "19003682",Atlas Sculpture at International Building
@@ -44616,6 +44611,7 @@
 "19163688",La Pomme
 "19163688",Exhale Gramercy
 "19164688",Union League Club
+"19164688",The Kunjip
 "19164688",Flywheel Sports
 "19164688",Talde
 "19164688",Flywheel Sports
@@ -44689,7 +44685,6 @@
 "19168688",Warehouse Wines & Spirits
 "19168688",Flywheel Sports
 "19168688",John F. Kennedy International Airport (JFK) (John F. Kennedy International Airport)
-"19173688",Exhale Gramercy
 "19169688",Newark Liberty International Airport (EWR) (Newark Liberty International Airport)
 "19169688",Exhale Gramercy
 "19169688",Union League Club
@@ -44748,6 +44743,7 @@
 "19173688",Saxon + Parole
 "19173688",Flywheel Sports
 "19173688",Chinese Consulate General
+"19173688",Exhale Gramercy
 "19173688",Wogies Bar & Grill
 "19173688",Rosemary’s
 "19173688",Kingswood
@@ -44809,6 +44805,7 @@
 "19192688",Flywheel Sports
 "19192688",Bill's Food & Drink
 "19192688",Flywheel Sports
+"19192688",E-Mo Kimbap
 "19192688",Flywheel Sports
 "19192688",Saxon + Parole
 "19192688",The Daily
@@ -44908,7 +44905,6 @@
 "19205689",Webster Hall
 "19205689",New York Hilton Midtown
 "19205689",New York Hilton Midtown
-"25684928",H&M
 "19205689",John F. Kennedy International Airport (JFK) (John F. Kennedy International Airport)
 "19205689",Lillie's Union Square
 "19205689",Pacha NYC
@@ -44971,7 +44967,6 @@
 "19207689",Marquee
 "19208689",New York Hilton Midtown
 "19208689",New York Hilton Midtown
-"19213689",Marquee
 "19208689",John F. Kennedy International Airport (JFK) (John F. Kennedy International Airport)
 "19208689",Eataly NYC
 "19208689",New York Hilton Midtown
@@ -45019,14 +45014,12 @@
 "19209689",Eataly NYC
 "19209689",New York Hilton Midtown
 "19209689",New York Hilton Midtown
-"25865934","Duckville, USA"
 "19209689",John F. Kennedy International Airport (JFK) (John F. Kennedy International Airport)
 "19209689",Eataly NYC
 "19209689",The Smith
 "19209689",Webster Hall
 "19209689",New York Hilton Midtown
 "19209689",New York Hilton Midtown
-"19213689",Webster Hall
 "19209689",John F. Kennedy International Airport (JFK) (John F. Kennedy International Airport)
 "19209689",Eataly NYC
 "19209689",New York Hilton Midtown
@@ -45073,8 +45066,6 @@
 "19211689",The Smith
 "19211689",New York Hilton Midtown
 "19211689",New York Hilton Midtown
-"19213689",Eataly NYC
-"25865934",McDonald's
 "19211689",John F. Kennedy International Airport (JFK) (John F. Kennedy International Airport)
 "19211689",The Smith
 "19211689",New York Hilton Midtown
@@ -45111,6 +45102,7 @@
 "19212689",Webster Hall
 "19212689",New York Hilton Midtown
 "19212689",John F. Kennedy International Airport (JFK) (John F. Kennedy International Airport)
+"19212689",Ippudo
 "19212689",Pacha NYC
 "19212689",Marquee
 "19212689",Webster Hall
@@ -45128,14 +45120,16 @@
 "19213689",The Smith
 "19213689",New York Hilton Midtown
 "19213689",New York Hilton Midtown
-"25865934",Walgreens
 "19213689",John F. Kennedy International Airport (JFK) (John F. Kennedy International Airport)
+"19213689",Eataly NYC
 "19213689",The Smith
 "19213689",Webster Hall
 "19213689",New York Hilton Midtown
 "19213689",New York Hilton Midtown
 "19213689",Lillie's Union Square
 "19213689",Pacha NYC
+"19213689",Marquee
+"19213689",Webster Hall
 "19213689",New York Hilton Midtown
 "19213689",New York Hilton Midtown
 "19213689",Ippudo
@@ -45189,7 +45183,6 @@
 "19217689",Webster Hall
 "19217689",New York Hilton Midtown
 "19217689",New York Hilton Midtown
-"19237689",Ippudo
 "19217689",John F. Kennedy International Airport (JFK) (John F. Kennedy International Airport)
 "19217689",Eataly NYC
 "19217689",The Smith
@@ -45241,7 +45234,6 @@
 "19221689",Marquee
 "19221689",New York Hilton Midtown
 "19221689",New York Hilton Midtown
-"19235689",New York Hilton Midtown
 "19221689",John F. Kennedy International Airport (JFK) (John F. Kennedy International Airport)
 "19221689",Ippudo
 "19221689",Marquee
@@ -45298,7 +45290,6 @@
 "19229689",John F. Kennedy International Airport (JFK) (John F. Kennedy International Airport)
 "19229689",New York Hilton Midtown
 "19229689",New York Hilton Midtown
-"19235689",The Smith
 "19229689",John F. Kennedy International Airport (JFK) (John F. Kennedy International Airport)
 "19229689",Eataly NYC
 "19229689",New York Hilton Midtown
@@ -45355,7 +45346,6 @@
 "19232689",Eataly NYC
 "19232689",The Smith
 "19232689",New York Hilton Midtown
-"19234689",New York Hilton Midtown
 "19232689",John F. Kennedy International Airport (JFK) (John F. Kennedy International Airport)
 "19232689",The Smith
 "19232689",Pacha NYC
@@ -45411,6 +45401,9 @@
 "19234689",Marquee
 "19234689",John F. Kennedy International Airport (JFK) (John F. Kennedy International Airport)
 "19234689",Webster Hall
+"19234689",New York Hilton Midtown
+"19235689",New York Hilton Midtown
+"19235689",The Smith
 "19235689",New York Hilton Midtown
 "19235689",The Smith
 "19235689",Webster Hall
@@ -45469,6 +45462,7 @@
 "19237689",Pacha NYC
 "19237689",Webster Hall
 "19237689",New York Hilton Midtown
+"19237689",Ippudo
 "19237689",Lillie's Union Square
 "19237689",Webster Hall
 "19237689",New York Hilton Midtown
@@ -45566,7 +45560,6 @@
 "19244689",Eataly NYC
 "19244689",The Smith
 "19244689",New York Hilton Midtown
-"25867934",The Cottage Bar
 "19244689",John F. Kennedy International Airport (JFK) (John F. Kennedy International Airport)
 "19244689",Eataly NYC
 "19244689",Eataly NYC
@@ -45776,6 +45769,7 @@
 "19537699","346 E. 18th Street"
 "19537699",Manhattan Bridge
 "19537699",Verrazano-Narrows Bridge Toll Plaza
+"19537699",CVS
 "19537699",Verrazano-Narrows Bridge Toll Plaza
 "19537699",Verrazano-Narrows Bridge (Verrazano–Narrows Bridge)
 "19537699",Manhattan Bridge
@@ -45836,6 +45830,7 @@
 "19611702",MTA Subway - Beach 90th St (A/S)
 "19611702",Home :]
 "19611702",MTA Subway - Beach 105th St/Seaside (A/S)
+"19611702",Hanco's
 "19611702",MTA Subway - Broad Channel (A/S)
 "19611702",Dayton 8800
 "19611702",MTA Subway - Rockaway Park/Beach 116th St (A/S)
@@ -46110,7 +46105,6 @@
 "19628702",St. Francis College Library
 "19628702",MTA Subway - Jay St/MetroTech (A/C/F/R)
 "19628702",St. Francis College
-"25867934",Jack Rabbit Slims
 "19628702",St. Francis College Mailroom
 "19628702",MTA Subway - Broad Channel (A/S)
 "19628702",Northwell - Long Island Jewish Medical Center
@@ -46485,7 +46479,6 @@
 "19718706",Cross Island Plaza
 "19718706",The Vapors Barber Shop Inc.
 "19718706",Merrick Farm Country
-"19719706",The Gap Factory
 "19718706","The National Sorority Of Phi Delta Kappa, Beta Omicron Chapter Early Childhood Education Center"
 "19718706",Next Millenneum Barber Shop
 "19718706",Key Food
@@ -46575,7 +46568,6 @@
 "19719706",Little Caesars Pizza
 "19719706",Smoke BBQ Pit
 "19719706",Western Beef
-"19720706",Popeye's
 "19719706",The Vapors Barber Shop Inc.
 "19719706",Merrick Farm Country
 "19719706",PS/IS 270
@@ -46604,13 +46596,13 @@
 "19719706",Jamaica Multiplex Cinemas
 "19719706",Q5 Bus Stop
 "19719706",Jamaica Center - Parsons/Archer Bus Terminal
+"19719706",The Gap Factory
 "19719706",Popeye's
 "19719706",BP
 "19719706",My hunnys Bed
 "19719706",Farm Fried N Curry Chicken
 "19719706",LaGuardia Airport (LGA) (LaGuardia Airport)
 "19719706",MTA Bus - Q84 @ 237th Street  & 129th Avenue
-"25867934",Cugino's Pizza
 "19719706",Dr Taylor
 "19719706",The Vapors Barber Shop Inc.
 "19719706",Cross Island Plaza
@@ -46632,6 +46624,7 @@
 "19720706",Zarkana by Cirque du Soleil
 "19720706",Sabrett food cart W 50th & 6th avenue
 "19720706",Jamaica Center - Parsons/Archer Bus Terminal
+"19720706",Popeye's
 "19720706",BP
 "19720706",Next Millenneum Barber Shop
 "19720706",Pathmark
@@ -46689,7 +46682,6 @@
 "19720706",Pathmark
 "19720706",Purr-fect Dry Cleaners
 "19720706",PS/IS 270
-"19721706",Wonder Bread
 "19720706",MTA Bus - Q84 @ 237th Street  & 129th Avenue
 "19720706",The Vapors Barber Shop Inc.
 "19720706",New Gookies
@@ -46722,9 +46714,7 @@
 "19720706",Microsoft
 "19720706",one stop home service real estate
 "19720706",Jamaica Multiplex Cinemas
-"19721706",Little Caesars Pizza
 "19720706",Jamaica Center - Parsons/Archer Bus Terminal
-"24429881",Twin Donut
 "19720706",Popeye's
 "19720706",BP
 "19720706",My hunnys Bed
@@ -46747,6 +46737,7 @@
 "19721706",Del Frisco's Double Eagle Steak House
 "19721706",Magnolia Bakery
 "19721706",Jamaica Center - Parsons/Archer Bus Terminal
+"19721706",Wonder Bread
 "19721706",BP
 "19721706",Q84 Bus Stop
 "19721706",Burger King
@@ -46783,6 +46774,7 @@
 "19721706",Little Caesars Pizza
 "19721706",The Gap Factory
 "19721706",Burger King
+"19721706",Little Caesars Pizza
 "19721706",Bagel Factory
 "19721706",UNIQLO
 "19721706",Macchiato Espresso Bar
@@ -47427,7 +47419,6 @@
 "20033718","MTA MaBSTOA Bus at W. 145th Street & 8th Avenue (Douglass Blvd): (M10, Bx19)"
 "20033718","145th Street Bridge"
 "20033718",MTA Subway - 149th St/Grand Concourse (2/4/5)
-"20037718",Electric Castle
 "20033718","MTA MaBSTOA Bus at Southern Bl. & E. 163rd St (Hunts Pt.): (Bx5, Bx6, Bx19, BP Pool Shuttle)"
 "20033718",MTA Subway - 145th St (A/B/C/D)
 "20033718",MTA Bus - W 145 St & Amsterdam Av (Bx19/M100/M101)
@@ -47474,13 +47465,13 @@
 "20035718",MTA Bus - W 145 St & Amsterdam Av (Bx19/M100/M101)
 "20035718","MTA MaBSTOA Bus at W. 135th St. & Amsterdam Ave: (M11, M100, M101)"
 "20035718",A. Philip Randolph Campus High School @ City College
-"20137722",MTA Subway - 8th Ave (N)
 "20035718","MTA MaBSTOA Bus at W. 145th Street, Broadway & Riverside Drive: (M4, M5, M11, Bx19)"
 "20035718",Electric Castle
 "20035718","149th Laundromat"
 "20035718",A. Philip Randolph Campus High School @ City College
 "20035718",MTA Bus - Broadway & W 136 St (M4/M5/M11)
 "20035718",MTA Subway - 145th St (1)
+"20035718",Nadal 2 Deli
 "20035718",MTA Subway - 145th St (1)
 "20035718",TCI College
 "20035718",Lower Level (E/F/G/H)
@@ -47500,7 +47491,6 @@
 "20036718","MTA MaBSTOA Bus at W. 135th St. & Amsterdam Ave: (M11, M100, M101)"
 "20036718",A. Philip Randolph Campus High School @ City College
 "20036718",Electric Castle
-"23199834",Styertowne Apartments
 "20036718",MTA MaBSTOA Bus Bx1 / Bx2 / Bx11 / Bx18 / BxM4 at East 170th Street / Grand Concourse
 "20036718",A. Philip Randolph Campus High School @ City College
 "20036718",TCI College
@@ -47523,6 +47513,7 @@
 "20037718",Electric Castle
 "20037718",MTA Bus - W 145 St & Amsterdam Av (Bx19/M100/M101)
 "20037718",A. Philip Randolph Campus High School @ City College
+"20037718",Electric Castle
 "20037718",MTA Subway - W. 4th Street/Washington Square (A/B/C/D/E/F/M)
 "20037718",Washington Square Park
 "20037718",MTA Bus - W 145 St & Amsterdam Av (Bx19/M100/M101)
@@ -47571,7 +47562,7 @@
 "20039718",A. Philip Randolph Campus High School @ City College
 "20039718",Electric Castle
 "20039718",JFK AirTrain - Howard Beach
-"20150722","90 prince st"
+"20137722",MTA Subway - 8th Ave (N)
 "20137722",MTA Bus - B68/B74/B82/B82LTD - Stillwell Av Terminal
 "20137722",Kohl's
 "20137722",MTA Bus - Bay Parkway & 86th Street (B6/B6LTD/B82/B82LTD)
@@ -47591,6 +47582,7 @@
 "20138722",B74 / B36
 "20138722",ShopRite
 "20138722",MTA Bus - Ave I & McDonald Ave (B11)
+"20138722",Lichee Nut
 "20138722",The boss house
 "20138722",MTA Bus - B68/B74/B82/B82LTD - Stillwell Av Terminal
 "20138722",Asphalt Green
@@ -47806,7 +47798,6 @@
 "20146722",MTA Bus - B68/B74/B82/B82LTD - Stillwell Av Terminal
 "20146722",Aquatic Center
 "20146722",Asphalt Green
-"23199834",Home
 "20146722","360 Schermerhorn St."
 "20146722",MTA Bus - B68/B74/B82/B82LTD - Stillwell Av Terminal
 "20146722",IS 234 Cunningham JHS
@@ -47837,6 +47828,7 @@
 "20150722",The boss house
 "20150722",MTA Bus - B68/B74/B82/B82LTD - Stillwell Av Terminal
 "20150722","90 prince st"
+"20150722","90 prince st"
 "20150722",McDonald's
 "20150722",The boss house
 "20150722","90 prince st"
@@ -47860,6 +47852,7 @@
 "20151722",The boss house
 "20151722",MTA Bus - B68/B74/B82/B82LTD - Stillwell Av Terminal
 "20151722",Bay Ridge Christian Center
+"20151722",McDonald's
 "20151722",Deal 99 Cents & Up
 "20151722",The boss house
 "20151722",MTA Bus - B68/B74/B82/B82LTD - Stillwell Av Terminal
@@ -48013,7 +48006,6 @@
 "20173723",Chashama
 "20173723",Art Studio B50 | Noah X Arts | Hunter Art
 "20173723",Chashama
-"20193723",Bosi Contemporary
 "20173723",Art Studio B50 | Noah X Arts | Hunter Art
 "20173723",Kenny's Bakery
 "20173723",Manna's Restaurant
@@ -48023,7 +48015,6 @@
 "20173723",Bushwick Open Studios
 "20173723",Interstate Projects
 "20173723",English Kills
-"23199834",Styertowne Apartments
 "20173723",Art Studio B50 | Noah X Arts | Hunter Art
 "20174723",Tortoise and Hare Statue
 "20174723",Mask Sculpture in Van Cortlandt Park
@@ -48071,6 +48062,7 @@
 "20177723",Art Studio B50 | Noah X Arts | Hunter Art
 "20177723","7-Eleven"
 "20193723",Chashama
+"20193723",Bosi Contemporary
 "20193723",Garvey simon
 "20193723",Pace Gallery
 "20193723",Freight + Volume
@@ -48642,7 +48634,6 @@
 "20413730",New York Marriott Marquis
 "20414730",Times Square
 "20414730",Bank of America
-"23199834",Finally @ Home
 "20414730",New York Marriott Marquis
 "20414730",Times Square
 "20414730",The Orion Penthouse
@@ -48650,7 +48641,6 @@
 "20414730",Bank of America
 "20414730",New York Marriott Marquis
 "20414730",Times Square
-"20515734",Lot M
 "20414730",Lillie's Union Square
 "20414730",New York Marriott Marquis
 "20414730",Lillie's Union Square
@@ -48882,6 +48872,7 @@
 "20515734","110 Lawrence Ave Dumont Nj"
 "20515734","110 Lawrence Ave Dumont Nj"
 "20515734","110 Lawrence Ave Dumont Nj"
+"20515734",Lot M
 "20515734",Meadowlands Parking Lot
 "20515734",Pegasus Restaurant
 "20515734",TV Control
@@ -49309,7 +49300,6 @@
 "20734742",Red Bull NY
 "20734742",MTA Subway - Montrose Ave (L)
 "20734742",Regal Cinemas Union Square 14
-"25873934",Linwood Pizza
 "20734742",NEW YORK GIANTS STATE OF MIND!!!!!!!!!!!!!!
 "20734742",Williamsburg Bridge
 "20734742",Heat Madness
@@ -49399,7 +49389,6 @@
 "20736742",Union Square Park
 "20736742",Union Square Park
 "20736742",Strand Bookstore
-"20744742",Heat Madness
 "20736742",Manhattan Avenue & Moore St
 "20736742",RangerMania
 "20736742",Red Bull NY
@@ -49514,6 +49503,7 @@
 "20744742",Dunkin Donuts
 "20744742",Heat Madness
 "20744742",RangerMania
+"20744742",Heat Madness
 "20744742",NEW YORK GIANTS STATE OF MIND!!!!!!!!!!!!!!
 "20744742",Netflix
 "20744742",Strand Bookstore
@@ -50057,7 +50047,6 @@
 "20818745",Bourbon Street Bar & Grille
 "20818745",Union Square Park
 "20818745","2 Bros. Pizza"
-"25854934",A&P
 "20818745",Raccoon Lodge
 "20818745",Starbucks
 "20818745",Economy Candy
@@ -50191,6 +50180,7 @@
 "20822745",Bryant Park
 "20822745",Southwest Porch at Bryant Park
 "20822745",Bank of America
+"20822745",Starbucks
 "20822745",Economy Candy
 "20822745",Sauce Restaurant
 "20822745",Boss Tweed's Saloon
@@ -50584,7 +50574,6 @@
 "20940750","My Command Center, Location Does Not Exists = OFF THE GRID"
 "20940750",MTA Subway - Nostrand Ave (A/C)
 "20940750",MTA Subway - 66th St/Lincoln Center (1)
-"20997752",Villa
 "20940750","My Command Center, Location Does Not Exists = OFF THE GRID"
 "20940750",Guzman Grocery
 "20940750",MTA Subway - Nostrand Ave (A/C)
@@ -50639,7 +50628,6 @@
 "20942750","My Command Center, Location Does Not Exists = OFF THE GRID"
 "20942750",Guzman Grocery
 "20942750",MTA Subway - Nostrand Ave (A/C)
-"21005753",My bed :-)
 "20942750",National September 11 Memorial & Museum
 "20942750",Brookfield Properties
 "20942750",Don's And Diva's Unisex Hair Salon
@@ -50800,6 +50788,7 @@
 "20995752",University Hall
 "20995752",Villa
 "20995752",Bottle King
+"20995752",Subway
 "20995752",Breakers Billiards
 "20995752","21 Club"
 "20995752",The Halal Guys
@@ -50814,8 +50803,10 @@
 "20997752",Student Recreation Center
 "20997752",Villa
 "20997752","Jatin's ""awesome"" Store"
+"20997752",Villa
 "20997752",Student Recreation Center
 "20997752",Villa
+"20997752",SUBWAY
 "20997752",Micro Center
 "20997752",Staples
 "20997752",Villa
@@ -50872,6 +50863,7 @@
 "21005753",MultiPlan Inc.
 "21005753",Red Robin Gourmet Burgers
 "21005753",Lisa & Mike's Garden place
+"21005753",My bed :-)
 "21006753",MultiPlan Inc.
 "21006753","14th Street PATH Station"
 "21006753",Journal Square Parking
@@ -50935,6 +50927,7 @@
 "21010753",MultiPlan Inc.
 "21010753","14th Street PATH Station"
 "21010753",Journal Square - Platform C3
+"21010753",Dunkin' Donuts
 "21010753",ShopRite
 "21010753",On the couch reading
 "21012753",Home Sweet Home :)
@@ -50949,7 +50942,6 @@
 "21012753",Food Depot
 "21012753",TD Bank
 "21014753","14th Street PATH Station"
-"25873934",Lenwich by Lenny's
 "21014753",Journal Square - Platform C3
 "21014753","2 Journal Square Plaza"
 "21014753",MultiPlan Inc.
@@ -51043,13 +51035,11 @@
 "21030754",Quinn Library
 "21030754",McMahon Hall
 "21030754",Lowenstein Building
-"21056754",Home home home
 "21030754",MBFW Press Credentials Trailer
 "21030754",Fordham University School of Law
 "21030754",Fordham University School of Law
 "21030754",Home home home
 "21030754",McMahon Hall
-"21043754",Home home home
 "21030754",Quinn Library
 "21030754",McMahon Hall
 "21032754",McMahon Hall
@@ -51101,7 +51091,6 @@
 "21037754",Quinn Library
 "21037754",McMahon Hall
 "21037754",Lowenstein Building
-"21060754",Olympic Flame Diner
 "21037754",MBFW Press Credentials Trailer
 "21037754",McMahon Hall
 "21037754",Home home home
@@ -51159,11 +51148,11 @@
 "21043754",MTA Subway - 155th St (C)
 "21043754",Olympic Flame Diner
 "21043754",McMahon Hall
-"21060754",McMahon Hall
 "21043754",Quinn Library
 "21043754",McMahon Hall
 "21043754",Quinn Library
 "21043754",Spectrum Store
+"21043754",Home home home
 "21044754",McMahon Hall
 "21044754",McMahon Hall
 "21044754",Lowenstein Building
@@ -51172,7 +51161,6 @@
 "21044754",McMahon Hall
 "21044754",McMahon Hall
 "21044754",MBFW Press Credentials Trailer
-"25873934",Duane Reade
 "21044754",Fordham University School of Law
 "21044754",Home home home
 "21044754",Home home home
@@ -51387,6 +51375,7 @@
 "21056754",Lowenstein Building
 "21056754",MBFW Press Credentials Trailer
 "21056754",Fordham University School of Law
+"21056754",Home home home
 "21056754",MTA Subway - 155th St (C)
 "21056754",Harlem Tavern
 "21057754",MTA Subway - 155th St (C)
@@ -51445,6 +51434,8 @@
 "21060754",MBFW Press Credentials Trailer
 "21060754",Home home home
 "21060754",MTA Subway - 155th St (C)
+"21060754",Olympic Flame Diner
+"21060754",McMahon Hall
 "21060754",MBFW Press Credentials Trailer
 "21060754",Olympic Flame Diner
 "21060754",McMahon Hall
@@ -51501,7 +51492,6 @@
 "21266763",ALCC American Language
 "21266763",Prospect Park - Parkside
 "21266763",MTA Subway - Parkside Ave (Q)
-"21278763",Starbucks
 "21266763",ALCC American Language
 "21266763",Prospect Park - Parkside
 "21266763",MTA Subway - Parkside Ave (Q)
@@ -51565,7 +51555,6 @@
 "21270763",ALCC American Language
 "21270763",Pret A Manger
 "21270763",Pinkberry
-"25873934",Five Guys
 "21270763",Prospect Park - Parkside
 "21270763",Orlando's Baber Shop
 "21270763",Gem Super Value
@@ -51615,6 +51604,7 @@
 "21278763",MTA Subway - Parkside Ave (Q)
 "21278763",ALCC American Language
 "21278763",Murray's Bagels
+"21278763",Starbucks
 "21278763",MTA Subway - Avenue N (F)
 "21278763",Super Clean Laundromat
 "21278763",MTA Subway - Parkside Ave (Q)
@@ -51670,17 +51660,16 @@
 "21280763",Haus Of Pleasure
 "21280763",MTA Subway - Parkside Ave (Q)
 "21280763",MTA Subway - Manhattan Bridge (B/D/N/Q)
-"21317766",Target
 "21280763",Haus Of Pleasure
 "21280763",ALCC American Language
 "21280763",ALCC American Language
 "21280763",MTA Subway - Parkside Ave (Q)
 "21280763",CFSC Check Cashing
 "21280763",Zen Vegetarian House
-"27060976",J&R
 "21280763",MTA Subway - Parkside Ave (Q)
 "21280763",Astor Place
 "21280763",MTA Subway - Parkside Ave (Q)
+"21280763",House
 "21280763",Boba Life NYC
 "21280763",Hollister Co.
 "21280763",Gem Super Value
@@ -51728,6 +51717,7 @@
 "21317766",Outerstuff
 "21317766",Port Authority Bus Terminal
 "21317766",Port Authority Bus Terminal
+"21317766",Target
 "21317766",Outback Steakhouse
 "21317766",Port Authority Bus Terminal
 "21317766",Dunkin' Donuts
@@ -51791,7 +51781,6 @@
 "21320766",Edgewater Multiplex Cinemas
 "21320766",Wendy's
 "21320766",BJ's Wholesale Club
-"27062976",Starbucks
 "21320766","7-Eleven"
 "21320766",Delta Gas Station
 "21321766",Port Authority Bus Terminal
@@ -51848,7 +51837,6 @@
 "21323766",Outerstuff
 "21323766",Port Authority Bus Terminal
 "21323766",Lincoln Tunnel
-"25873934",Lenwich by Lenny's
 "21323766",Outerstuff
 "21323766",Cosi
 "21323766",Bryant Park
@@ -52420,9 +52408,7 @@
 "21371768",Lincoln Tunnel
 "21371768",Port Authority Bus Terminal
 "21371768",American Museum of Natural History
-"21374768",Camizzi's Place
 "21371768",Creatures of Light at the American Museum of Natural History
-"27429990",Woorijip
 "21371768",World's Largest Dinosaurs Exhibit at the American Museum of Natural History
 "21371768",AMNH Food Court
 "21371768",The Butterfly Conservatory at the American Museum of Natural History
@@ -52453,6 +52439,7 @@
 "21372768",Disney Store
 "21372768",Paramus Park Food Court
 "21372768",Nathan's Famous
+"21372768",Taco Bell
 "21372768",Auntie Anne's
 "21372768",Paramus Park Parking Lot
 "21372768",Village Pourhouse
@@ -52537,6 +52524,7 @@
 "21374768",Auntie Anne's
 "21374768",Paramus Park Parking Lot
 "21374768",The Camizzi Grapevine
+"21374768",Camizzi's Place
 "21374768",North Bergen High School
 "21374768",Exxon
 "21374768",Carol Ann Cleaners
@@ -52763,7 +52751,6 @@
 "21381768",Camizzi's Place
 "21381768",Hudson County Park Courts
 "21381768",James J Braddock North Hudson County Park
-"21534773",The Home Depot
 "21381768",Garita Vision Center
 "21381768",Woodcliff Lake
 "21381768",The Camizzi Grapevine
@@ -52801,7 +52788,6 @@
 "21382768",Camizzi's Place
 "21382768",North Bergen Board of Education
 "21382768",NBHS Parking Lot
-"21517773",River Front Plaza
 "21382768",North Bergen High School
 "21382768",North Bergen High School
 "21382768",Hudson County Plaza
@@ -52919,6 +52905,7 @@
 "21517773",Nassor Electrical Supply
 "21517773",Lodi Pizza
 "21517773",Superior Distributors Inc.
+"21517773",River Front Plaza
 "21517773",Ed Koch Queensboro Bridge
 "21517773",Joe Sabba Park
 "21517773",Chase Bank
@@ -52990,7 +52977,6 @@
 "21519773",The Butcher Block
 "21519773",Ed Koch Queensboro Bridge
 "21519773",Retro Fitness
-"22436806",Keap Hope 5A
 "21519773",Ed Koch Queensboro Bridge
 "21519773",Retro Fitness
 "21519773",World Of Wings
@@ -53050,6 +53036,7 @@
 "21534773",TGIF!
 "21534773",lunch
 "21534773",Morning Coffee
+"21534773",The Home Depot
 "21535773",Beyer bros corp
 "21535773",lunch
 "21535773",Ed Koch Queensboro Bridge
@@ -53164,11 +53151,9 @@
 "21926787",Gene
 "21926787",Baruch College - William and Anita Newman Vertical Campus
 "21926787",Warren-Tricomi Salon
-"25873934",CityPie
 "21926787",Baruch College - William and Anita Newman Vertical Campus
 "21926787",Gene
 "21927787",James Hall
-"22438806",Mary Ann's
 "21927787",Baruch College - William and Anita Newman Vertical Campus
 "21927787",Gene
 "21927787",Brooklyn College Starbucks Whitehead
@@ -53284,11 +53269,13 @@
 "22434806",Equinox Park Avenue
 "22434806",Chipotle Mexican Grill
 "22434806",ONS Clothing
+"22434806",Bocca Di Bacco
 "22434806",The Jane Hotel Ballroom
 "22434806",HK Hell's Kitchen
 "22434806",Henrietta Hudson Bar & Girl
 "22434806",Yola's Cafe
 "22436806",John F. Kennedy International Airport (JFK) (John F. Kennedy International Airport)
+"22436806",Keap Hope 5A
 "22436806",Onassis Clothing Corporate Headquarters
 "22436806",W Cafe
 "22436806",Starbucks
@@ -53348,6 +53335,7 @@
 "22438806",San Loco
 "22438806",Starbucks
 "22438806",Regal Cinemas Battery Park 11
+"22438806",Mary Ann's
 "22439806",Starbucks
 "22439806",Keap Hope 5A
 "22439806",Onassis Clothing Corporate Headquarters
@@ -53820,6 +53808,7 @@
 "22711816",Bergen Community College
 "22711816",Bergen Parking Lot
 "22711816",Ender Hall
+"22711816",Subway
 "22711816",Bank Of America
 "22711816",Stop & Shop
 "22711816",Valero
@@ -54141,7 +54130,6 @@
 "22793819",Metro City
 "22793819",MTA B82
 "22793819",CVS/Pharmacy
-"23199834",European Wax Center
 "22793819",MTA Bus - B6/B6LTD/B82/B82LTD - Flatlands Av & Ralph Av
 "22793819",Metro City
 "22793819",MTA Subway - Canarsie/Rockaway Pkwy (L)
@@ -54249,7 +54237,6 @@
 "22796819",Papaya Dog
 "22796819",MTA Subway - 1st Ave (L)
 "22796819",CVS/Pharmacy
-"23199834",Costco Wholesale
 "22796819",MTA Bus - B82/B82LTD - Glenwood Rd & Rockaway Pkwy
 "22796819",MTA B82
 "22796819",Metro City
@@ -54315,7 +54302,6 @@
 "22799819",MTA Subway - 1st Ave (L)
 "22799819",CVS/Pharmacy
 "22799819",Papaya Dog
-"22807819",MTA B82
 "22799819",MTA Subway - Canarsie/Rockaway Pkwy (L)
 "22799819",Metro City
 "22799819",Javons Home
@@ -54372,6 +54358,7 @@
 "22807819",Planet Fitness
 "22807819",MTA Bus - B6/B6LTD/B42/B82/B82LTD - Rockaway Station & Rockaway Pkwy
 "22807819",Metro City
+"22807819",MTA B82
 "22807819",Javons Home
 "22807819",Batcave
 "22807819",MTA Bus - B6/B6LTD/B82/B82LTD - Flatlands Av & Ralph Av
@@ -54610,7 +54597,6 @@
 "22819820",Gate 204
 "22819820","7-Eleven"
 "22819820",Port Authority Bus Terminal
-"22822820",Au Bon Pain
 "22819820",Port Authority Food Court
 "22819820",Au Bon Pain
 "22819820",Chase Bank
@@ -54672,6 +54658,7 @@
 "22822820",Chase Bank
 "22822820",Transbridge Bus Line
 "22822820",Casa Java
+"22822820",Au Bon Pain
 "22822820","7-Eleven"
 "22822820",Port Authority Food Court
 "22822820",Yi Mei Fung Bakery Corp
@@ -55160,6 +55147,7 @@
 "23194834",McDonald's
 "23194834",McDonald's
 "23194834",The Village at Little Falls
+"23194834",SUBWAY
 "23194834",Secaucus Municipal Government Center
 "23194834",New Jersey / New York State Border
 "23194834",Lincoln Tunnel
@@ -55219,88 +55207,6 @@
 "23196834",Platinum Fitness
 "23196834",The Sweaty Sauna
 "23196834",Styertowne Apartments
-"1266",The Lair Of Modern Strange Cowboy
-"1266",Galaxy Gourmet Deli
-"1266",The Lair Of Modern Strange Cowboy
-"1266",Popeyes Louisiana Kitchen
-"1266",MTA Bus Operations Depot - LaGuardia
-"1266",MTA Subway - 63rd Dr/Rego Park (M/R)
-"1266",MTA Subway - 34th St/Herald Sq (B/D/F/M/N/Q/R/W)
-"1266",NYCT Transit Survey Unit
-"1266",The Lair Of Modern Strange Cowboy
-"47119",Turning Point
-"173965",TGI Fridays
-"219681",Zeytinz
-"221782",Taco Bell
-"245790",Penelope
-"248590",Press
-"260895",Wendy's
-"262895",Wendy's
-"3289120",Petco
-"4009144",Crave Astoria
-"4285153",Cafetasia
-"5174184","44 & X"
-"5188185",King Pizza
-"5199185",Central Lounge
-"5211185",my bed
-"5267187",Zeytinz
-"6641236",McDonald's
-"6913246",Starbucks
-"8243293",Vandam Diner
-"9710343",Burger King
-"9740344",McDonald's
-"9861349",Health King
-"9867349",Circo
-"9869349",Houlihan's
-"9877349",Le Basket
-"10072355",Wendy's
-"10561371",TD Bank
-"10562371",TD Bank
-"10893384",Bouley
-"10905384",Subway
-"10929386",Crown
-"11258398",Okinawa
-"11989422",Wendy's
-"12404438",Franchia
-"12594445",Timo's
-"12947458",Cafe Metro
-"12962458",Golden Krust
-"13419475",Boyd Thai
-"13624484",Au Bon Pain
-"14296509",Tacos Mexico
-"14574519",Café Hestia
-"14602519",Cafe Metro
-"14837529",Dante's
-"16215579",Nyonya
-"16286582",Starbucks
-"16522593",Papaya Dog
-"17891642",'sNice
-"17930643",Jimmy Buff's
-"18012646",Così
-"18014646",Alidoro
-"18170652",Wendy's
-"18396660",Souvlaki GR
-"19212689",Ippudo
-"19611702",Hanco's
-"20035718",Nadal 2 Deli
-"20151722",McDonald's
-"20822745",Starbucks
-"20995752",Subway
-"20997752",SUBWAY
-"21010753",Dunkin' Donuts
-"21280763",House
-"21372768",Taco Bell
-"22434806",Bocca Di Bacco
-"22711816",Subway
-"23194834",SUBWAY
-"23426842",Quiznos
-"23831857",Barbuto
-"24454881",SUBWAY
-"24527885",Mi Casa
-"24664889",Gap
-"26294951",Cucina Liberta
-"27060976",Zeytuna
-"281931017",SUBWAY
 "23196834",Dunkin' Donuts
 "23196834",Platinum Fitness
 "23196834",The Sweaty Sauna
@@ -55343,6 +55249,22 @@
 "23198834",Styertowne Apartments
 "23198834",Home
 "23198834",Costco Gas
+"23198834",Feathers
+"23198834",Platinum Fitness
+"23198834",Styertowne Apartments
+"23198834",Home
+"23198834",Pier 1 Imports
+"23199834",Platinum Fitness
+"23199834",The Sweaty Sauna
+"23199834",Platinum Fitness
+"23199834",The Sweaty Sauna
+"23199834",CUPS Frozen Yogurt
+"23199834",Styertowne Apartments
+"23199834",Home
+"23199834",Styertowne Apartments
+"23199834",Finally @ Home
+"23199834",European Wax Center
+"23199834",Costco Wholesale
 "23199834",Platinum Fitness
 "23199834",The Sweaty Sauna
 "23201834",The Sweaty Sauna
@@ -55478,6 +55400,7 @@
 "23426842",United Artists Kaufman Astoria 14
 "23426842",My Casa
 "23426842",Steve Madden Corporate Office
+"23426842",Quiznos
 "23426842",Museum of Sex
 "23426842",The Blake
 "23426842",Picnic on 57th
@@ -55518,6 +55441,7 @@
 "23429842",My Casa
 "23429842",Steve Madden Corporate Office
 "23429842",Basurero
+"23429842",Laundry Center
 "23429842",United Artists Kaufman Astoria 14
 "23429842",Steve Madden Corporate Office
 "23429842",My Casa
@@ -55575,6 +55499,7 @@
 "23435842",Applebee's Neighborhood Grill & Bar
 "23435842",AMC Empire 25
 "23435842",Steve Madden Corporate Office
+"23435842",My Casa
 "23435842",Steve Madden Corporate Office
 "23435842",My Casa
 "23435842",Starbucks
@@ -55589,7 +55514,6 @@
 "23436842",My Casa
 "23436842",Steve Madden Corporate Office
 "23436842",Herald Square
-"23453842",Macy's
 "23436842","Marriott Vacation Club Pulse, New York City"
 "23436842",Steve Madden Corporate Office
 "23436842",Baruch College - William and Anita Newman Vertical Campus
@@ -55688,6 +55612,7 @@
 "23452842",My Casa
 "23452842",Cold Stone Creamery/The Original SoupMan
 "23452842",Hallmark
+"23452842",Regina's Pizzeria
 "23453842",Steve Madden Corporate Office
 "23453842","Golden Nugget Jewelery, Inc."
 "23453842",Medical Center
@@ -55705,6 +55630,7 @@
 "23453842",Queens Center Mall
 "23453842",Caravan Chicken
 "23453842",Queens Center Mall
+"23453842",Macy's
 "23453842",Cinnabon
 "23803857",JFK AirTrain - Terminal 2
 "23803857",Casa de Kostovny
@@ -55846,6 +55772,7 @@
 "23831857",Casa de Kostovny
 "23831857",Waldorf Astoria New York
 "23831857",Casa de Kostovny
+"23831857",Barbuto
 "23831857",Session House Bar & Kitchen
 "23831857",Casa de Kostovny
 "23831857",Kaia Wine Bar
@@ -55920,6 +55847,9 @@
 "24099868",H&M
 "24099868",American Apparel
 "24099868",Forever 21
+"24099868",Urge Lounge
+"24099868",Fineline Tattoo
+"24101868",Starbucks
 "24101868",Mulholland's
 "24101868",Times Square Art Center
 "24101868",Starbucks
@@ -56157,6 +56087,8 @@
 "24244872",The West End Lounge
 "24244872",Amir
 "24244872",My Block
+"24244872",Crumbs Bake Shop
+"24244872",Amir
 "24244872",Garden of Eden Marketplace
 "24244872",Equinox West 92nd Street
 "24244872",Westside Market
@@ -56218,6 +56150,7 @@
 "24245872",Absolute Bagels
 "24245872",My Block
 "24245872","109 St. Gourmet Deli"
+"24245872",Saji's
 "24245872",D'Agostino
 "24245872",Famous Deli
 "24245872",TD Bank
@@ -56278,6 +56211,8 @@
 "24247872",The West End Lounge
 "24247872",TD Bank
 "24247872",Westside Market
+"24247872",My Block
+"24247872",Absolute Bagels
 "24247872",John Jay College - New Building
 "24247872",Good Stuff Diner
 "24247872",My Block
@@ -56396,6 +56331,12 @@
 "24250872",TD Bank
 "24250872",Citibank
 "24250872",Samad's Gourmet
+"24250872",Maoz Vegetarian
+"24250872","109 St. Gourmet Deli"
+"24250872",My Block
+"24250872",Famous Deli
+"24250872",Famous Deli
+"24250872",Crumbs Bake Shop
 "24250872",Cathedral Church of St. John the Divine
 "24250872",AMC Loews Lincoln Square 13
 "24250872",Fresh Cut Christmas Trees
@@ -56455,6 +56396,9 @@
 "24251872",The Pet Market
 "24251872",Creative Health Food Store
 "24251872",Straus Park
+"24251872",Amir
+"24251872",My Block
+"24251872",Crumbs Bake Shop
 "24251872",The West End Lounge
 "24251872",Amir
 "24251872",Fresh Cut Christmas Trees
@@ -56513,6 +56457,9 @@
 "24251872",D'Agostino
 "24251872",Famous Deli
 "24252872",Fresh Cut Christmas Trees
+"24252872",D'Agostino
+"24252872",Crumbs Bake Shop
+"24252872",Kim's Fruit & Vegetable
 "24252872",Gristedes Supermarkets
 "24252872",Garden of Eden Marketplace
 "24252872",Zoya Cleaners
@@ -56571,6 +56518,8 @@
 "24356877",Paradise =)
 "24356877",Maimonides Medical Center
 "24356877",Paradise =)
+"24356877",Something Else
+"24356877",Stop 1 Super Market
 "24357877",Maimonides Medical Center
 "24357877",Mi Casa
 "24357877",Mi Casa
@@ -56589,7 +56538,6 @@
 "24358877",Boro Park Center
 "24358877",La Strada Pizzeria & Restaurant
 "24358877",Boro Park Center
-"24361877",Mi Casa
 "24358877",Maimonides Medical Center
 "24358877",Mi Casa
 "24358877",Paradise =)
@@ -56649,6 +56597,7 @@
 "24361877",Paradise =)
 "24361877",Cukoo house :D
 "24361877",Medical Arts Pavillion (NYU Lutheran)
+"24361877",Mi Casa
 "24362877",Mi Casa
 "24362877",Paradise =)
 "24362877",THE ROOF IS ON FIRE !!
@@ -56721,6 +56670,7 @@
 "24429881",Dunkin' Donuts
 "24429881",Mijana Hookah Lounge & Restaurant
 "24429881",Hubs L'Shish Deli
+"24429881",Twin Donut
 "24430881",Ding Dong Lounge
 "24430881",Thai Market
 "24430881",The Grinnell
@@ -56748,6 +56698,9 @@
 "24431881",Hubs L'Shish Deli
 "24431881",The Grinnell
 "24431881",Ding Dong Lounge
+"24431881",Hubs L'Shish Deli
+"24431881",The Grinnell
+"24431881",The Grinnell
 "24432881",Ding Dong Lounge
 "24432881",The Grinnell
 "24432881",J's Big Gym
@@ -56980,6 +56933,7 @@
 "24449881",Hubs L'Shish Deli
 "24449881",The Grinnell
 "24449881",Wayne Manor ( Bat Cave )
+"24449881",The Grinnell
 "24449881",Rite Aid
 "24449881",Punta Cana Restaurant
 "24449881",Kennedy Chicken & Sandwiches
@@ -57088,10 +57042,10 @@
 "24454881",Imsomnia
 "24454881",Galaxy Gourmet Deli
 "24454881",The Grinnell
+"24454881",SUBWAY
 "24454881",Broadway Laundromat
 "24454881",Mijana Hookah Lounge & Restaurant
 "24454881",Wayne Manor ( Bat Cave )
-"25873934",Duane Reade
 "24454881",J's Big Gym
 "24454881",Mijana Hookah Lounge & Restaurant
 "24454881",MTA Bus - M60-SBS (LaGuardia Airport) - Astoria Blvd/Steinway St
@@ -57314,12 +57268,10 @@
 "24466882",Central Plumbing Specialties
 "24466882",K & G Hardware
 "24466882",Mushtari
-"24531885","158th Street and third ave"
 "24466882",Basics Plus Hardware & Houseware
 "24466882",Broadway Hardware
 "24467882",Cook's Arts & Crafts Shoppe
 "24467882",Metalliferous
-"25873934",Duane Reade
 "24467882",Sam Flax
 "24467882",Stitch Therapy
 "24467882",Michaels
@@ -57488,9 +57440,11 @@
 "24527885",Starbucks
 "24527885",MTA Subway - Fulton St (A/C/J/Z/2/3/4/5)
 "24527885",MTA Subway - 3rd Ave/149th St (2/5)
+"24527885",Mi Casa
 "24527885",One Liberty Plaza
 "24527885",Starbucks
 "24527885",MTA Subway - 3rd Ave/149th St (2/5)
+"24527885",Mi Casa
 "24527885",MTA Subway - 3rd Ave/149th St (2/5)
 "24527885",Starbucks
 "24527885",One Liberty Plaza
@@ -57604,6 +57558,7 @@
 "24531885",Starbucks
 "24531885",MTA Subway - Fulton St (A/C/J/Z/2/3/4/5)
 "24531885",MTA Subway - 3rd Ave/149th St (2/5)
+"24531885","158th Street and third ave"
 "24531885",Dunkin' Donuts
 "24531885",Zuccotti Park
 "24531885",One Liberty Plaza
@@ -57654,7 +57609,6 @@
 "24534885",One Liberty Plaza
 "24534885",Starbucks
 "24534885",Zuccotti Park
-"25873934",Kwik Farms
 "24534885",MTA Subway - Fulton St (A/C/J/Z/2/3/4/5)
 "24534885",MTA Subway - 3rd Ave/149th St (2/5)
 "24534885",Metfood Supermarket
@@ -57710,6 +57664,8 @@
 "24540885",MTA Subway - Fulton St (A/C/J/Z/2/3/4/5)
 "24540885",One Liberty Plaza
 "24540885",One Liberty Plaza
+"24540885",Starbucks
+"24540885",Duane Reade
 "24540885",MTA Bus - M35 - 125th and Lexington Ave
 "24540885","158th Street and third ave"
 "24540885",Starbucks
@@ -57725,7 +57681,6 @@
 "24544885",Starbucks
 "24544885",MTA Subway - 3rd Ave/149th St (2/5)
 "24544885","158th Street and third ave"
-"24814895",Home
 "24544885",MTA Subway - Fulton St (A/C/J/Z/2/3/4/5)
 "24544885",Starbucks
 "24544885",One Liberty Plaza
@@ -57830,7 +57785,6 @@
 "24552885",food town
 "24552885",Planet Fitness
 "24552885",MTA Subway - 149th St/Grand Concourse (2/4/5)
-"24555885",Starbucks
 "24553885",One Liberty Plaza
 "24553885",MTA Subway - 149th St/Grand Concourse (2/4/5)
 "24553885","158th Street and third ave"
@@ -57870,7 +57824,6 @@
 "24554885","158th Street and third ave"
 "24554885",MTA Subway - 3rd Ave/149th St (2/5)
 "24554885",MTA Subway - 149th St/Grand Concourse (2/4/5)
-"26116943",Taqueria Downtown
 "24554885",MTA Subway - Fulton St (A/C/J/Z/2/3/4/5)
 "24554885",Starbucks
 "24554885",One Liberty Plaza
@@ -57887,6 +57840,7 @@
 "24555885",MTA Subway - 149th St/Grand Concourse (2/4/5)
 "24555885",MTA Subway - 3rd Ave/149th St (2/5)
 "24555885",Mi Casa
+"24555885",Starbucks
 "24555885",One Liberty Plaza
 "24555885",Starbucks
 "24555885",MTA Subway - 149th St/Grand Concourse (2/4/5)
@@ -57993,7 +57947,6 @@
 "24561885",Starbucks
 "24561885",MTA Subway - Fulton St (A/C/J/Z/2/3/4/5)
 "24561885",MTA Subway - 149th St/Grand Concourse (2/4/5)
-"24818895",M & M Deli
 "24561885",MTA Subway - 3rd Ave/149th St (2/5)
 "24561885",Mi Casa
 "24561885",MTA Subway - High St/Brooklyn Bridge (A/C)
@@ -58034,6 +57987,8 @@
 "24562885",MTA Subway - High St/Brooklyn Bridge (A/C)
 "24562885",New York City College of Technology
 "24562885",Environmental Center
+"24562885",SUBWAY
+"24562885",Starbucks
 "24562885",New china chinese restaurant
 "24562885","158th Street and third ave"
 "24562885",MTA Subway - 149th St/Grand Concourse (2/4/5)
@@ -58144,6 +58099,10 @@
 "24664889",Payless ShoeSource
 "24664889","2 Cute"
 "24664889",Forever 21
+"24664889",Macy's
+"24664889",Charlotte Russe
+"24664889",JCPenney
+"24664889",Garage
 "24664889",Garden State Plaza Food Court
 "24664889",Bergen Community College
 "24664889",Pitkin Education Center
@@ -58157,7 +58116,6 @@
 "24664889",NJT - 178 Bus Stop
 "24664889",Fairleigh Dickinson University
 "24664889",Dickinson Hall FDU
-"24818895",Dunkin' Donuts
 "24664889",Fitness Center - Fairleigh Dickinson University
 "24664889",Commuter Lounge
 "24664889",SUB
@@ -58167,6 +58125,7 @@
 "24664889",SUB
 "24664889",NJTransit 756 New Bridge Road
 "24664889",Westfield Garden State Plaza
+"24664889",Gap
 "24664889",Cinnabon
 "24664889",Garden State Plaza Food Court
 "24664889",NJT - Bus Stop
@@ -58213,7 +58172,6 @@
 "24669889",Fairleigh Dickinson University
 "24669889",Dickinson Hall FDU
 "24669889",Commuter Lounge
-"24825895",M & M Deli
 "24669889",Fitness Center - Fairleigh Dickinson University
 "24669889",Robison Annex FDU
 "24669889",Fred Triplett Park
@@ -58432,7 +58390,6 @@
 "24723891",Hoja Nails
 "24723891",Liberty Place Apartments
 "24723891", Home Sweet Home 
-"24825895",SUBWAY
 "24723891",New Jersey Motor Vehicle Commission
 "24723891",Liberty Place Apartments
 "24723891", Home Sweet Home 
@@ -58450,7 +58407,6 @@
 "24724891",Liberty Place Apartments
 "24724891", Home Sweet Home 
 "24724891",New Jersey Motor Vehicle Commission
-"24819895",Home
 "24724891",New Jersey Motor Vehicle Commission
 "24724891","7-Eleven"
 "24724891",Liberty Place Apartments
@@ -58563,7 +58519,6 @@
 "24731891",New Jersey Motor Vehicle Commission
 "24731891",Don Quijote Restaurant
 "24731891", Home Sweet Home 
-"24822895",SUBWAY
 "24731891",New Jersey Motor Vehicle Commission
 "24731891",UltraBar
 "24731891",New Jersey Motor Vehicle Commission
@@ -58644,6 +58599,8 @@
 "24811895",Pepe Luxury Cars
 "24811895",Dunkin' Donuts
 "24811895",Stephenson Playground
+"24811895",Home
+"24811895",Dunkin' Donuts
 "24811895",New Rochelle APlus at Sunoco
 "24811895",Stephenson Playground
 "24811895",Stephenson Park
@@ -58704,6 +58661,8 @@
 "24814895",Stephenson Park
 "24814895",Dunkin' Donuts
 "24814895",Stephenson Park
+"24814895",Dunkin' Donuts
+"24814895",M & M Deli
 "24814895",Stephenson Playground
 "24814895",Stephenson Park
 "24814895",Home
@@ -58716,6 +58675,7 @@
 "24814895",Home
 "24814895",Stephenson Playground
 "24814895",Stephenson Park
+"24814895",Home
 "24815895",Stephenson Playground
 "24815895",Stephenson Park
 "24815895",Home
@@ -58776,6 +58736,8 @@
 "24818895",Dunkin' Donuts
 "24818895",Stephenson Playground
 "24818895",Stephenson Park
+"24818895",M & M Deli
+"24818895",Dunkin' Donuts
 "24818895","1200 Midland Ave."
 "24818895",Home
 "24818895",Dunkin' Donuts
@@ -58798,6 +58760,8 @@
 "24819895",Home
 "24819895",Dunkin' Donuts
 "24819895",Stephenson Park
+"24819895",Home
+"24822895",SUBWAY
 "24822895",Home
 "24822895",M & M Deli
 "24822895",Home
@@ -58837,6 +58801,8 @@
 "24823895",Home
 "24825895",Stephenson Park
 "24825895",Home
+"24825895",M & M Deli
+"24825895",SUBWAY
 "24825895",Stephenson Playground
 "24825895",Stephenson Park
 "24825895",Home
@@ -58856,7 +58822,6 @@
 "24827895",Crack's Crib
 "24827895",Stephenson Playground
 "24827895",George Washington Bridge
-"24954900",Westway Diner
 "24827895",George Washington Bridge
 "24827895",Pelham Bay & Split Rock Golf Course
 "24827895",Stephenson Playground
@@ -58919,6 +58884,7 @@
 "24954900",Starbucks
 "24954900",Arch Insurance
 "24954900",L'Allegria Restaurant
+"24954900",Westway Diner
 "24954900",Schmackary's
 "24954900",Arch Insurance
 "24954900",Starbucks
@@ -59346,6 +59312,7 @@
 "25008901",Gettysburg St
 "25008901",Springfield & Hillside
 "25008901",Where Dreams Come To Die.
+"25008901",Gate 1
 "25008901",Terminal 5
 "25008901",JetBlue Lounge
 "25008901",Little Jerk Center
@@ -59514,6 +59481,8 @@
 "25025902",CKO Kickboxing Paramus
 "25025902",Shipyard Hoboken
 "25025902",Leonia Medical Associates
+"25025902",Archetypus Cafe
+"25025902",Club Cama
 "25025902",CKO Kickboxing
 "25025902",CKO Kickboxing
 "25027902",Golds Gym
@@ -59640,6 +59609,7 @@
 "25288913",Dallas BBQ
 "25288913",Macy's
 "25288913",Au Bon Pain
+"25288913",Dunkin Donuts
 "25288913",MTA Subway - Bergen St (F/G)
 "25288913","LF Beauty: Jackel, Inc / Lornamead"
 "25288913",Duane Reade
@@ -59800,6 +59770,7 @@
 "25295913",Old Navy
 "25295913",Pathmark
 "25295913",Dunkin' Donuts
+"25296913",Dunkin Donuts
 "25296913",MTA Subway - Bergen St (F/G)
 "25296913",Urban Outfitters
 "25296913",MTA Subway - Utica Ave (A/C)
@@ -59854,7 +59825,6 @@
 "25334916",NJT - 22nd Street Light Rail Station
 "25334916",NJT - Exchange Place Light Rail Station
 "25334916",NJT - 22nd Street Light Rail Station
-"26119943","55 Van Reipen"
 "25334916",NJT - 22nd Street Light Rail Station
 "25334916",NJT - 8th Street Light Rail Station
 "25334916",NJT - 22nd Street Light Rail Station
@@ -59869,7 +59839,6 @@
 "25334916",MTA Subway - High St/Brooklyn Bridge (A/C)
 "25334916",Stephen R. Gregg Bayonne County Park
 "25334916",Jun's Residence
-"25507922",Mariella Pizza
 "25334916",NJT - 22nd Street Light Rail Station
 "25334916",Applebee's Neighborhood Grill & Bar
 "25334916",Jun's Residence
@@ -59913,7 +59882,6 @@
 "25336916",NJT - 8th Street Light Rail Station
 "25336916",NJT - 22nd Street Light Rail Station
 "25336916",NJT - 22nd Street Light Rail Station
-"25507922",Pier 40
 "25336916",NJT - Exchange Place Light Rail Station
 "25336916",NJT - Exchange Place Light Rail Station
 "25336916",NJT - 22nd Street Light Rail Station
@@ -60080,6 +60048,7 @@
 "25507922",Pier 40 Soccer Fields
 "25507922",NYFEST @ TribecaFest
 "25507922",White Horse Tavern
+"25507922",Pier 40
 "25507922",NYFEST @ TribecaFest
 "25507922",The Jane Hotel
 "25507922",Best Pizza
@@ -60087,6 +60056,7 @@
 "25507922",Anna Maria Pizza & Pasta
 "25507922",Kosciuszko Bridge
 "25507922",MTA Bus - Lexington Av & E 68 St (M101/M102/M103)
+"25507922",Mariella Pizza
 "25509922",Yankee Stadium
 "25509922",Tony's Pizza & Pasta
 "25509922",Kosciuszko Bridge
@@ -60188,6 +60158,8 @@
 "25518922",Sylvia's Restaurant
 "25518922",MTA Bus - M2
 "25518922",Museum of the City of New York
+"25518922",M4 bus
+"25518922",Pizza Prince
 "25519922",Chao Thai ร้านชาวไทย
 "25519922",McCarren Park
 "25519922",The Tippler
@@ -60247,6 +60219,7 @@
 "25532922",Mille-Feuille Bakery
 "25532922",Broadway Panhandler
 "25532922",Medi Winebar
+"25532922",Joe's Pizza
 "25535922",Carmine's Original Pizza
 "25535922",Williamsburg Cinemas
 "25535922",Nitehawk Cinema
@@ -60317,7 +60290,6 @@
 "25680928",City College (CWE)
 "25680928",MTA Subway - Simpson St (2/5)
 "25680928",MTA Subway - Mosholu Parkway (4)
-"25691928",John's Breakfast Cart
 "25680928",The Children's Learning Center @ Hunter College
 "25680928",Mi Casa :-D
 "25680928",MTA Subway - Mosholu Parkway (4)
@@ -60356,6 +60328,7 @@
 "25682928",MTA Subway - Mosholu Parkway (4)
 "25682928",The Children's Learning Center @ Hunter College
 "25682928",MTA Subway - 68th St/Hunter College (6)
+"25682928",Petco
 "25682928",Costco Wholesale
 "25682928",MTA Subway - Mosholu Parkway (4)
 "25682928",The Children's Learning Center @ Hunter College
@@ -60409,6 +60382,7 @@
 "25684928",Central Park - 72nd St Playground
 "25684928",The Children's Learning Center @ Hunter College
 "25684928",MTA Subway - 68th St/Hunter College (6)
+"25684928",H&M
 "25684928",MTA Subway - Mosholu Parkway (4)
 "25684928",The Children's Learning Center @ Hunter College
 "25684928",Times Square
@@ -60480,6 +60454,7 @@
 "25691928",The Children's Learning Center @ Hunter College
 "25691928",MTA Subway - E 180th St (2/5)
 "25691928",The Children's Learning Center @ Hunter College
+"25691928",John's Breakfast Cart
 "25691928",The Children's Learning Center @ Hunter College
 "25691928",Abuela's Casa <3
 "25691928",Mi Casa :-D
@@ -60534,7 +60509,6 @@
 "25695928",MTA Subway - Mosholu Parkway (4)
 "25695928",Barnes & Noble
 "25695928",MTA Subway - Mosholu Parkway (4)
-"25702928",Mi Casa :-D
 "25695928",The Children's Learning Center @ Hunter College
 "25695928",Castañeda Residence
 "25695928",Dahlia Nails & Spa
@@ -60593,7 +60567,6 @@
 "25698928",MTA Subway - 68th St/Hunter College (6)
 "25698928",Abuela's Casa <3
 "25698928",Pathmark
-"25702928",Alberto's Breakfast Cart
 "25698928","121212 The Concert For Sandy Relief - Live Simulcast Viewing"
 "25698928",Mi Casa :-D
 "25698928",MTA Subway - Mosholu Parkway (4)
@@ -60650,6 +60623,8 @@
 "25702928",MTA Subway - Mosholu Parkway (4)
 "25702928",The Children's Learning Center @ Hunter College
 "25702928",MTA Subway - 161st St/Yankee Stadium (4/B/D)
+"25702928",Mi Casa :-D
+"25702928",Alberto's Breakfast Cart
 "25702928",Chase Bank
 "25702928",MTA Subway - 68th St/Hunter College (6)
 "25702928",Mi Casa :-D
@@ -60799,6 +60774,7 @@
 "25852934",McDonald's
 "25854934",Zeppelin Hall Biergarten
 "25854934",Jack Rabbit Slims
+"25854934",A&P
 "25854934",Tailgate Central
 "25854934",Yankee Stadium
 "25854934",Jim Beam Suite Lounge
@@ -60861,6 +60837,9 @@
 "25864934",Duane Reade
 "25864934",CV Rooftop Pool
 "25865934",Chloeville
+"25865934","Duckville, USA"
+"25865934",McDonald's
+"25865934",Walgreens
 "25865934",Binghampton Bagels & Deli
 "25865934",Corner of 77th & Central Park West
 "25865934",Central Park - The Yard
@@ -60921,6 +60900,9 @@
 "25867934",Lenwich by Lenny's
 "25867934",Duane Reade
 "25867934",GWB Ghetto Jitney
+"25867934",The Cottage Bar
+"25867934",Jack Rabbit Slims
+"25867934",Cugino's Pizza
 "25868934",Corner of 77th & Central Park West
 "25868934",Dive 75
 "25868934",Duane Reade
@@ -60981,6 +60963,15 @@
 "25872934",A&P
 "25872934",Kittyville
 "25873934",Duane Reade
+"25873934",Linwood Pizza
+"25873934",Lenwich by Lenny's
+"25873934",Duane Reade
+"25873934",Five Guys
+"25873934",Lenwich by Lenny's
+"25873934",CityPie
+"25873934",Duane Reade
+"25873934",Duane Reade
+"25873934",Kwik Farms
 "25873934",George Washington Bridge
 "25873934",Halal food cart
 "25873934",Duane Reade
@@ -61098,6 +61089,7 @@
 "26116943","55 Van Reipen"
 "26116943",Grove Street Bicycles
 "26116943",Barcade
+"26116943",Taqueria Downtown
 "26116943",Zeppelin Hall Biergarten
 "26116943",Lucky 7 Tavern
 "26116943",Lamp Post Bar & Grille
@@ -61157,6 +61149,7 @@
 "26118943",Lucky 7 Tavern
 "26119943",River Front Plaza
 "26119943",Eastern Datacomm
+"26119943","55 Van Reipen"
 "26119943",Lucky 7 Tavern
 "26119943","55 Van Reipen"
 "26119943",Terminal A
@@ -61469,7 +61462,6 @@
 "26140943",Barcade
 "26140943",Hamilton Park
 "26140943",Eastern Datacomm
-"26154943",The Lenox
 "26140943",US Post Office
 "26140943",Cosmo's Italian Salumeria
 "26140943",Eastern Datacomm
@@ -61649,6 +61641,7 @@
 "26153943",Eastern Datacomm
 "26154943",Dunkin' Donuts
 "26154943",Eastern Datacomm
+"26154943",The Lenox
 "26154943",Paratha Junction
 "26154943",Eastern Datacomm
 "26154943",Lucky 7 Tavern
@@ -61705,7 +61698,6 @@
 "26288951",MTA Subway - 125th St (1)
 "26288951",MTA Subway - 42nd St/Times Square/Port Authority Bus Terminal (A/C/E/N/Q/R/S/W/1/2/3/7)
 "26288951",New Star Cafe
-"26289951",The House of Me
 "26288951",Chefs Diet
 "26288951",MTA Subway - Rector St (R/W)
 "26288951",MTA Subway - 125th St (1)
@@ -61794,7 +61786,6 @@
 "26289951",MTA Subway - 42nd St/Times Square/Port Authority Bus Terminal (A/C/E/N/Q/R/S/W/1/2/3/7)
 "26289951",MTA Subway - Rector St (R/W)
 "26289951",Alcoholism Council of New York
-"26290951",Ok Cleaners
 "26289951","The Lesbian, Gay, Bisexual & Transgender Community Center"
 "26289951",Good Stuff Diner
 "26289951",MTA Subway - 125th St (1)
@@ -61812,6 +61803,7 @@
 "26289951",Ok Cleaners
 "26289951",Duane Reade
 "26289951",Chinatown Brasserie
+"26289951",The House of Me
 "26289951","The Lesbian, Gay, Bisexual & Transgender Community Center"
 "26289951",H&M
 "26289951",Daffy's
@@ -61838,7 +61830,6 @@
 "26290951",MTA Subway - Rector St (R/W)
 "26290951",MTA Subway - 137th St/City College (1)
 "26290951",The House of Me
-"26293951",The House of Me
 "26290951",MTA Subway - 190th St (A)
 "26290951",MTA Subway - 42nd St/Times Square/Port Authority Bus Terminal (A/C/E/N/Q/R/S/W/1/2/3/7)
 "26290951",New Star Cafe
@@ -61848,6 +61839,7 @@
 "26290951",MTA Subway - 125th St (1)
 "26290951",MTA Subway - 191st St (1)
 "26290951",The House of Me
+"26290951",Ok Cleaners
 "26290951",Victorian Cleaner
 "26290951",MTA Subway - 190th St (A)
 "26290951",MTA Subway - 42nd St/Times Square/Port Authority Bus Terminal (A/C/E/N/Q/R/S/W/1/2/3/7)
@@ -61947,13 +61939,13 @@
 "26293951",The Monster
 "26293951",MTA Subway - 125th St (1)
 "26293951",The House of Me
+"26293951",The House of Me
 "26293951",MTA Subway - 190th St (A)
 "26293951",MTA Subway - 42nd St/Times Square/Port Authority Bus Terminal (A/C/E/N/Q/R/S/W/1/2/3/7)
 "26293951",Chefs Diet
 "26293951",MTA Subway - Rector St (R/W)
 "26293951",Alcoholism Council of New York
 "26293951",MTA Subway - Chambers St (A/C/E)
-"26294951",The House of Me
 "26293951",MTA Subway - 190th St (A)
 "26293951",The House of Me
 "26293951",MTA Subway - 190th St (A)
@@ -62003,12 +61995,13 @@
 "26294951",Pergola
 "26294951",Chefs Diet
 "26294951",Hale & Hearty
-"26305951","16 Handles"
 "26294951",MTA Subway - 42nd St/Times Square/Port Authority Bus Terminal (A/C/E/N/Q/R/S/W/1/2/3/7)
+"26294951",Cucina Liberta
 "26294951",Alcoholism Council of New York
 "26294951",MTA Subway - 191st St (1)
 "26294951",The House of Me
 "26294951",Planet Fitness
+"26294951",The House of Me
 "26294951",Planet Fitness
 "26294951","7-Eleven"
 "26294951",The House of Me
@@ -62114,7 +62107,6 @@
 "26297951",Hale and Hearty
 "26297951",Cucina Liberta
 "26297951",Alcoholism Council of New York
-"27060976",Random Block
 "26297951",AMC Loews 34th Street 14
 "26297951",Uptown Super Market
 "26297951",Cucina Liberta
@@ -62172,7 +62164,6 @@
 "26301951",MTA Subway - 190th St (A)
 "26301951",El Manahry Fresh Juice
 "26301951",TD Bank
-"27061976",J&R
 "26301951",Chefs Diet
 "26301951",MTA Subway - 42nd St/Times Square/Port Authority Bus Terminal (A/C/E/N/Q/R/S/W/1/2/3/7)
 "26301951",Cucina Liberta
@@ -62194,7 +62185,6 @@
 "26302951",The House of Me
 "26302951",China Sun
 "26302951",Chefs Diet
-"26306951",Two Boots West Village
 "26302951",Callen-Lorde Community Health Center
 "26302951",The House of Me
 "26302951",MTA Subway - 190th St (A)
@@ -62230,6 +62220,7 @@
 "26305951",Planet Fitness
 "26305951",Chefs Diet
 "26305951",Coppelia
+"26305951","16 Handles"
 "26305951",MTA Subway - 96th St (1/2/3)
 "26305951",The House of Me
 "26305951",The House of Me
@@ -62250,6 +62241,7 @@
 "26306951",The House of Me
 "26306951",Chefs Diet
 "26306951",The Underground
+"26306951",Two Boots West Village
 "26306951",MTA Subway - 190th St (A)
 "26996974",Ralph Ellison Memorial Park
 "26996974",Riverbank State Park
@@ -62392,10 +62384,8 @@
 "27001974",Sutter Ave
 "27001974",The Dog House
 "27002974",Track 2
-"27066976",Metro Mall
 "27002974",MTA Subway - 145th St (1)
 "27002974",Ralph Ellison Memorial Park
-"27061976",Duane Reade
 "27002974",Riverbank State Park Athletics
 "27002974",Riverbank State Park
 "27002974",MTA Subway - 96th St (1/2/3)
@@ -62777,12 +62767,15 @@
 "27059976",East River Esplanade
 "27059976",MTA Subway - Brooklyn Bridge/City Hall/Chambers St (4/5/6/J/Z)
 "27060976",Duane Reade
+"27060976",Zeytuna
 "27060976",MTA Subway - Myrtle Ave/Broadway (J/M/Z)
 "27060976",SPEEDRUNNER CITY
+"27060976",Random Block
 "27060976",MTA Subway - Kosciuszko St (J)
 "27060976",Duane Reade
 "27060976",Brooklyn Public Library - DeKalb Branch
 "27060976",Bank of America
+"27060976",J&R
 "27060976",MTA Subway - Bowery (J/Z)
 "27060976",MTA Subway - Kosciuszko St (J)
 "27060976",MTA Subway - J Train
@@ -62834,6 +62827,8 @@
 "27061976",Zeytuna
 "27061976",Tiffany & Co.
 "27061976",Pine St
+"27061976",J&R
+"27061976",Duane Reade
 "27061976",Bank of America
 "27061976",MTA Subway - Delancey St/Essex St (F/J/M/Z)
 "27061976",Raylz HQ
@@ -62887,6 +62882,7 @@
 "27062976",MHR management
 "27062976",Raylz HQ
 "27062976",MTA Subway - Kosciuszko St (J)
+"27062976",Starbucks
 "27062976",Duane Reade
 "27062976",MTA Subway - Knickerbocker Ave (M)
 "27062976",MTA Subway - Kosciuszko St (J)
@@ -62931,6 +62927,7 @@
 "27066976",MTA M Train - Shuttle Bus
 "27066976",Kmart
 "27066976",MTA Bus - Q38/Q54/Q67 - Metropolitan Av & Metro Av Station
+"27066976",Metro Mall
 "27066976",MTA Subway - Myrtle Ave/Broadway (J/M/Z)
 "27066976",Metropolitan Avenue - Bound M Shuttle
 "27066976",MTA Subway - Central Ave (M)
@@ -62950,7 +62947,6 @@
 "27067976",Raylz HQ
 "27067976",Random Block
 "27067976",Brooklyn Public Library - DeKalb Branch
-"27196980","184 Kent"
 "27067976",MTA - B38 - Dekalb Ave & Evergreen Ave
 "27067976",The Hot Shower
 "27067976",Raylz HQ
@@ -63192,7 +63188,6 @@
 "27078976",MTA Subway - 66th St/Lincoln Center (1)
 "27078976",McDonald's
 "27078976",Grand Hyatt New York
-"27194980",Max Fish
 "27078976",MTA Bus - Lexington Av & E 45 St (M101/M102/M103)
 "27078976",MTA Bus - Astor Pl & 3 Av (M101/M102)
 "27078976",New York City Hall
@@ -63246,6 +63241,7 @@
 "27082976",Raylz HQ
 "27082976",MTA Bus - B47 - Dekalb & Broadway
 "27082976",MTA - B38 - Dekalb Ave & Evergreen Ave
+"27194980",Max Fish
 "27194980",Two-Bit's Retro Arcade
 "27194980",Real Proof Labs
 "27194980",Crif Dogs
@@ -63272,6 +63268,7 @@
 "27195980","28 Fusion Sushi/Chef 28"
 "27195980",Ace Hotel New York
 "27195980",Opening Ceremony
+"27196980","184 Kent"
 "27196980",Stumptown Coffee Roasters
 "27196980",Rudy's Barbershop
 "27196980",Opening Ceremony
@@ -63606,7 +63603,6 @@
 "27429990",InterContinental New York Times Square
 "27429990",Best Western Bronx Inn
 "27429990",Radisson Hotel JFK Airport
-"27476992",Festival
 "27429990",Wingate by Wyndham Manhattan Midtown
 "27429990",Radisson Hotel JFK Airport
 "27429990",InterContinental New York Times Square
@@ -63626,6 +63622,7 @@
 "27429990",Wingate by Wyndham Manhattan Midtown
 "27429990",VOILÀ hotel -  St Giles The Court
 "27429990",New York City Hall
+"27429990",Woorijip
 "27429990",InterContinental New York Times Square
 "27429990",Radisson Hotel JFK Airport
 "27429990",InterContinental New York Times Square
@@ -63657,7 +63654,6 @@
 "27430990",Wingate by Wyndham Manhattan Midtown
 "27430990",VOILÀ hotel -  St Giles The Court
 "27430990",InterContinental New York Times Square
-"27476992",Corner Burger
 "27430990",InterContinental New York Times Square
 "27430990",Radisson Hotel JFK Airport
 "27430990",Best Western Jfk Airport Hotel
@@ -63859,7 +63855,6 @@
 "27437990",VOILÀ hotel -  St Giles The Court
 "27437990",Radisson Hotel JFK Airport
 "27437990",Best Western Queens Court Hotel
-"27480992",Bank of America
 "27437990",InterContinental New York Barclay
 "27437990",Wingate by Wyndham Manhattan Midtown
 "27437990",VOILÀ hotel -  St Giles The Court
@@ -64079,6 +64074,8 @@
 "27476992",United Artists Sheepshead Bay 14 IMAX & RPX
 "27476992",Stop & Shop
 "27476992",Bagel Boy
+"27476992",Festival
+"27476992",Corner Burger
 "27476992",Brooklyn Heights Promenade
 "27476992",Crumbs Bake Shop
 "27476992",MCU Park
@@ -64139,6 +64136,7 @@
 "27480992",Costco Wholesale
 "27480992",Artopolis Bakery
 "27480992",Starbucks
+"27480992",Bank of America
 "27480992",Evon Hair Salon
 "27480992",St Simon And Jude
 "27480992",Starbucks
@@ -64237,7 +64235,6 @@
 "27499992",Emporium Gas
 "27499992",Il Fornaretto Bakery
 "27499992",Walgreens
-"278761006",my spot dammit
 "27499992",Marine Air Terminal (Terminal A)
 "27504992",Rite Aid
 "27504992",Starbucks
@@ -64296,7 +64293,6 @@
 "278651006",PS/IS 270
 "278651006",Two Hands Deli & Grocery
 "278651006",Randall's Island
-"281691016",Chomo Villa
 "278651006",PS/IS 270
 "278651006",P.S. 270Q
 "278651006",my spot dammit
@@ -64415,6 +64411,7 @@
 "278761006",Crown Fried Chicken
 "278761006",my spot dammit
 "278761006",Ho Mei Chinese Resturant
+"278761006",my spot dammit
 "278761006","422 jefferson ave"
 "278761006",amby grocery
 "278761006",my spot dammit
@@ -64586,6 +64583,7 @@
 "281691016",New Milford High School
 "281691016",The Astillero Residence
 "281691016",Sanchez Residence
+"281691016",Chomo Villa
 "281691016",The Astillero Residence
 "281691016",The Astillero Residence
 "281701016",New Milford High School
@@ -64715,7 +64713,6 @@
 "281901017",Burger King
 "281901017",AMC Bay Plaza Cinema 13
 "281901017",Bay Plaza Shopping Center
-"281931017",Carl's Steaks
 "281901017",MTA MaBSTOA Bus Bx23 / Bx26 / Bx28 / Bx29 / Bx38 / Q50 / BxM7 at Bartow Avenue / Co-op City Blvd (Section 3 / 4)
 "281901017",Mount Sinai Beth Israel
 "281901017",Pelham Bay Park
@@ -64773,6 +64770,7 @@
 "281921017","MTA Bx23, Bx29, Q50, Bee Line 45 Pelham Bay"
 "281921017",Pelham Bay Park
 "281921017",Nightmare
+"281931017",Carl's Steaks
 "281931017",Starbucks
 "281931017",MTA Subway - 34th St/Herald Sq (B/D/F/M/N/Q/R/W)
 "281931017",MTA Subway - 5th Ave/59th St (N/R/W)
@@ -64781,6 +64779,7 @@
 "281931017",MTA Subway - Lexington Ave/59th St (4/5/6/N/R/W)
 "281931017","MTA Bx23, Bx29, Q50, Bee Line 45 Pelham Bay"
 "281931017",Dunkin' Donuts
+"281931017",SUBWAY
 "281931017",CVS/pharmacy
 "281931017",Pelham Bay Park
 "281931017",Pelham Bay Park
@@ -64942,7 +64941,6 @@
 "281971017",Nightmare
 "281971017",Pelham Bay Park
 "281971017",MTA Subway - Pelham Bay Park (6)
-"282651019",Convivium Osteria
 "281971017",MTA Subway - Buhre Ave (6)
 "281971017",MTA Subway - Middletown Rd (6)
 "281971017",MTA Subway - Westchester Square/E Tremont Ave (6)
@@ -65054,7 +65052,6 @@
 "282051017",Foodtown
 "282051017",MTA Subway - 161st St/Yankee Stadium (4/B/D)
 "282051017",MTA Subway - 42nd St/Grand Central (4/5/6/7/S)
-"282431019",Zaytoon's
 "282051017",MTA Subway - 42nd St/Times Square/Port Authority Bus Terminal (A/C/E/N/Q/R/S/W/1/2/3/7)
 "282051017",Shake Shack
 "282051017",Yankees Clubhouse Shop
@@ -65112,6 +65109,7 @@
 "282431019",Prospect Park
 "282431019",The Belnord | Place of Prospects
 "282431019",Branded Saloon
+"282431019",Zaytoon's
 "282431019",The Belnord | Place of Prospects
 "282431019",Long Meadow
 "282431019",Down to Earth Park Slope Farmers Market
@@ -65224,6 +65222,7 @@
 "282651019",The Vanderbilt
 "282651019",Blue Apron Foods
 "282651019",Grand Army Plaza Greenmarket
+"282651019",Convivium Osteria
 "282651019",The Belnord | Place of Prospects
 "282651019",Starbucks
 "282661019",New York Sports Club
@@ -65611,7 +65610,6 @@
 "287331040",HK Lounge
 "287331040",Carolines on Broadway
 "287331040",Vucciria
-"289121047",Ranch Market
 "287331040",Barry’s Bootcamp
 "287331040",American Apparel Warehouse
 "287331040",CVS/pharmacy
@@ -65885,7 +65883,6 @@
 "288381044",MTA Subway - 42nd St/Grand Central (4/5/6/7/S)
 "288381044",Hudson News
 "288381044",Apple Grand Central
-"289081047",Mi Casa
 "288381044",Grand Central Terminal Clock
 "288381044",Church of St. John
 "288381044",Kaji Sushi & Hibachi Japanese Restaurant
@@ -65944,6 +65941,7 @@
 "289081047",Verrazano-Narrows Bridge (Verrazano–Narrows Bridge)
 "289081047",Dollar Tree
 "289081047",White Castle
+"289081047",Mi Casa
 "289081047",ShopRite
 "289091047",MTA Subway - Briarwood (E/F)
 "289091047",MTA Subway - Lexington Ave/53rd St (E/M/6)
@@ -66125,6 +66123,7 @@
 "289121047",Dunkin' Donuts
 "289121047",MTA Subway - Briarwood (E/F)
 "289121047",MTA Subway - Lexington Ave/63rd St (F/Q)
+"289121047",Ranch Market
 "289121047",Chantels House
 "289121047",Duane Reade
 "289121047",Fantastic Kids Toys
@@ -66239,7 +66238,6 @@
 "289141047",Chantels House
 "289141047",Central Park - North End
 "289141047",Robert F Kennedy Toll Plaza
-"289171047",Dunkin' Donuts
 "289141047",Willis Avenue Bridge
 "289141047",MTA Subway - Briarwood (E/F)
 "289141047",Amandas Castle
@@ -66296,6 +66294,7 @@
 "289161047",Amandas Castle
 "289171047",Aged Restaurant and Bar (aged.)
 "289171047",United Artists Midway 9
+"289171047",Dunkin' Donuts
 "289171047",Dunkin' Donuts
 "289171047",Fantastic Kids Toys
 "289171047",Chipotle Mexican Grill
@@ -66533,7 +66532,6 @@
 "291301054",TD Bank
 "291301054","Hookers, Drugs And Guns Funporium"
 "291301054",KFC
-"291371054",UPS
 "291301054",Joe's Home Office
 "291301054",Jimmy Jim's Grill
 "291301054",Rose's Pizza
@@ -66593,6 +66591,7 @@
 "291341054",Sanctuary
 "291341054",Joe's Home Office
 "291371054",Joe's Official Sunday NFL Couch
+"291371054",UPS
 "291371054",Midland Bagels & Grill
 "291371054",Sanctuary
 "291371054",Sanctuary
@@ -66720,7 +66719,6 @@
 "291521055",CVS/pharmacy
 "291521055",Fashion Institute of Technology
 "291521055",Pinkyotto
-"291561055",PetSmart
 "291521055",The New School for Jazz and Contemporary Music
 "291521055",Fashion Institute of Technology
 "291521055",FIT Building C
@@ -66779,6 +66777,7 @@
 "291561055",Pinkyotto Office
 "291561055",Dean & DeLuca
 "291561055",Pinkyotto Office
+"291561055",PetSmart
 "291561055",Apartment 10-H!
 "291561055",Pinkyotto
 "291561055",Bank of America
@@ -66954,6 +66953,7 @@
 "295631070",EHS St. George Residence
 "295631070",Eastern Athletic Club
 "295631070",Eastern Athletic Club
+"295631070",Starbucks
 "295631070",Eastern Athletic Club
 "295631070",Dumbo Waterfront (10 Jay Street)
 "295631070",Miami Ad School Brooklyn
