@@ -26,7 +26,7 @@ public class StringUtils {
       if (Charset.forName("US-ASCII").newEncoder().canEncode(character)) {
         String characterCleaned =
           (character + "").replaceAll(
-              "[+,'!@#$&\\*()\\[\\]\\-/\\\\:;\\.\\?|]",
+              "[+,'\"!@#$&\\*()\\[\\]\\-/\\\\:;\\.\\?|]",
               ""
             );
 
