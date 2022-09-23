@@ -8,7 +8,7 @@ public class CsvToSql {
 
   private static final String TRAJECTORY_ID = "trajectory_id";
   private static final String TRAJECTORY_VALUE = "trajectory_value";
-  private static final String delimit = ",";
+  private static final String DELIMIT = ",";
   private static final String delimitTrajectory = ";";
   private static final String schema = "foursquare";
   private static final int maxLine = 500;
@@ -92,7 +92,7 @@ public class CsvToSql {
     Properties pointTrajectory = new Properties();
 
     if (line != null) {
-      String[] point = line.split(delimit);
+      String[] point = line.split(DELIMIT);
       pointTrajectory.setProperty(
         TRAJECTORY_ID,
         StringUtils.sanitize(point[0])
