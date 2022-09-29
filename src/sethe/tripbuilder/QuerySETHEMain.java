@@ -46,7 +46,7 @@ public class QuerySETHEMain {
 
   public void executeQuery(CompositeQuery query) throws Exception {
     for (Query filter : query.getMapFilter().values()) {
-      searchTrajectories(filter);
+      searchTrajectories(filter, query.getDelimiter());
       for (Trajectory t : filter.getMapResultQuery().values()) {
         //				t.printGraph();
         query.add(t);
@@ -60,12 +60,12 @@ public class QuerySETHEMain {
    * @return
    * @throws SQLException
    */
-  private void searchTrajectories(Query filter) throws Exception {
+  private void searchTrajectories(Query filter, String delimiter) throws Exception {
     String sql = filter.createSqlQuery(schema);
 
     ResultSet rs = st.executeQuery(sql);
     while (rs.next()) {
-      Trajectory t = new Trajectory();
+      Trajectory t = new Trajectory(delimiter);
       t.setId(rs.getString(1));
       t.loadText(rs.getString(2), rs.getString(3)); //Poi values, category values
       t.setQuery(filter);
@@ -148,7 +148,17 @@ public class QuerySETHEMain {
   public static CompositeQuery loadQuery(Properties properties) {
     CompositeQuery query = new CompositeQuery();
     String distFun = properties.getProperty("dist_func");
-    String split = properties.getProperty("split");
+    String split = ";";
+//    String split = properties.getProperty("split");
+
+    String pkColumn = properties.getProperty("pk_column_name");
+    String valueColumn = properties.getProperty("value_column_name");
+    String delimiter = properties.getProperty("delimiter");
+
+    query.setPkTrajColumnName(pkColumn);
+    query.setValueColumnName(valueColumn);
+    query.setDelimiter(delimiter);
+
     int arraySize = 0;
 
     Map<String, Query> filters = new HashMap<String, Query>();
@@ -163,9 +173,9 @@ public class QuerySETHEMain {
     }
 
     for (String fname : filters.keySet()) {
-      Query f = new Query(fname);
+      Query f = new Query(fname, query);
       f.setDistanceFunction(distFun);
-      f.setQuery(query);
+//      f.setQuery(query);
 
       //Getting PoIs
       String p = properties.getProperty(fname + "_asp_poi");

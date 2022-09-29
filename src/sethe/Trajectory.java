@@ -19,17 +19,20 @@ public class Trajectory implements Comparable<Trajectory> {
   private List<SubTrajectory> subTrajectories;
   private Double coefficient;
 
-  public Trajectory() {
+  private String delimiter;
+
+  public Trajectory(String delimiter) {
     graph = new Graph();
     subTrajectories = new ArrayList<SubTrajectory>();
     coefficient = 0d;
+    this.delimiter = delimiter == null? " " : delimiter;
   }
 
   public void loadText(String valuePoi, String valueCat) throws Exception {
     textPoi = valuePoi;
     textCategory = valueCat;
-    String[] places = valuePoi.split(" ");
-    String[] categories = valueCat.split(" ");
+    String[] places = valuePoi.split(delimiter);
+    String[] categories = valueCat.split(delimiter);
 
     if (places.length != categories.length) throw new Exception(
       "Trajectory " + id + " num poi size is different from the category size"
@@ -182,7 +185,7 @@ public class Trajectory implements Comparable<Trajectory> {
   private PoI findPoIs(String m, int end, String text, boolean isCategory)
     throws Exception {
     String subTraj = substring(text, end); //text.substring(0, end).trim();
-    String[] arraySubTraj = subTraj.split(" ");
+    String[] arraySubTraj = subTraj.split(delimiter);
 
     for (int i = arraySubTraj.length - 1; i >= 0; i--) {
       String poi = arraySubTraj[i];
