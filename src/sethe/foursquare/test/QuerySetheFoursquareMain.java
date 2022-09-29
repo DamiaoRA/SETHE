@@ -1,4 +1,4 @@
-package sethe.tripbuilder.test;
+package sethe.foursquare.test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,6 +6,7 @@ import java.util.Properties;
 
 import sethe.CompositeQuery;
 import sethe.tripbuilder.QuerySETHEMain;
+import sethe.util.TimeQ;
 
 public class QuerySetheFoursquareMain {
 	private static QuerySETHEMain qt = null;

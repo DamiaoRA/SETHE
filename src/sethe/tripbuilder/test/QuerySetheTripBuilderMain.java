@@ -6,6 +6,7 @@ import java.util.Properties;
 
 import sethe.CompositeQuery;
 import sethe.tripbuilder.QuerySETHEMain;
+import sethe.util.TimeQ;
 
 /**
  * SETHE Queries
