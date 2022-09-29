@@ -9,16 +9,31 @@ public class CsvToSql {
   private static final String TRAJECTORY_ID = "trajectory_id";
   private static final String TRAJECTORY_VALUE = "trajectory_value";
   private static final String DELIMIT = ",";
-  private static final String delimitTrajectory = ";";
-  private static final String schema = "foursquare";
-  private static final int maxLine = 500;
+  private static final String DELIMIT_TRAJECTORY = ";";
+  private static final short MAX_LINE = 500;
 
   public static void main(String[] args) throws IOException {
+    boolean sanitize = true;
+
+    if (args.length == 0) {
+      System.out.println("Por favor, informe o caminho do arquivo CSV.");
+    } else if (args.length < 2) {
+      System.out.println("Por favor, informe o schema do banco de dados.");
+    } else if (args.length == 3) {
+      sanitize = !Objects.equals(args[2], "--no-sanitize");
+    }
+
     String pathFile = args[0];
-    csvToSql(pathFile);
+    String schema = args[1];
+
+    csvToSql(pathFile, schema, sanitize);
   }
 
-  private static void csvToSql(String pathFile) throws IOException {
+  private static void csvToSql(
+    final String pathFile,
+    final String schema,
+    boolean sanitizeValue
+  ) throws IOException {
     File fileCsv = new File(pathFile);
     String pathFileSql = fileCsv.getAbsolutePath().replace(".csv", ".sql");
     File fileSql = new File(pathFileSql);
@@ -40,16 +55,22 @@ public class CsvToSql {
       bufferedWriter.flush();
 
       int countLine = 0;
-      Properties current = getPointTrajectory(bufferedReader.readLine());
+      Properties current = getPointTrajectory(
+        bufferedReader.readLine(),
+        sanitizeValue
+      );
 
       if (!current.isEmpty()) {
         String trajectoryId = current.getProperty(TRAJECTORY_ID);
         String trajectory = current.getProperty(TRAJECTORY_VALUE);
 
-        Properties next = getPointTrajectory(bufferedReader.readLine());
+        Properties next = getPointTrajectory(
+          bufferedReader.readLine(),
+          sanitizeValue
+        );
 
         while (!next.isEmpty()) {
-          if (countLine > maxLine) {
+          if (countLine > MAX_LINE) {
             bufferedWriter.flush();
             countLine = 0;
           }
@@ -62,7 +83,7 @@ public class CsvToSql {
           ) {
             trajectoryId = current.getProperty(TRAJECTORY_ID);
             trajectory +=
-              delimitTrajectory + next.getProperty(TRAJECTORY_VALUE);
+              DELIMIT_TRAJECTORY + next.getProperty(TRAJECTORY_VALUE);
             current = (Properties) next.clone();
           } else {
             bufferedWriter.write(
@@ -74,7 +95,7 @@ public class CsvToSql {
             trajectory = current.getProperty(TRAJECTORY_VALUE);
           }
 
-          next = getPointTrajectory(bufferedReader.readLine());
+          next = getPointTrajectory(bufferedReader.readLine(), sanitizeValue);
           countLine++;
         }
 
@@ -88,7 +109,7 @@ public class CsvToSql {
     }
   }
 
-  private static Properties getPointTrajectory(String line) {
+  private static Properties getPointTrajectory(String line, boolean sanitize) {
     Properties pointTrajectory = new Properties();
 
     if (line != null) {
@@ -99,7 +120,7 @@ public class CsvToSql {
       );
       pointTrajectory.setProperty(
         TRAJECTORY_VALUE,
-        StringUtils.sanitize(point[1])
+        sanitize ? StringUtils.sanitize(point[1]) : point[1]
       );
     }
 
