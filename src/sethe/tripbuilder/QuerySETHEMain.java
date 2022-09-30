@@ -44,6 +44,23 @@ public class QuerySETHEMain {
     st = con.createStatement();
   }
 
+  public QuerySETHEMain(
+    String host,
+    String port,
+    String user,
+    String pass,
+    String schema,
+    String database
+  ) throws SQLException {
+    String url = "jdbc:postgresql://" + host + ":" + port + "/" + database;
+    this.schema = schema;
+    Properties options = new Properties();
+    options.setProperty("user", user);
+    options.setProperty("password", pass);
+    con = DriverManager.getConnection(url, options);
+    st = con.createStatement();
+  }
+
   public void executeQuery(CompositeQuery query) throws Exception {
     for (Query filter : query.getMapFilter().values()) {
       searchTrajectories(filter, query.getDelimiter());
@@ -60,7 +77,8 @@ public class QuerySETHEMain {
    * @return
    * @throws SQLException
    */
-  private void searchTrajectories(Query filter, String delimiter) throws Exception {
+  private void searchTrajectories(Query filter, String delimiter)
+    throws Exception {
     String sql = filter.createSqlQuery(schema);
 
     ResultSet rs = st.executeQuery(sql);
@@ -149,7 +167,7 @@ public class QuerySETHEMain {
     CompositeQuery query = new CompositeQuery();
     String distFun = properties.getProperty("dist_func");
     String split = ";";
-//    String split = properties.getProperty("split");
+    //    String split = properties.getProperty("split");
 
     String pkColumn = properties.getProperty("pk_column_name");
     String valueColumn = properties.getProperty("value_column_name");
@@ -175,7 +193,7 @@ public class QuerySETHEMain {
     for (String fname : filters.keySet()) {
       Query f = new Query(fname, query);
       f.setDistanceFunction(distFun);
-//      f.setQuery(query);
+      //      f.setQuery(query);
 
       //Getting PoIs
       String p = properties.getProperty(fname + "_asp_poi");
