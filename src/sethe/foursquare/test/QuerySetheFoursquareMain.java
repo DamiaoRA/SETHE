@@ -22,9 +22,11 @@ public class QuerySetheFoursquareMain {
         "sethe"
       );
 
-    List<TimeQ> times = new ArrayList<TimeQ>();
+    List<TimeQ> times = new ArrayList<>();
     times.add(queryQ1());
+    times.add(queryQ2());
     System.out.println();
+
     for (TimeQ t : times) {
       System.out.println(t.toString());
     }
@@ -33,9 +35,24 @@ public class QuerySetheFoursquareMain {
   private static TimeQ queryQ1() throws Exception {
     Properties prop = new Properties();
     prop.setProperty("q1_asp_cat", "Residence;Food");
-    prop.setProperty("q1_proximity", ".* ; ~");
+    prop.setProperty("q1_proximity", ".*;~");
 
     return queryQ(prop);
+  }
+
+  /**
+   * Consulta 02: trajetória onde pare na categoria "Food", e pare em um "Residence" ou "Shop & Service"
+   * e finalize parando em um "Food".
+   *
+   * @return
+   * @throws Exception
+   */
+  private static TimeQ queryQ2() throws Exception {
+    Properties properties = new Properties();
+    properties.setProperty("q1_asp_cat", "Food;(Residence|Shop Service);(Food)$");
+    properties.setProperty("q1_proximity", ".*;~;~");
+
+    return queryQ(properties);
   }
 
   private static TimeQ queryQ(Properties prop) throws Exception {
