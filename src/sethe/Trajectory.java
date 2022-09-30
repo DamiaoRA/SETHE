@@ -7,204 +7,215 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Trajectory implements Comparable<Trajectory>{
-	private String id;
-	private String textPoi;
-	private String textCategory;
-	private Query query;
-	private PoI[] pois;
+public class Trajectory implements Comparable<Trajectory> {
 
-	private Graph graph;
-	private List<SubTrajectory> subTrajectories;
-	private Double coefficient;
+  private String id;
+  private String textPoi;
+  private String textCategory;
+  private Query query;
+  private PoI[] pois;
 
-	public Trajectory() {
-		graph = new Graph();
-		subTrajectories = new ArrayList<SubTrajectory>();
-		coefficient = 0d;
-	}
+  private Graph graph;
+  private List<SubTrajectory> subTrajectories;
+  private Double coefficient;
 
-	public void loadText(String valuePoi, String valueCat) throws Exception {
-		textPoi = valuePoi;
-		textCategory = valueCat;
-		String[] places = valuePoi.split(" ");
-		String[] categories = valueCat.split(" ");
+  private String delimiter;
 
-		if(places.length != categories.length)
-			throw new Exception("Trajectory " + id + " num poi size is different from the category size");
+  public Trajectory(String delimiter) {
+    graph = new Graph();
+    subTrajectories = new ArrayList<SubTrajectory>();
+    coefficient = 0d;
+    this.delimiter = delimiter == null? " " : delimiter;
+  }
 
-		pois = new PoI[places.length];
-		for(int i = places.length - 1; i >= 0; i--) {
-			PoI p = new PoI();
-			p.setName(places[i]);
-			p.setPosition(i);
-			p.setCategory(categories[i]);
-			pois[i] = p;
-		}
-	}
+  public void loadText(String valuePoi, String valueCat) throws Exception {
+    textPoi = valuePoi;
+    textCategory = valueCat;
+    String[] places = valuePoi.split(delimiter);
+    String[] categories = valueCat.split(delimiter);
 
-	public void addAspect(String a, String[] text) throws Exception {
-		if(text.length != pois.length) {
-			throw new Exception("Trajectory " + id + " num aspect size is different from the trajectory size");
-		}
+    if (places.length != categories.length) throw new Exception(
+      "Trajectory " + id + " num poi size is different from the category size"
+    );
 
-		for(int i=text.length - 1; i >= 0; i--) {
-			pois[i].addAspect(a, text[i]);
-		}
-	}
+    pois = new PoI[places.length];
+    for (int i = places.length - 1; i >= 0; i--) {
+      PoI p = new PoI();
+      p.setName(places[i]);
+      p.setPosition(i);
+      p.setCategory(categories[i]);
+      pois[i] = p;
+    }
+  }
 
-	public String getId() {
-		return id;
-	}
+  public void addAspect(String a, String[] text) throws Exception {
+    if (text.length != pois.length) {
+      throw new Exception(
+        "Trajectory " +
+        id +
+        " num aspect size is different from the trajectory size"
+      );
+    }
 
-	public void setId(String id) {
-		this.id = id;
-	}
+    for (int i = text.length - 1; i >= 0; i--) {
+      pois[i].addAspect(a, text[i]);
+    }
+  }
 
-	public void addSubtrajectory(SubTrajectory subTrajectory) {
-		subTrajectories.add(subTrajectory);
-	}
+  public String getId() {
+    return id;
+  }
 
-	public Query getQuery() {
-		return query;
-	}
+  public void setId(String id) {
+    this.id = id;
+  }
 
-	public void setQuery(Query query) {
-		this.query = query;
-	}
+  public void addSubtrajectory(SubTrajectory subTrajectory) {
+    subTrajectories.add(subTrajectory);
+  }
 
+  public Query getQuery() {
+    return query;
+  }
 
-	public List<SubTrajectory> getSubTrajectories() {
-		return subTrajectories;
-	}
+  public void setQuery(Query query) {
+    this.query = query;
+  }
 
-	public void setSubTrajectories(List<SubTrajectory> subTrajectories) {
-		this.subTrajectories = subTrajectories;
-	}
+  public List<SubTrajectory> getSubTrajectories() {
+    return subTrajectories;
+  }
 
-	public Double getCoefficient() {
-		return coefficient;
-	}
+  public void setSubTrajectories(List<SubTrajectory> subTrajectories) {
+    this.subTrajectories = subTrajectories;
+  }
 
-	public void setCoefficient(Double coefficient) {
-		this.coefficient = coefficient;
-	}
+  public Double getCoefficient() {
+    return coefficient;
+  }
 
-	@Override
-	public boolean equals(Object obj) {
-		String id2 = ((Trajectory)obj).getId();
-		return id.equals(id2);
-	}
+  public void setCoefficient(Double coefficient) {
+    this.coefficient = coefficient;
+  }
 
-	@Override
-	public int compareTo(Trajectory o) {
-		if(this.coefficient.compareTo(o.coefficient) < 0) {
-			return 1;
-		} else if(this.coefficient.compareTo(o.coefficient) == 0) {
-			return 0;
-		}
-		return -1;
-	}
+  @Override
+  public boolean equals(Object obj) {
+    String id2 = ((Trajectory) obj).getId();
+    return id.equals(id2);
+  }
 
-	public void calcCoefficient() {
-		for(SubTrajectory s : subTrajectories) {
-			if(s.getCoefficient() > coefficient) {
-				coefficient = s.getCoefficient();
-			}
-		}
-	}
+  @Override
+  public int compareTo(Trajectory o) {
+    if (this.coefficient.compareTo(o.coefficient) < 0) {
+      return 1;
+    } else if (this.coefficient.compareTo(o.coefficient) == 0) {
+      return 0;
+    }
+    return -1;
+  }
 
-	public void print() {
-		Collections.reverse(subTrajectories);
-//		System.out.println(textCategory);
-		System.out.println(id + ";" + coefficient);
-//		System.out.println(coefficient);
+  public void calcCoefficient() {
+    for (SubTrajectory s : subTrajectories) {
+      if (s.getCoefficient() > coefficient) {
+        coefficient = s.getCoefficient();
+      }
+    }
+  }
 
-//		for(PoI p : pois) {
-//			System.out.print("[" + p.getPosition() + " " + p.getCategory() + "]");
-//		}
-//		System.out.println("");
-//		for(PoI p : pois) {
-//			System.out.print("[" + p.getPosition() + " " + p.getName() + "]");
-//		}
-//		System.out.println("");
-//
-//		for(SubTrajectory s : subTrajectories) {
-//			s.print();
-//		}
-//		System.out.println("");
-	}
+  public void print() {
+    Collections.reverse(subTrajectories);
+    //		System.out.println(textCategory);
+    System.out.println(id + ";" + coefficient);
+    //		System.out.println(coefficient);
 
-	public void calcSubtrajectory() throws Exception {
-		for(Expression e : query.getArrayExp()) {
-			String text = textPoi;
-			if(e.isCategory()) {
-				text = textCategory;
-			}
+    //		for(PoI p : pois) {
+    //			System.out.print("[" + p.getPosition() + " " + p.getCategory() + "]");
+    //		}
+    //		System.out.println("");
+    //		for(PoI p : pois) {
+    //			System.out.print("[" + p.getPosition() + " " + p.getName() + "]");
+    //		}
+    //		System.out.println("");
+    //
+    //		for(SubTrajectory s : subTrajectories) {
+    //			s.print();
+    //		}
+    //		System.out.println("");
+  }
 
-			Pattern pattern = Pattern.compile(e.getValue());
-			Matcher matcher = pattern.matcher(text);
-			while(matcher.find()) {
-				String m = matcher.group().trim();
-				int end = matcher.end();
-				PoI poi = findPoIs(m, end, text, e.isCategory());
-				addVertice(e, poi);
-			}
-		}
+  public void calcSubtrajectory() throws Exception {
+    for (Expression e : query.getArrayExp()) {
+      String text = textPoi;
+      if (e.isCategory()) {
+        text = textCategory;
+      }
 
-		graph.fix(query.getArrayExp().length-1); 
+      Pattern pattern = Pattern.compile(e.getValue());
+      Matcher matcher = pattern.matcher(text);
+      while (matcher.find()) {
+        String m = matcher.group().trim();
+        int end = matcher.end();
+        PoI poi = findPoIs(m, end, text, e.isCategory());
+        addVertice(e, poi);
+      }
+    }
 
-		createSubTrajectories();
-	}
+    graph.fix(query.getArrayExp().length - 1);
 
-	private void createSubTrajectories() throws Exception {
-		List<LinkedList<PoI>> ll = graph.createListListPoI();
-		for(LinkedList<PoI> lk : ll) {
-			SubTrajectory st = new SubTrajectory();
-			st.setTrajectory(this);
-			st.setPois(lk);
-			st.setDistanceFunction(query.getDistanceFunction());
-			st.calcCoefficient(query);
-			subTrajectories.add(st);
-		}
+    createSubTrajectories();
+  }
 
-		Collections.sort(subTrajectories);
-		if(!subTrajectories.isEmpty())
-			this.coefficient = subTrajectories.get(subTrajectories.size() - 1).getCoefficient();
-	}
+  private void createSubTrajectories() throws Exception {
+    List<LinkedList<PoI>> ll = graph.createListListPoI();
+    for (LinkedList<PoI> lk : ll) {
+      SubTrajectory st = new SubTrajectory();
+      st.setTrajectory(this);
+      st.setPois(lk);
+      st.setDistanceFunction(query.getDistanceFunction());
+      st.calcCoefficient(query);
+      subTrajectories.add(st);
+    }
 
-	//TODO talvez não seja mais necessário. Remover essa função pra ganhar desempenho
-	private PoI findPoIs(String m, int end, String text, boolean isCategory) throws Exception {
-		String subTraj = substring(text, end);//text.substring(0, end).trim();
-		String[] arraySubTraj = subTraj.split(" ");
+    Collections.sort(subTrajectories);
+    if (!subTrajectories.isEmpty()) this.coefficient =
+      subTrajectories.get(subTrajectories.size() - 1).getCoefficient();
+  }
 
-		for(int i = arraySubTraj.length - 1; i >= 0; i--) {
-			String poi = arraySubTraj[i];
-			if(poi.trim().contains(m)) {
-				return pois[i];
-			}
-		}
+  //TODO talvez não seja mais necessário. Remover essa função pra ganhar desempenho
+  private PoI findPoIs(String m, int end, String text, boolean isCategory)
+    throws Exception {
+    String subTraj = substring(text, end); //text.substring(0, end).trim();
+    String[] arraySubTraj = subTraj.split(delimiter);
 
-		throw new Exception("Expressão " + m + " não encontrada na subtrajetória " + text);
-	}
+    for (int i = arraySubTraj.length - 1; i >= 0; i--) {
+      String poi = arraySubTraj[i];
+      if (poi.trim().contains(m)) {
+        return pois[i];
+      }
+    }
 
-	private String substring(String text, int end) {
-		while(end < (text.length()-1) && text.charAt(end) != ' ') {
-			end++;
-		}
-		return text.substring(0, end).trim();
-	}
+    throw new Exception(
+      "Expressão " + m + " não encontrada na subtrajetória " + text
+    );
+  }
 
-	private void addVertice(Expression e, PoI p) {
-		graph.createVertice(e, p);
-	}
+  private String substring(String text, int end) {
+    while (end < (text.length() - 1) && text.charAt(end) != ' ') {
+      end++;
+    }
+    return text.substring(0, end).trim();
+  }
 
-	public void printGraph() {
-		graph.print();
-	}
+  private void addVertice(Expression e, PoI p) {
+    graph.createVertice(e, p);
+  }
 
-	public String getAspectValuePoI(int i, String aspectType) {
-		String aspectValue = pois[i].getAspectValue(aspectType);
-		return aspectValue;
-	}
+  public void printGraph() {
+    graph.print();
+  }
+
+  public String getAspectValuePoI(int i, String aspectType) {
+    String aspectValue = pois[i].getAspectValue(aspectType);
+    return aspectValue;
+  }
 }

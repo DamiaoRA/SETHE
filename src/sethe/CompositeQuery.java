@@ -6,6 +6,10 @@ import java.util.PriorityQueue;
 public class CompositeQuery {
 	private Map<String, Query> mapFilter;
 	private PriorityQueue<Trajectory> finalResult;
+	
+	private String pkTrajColumnName;
+	private String valueColumnName;
+	private String delimiter;
 
 	public CompositeQuery() {
 		finalResult = new PriorityQueue<Trajectory>();
@@ -48,5 +52,29 @@ public class CompositeQuery {
 
 	public PriorityQueue<Trajectory> getFinalResult() {
 		return finalResult;
+	}
+
+	public String getPkTrajColumnName() {
+		return pkTrajColumnName;
+	}
+
+	public void setPkTrajColumnName(String pkTrajColumnName) {
+		this.pkTrajColumnName = pkTrajColumnName;
+	}
+
+	public String getValueColumnName() {
+		return valueColumnName;
+	}
+
+	public void setValueColumnName(String valueColumnName) {
+		this.valueColumnName = valueColumnName;
+	}
+
+	public String getDelimiter() {
+		return delimiter;
+	}
+
+	public void setDelimiter(String delimiter) {
+		this.delimiter = delimiter;
 	}
 }

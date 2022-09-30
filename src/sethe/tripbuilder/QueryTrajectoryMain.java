@@ -40,7 +40,7 @@ public class QueryTrajectoryMain {
 
 	private void executeQuery(CompositeQuery query) throws Exception {
 		for(Query filter : query.getMapFilter().values()) {
-			searchTrajectories(filter);
+			searchTrajectories(filter, query.getDelimiter());
 			for(Trajectory t : filter.getMapResultQuery().values()) {
 //				t.printGraph();
 				query.add(t);
@@ -54,12 +54,12 @@ public class QueryTrajectoryMain {
 	 * @return
 	 * @throws SQLException
 	 */
-	private void searchTrajectories(Query filter) throws Exception {
+	private void searchTrajectories(Query filter, String delimiter) throws Exception {
 		String sql = filter.createSqlQuery(schema);
 
 		ResultSet rs = st.executeQuery(sql); //TODO pensar em como fazer paginação
 		while(rs.next()) {
-			Trajectory t = new Trajectory();
+			Trajectory t = new Trajectory(delimiter);
 			t.setId(rs.getString(1));
 			t.loadText(rs.getString(2), rs.getString(3));//Poi values, category values
 			t.setQuery(filter);
@@ -149,9 +149,9 @@ public class QueryTrajectoryMain {
 		}
 
 		for(String fname : filters.keySet()) {
-			Query f = new Query(fname);
+			Query f = new Query(fname, query);
 			f.setDistanceFunction(distFun);
-			f.setQuery(query);
+//			f.setQuery(query);
 
 			//Getting PoIs
 			String p = properties.getProperty(fname + "_asp_poi");

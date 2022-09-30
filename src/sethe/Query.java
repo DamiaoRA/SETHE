@@ -18,15 +18,22 @@ public class Query {
 	private Map<String, Double> mapLimit; 			// limite máximo para a função de distância
 
 	private Map<String, Trajectory> mapResultQuery;  //Armazena o resultado da consulta <id, trajetória>
+	
+	private String pkColumn = "traj_fk";
+	private String valueColumn = "values";
 
 	private String distanceFunction;
 
-	public Query(String name) {
+	public Query(String name, CompositeQuery cquery) {
 		this.name = name;
+		this.query = cquery;
 		mapWeight = new HashMap<String, Double>();
 		mapDistanceFunc = new HashMap<String, String>();
 		mapLimit = new HashMap<String, Double>();
 		mapResultQuery = new HashMap<String, Trajectory>();
+
+		if(query.getPkTrajColumnName() != null) pkColumn = query.getPkTrajColumnName();
+		if(query.getValueColumnName() != null) valueColumn = query.getValueColumnName();
 	}
 
 	public void init(int arraySize) {
@@ -155,8 +162,8 @@ public class Query {
 		String regexCat = regexCat();
 
 		// regex sql
-		String regexSqlPoi = regexPoi == null ? "" : "regexp_matches(p.values, '" + regexPoi + "') as rxp";
-		String regexSqlCat = regexCat == null ? "" : "regexp_matches(c.values, '" + regexCat + "') as rxc";
+		String regexSqlPoi = regexPoi == null ? "" : "regexp_matches(p." + valueColumn + ", '" + regexPoi + "') as rxp";
+		String regexSqlCat = regexCat == null ? "" : "regexp_matches(c." + valueColumn + ", '" + regexCat + "') as rxc";
 		String regex = "";
 		if (regexCat != null && regexPoi != null) {
 			regex = regexSqlPoi + ", " + regexSqlCat;
@@ -165,10 +172,10 @@ public class Query {
 		}
 
 		// column traj_fk
-		String trajfk = regexPoi == null ? "c.traj_fk" : "p.traj_fk";
+		String trajfk = regexPoi == null ? "c." + pkColumn : "p." + pkColumn;
 
 		// column values
-		String values = "p.values AS values_poi, c.values AS values_cat";
+		String values = "p." + valueColumn + " AS values_poi, c." + valueColumn + " AS values_cat";
 
 		// from
 		String tablePoi = schema + ".tb_poi p";
@@ -176,7 +183,7 @@ public class Query {
 		String from = " FROM " + tablePoi + "," + tableCat;
 
 		// where
-		String where = " WHERE p.traj_fk = c.traj_fk";
+		String where = " WHERE p." + pkColumn + " = c." + pkColumn;
 
 		String query = "SELECT " + trajfk + ", " + values + ", " + regex  + " " + from + " " + where;
 
@@ -208,9 +215,9 @@ public class Query {
 		return query;
 	}
 
-	public void setQuery(CompositeQuery query) {
-		this.query = query;
-	}
+//	public void setQuery(CompositeQuery query) {
+//		this.query = query;
+//	}
 
 	public Map<String, Trajectory> getMapResultQuery() {
 		return mapResultQuery;
