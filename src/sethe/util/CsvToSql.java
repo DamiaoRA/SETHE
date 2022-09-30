@@ -11,6 +11,7 @@ public class CsvToSql {
   private static final String DELIMIT = ",";
   private static final String DELIMIT_TRAJECTORY = ";";
   private static final short MAX_LINE = 500;
+  private static boolean sanitize = true;
 
   /**
    * Para gerar um arquivo SQL a partir dos dados de uma fonte CSV devemos observar que o arquivo deverá considerar o
@@ -49,8 +50,6 @@ public class CsvToSql {
    * @throws IOException
    */
   public static void main(String[] args) throws IOException {
-    boolean sanitize = true;
-
     if (args.length == 0) {
       System.out.println("Por favor, informe o caminho do arquivo CSV.");
     } else if (args.length < 2) {
@@ -62,14 +61,11 @@ public class CsvToSql {
     String pathFile = args[0];
     String schema = args[1];
 
-    csvToSql(pathFile, schema, sanitize);
+    csvToSql(pathFile, schema);
   }
 
-  private static void csvToSql(
-    final String pathFile,
-    final String schema,
-    final boolean sanitizeValue
-  ) throws IOException {
+  private static void csvToSql(final String pathFile, final String schema)
+    throws IOException {
     File fileCsv = new File(pathFile);
     String pathFileSql = fileCsv.getAbsolutePath().replace(".csv", ".sql");
     File fileSql = new File(pathFileSql);
@@ -91,19 +87,13 @@ public class CsvToSql {
       bufferedWriter.flush();
 
       int countLine = 0;
-      Properties current = getPointTrajectory(
-        bufferedReader.readLine(),
-        sanitizeValue
-      );
+      Properties current = getPointTrajectory(bufferedReader.readLine());
 
       if (!current.isEmpty()) {
         String trajectoryId = current.getProperty(TRAJECTORY_ID);
         String trajectory = current.getProperty(TRAJECTORY_VALUE);
 
-        Properties next = getPointTrajectory(
-          bufferedReader.readLine(),
-          sanitizeValue
-        );
+        Properties next = getPointTrajectory(bufferedReader.readLine());
 
         while (!next.isEmpty()) {
           if (countLine > MAX_LINE) {
@@ -131,7 +121,7 @@ public class CsvToSql {
             trajectory = current.getProperty(TRAJECTORY_VALUE);
           }
 
-          next = getPointTrajectory(bufferedReader.readLine(), sanitizeValue);
+          next = getPointTrajectory(bufferedReader.readLine());
           countLine++;
         }
 
@@ -145,7 +135,7 @@ public class CsvToSql {
     }
   }
 
-  private static Properties getPointTrajectory(String line, boolean sanitize) {
+  private static Properties getPointTrajectory(String line) {
     Properties pointTrajectory = new Properties();
 
     if (line != null) {
