@@ -12,6 +12,42 @@ public class CsvToSql {
   private static final String DELIMIT_TRAJECTORY = ";";
   private static final short MAX_LINE = 500;
 
+  /**
+   * Para gerar um arquivo SQL a partir dos dados de uma fonte CSV devemos observar que o arquivo deverá considerar o
+   * padrão pré-definido, onde é constituído de duas colunas: a primeira denominada de trajectory_id que identifica a
+   * trajetória, onde a mesma é um ponto da rota e a segunda coluna, denominada de trajectory_value, constitui o valor
+   * da propriedade em questão a ser analisada, por exemplo, o valor da categoria, POI, preço, clima daquele ponto da
+   * trajetória. Outro ponto importante é que os dados devem estar ordenados pelo período da trajetória, para que assim,
+   * os dados fiquem corretos. Um exemplo de consulta:
+   *
+   * select
+   *    tid as trajectory_id,
+   *    poi_name as trajectory_value
+   * from
+   *    foursquare.data_checkin
+   * order by
+   *    tid, date_time;
+   *
+   * Para executar este CSV e assim gerar a rota completa necessita ser informado os parâmetros obrigatórios:
+   * o caminho do arquivo CSV e o esquema do banco de dados. A tabela de destino é criada a partir do nome do arquivo,
+   * por exemplo, se o nome do arquivo CSV for tb_poi.csv a tabela a ser criada será tb_poi e sendo gerado o arquivo SQL
+   * com o mesmo nome e no mesmo caminho do arquivo, contendo: o comando DDL de criação da tabela e os comandos DML de
+   * INSERT das trajetórias.
+   *
+   * Existe um terceiro parâmetro --no-sanitize para não aplicar a higienização dos dados na coluna valores.
+   * Sendo útil em casos em que a informação necessite ficar exatamente como foi criada, a exemplo, um número de ponto
+   * flutuante, se for higienizada irá remover o sinal decimal (. ou ,). Por padrão, os dados da coluna trajectory_value
+   * será higienizado.
+   *
+   * Exemplo de execução:
+   *
+   * java CsvToSql scripts/foursquare/tb_poi.csv foursquare
+   * ou
+   * java CsvToSql scripts/foursquare/tb_price.csv foursquare --no-sanitize
+   *
+   * @param args
+   * @throws IOException
+   */
   public static void main(String[] args) throws IOException {
     boolean sanitize = true;
 
@@ -32,7 +68,7 @@ public class CsvToSql {
   private static void csvToSql(
     final String pathFile,
     final String schema,
-    boolean sanitizeValue
+    final boolean sanitizeValue
   ) throws IOException {
     File fileCsv = new File(pathFile);
     String pathFileSql = fileCsv.getAbsolutePath().replace(".csv", ".sql");
