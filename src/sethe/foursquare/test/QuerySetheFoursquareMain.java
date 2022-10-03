@@ -17,17 +17,17 @@ public class QuerySetheFoursquareMain {
         "localhost",
         "5432",
         "juliafealves",
-        "psql@bd",
+        "m4c0$",
         "foursquare",
         "sethe"
       );
 
     List<TimeQ> times = new ArrayList<>();
-    times.add(queryQ1());
-    times.add(queryQ2());
+//    times.add(queryQ1());
+//    times.add(queryQ2());
     times.add(queryQ3());
-    times.add(queryQ6());
-    times.add(queryQ7());
+//    times.add(queryQ6());
+//    times.add(queryQ7());
     System.out.println();
 
     for (TimeQ t : times) {
@@ -37,8 +37,8 @@ public class QuerySetheFoursquareMain {
 
   private static TimeQ queryQ1() throws Exception {
     Properties prop = new Properties();
-    prop.setProperty("q1_asp_cat", "Residence ; Food");
-    prop.setProperty("q1_proximity", ".* ; ~");
+    prop.setProperty("q1_asp_cat", "Residence;Food");
+    prop.setProperty("q1_proximity", ".*;~");
 
     return queryQ(prop);
   }
@@ -54,17 +54,31 @@ public class QuerySetheFoursquareMain {
     Properties properties = new Properties();
     properties.setProperty(
       "q1_asp_cat",
-      "Food ; (Residence|Shop Service) ; (Food)$"
+      "Food;(Residence|Shop Service);(Food)$"
     );
-    properties.setProperty("q1_proximity", ".* ; ~ ; ~");
+    properties.setProperty("q1_proximity", ".*; ~;~");
 
     return queryQ(properties);
   }
 
+  /**
+   * Consulta 3: trajetória que pare em um POI Hotel qualquer, pare em qualquer POI denominado de Bar e finalize em um
+   * POI Hotel.
+   *
+   * Observação: na categoria do POI não explicita se é um hotel ou não, sendo categorizado como "Travel & Transport".
+   *
+   * @todo Dúvida: Pensei se seria interessante uma pesquisa onde o usuário inicia e finalize no mesmo hotel, sem
+   * necessariamente informar um POI em específico. Seria possível?
+   * Exemplos de resultados para a mesma consulta:
+   * Hotel Guanabara > Manos Bar > Hotel Guanabara
+   * Hotel do Bairro > Bar > Hotel do Bairro
+   * @return
+   * @throws Exception
+   */
   private static TimeQ queryQ3() throws Exception {
     Properties properties = new Properties();
-    properties.setProperty("q1_asp_cat", "Shop Service ; Residence");
-    properties.setProperty("q1_proximity", ".* ; ~");
+    properties.setProperty("q1_asp_poi", "Hotel( (\\w*))*;((\\w*) )*Bar;Hotel( (\\w*))*$");
+    properties.setProperty("q1_proximity", "~;.*;~");
 
     return queryQ(properties);
   }
