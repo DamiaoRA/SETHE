@@ -25,6 +25,9 @@ public class QuerySetheFoursquareMain {
     List<TimeQ> times = new ArrayList<>();
     times.add(queryQ1());
     times.add(queryQ2());
+    times.add(queryQ3());
+    times.add(queryQ6());
+    times.add(queryQ7());
     System.out.println();
 
     for (TimeQ t : times) {
@@ -34,8 +37,8 @@ public class QuerySetheFoursquareMain {
 
   private static TimeQ queryQ1() throws Exception {
     Properties prop = new Properties();
-    prop.setProperty("q1_asp_cat", "Residence;Food");
-    prop.setProperty("q1_proximity", ".*;~");
+    prop.setProperty("q1_asp_cat", "Residence ; Food");
+    prop.setProperty("q1_proximity", ".* ; ~");
 
     return queryQ(prop);
   }
@@ -49,10 +52,47 @@ public class QuerySetheFoursquareMain {
    */
   private static TimeQ queryQ2() throws Exception {
     Properties properties = new Properties();
-    properties.setProperty("q1_asp_cat", "Food;(Residence|Shop Service);(Food)$");
-    properties.setProperty("q1_proximity", ".*;~;~");
+    properties.setProperty(
+      "q1_asp_cat",
+      "Food ; (Residence|Shop Service) ; (Food)$"
+    );
+    properties.setProperty("q1_proximity", ".* ; ~ ; ~");
 
     return queryQ(properties);
+  }
+
+  private static TimeQ queryQ3() throws Exception {
+    Properties properties = new Properties();
+    properties.setProperty("q1_asp_cat", "Shop Service ; Residence");
+    properties.setProperty("q1_proximity", ".* ; ~");
+
+    return queryQ(properties);
+  }
+
+  private static TimeQ queryQ6() throws Exception {
+    Properties prop = new Properties();
+
+    prop.setProperty(
+      "q1_asp_cat",
+      "Shop( (\\w*))*;((Travel Transport|Food)( (\\w*))*$)*"
+    );
+    prop.setProperty("q1_proximity", ".* ; .*");
+
+    return queryQ(prop);
+  }
+
+  private static TimeQ queryQ7() throws Exception {
+    Properties prop = new Properties();
+
+    prop.setProperty("q1_asp_cat", "Shop;Food");
+    prop.setProperty("q1_asp_day", "Monday;Sunday");
+    prop.setProperty("q1_proximity", ".*;.*");
+
+    prop.setProperty("weight_day", "1");
+    prop.setProperty("distance_day", "equality");
+    prop.setProperty("limit_day", "1");
+
+    return queryQ(prop);
   }
 
   private static TimeQ queryQ(Properties prop) throws Exception {

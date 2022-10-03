@@ -98,18 +98,24 @@ public class QuerySETHEMain {
     }
   }
 
+  // todo generalizar o split
   private void searchAspects(Trajectory t, Set<String> aspects)
     throws Exception {
     for (String a : aspects) {
       String text = queryAspect(t.getId(), a);
-      t.addAspect(a, text.split(" "));
+      t.addAspect(a, text.split(";"));
     }
   }
 
+  //TODO gereneralizar
   private String queryAspect(String trajId, String a) throws SQLException {
     String table = schema + ".tb_" + a;
     String sql =
-      "SELECT values FROM " + table + " WHERE traj_fk = '" + trajId + "'";
+      "SELECT trajectory_value FROM " +
+      table +
+      " WHERE trajectory_id = '" +
+      trajId +
+      "'";
     ResultSet rs = st.executeQuery(sql);
     if (rs.next()) {
       return rs.getString(1);
@@ -167,7 +173,6 @@ public class QuerySETHEMain {
     CompositeQuery query = new CompositeQuery();
     String distFun = properties.getProperty("dist_func");
     String split = ";";
-    //    String split = properties.getProperty("split");
 
     String pkColumn = properties.getProperty("pk_column_name");
     String valueColumn = properties.getProperty("value_column_name");
