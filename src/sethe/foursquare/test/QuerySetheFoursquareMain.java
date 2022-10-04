@@ -28,7 +28,7 @@ public class QuerySetheFoursquareMain {
     times.add(queryQ3());
     times.add(queryQ4());
     times.add(queryQ5());
-//    times.add(queryQ6());
+    times.add(queryQ6());
 //    times.add(queryQ7());
     System.out.println();
 
@@ -93,8 +93,8 @@ public class QuerySetheFoursquareMain {
    */
   private static TimeQ queryQ4() throws Exception {
     Properties properties = new Properties();
-    properties.setProperty("q1_asp_poi", "((\\w*))*Hospital;((\\w*))*;((\\w*))*");
-    properties.setProperty("q1_asp_cat", "((\\w*))*;(Food|Shop Service|Residence);((\\w*))*");
+    properties.setProperty("q1_asp_poi", "(\\w*)*Hospital;(\\w*)*;(\\w*)*");
+    properties.setProperty("q1_asp_cat", "(\\w*)*;(Food|Shop Service|Residence);(\\w*)*");
     properties.setProperty("q1_proximity", "~;~;.*");
 
     return queryQ(properties);
@@ -107,20 +107,38 @@ public class QuerySetheFoursquareMain {
    * @throws Exception
    */
   private static TimeQ queryQ5() throws Exception {
-    Properties prop = new Properties();
+    Properties properties = new Properties();
 
-    prop.setProperty("q1_asp_cat", "Shop;(Food)$");
-    prop.setProperty("q1_asp_day", "Sunday;Monday");
-    prop.setProperty("q1_proximity", ".*;~");
+    properties.setProperty("q1_asp_cat", "Shop;(Food)$");
+    properties.setProperty("q1_asp_day", "Sunday;Monday");
+    properties.setProperty("q1_proximity", ".*;~");
 
-    prop.setProperty("weight_day", "1");
-    prop.setProperty("distance_day", "equality");
-    prop.setProperty("limit_day", "1");
+    properties.setProperty("weight_day", "1");
+    properties.setProperty("distance_day", "equality");
+    properties.setProperty("limit_day", "1");
 
-    return queryQ(prop);
+    return queryQ(properties);
   }
 
+  /**
+   * Consulta 6: trajetória que pare um local Arts, passe em outros locais, pare em Event com clima Clear, e
+   * posteriormente no Nightlife Spot em clima qualquer.
+   * @return
+   * @throws Exception
+   */
   private static TimeQ queryQ6() throws Exception {
+    Properties properties = new Properties();
+
+    properties.setProperty("q1_asp_cat","Arts(\\w*)*;(\\w*)*;Event;Nightlife Spot");
+    properties.setProperty("q1_asp_weather", ".*;Rain;Clear;.*");
+    properties.setProperty("weight_weather", "1");
+    properties.setProperty("distance_weather", "equality");
+    properties.setProperty("limit_weather", "1");
+
+    return queryQ(properties);
+  }
+
+  private static TimeQ queryQ7() throws Exception {
     Properties prop = new Properties();
 
     prop.setProperty(
