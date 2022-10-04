@@ -24,9 +24,10 @@ public class QuerySetheFoursquareMain {
 
     List<TimeQ> times = new ArrayList<>();
 //    times.add(queryQ1());
-//    times.add(queryQ2());
+    times.add(queryQ2());
     times.add(queryQ3());
     times.add(queryQ4());
+    times.add(queryQ5());
 //    times.add(queryQ6());
 //    times.add(queryQ7());
     System.out.println();
@@ -99,6 +100,26 @@ public class QuerySetheFoursquareMain {
     return queryQ(properties);
   }
 
+  /**
+   * Consulta 05: trajetória que pare em um Shop e finalize Food, esta trajetória passa pelo o dia Sunday e Monday.
+   *
+   * @return
+   * @throws Exception
+   */
+  private static TimeQ queryQ5() throws Exception {
+    Properties prop = new Properties();
+
+    prop.setProperty("q1_asp_cat", "Shop;(Food)$");
+    prop.setProperty("q1_asp_day", "Sunday;Monday");
+    prop.setProperty("q1_proximity", ".*;~");
+
+    prop.setProperty("weight_day", "1");
+    prop.setProperty("distance_day", "equality");
+    prop.setProperty("limit_day", "1");
+
+    return queryQ(prop);
+  }
+
   private static TimeQ queryQ6() throws Exception {
     Properties prop = new Properties();
 
@@ -107,20 +128,6 @@ public class QuerySetheFoursquareMain {
       "Shop( (\\w*))*;((Travel Transport|Food)( (\\w*))*$)*"
     );
     prop.setProperty("q1_proximity", ".* ; .*");
-
-    return queryQ(prop);
-  }
-
-  private static TimeQ queryQ7() throws Exception {
-    Properties prop = new Properties();
-
-    prop.setProperty("q1_asp_cat", "Shop;Food");
-    prop.setProperty("q1_asp_day", "Monday;Sunday");
-    prop.setProperty("q1_proximity", ".*;.*");
-
-    prop.setProperty("weight_day", "1");
-    prop.setProperty("distance_day", "equality");
-    prop.setProperty("limit_day", "1");
 
     return queryQ(prop);
   }
