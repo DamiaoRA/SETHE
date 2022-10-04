@@ -13,9 +13,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
-
-import sethe.Query;
 import sethe.CompositeQuery;
+import sethe.Query;
 import sethe.Trajectory;
 import sethe.util.StringUtils;
 
@@ -24,191 +23,248 @@ import sethe.util.StringUtils;
  *
  */
 public class QuerySETHEMain {
-	private Connection con;
-	private Statement st;
-	private String schema = "trajSem";
 
-	public QuerySETHEMain(String url1, String port, String user, String pass, String schema) throws SQLException {
-		String url = "jdbc:postgresql://" + url1 + ":" + port + "/trajetoria";
-		this.schema = schema;
-		Properties props = new Properties();
-		props.setProperty("user", user);
-		props.setProperty("password", pass);
-		con = DriverManager.getConnection(url, props);
-		st = con.createStatement();
-	}
+  private Connection con;
+  private Statement st;
+  private String schema = "trajSem";
+  private String pkColumnName = "traj_pk";
+  private String valueColumnName = "values";
 
-	public void executeQuery(CompositeQuery query) throws Exception {
-		for(Query filter : query.getMapFilter().values()) {
-			searchTrajectories(filter);
-			for(Trajectory t : filter.getMapResultQuery().values()) {
-//				t.printGraph();
-				query.add(t);
-			}
-		}
-	}
+  public QuerySETHEMain(
+    String url1,
+    String port,
+    String user,
+    String pass,
+    String schema
+  ) throws SQLException {
+    String url = "jdbc:postgresql://" + url1 + ":" + port + "/trajetoria";
+    this.schema = schema;
+    Properties props = new Properties();
+    props.setProperty("user", user);
+    props.setProperty("password", pass);
+    con = DriverManager.getConnection(url, props);
+    st = con.createStatement();
+  }
 
-	/**
-	 * Pesquisa as trajetórias que obedecem o regex descrito na query
-	 * @param filter
-	 * @return
-	 * @throws SQLException
-	 */
-	private void searchTrajectories(Query filter) throws Exception {
-		String sql = filter.createSqlQuery(schema);
+  public QuerySETHEMain(
+    String host,
+    String port,
+    String user,
+    String pass,
+    String schema,
+    String database,
+    String pkColumnName,
+    String valueColumnName
+  ) throws SQLException {
+    String url = "jdbc:postgresql://" + host + ":" + port + "/" + database;
+    this.schema = schema;
+    this.pkColumnName = pkColumnName;
+    this.valueColumnName = valueColumnName;
+    Properties options = new Properties();
+    options.setProperty("user", user);
+    options.setProperty("password", pass);
+    con = DriverManager.getConnection(url, options);
+    st = con.createStatement();
+  }
 
-		ResultSet rs = st.executeQuery(sql);
-		while(rs.next()) {
-			Trajectory t = new Trajectory();
-			t.setId(rs.getString(1));
-			t.loadText(rs.getString(2), rs.getString(3));//Poi values, category values
-			t.setQuery(filter);
-			searchAspects(t, filter.getAspects());
+  public void executeQuery(CompositeQuery query) throws Exception {
+    for (Query filter : query.getMapFilter().values()) {
+      searchTrajectories(filter, query.getDelimiter());
+      for (Trajectory t : filter.getMapResultQuery().values()) {
+        //				t.printGraph();
+        query.add(t);
+      }
+    }
+  }
 
-			//Calculando as subtrajetórias
-			t.calcSubtrajectory();
-			//
+  /**
+   * Pesquisa as trajetórias que obedecem o regex descrito na query
+   * @param filter
+   * @return
+   * @throws SQLException
+   */
+  private void searchTrajectories(Query filter, String delimiter)
+    throws Exception {
+    String sql = filter.createSqlQuery(schema);
 
-			filter.addTrajectory(t);
-			filter.getQuery().add(t);
-		}
-	}
+    ResultSet rs = st.executeQuery(sql);
+    while (rs.next()) {
+      Trajectory t = new Trajectory(delimiter);
+      t.setId(rs.getString(1));
+      t.loadText(rs.getString(2), rs.getString(3)); //Poi values, category values
+      t.setQuery(filter);
+      searchAspects(t, filter.getAspects());
 
-	private void searchAspects(Trajectory t, Set<String> aspects) throws Exception {
-		for(String a : aspects) {
-			String text = queryAspect(t.getId(), a);
-			t.addAspect(a, text.split(" "));
-		}
-	}
+      //Calculando as subtrajetórias
+      t.calcSubtrajectory();
+      //
 
-	private String queryAspect(String trajId, String a) throws SQLException {
-		String table = schema + ".tb_" + a;
-		String sql = "SELECT values FROM " + table + " WHERE traj_fk = '" + trajId + "'";
-		ResultSet rs = st.executeQuery(sql);
-		if(rs.next()) {
-			return rs.getString(1);
-		}
-		return "";
-	}
+      filter.addTrajectory(t);
+      filter.getQuery().add(t);
+    }
+  }
 
-	private void close() throws SQLException {
-		con.close();
-	}
+  // todo generalizar o split
+  private void searchAspects(Trajectory t, Set<String> aspects)
+    throws Exception {
+    for (String a : aspects) {
+      String text = queryAspect(t.getId(), a);
+      t.addAspect(a, text.split(";"));
+    }
+  }
 
-	public static void main(String[] args) throws Exception {
+  private String queryAspect(String trajectoryId, String aspect)
+    throws SQLException {
+    String table = schema + ".tb_" + aspect;
+    String sql = String.format(
+      "SELECT %s FROM %s WHERE %s = '%s'",
+      valueColumnName,
+      table,
+      pkColumnName,
+      trajectoryId
+    );
+    ResultSet rs = st.executeQuery(sql);
 
-		//Properties file
-		InputStream is = QuerySETHEMain.class.getResourceAsStream("semantic.properties");
-		Properties properties = new Properties();
-		properties.load(new InputStreamReader(is, Charset.forName("UTF-8")));
+    return rs.next() ? rs.getString(1) : "";
+  }
 
-		String schema = properties.getProperty("schema");
-		CompositeQuery query = loadQuery(properties);
+  private void close() throws SQLException {
+    con.close();
+  }
 
-		QuerySETHEMain qt = null;
+  public static void main(String[] args) throws Exception {
+    //Properties file
+    InputStream is =
+      QuerySETHEMain.class.getResourceAsStream("semantic.properties");
+    Properties properties = new Properties();
+    properties.load(new InputStreamReader(is, Charset.forName("UTF-8")));
 
-		try {
-			qt = new QuerySETHEMain("localhost", "25432", "postgres", "postgres", schema);
-			long t1 = System.currentTimeMillis();
+    String schema = properties.getProperty("schema");
+    CompositeQuery query = loadQuery(properties);
 
-			qt.executeQuery(query);
+    QuerySETHEMain qt = null;
 
-//			for(Trajectory t : query.getFinalResult()) {
-//				t.print();
-//			}
-			int count = 0;
-			while(!query.getFinalResult().isEmpty()) {
-				query.getFinalResult().poll().print();
-				count++;
-			}
-			long t2 = System.currentTimeMillis();
+    try {
+      qt =
+        new QuerySETHEMain(
+          "localhost",
+          "25432",
+          "postgres",
+          "postgres",
+          schema
+        );
+      long t1 = System.currentTimeMillis();
 
-			System.out.println("Total: " + count + "\nTempo total: " +  (t2 - t1));
-		} finally{
-			if(qt != null)
-				qt.close();
-		}
-	}
+      qt.executeQuery(query);
 
-	@SuppressWarnings("rawtypes")
-	public static CompositeQuery loadQuery(Properties properties) {
-		CompositeQuery query = new CompositeQuery();
-		String distFun = properties.getProperty("dist_func");
-		String split = properties.getProperty("split");
-		int arraySize = 0;
+      //			for(Trajectory t : query.getFinalResult()) {
+      //				t.print();
+      //			}
+      int count = 0;
+      while (!query.getFinalResult().isEmpty()) {
+        query.getFinalResult().poll().print();
+        count++;
+      }
+      long t2 = System.currentTimeMillis();
 
-		Map<String, Query> filters = new HashMap<String, Query>();
+      System.out.println("Total: " + count + "\nTempo total: " + (t2 - t1));
+    } finally {
+      if (qt != null) qt.close();
+    }
+  }
 
-		//Getting filters name
-		for(Enumeration e = properties.keys();e.hasMoreElements();) {
-			String key = e.nextElement().toString();
-			if(key.contains("_asp")) {
-				String filterName = key.substring(0, key.indexOf("_"));
-				filters.put(filterName, null);
-			}
-		}
+  @SuppressWarnings("rawtypes")
+  public static CompositeQuery loadQuery(Properties properties) {
+    CompositeQuery query = new CompositeQuery();
+    String distFun = properties.getProperty("dist_func");
+    String split = ";";
 
-		for(String fname : filters.keySet()) {
-			Query f = new Query(fname);
-			f.setDistanceFunction(distFun);
-			f.setQuery(query);
+    String pkColumn = properties.getProperty("pk_column_name");
+    String valueColumn = properties.getProperty("value_column_name");
+    String delimiter = properties.getProperty("delimiter");
 
-			//Getting PoIs
-			String p = properties.getProperty(fname + "_asp_poi");
-			String[] arrayPoi = p != null ? p.split(split) : new String[0];
-			if(p != null ) arraySize = arrayPoi.length;
+    query.setPkTrajColumnName(pkColumn);
+    query.setValueColumnName(valueColumn);
+    query.setDelimiter(delimiter);
 
-			//Getting category
-			String c = properties.getProperty(fname + "_asp_cat");
-			String[] arrayCat = c != null? c.split(split) : new String[0];
-			if(c != null ) arraySize = arrayCat.length;
-			
-			f.init(arraySize);
+    int arraySize = 0;
 
-			for(int i = 0; i < arraySize; i++) {
-				String cat = arrayCat.length > 0 ? arrayCat[i].trim() : null;
-				String poi = arrayPoi.length > 0 ? arrayPoi[i].trim() : null;
-				f.addExpression(i, cat, poi);
-			}
+    Map<String, Query> filters = new HashMap<String, Query>();
 
-			//Getting proximity
-			String proximity = properties.getProperty(fname + "_proximity");
-			if(!StringUtils.isEmpty(proximity)) {
-				String[] proximityValues = proximity.split(split);
-				for(int i = 0; i < proximityValues.length; i++) {
-					f.addProximityExpression(i, proximityValues[i]);
-				}
-			}
+    //Getting filters name
+    for (Enumeration e = properties.keys(); e.hasMoreElements();) {
+      String key = e.nextElement().toString();
+      if (key.contains("_asp")) {
+        String filterName = key.substring(0, key.indexOf("_"));
+        filters.put(filterName, null);
+      }
+    }
 
-			//Getting aspects
-			for(Enumeration e = properties.keys();e.hasMoreElements();) {
-				String key = e.nextElement().toString();
-				if(key.startsWith(fname + "_asp_") && !key.contains("asp_poi") && !key.contains("asp_cat")) {
-					String[] aspValues = properties.getProperty(key).split(";");
-					key = key.replace(fname + "_asp_", "");
-					for(int i = 0; i < aspValues.length; i++) {
-						f.addAspectExpression(i, key, aspValues[i].trim());
-					}
-				} else if (key.startsWith("weight_")) {
-					String asp = key.substring(key.indexOf("_") + 1);
-					Double value = Double.parseDouble(properties.getProperty(key));
-					f.addWeight(asp, value);
-				} else if (key.startsWith("distance_")) {
-					String asp = key.substring(key.indexOf("_") + 1);
-					String value = properties.getProperty(key);
-					f.addDistanceFunction(asp, value.trim());
-				} else if (key.startsWith("limit_")) {
-					String asp = key.substring(key.indexOf("_") + 1);
-					Double value = Double.parseDouble(properties.getProperty(key));
-					f.addLimitAspValue(asp, value);
-				}
-			}
+    for (String fname : filters.keySet()) {
+      Query f = new Query(fname, query);
+      f.setDistanceFunction(distFun);
+      //      f.setQuery(query);
 
-			filters.put(fname, f);
-		}
+      //Getting PoIs
+      String p = properties.getProperty(fname + "_asp_poi");
+      String[] arrayPoi = p != null ? p.split(split) : new String[0];
+      if (p != null) arraySize = arrayPoi.length;
 
-		query.setMapFilter(filters);
+      //Getting category
+      String c = properties.getProperty(fname + "_asp_cat");
+      String[] arrayCat = c != null ? c.split(split) : new String[0];
+      if (c != null) arraySize = arrayCat.length;
 
-		return query;
-	}
+      f.init(arraySize);
+
+      for (int i = 0; i < arraySize; i++) {
+        String cat = arrayCat.length > 0 ? arrayCat[i].trim() : null;
+        String poi = arrayPoi.length > 0 ? arrayPoi[i].trim() : null;
+        f.addExpression(i, cat, poi);
+      }
+
+      //Getting proximity
+      String proximity = properties.getProperty(fname + "_proximity");
+      if (!StringUtils.isEmpty(proximity)) {
+        String[] proximityValues = proximity.split(split);
+        for (int i = 0; i < proximityValues.length; i++) {
+          f.addProximityExpression(i, proximityValues[i]);
+        }
+      }
+
+      //Getting aspects
+      for (Enumeration e = properties.keys(); e.hasMoreElements();) {
+        String key = e.nextElement().toString();
+        if (
+          key.startsWith(fname + "_asp_") &&
+          !key.contains("asp_poi") &&
+          !key.contains("asp_cat")
+        ) {
+          String[] aspValues = properties.getProperty(key).split(";");
+          key = key.replace(fname + "_asp_", "");
+          for (int i = 0; i < aspValues.length; i++) {
+            f.addAspectExpression(i, key, aspValues[i].trim());
+          }
+        } else if (key.startsWith("weight_")) {
+          String asp = key.substring(key.indexOf("_") + 1);
+          Double value = Double.parseDouble(properties.getProperty(key));
+          f.addWeight(asp, value);
+        } else if (key.startsWith("distance_")) {
+          String asp = key.substring(key.indexOf("_") + 1);
+          String value = properties.getProperty(key);
+          f.addDistanceFunction(asp, value.trim());
+        } else if (key.startsWith("limit_")) {
+          String asp = key.substring(key.indexOf("_") + 1);
+          Double value = Double.parseDouble(properties.getProperty(key));
+          f.addLimitAspValue(asp, value);
+        }
+      }
+
+      filters.put(fname, f);
+    }
+
+    query.setMapFilter(filters);
+
+    return query;
+  }
 }
