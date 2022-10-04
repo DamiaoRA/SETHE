@@ -27,6 +27,8 @@ public class QuerySETHEMain {
   private Connection con;
   private Statement st;
   private String schema = "trajSem";
+  private String pkColumnName = "traj_pk";
+  private String valueColumnName = "values";
 
   public QuerySETHEMain(
     String url1,
@@ -50,10 +52,14 @@ public class QuerySETHEMain {
     String user,
     String pass,
     String schema,
-    String database
+    String database,
+    String pkColumnName,
+    String valueColumnName
   ) throws SQLException {
     String url = "jdbc:postgresql://" + host + ":" + port + "/" + database;
     this.schema = schema;
+    this.pkColumnName = pkColumnName;
+    this.valueColumnName = valueColumnName;
     Properties options = new Properties();
     options.setProperty("user", user);
     options.setProperty("password", pass);
@@ -107,20 +113,19 @@ public class QuerySETHEMain {
     }
   }
 
-  //TODO gereneralizar
-  private String queryAspect(String trajId, String a) throws SQLException {
-    String table = schema + ".tb_" + a;
-    String sql =
-      "SELECT trajectory_value FROM " +
-      table +
-      " WHERE trajectory_id = '" +
-      trajId +
-      "'";
+  private String queryAspect(String trajectoryId, String aspect)
+    throws SQLException {
+    String table = schema + ".tb_" + aspect;
+    String sql = String.format(
+      "SELECT %s FROM %s WHERE %s = '%s'",
+      valueColumnName,
+      table,
+      pkColumnName,
+      trajectoryId
+    );
     ResultSet rs = st.executeQuery(sql);
-    if (rs.next()) {
-      return rs.getString(1);
-    }
-    return "";
+
+    return rs.next() ? rs.getString(1) : "";
   }
 
   private void close() throws SQLException {

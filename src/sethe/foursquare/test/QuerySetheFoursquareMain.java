@@ -19,7 +19,9 @@ public class QuerySetheFoursquareMain {
         "juliafealves",
         "m4c0$",
         "foursquare",
-        "sethe"
+        "sethe",
+        "trajectory_id",
+        "trajectory_value"
       );
 
     List<TimeQ> times = new ArrayList<>();
@@ -58,7 +60,10 @@ public class QuerySetheFoursquareMain {
    */
   private static TimeQ queryQ2() throws Exception {
     Properties properties = new Properties();
-    properties.setProperty("q1_asp_cat", "Food;(Residence|Shop Service);(Food)$");
+    properties.setProperty(
+      "q1_asp_cat",
+      "Food;(Residence|Shop Service);(Food)$"
+    );
     properties.setProperty("q1_proximity", ".*; ~;~");
 
     return queryQ(properties);
@@ -81,7 +86,10 @@ public class QuerySetheFoursquareMain {
    */
   private static TimeQ queryQ3() throws Exception {
     Properties properties = new Properties();
-    properties.setProperty("q1_asp_poi", "Hotel( (\\w*))*;((\\w*) )*Bar;Hotel( (\\w*))*$");
+    properties.setProperty(
+      "q1_asp_poi",
+      "Hotel( (\\w*))*;((\\w*) )*Bar;Hotel( (\\w*))*$"
+    );
     properties.setProperty("q1_proximity", "~;.*;~");
 
     return queryQ(properties);
@@ -97,7 +105,10 @@ public class QuerySetheFoursquareMain {
   private static TimeQ queryQ4() throws Exception {
     Properties properties = new Properties();
     properties.setProperty("q1_asp_poi", "(\\w*)*Hospital;(\\w*)*;(\\w*)*");
-    properties.setProperty("q1_asp_cat", "(\\w*)*;(Food|Shop Service|Residence);(\\w*)*");
+    properties.setProperty(
+      "q1_asp_cat",
+      "(\\w*)*;(Food|Shop Service|Residence);(\\w*)*"
+    );
     properties.setProperty("q1_proximity", "~;~;.*");
 
     return queryQ(properties);
@@ -130,7 +141,10 @@ public class QuerySetheFoursquareMain {
    */
   private static TimeQ queryQ6() throws Exception {
     Properties properties = new Properties();
-    properties.setProperty("q1_asp_cat","Arts(\\w*)*;(\\w*)*;Event;Nightlife Spot");
+    properties.setProperty(
+      "q1_asp_cat",
+      "Arts(\\w*)*;(\\w*)*;Event;Nightlife Spot"
+    );
     properties.setProperty("q1_asp_weather", ".*;Rain;Clear;.*");
     properties.setProperty("weight_weather", "1");
     properties.setProperty("distance_weather", "equality");
@@ -147,7 +161,10 @@ public class QuerySetheFoursquareMain {
    */
   private static TimeQ queryQ7() throws Exception {
     Properties properties = new Properties();
-    properties.setProperty("q1_asp_cat","Shop( (\\w*))*;((Travel Transport|Food)( (\\w*))*$)*");
+    properties.setProperty(
+      "q1_asp_cat",
+      "Shop( (\\w*))*;((Travel Transport|Food)( (\\w*))*$)*"
+    );
     properties.setProperty("q1_proximity", "~;.*");
 
     return queryQ(properties);
@@ -161,7 +178,10 @@ public class QuerySetheFoursquareMain {
    */
   private static TimeQ queryQ8() throws Exception {
     Properties properties = new Properties();
-    properties.setProperty("q1_asp_cat", "^(Travel Transport);(\\w*)*;(Shop Service)$");
+    properties.setProperty(
+      "q1_asp_cat",
+      "^(Travel Transport);(\\w*)*;(Shop Service)$"
+    );
     properties.setProperty("q1_proximity", "~;.*;~");
 
     return queryQ(properties);
@@ -176,7 +196,10 @@ public class QuerySetheFoursquareMain {
    */
   private static TimeQ queryQ9() throws Exception {
     Properties properties = new Properties();
-    properties.setProperty("q1_asp_cat", "^(((\\w*))*(College University|Outdoors Recreation)); .*");
+    properties.setProperty(
+      "q1_asp_cat",
+      "^(((\\w*))*(College University|Outdoors Recreation)); .*"
+    );
     properties.setProperty("q1_asp_poi", "  .* ;Hamilton");
     properties.setProperty("q1_proximity", ".* ; .*");
     properties.setProperty("q1_asp_weather", " .* ; (?-)Rain");
@@ -196,7 +219,10 @@ public class QuerySetheFoursquareMain {
   private static TimeQ queryQ10() throws Exception {
     Properties properties = new Properties();
     properties.setProperty("q1_asp_poi", "Kennedy Center;.*");
-    properties.setProperty("q1_asp_cat", ".*;(Event|Professional Other Places)");
+    properties.setProperty(
+      "q1_asp_cat",
+      ".*;(Event|Professional Other Places)"
+    );
     properties.setProperty("q1_proximity", "~;.*");
 
     return queryQ(properties);
@@ -222,6 +248,7 @@ public class QuerySetheFoursquareMain {
     long t2 = System.currentTimeMillis();
 
     System.out.println("count: " + count);
+    System.out.println("========");
     TimeQ time = new TimeQ(t1, t2, "Q1", count);
 
     return time;
