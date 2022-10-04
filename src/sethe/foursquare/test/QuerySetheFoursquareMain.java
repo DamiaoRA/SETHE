@@ -23,17 +23,18 @@ public class QuerySetheFoursquareMain {
       );
 
     List<TimeQ> times = new ArrayList<>();
-//    times.add(queryQ1());
+    times.add(queryQ1());
     times.add(queryQ2());
     times.add(queryQ3());
     times.add(queryQ4());
     times.add(queryQ5());
     times.add(queryQ6());
-//    times.add(queryQ7());
+    times.add(queryQ7());
     System.out.println();
 
-    for (TimeQ t : times) {
-      System.out.println(t.toString());
+    for (TimeQ time : times) {
+      System.out.println(time.toString());
+      System.out.println("------");
     }
   }
 
@@ -108,11 +109,9 @@ public class QuerySetheFoursquareMain {
    */
   private static TimeQ queryQ5() throws Exception {
     Properties properties = new Properties();
-
     properties.setProperty("q1_asp_cat", "Shop;(Food)$");
     properties.setProperty("q1_asp_day", "Sunday;Monday");
     properties.setProperty("q1_proximity", ".*;~");
-
     properties.setProperty("weight_day", "1");
     properties.setProperty("distance_day", "equality");
     properties.setProperty("limit_day", "1");
@@ -128,7 +127,6 @@ public class QuerySetheFoursquareMain {
    */
   private static TimeQ queryQ6() throws Exception {
     Properties properties = new Properties();
-
     properties.setProperty("q1_asp_cat","Arts(\\w*)*;(\\w*)*;Event;Nightlife Spot");
     properties.setProperty("q1_asp_weather", ".*;Rain;Clear;.*");
     properties.setProperty("weight_weather", "1");
@@ -138,16 +136,17 @@ public class QuerySetheFoursquareMain {
     return queryQ(properties);
   }
 
+  /**
+   * Consulta 7: trajetória pare no POI da categoria de Shop, e finalize no Travel & Transport ou Food ou outros locais.
+   * @return
+   * @throws Exception
+   */
   private static TimeQ queryQ7() throws Exception {
-    Properties prop = new Properties();
+    Properties properties = new Properties();
+    properties.setProperty("q1_asp_cat","Shop( (\\w*))*;((Travel Transport|Food)( (\\w*))*$)*");
+    properties.setProperty("q1_proximity", "~;.*");
 
-    prop.setProperty(
-      "q1_asp_cat",
-      "Shop( (\\w*))*;((Travel Transport|Food)( (\\w*))*$)*"
-    );
-    prop.setProperty("q1_proximity", ".* ; .*");
-
-    return queryQ(prop);
+    return queryQ(properties);
   }
 
   private static TimeQ queryQ(Properties prop) throws Exception {
