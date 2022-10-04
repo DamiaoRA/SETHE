@@ -26,6 +26,7 @@ public class QuerySetheFoursquareMain {
 //    times.add(queryQ1());
 //    times.add(queryQ2());
     times.add(queryQ3());
+    times.add(queryQ4());
 //    times.add(queryQ6());
 //    times.add(queryQ7());
     System.out.println();
@@ -79,6 +80,21 @@ public class QuerySetheFoursquareMain {
     Properties properties = new Properties();
     properties.setProperty("q1_asp_poi", "Hotel( (\\w*))*;((\\w*) )*Bar;Hotel( (\\w*))*$");
     properties.setProperty("q1_proximity", "~;.*;~");
+
+    return queryQ(properties);
+  }
+
+  /**
+   * Consulta 4: trajetória que parou num POI Hospital, onde posteriormente passou por um local que pode ser Food ou
+   * Shop & Service ou Residence e podendo ou não finalizar em outros locais.
+   * @return
+   * @throws Exception
+   */
+  private static TimeQ queryQ4() throws Exception {
+    Properties properties = new Properties();
+    properties.setProperty("q1_asp_poi", "((\\w*))*Hospital;((\\w*))*;((\\w*))*");
+    properties.setProperty("q1_asp_cat", "((\\w*))*;(Food|Shop Service|Residence);((\\w*))*");
+    properties.setProperty("q1_proximity", "~;~;.*");
 
     return queryQ(properties);
   }
