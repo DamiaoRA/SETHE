@@ -40,17 +40,37 @@ public class Query {
 		arrayExp = new Expression[arraySize];
 	}
 
-	public void addExpression(int index, String catExp, String poiExp) {
-		Expression exp = new Expression();
+	public void addExpression(int index, String catExp, String poiExp, double weight) {
+		Expression exp = new Expression(catExp, poiExp);
 		exp.setOrder(index);//listExp.size());
-		exp.setValueCategory(catExp);
-		exp.setValuePoi(poiExp);
-		if(catExp == null || catExp.isEmpty() || catExp.equals(".*"))
-			exp.setCategory(false);
-		else
-			exp.setCategory(true);
+//		exp.setValueCategory(catExp);
+//		exp.setValuePoi(poiExp);
+		exp.setWeight(weight);
+//		if(catExp == null || catExp.isEmpty() || catExp.equals(".*"))
+//			exp.setCategory(false);
+//		else
+//			exp.setCategory(true);
 
 		arrayExp[index] = exp;
+	}
+	
+	/**
+	 * Check what Expression can be the final expression of 
+	 */
+	public void calcLastExpression() {
+		Expression lastE = null;
+		for(int i = arrayExp.length - 1; i >= 0 ; i--) {
+			if(lastE == null) {
+				arrayExp[i].setIsFinal(true); 		//the last Expression is the always the end
+			} else if(lastE.isFinal() 
+					&& lastE.isOptional() 
+			/* && arrayExp[i].isOptional() */) { //if the previous Expression is final and the current one is optional, then arrayExp[i] is also final.
+				arrayExp[i].setIsFinal(true);
+			} else { //there are no more Expression candidates for the final
+				break;
+			}
+			lastE = arrayExp[i];
+		}
 	}
 
 	public void addAspectExpression(int order, String asp, String value) {

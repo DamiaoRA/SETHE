@@ -59,7 +59,7 @@ public class QueryTrajectoryMain {
 
 		ResultSet rs = st.executeQuery(sql); //TODO pensar em como fazer paginação
 		while(rs.next()) {
-			Trajectory t = new Trajectory(delimiter);
+			Trajectory t = new Trajectory(filter, delimiter);
 			t.setId(rs.getString(1));
 			t.loadText(rs.getString(2), rs.getString(3));//Poi values, category values
 			t.setQuery(filter);
@@ -168,7 +168,7 @@ public class QueryTrajectoryMain {
 			for(int i = 0; i < arraySize; i++) {
 				String cat = arrayCat.length > 0 ? arrayCat[i].trim() : null;
 				String poi = arrayPoi.length > 0 ? arrayPoi[i].trim() : null;
-				f.addExpression(i, cat, poi);
+				f.addExpression(i, cat, poi, 0d);
 			}
 
 			//Getting proximity

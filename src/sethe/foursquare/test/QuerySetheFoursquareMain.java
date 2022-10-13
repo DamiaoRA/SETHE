@@ -12,29 +12,41 @@ public class QuerySetheFoursquareMain {
   private static QuerySETHEMain qt = null;
 
   public static void main(String[] args) throws Exception {
-    qt =
-      new QuerySETHEMain(
-        "localhost",
-        "5432",
-        "juliafealves",
-        "m4c0$",
-        "foursquare",
-        "sethe",
-        "trajectory_id",
-        "trajectory_value"
-      );
+//    qt =
+//      new QuerySETHEMain(
+//        "localhost",
+//        "5432",
+//        "juliafealves",
+//        "m4c0$",
+//        "foursquare",
+//        "sethe",
+//        "trajectory_id",
+//        "trajectory_value"
+//      );
+
+	  qt =
+		      new QuerySETHEMain(
+		        "localhost",
+		        "5432",
+		        "postgres",
+		        "lsi123",
+		        "foursquare",
+		        "trajetoria",
+		        "trajectory_id",
+		        "trajectory_value"
+		      );
 
     List<TimeQ> times = new ArrayList<>();
-    times.add(queryQ1());
-    times.add(queryQ2());
-    times.add(queryQ3());
-    times.add(queryQ4());
-    times.add(queryQ5());
+//    times.add(queryQ1());
+//    times.add(queryQ2());
+//    times.add(queryQ3());
+//    times.add(queryQ4());
+//    times.add(queryQ5());
     times.add(queryQ6());
-    times.add(queryQ7());
-    times.add(queryQ8());
-    times.add(queryQ9());
-    times.add(queryQ10());
+//    times.add(queryQ7());
+//    times.add(queryQ8());
+//    times.add(queryQ9());
+//    times.add(queryQ10());
     System.out.println();
 
     for (TimeQ time : times) {
@@ -43,17 +55,23 @@ public class QuerySetheFoursquareMain {
     }
   }
 
+  /**
+   * Trajectories that stop at a Residence and then at a Food.
+   * @return
+   * @throws Exception
+   */
   private static TimeQ queryQ1() throws Exception {
     Properties prop = new Properties();
-    prop.setProperty("q1_asp_cat", "Residence;Food");
-    prop.setProperty("q1_proximity", ".*;~");
+    prop.setProperty("q1_asp_cat", "Residence ; Food");
+    prop.setProperty("q1_proximity", ".* ; ~");
 
     return queryQ(prop);
   }
 
   /**
-   * Consulta 02: trajetória onde pare na categoria "Food", e pare em um "Residence" ou "Shop & Service"
-   * e finalize parando em um "Food".
+   * Consulta 02: trajetória onde para na categoria "Food", e para em um "Residence" ou "Shop & Service", 
+   * depois para em um "Residence" ou "Shop & Service" novamente
+   * e finaliza parando em um "Food".
    *
    * @return
    * @throws Exception
@@ -62,12 +80,90 @@ public class QuerySetheFoursquareMain {
     Properties properties = new Properties();
     properties.setProperty(
       "q1_asp_cat",
-      "Food;(Residence|Shop Service);(Food)$"
+      "Food;(Residence|Shop Service) ; (Residence|Shop Service) ; (Food)$"
     );
-    properties.setProperty("q1_proximity", ".*; ~;~");
+    properties.setProperty("q1_proximity", ".* ;  ~ ; .* ; ~");
 
     return queryQ(properties);
   }
+  
+  /**
+   * Trajectories that stop at least once in a College, and then at a Event.
+   * @return
+   * @throws Exception
+   */
+  private static TimeQ queryQ3() throws Exception {
+	    Properties properties = new Properties();
+	    properties.setProperty(
+	      "q1_asp_cat",
+	      "College( (\\w*))* ; Event"
+	    );
+	    properties.setProperty("q1_proximity", ".* ; ~");
+
+	    return queryQ(properties);
+  }
+
+  /**
+   * Trajectories that stop at the Bryant Park and then at the Madison Square, or
+   * stop at the Madison Square and then at the Bryant Park.
+   */
+  private static TimeQ queryQ4() throws Exception {
+	  Properties prop = new Properties();
+
+	    prop.setProperty("q1_asp_poi", "Bryant Park ; Madison Square Park");
+	    prop.setProperty("q1_proximity", ".*			   ; ~");
+	    prop.setProperty("q2_asp_poi", "Madison Square Park ; Bryant Park");
+	    prop.setProperty("q2_proximity", ".*                    ; ~");
+
+	    return queryQ(prop);
+  }
+
+  /**
+   * Trajectories that begin at a Residence and then end at a Shop.
+   * @return
+   * @throws Exception
+   */
+  private static TimeQ queryQ5() throws Exception {
+	    Properties prop = new Properties();
+
+	    prop.setProperty(
+	      "q1_asp_cat",
+	      "^Residence ; (Shop( \\w*)*)$"
+	    );
+	    prop.setProperty("q1_proximity", ".* ; ~");
+
+	    return queryQ(prop);
+  }
+
+  /**
+   * @return
+   * @throws Exception
+   */
+	private static TimeQ queryQ6() throws Exception {
+		Properties prop = new Properties();
+
+		prop.setProperty("q1_asp_cat", "Food ; Residence ; Food ; (Residence)?");
+		prop.setProperty("q1_proximity", ".* ; .* ; .* ; .*");
+
+		return queryQ(prop);
+	}
+
+	/**
+	 * Trajectories that begin at a Food, stop at zero or more Food, and end at a Food.
+	 * @return
+	 * @throws Exception
+	 */
+	private static TimeQ queryQ7() throws Exception {
+		Properties prop = new Properties();
+
+		prop.setProperty("q1_asp_cat",   "^(Food) ; ((Food)+)$");
+		prop.setProperty("q1_proximity", " .*     ; ~ ");
+
+//		prop.setProperty("q1_asp_cat",   "^(Food) ; (Food)* ; (Food)$");
+//		prop.setProperty("q1_proximity", " .*     ; ~*      ; ~");
+
+		return queryQ(prop);
+	}
 
   /**
    * Consulta 3: trajetória que pare em um POI Hotel qualquer, pare em qualquer POI denominado de Bar e finalize em um
@@ -84,16 +180,16 @@ public class QuerySetheFoursquareMain {
    * @return
    * @throws Exception
    */
-  private static TimeQ queryQ3() throws Exception {
-    Properties properties = new Properties();
-    properties.setProperty(
-      "q1_asp_poi",
-      "Hotel( (\\w*))*;((\\w*) )*Bar;Hotel( (\\w*))*$"
-    );
-    properties.setProperty("q1_proximity", "~;.*;~");
-
-    return queryQ(properties);
-  }
+//  private static TimeQ queryQ3() throws Exception {
+//    Properties properties = new Properties();
+//    properties.setProperty(
+//      "q1_asp_poi",
+//      "Hotel( (\\w*))*;((\\w*) )*Bar;Hotel( (\\w*))*$"
+//    );
+//    properties.setProperty("q1_proximity", "~;.*;~");
+//
+//    return queryQ(properties);
+//  }
 
   /**
    * Consulta 4: trajetória que parou num POI Hospital, onde posteriormente passou por um local que pode ser Food ou
@@ -102,17 +198,17 @@ public class QuerySetheFoursquareMain {
    * @return
    * @throws Exception
    */
-  private static TimeQ queryQ4() throws Exception {
-    Properties properties = new Properties();
-    properties.setProperty("q1_asp_poi", "(\\w*)*Hospital;(\\w*)*;(\\w*)*");
-    properties.setProperty(
-      "q1_asp_cat",
-      "(\\w*)*;(Food|Shop Service|Residence);(\\w*)*"
-    );
-    properties.setProperty("q1_proximity", "~;~;.*");
-
-    return queryQ(properties);
-  }
+//  private static TimeQ queryQ4() throws Exception {
+//    Properties properties = new Properties();
+//    properties.setProperty("q1_asp_poi", "(\\w*)*Hospital;(\\w*)*;(\\w*)*");
+//    properties.setProperty(
+//      "q1_asp_cat",
+//      "(\\w*)*;(Food|Shop Service|Residence);(\\w*)*"
+//    );
+//    properties.setProperty("q1_proximity", "~;~;.*");
+//
+//    return queryQ(properties);
+//  }
 
   /**
    * Consulta 05: trajetória que pare em um Shop e finalize Food, esta trajetória passa pelo o dia Sunday e Monday.
@@ -120,17 +216,17 @@ public class QuerySetheFoursquareMain {
    * @return
    * @throws Exception
    */
-  private static TimeQ queryQ5() throws Exception {
-    Properties properties = new Properties();
-    properties.setProperty("q1_asp_cat", "Shop;(Food)$");
-    properties.setProperty("q1_asp_day", "Sunday;Monday");
-    properties.setProperty("q1_proximity", ".*;~");
-    properties.setProperty("weight_day", "1");
-    properties.setProperty("distance_day", "equality");
-    properties.setProperty("limit_day", "1");
-
-    return queryQ(properties);
-  }
+//  private static TimeQ queryQ5() throws Exception {
+//    Properties properties = new Properties();
+//    properties.setProperty("q1_asp_cat", "Shop;(Food)$");
+//    properties.setProperty("q1_asp_day", "Sunday;Monday");
+//    properties.setProperty("q1_proximity", ".*;~");
+//    properties.setProperty("weight_day", "1");
+//    properties.setProperty("distance_day", "equality");
+//    properties.setProperty("limit_day", "1");
+//
+//    return queryQ(properties);
+//  }
 
   /**
    * Consulta 6: trajetória que pare um local Arts, passe em outros locais, pare em Event com clima Clear, e
@@ -139,19 +235,19 @@ public class QuerySetheFoursquareMain {
    * @return
    * @throws Exception
    */
-  private static TimeQ queryQ6() throws Exception {
-    Properties properties = new Properties();
-    properties.setProperty(
-      "q1_asp_cat",
-      "Arts(\\w*)*;(\\w*)*;Event;Nightlife Spot"
-    );
-    properties.setProperty("q1_asp_weather", ".*;Rain;Clear;.*");
-    properties.setProperty("weight_weather", "1");
-    properties.setProperty("distance_weather", "equality");
-    properties.setProperty("limit_weather", "1");
-
-    return queryQ(properties);
-  }
+//  private static TimeQ queryQ6() throws Exception {
+//    Properties properties = new Properties();
+//    properties.setProperty(
+//      "q1_asp_cat",
+//      "Arts(\\w*)*;(\\w*)*;Event;Nightlife Spot"
+//    );
+//    properties.setProperty("q1_asp_weather", ".*;Rain;Clear;.*");
+//    properties.setProperty("weight_weather", "1");
+//    properties.setProperty("distance_weather", "equality");
+//    properties.setProperty("limit_weather", "1");
+//
+//    return queryQ(properties);
+//  }
 
   /**
    * Consulta 7: trajetória pare no POI da categoria de Shop, e finalize no Travel & Transport ou Food ou outros locais.
@@ -159,16 +255,16 @@ public class QuerySetheFoursquareMain {
    * @return
    * @throws Exception
    */
-  private static TimeQ queryQ7() throws Exception {
-    Properties properties = new Properties();
-    properties.setProperty(
-      "q1_asp_cat",
-      "Shop( (\\w*))*;((Travel Transport|Food)( (\\w*))*$)*"
-    );
-    properties.setProperty("q1_proximity", "~;.*");
-
-    return queryQ(properties);
-  }
+//  private static TimeQ queryQ7() throws Exception {
+//    Properties properties = new Properties();
+//    properties.setProperty(
+//      "q1_asp_cat",
+//      "Shop( (\\w*))*;((Travel Transport|Food)( (\\w*))*$)*"
+//    );
+//    properties.setProperty("q1_proximity", "~;.*");
+//
+//    return queryQ(properties);
+//  }
 
   /**
    * Consulta 8: trajetória que inicial no Travel & Transport e finaliza no Shop & Service.

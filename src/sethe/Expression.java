@@ -16,18 +16,55 @@ public class Expression {
 	private String valuePoi;
 	private int order;
 	private boolean isCategory;
+	private double weight;
+	private boolean isFinal = false;
+	private boolean isOptional = false;
+	private String cleanValue;
 
 	private Map<String, AspectExpression> mapAspects;
 	private Map<String, String> mapProximity;
 
 	private boolean checkProximity;
 
-	public Expression() {
+	public Expression(String cat, String namePoi) {
+		this.valueCategory = cat;
+		this.valuePoi = namePoi;
+
+		if(cat == null || cat.isEmpty() || cat.equals(".*"))
+			this.isCategory = false;
+		else
+			this.isCategory = true;
+
+		checkOptional(cat, namePoi);
+
+		if (isCategory)
+			cleanValue = valueCategory;
+		else 
+			cleanValue = valuePoi;
+
+		if(isOptional) {
+			cleanValue = cleanValue.substring(0, cleanValue.length()-1);
+		}
+
 		mapAspects = new HashMap<String, AspectExpression>();
 		mapProximity = new HashMap<String, String>();
 		checkProximity = false;
+		isFinal = false;
 	}
 	
+	private void checkOptional(String cat, String namepoi) {
+		if(isCategory) {
+			if (cat.charAt(cat.length() - 1) == '?') 
+				isOptional = true;
+		} else if(namepoi.charAt(namepoi.length() - 1) == '?') {
+			isOptional = true;
+		}
+	}
+
+	public String getCleanValue() {
+		return cleanValue;
+	}
+
 	public void addProximity(String aspectName, String value) {
 		mapProximity.put(aspectName, value.trim());
 	}
@@ -158,4 +195,34 @@ public class Expression {
 	public void setCheckProximity(boolean checkProximity) {
 		this.checkProximity = checkProximity;
 	}
+
+	public double getWeight() {
+		return weight;
+	}
+
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+
+	public boolean isFinal() {
+		return isFinal;
+	}
+
+	public void setIsFinal(boolean isFinal) {
+		this.isFinal = isFinal;
+	}
+
+	public boolean isOptional() {
+		return isOptional;
+	}
+
+//	public boolean isOptional() {
+//		if(isCategory) {
+//			if (valueCategory.charAt(valueCategory.length() - 1) == '?')
+//				return true;
+//		} else if (valuePoi.charAt(valuePoi.length() - 1) == '?') {
+//			return true;
+//		}
+//		return false;
+//	}
 }

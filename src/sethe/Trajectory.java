@@ -2,10 +2,11 @@ package sethe;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import sethe.util.graph.Graph;
 
 public class Trajectory implements Comparable<Trajectory> {
 
@@ -21,12 +22,13 @@ public class Trajectory implements Comparable<Trajectory> {
 
   private String delimiter;
 
-  public Trajectory(String delimiter) {
-    graph = new Graph();
-    subTrajectories = new ArrayList<SubTrajectory>();
-    coefficient = 0d;
-    this.delimiter = delimiter == null? " " : delimiter;
-  }
+	public Trajectory(Query query, String delimiter) {
+		this.query = query;
+		graph = new Graph(query.getArrayExp());
+		subTrajectories = new ArrayList<SubTrajectory>();
+		coefficient = 0d;
+		this.delimiter = delimiter == null ? " " : delimiter;
+	}
 
   public void loadText(String valuePoi, String valueCat) throws Exception {
     textPoi = valuePoi;
@@ -143,72 +145,110 @@ public class Trajectory implements Comparable<Trajectory> {
     //		System.out.println("");
   }
 
-  public void calcSubtrajectory() throws Exception {
-    for (Expression e : query.getArrayExp()) {
-      String text = textPoi;
-      if (e.isCategory()) {
-        text = textCategory;
-      }
+	public void calcSubtrajectory() throws Exception {
+		for(int i = 0; i < pois.length; i++) {
+			for (Expression e : query.getArrayExp()) {
+				String text = "";
+				if (e.isCategory()) {
+					text = pois[i].getCategory();
+				} else {
+					text = pois[i].getName();
+				}
 
-      Pattern pattern = Pattern.compile(e.getValue());
-      Matcher matcher = pattern.matcher(text);
-      while (matcher.find()) {
-        String m = matcher.group().trim();
-        int end = matcher.end();
-        PoI poi = findPoIs(m, end, text, e.isCategory());
-        addVertice(e, poi);
-      }
-    }
+				Pattern pattern = Pattern.compile(e.getCleanValue());
+				Matcher matcher = pattern.matcher(text);
+				if (matcher.find()) {
+					graph.createVertice(e, pois[i]);
+				}
+			}			
+		}
 
-    graph.fix(query.getArrayExp().length - 1);
+		graph.fix();
 
-    createSubTrajectories();
-  }
+		createSubTrajectories();
+	}
 
-  private void createSubTrajectories() throws Exception {
-    List<LinkedList<PoI>> ll = graph.createListListPoI();
-    for (LinkedList<PoI> lk : ll) {
-      SubTrajectory st = new SubTrajectory();
-      st.setTrajectory(this);
-      st.setPois(lk);
-      st.setDistanceFunction(query.getDistanceFunction());
-      st.calcCoefficient(query);
-      subTrajectories.add(st);
-    }
-
-    Collections.sort(subTrajectories);
-    if (!subTrajectories.isEmpty()) this.coefficient =
-      subTrajectories.get(subTrajectories.size() - 1).getCoefficient();
-  }
-
+//  public void calcSubtrajectory() throws Exception {
+//    for (Expression e : query.getArrayExp()) {
+//      String text = textPoi;
+//      if (e.isCategory()) {
+//        text = textCategory;
+//      }
+//
+//      Pattern pattern = Pattern.compile(e.getCleanValue());
+//      Matcher matcher = pattern.matcher(text);
+//      while (matcher.find()) {
+//        String m = matcher.group().trim();
+//        int end = matcher.end();
+//        PoI poi = findPoIs(m, end, text, e.isCategory());
+//        graph.createVertice(e, poi);
+//      }
+//    }
+//
+//    graph.fix();
+//
+//    createSubTrajectories();
+//  }
+  
   //TODO talvez não seja mais necessário. Remover essa função pra ganhar desempenho
   private PoI findPoIs(String m, int end, String text, boolean isCategory)
     throws Exception {
     String subTraj = substring(text, end); //text.substring(0, end).trim();
     String[] arraySubTraj = subTraj.split(delimiter);
 
-    for (int i = arraySubTraj.length - 1; i >= 0; i--) {
-      String poi = arraySubTraj[i];
-      if (poi.trim().contains(m)) {
-        return pois[i];
-      }
-    }
+    String lastPoi = arraySubTraj[arraySubTraj.length - 1];
+    if (lastPoi.trim().contains(m))
+    	return pois[arraySubTraj.length - 1];
 
     throw new Exception(
       "Expressão " + m + " não encontrada na subtrajetória " + text
     );
   }
 
-  private String substring(String text, int end) {
-    while (end < (text.length() - 1) && text.charAt(end) != ' ') {
-      end++;
-    }
-    return text.substring(0, end).trim();
+  private void createSubTrajectories() throws Exception {
+	  List<PoI[]> result = graph.extractPoiSubSequences();
+
+	  for (PoI[] subs : result) {
+	      SubTrajectory st = new SubTrajectory();
+	      st.setTrajectory(this);
+	      st.setPois(subs);
+	      st.setDistanceFunction(query.getDistanceFunction());
+	      st.calcCoefficient(query);
+	      subTrajectories.add(st);
+	    }
+
+	    Collections.sort(subTrajectories);
+	    if (!subTrajectories.isEmpty()) 
+	    	this.coefficient = subTrajectories.get(subTrajectories.size() - 1).getCoefficient();
   }
 
-  private void addVertice(Expression e, PoI p) {
-    graph.createVertice(e, p);
+//  private void createSubTrajectories() throws Exception {
+//    List<LinkedList<PoI>> ll = graph.createListListPoI();
+//    for (LinkedList<PoI> lk : ll) {
+//      SubTrajectory st = new SubTrajectory();
+//      st.setTrajectory(this);
+//      st.setPois(lk);
+//      st.setDistanceFunction(query.getDistanceFunction());
+//      st.calcCoefficient(query);
+//      subTrajectories.add(st);
+//    }
+//
+//    Collections.sort(subTrajectories);
+//    if (!subTrajectories.isEmpty()) 
+//    	this.coefficient = subTrajectories.get(subTrajectories.size() - 1).getCoefficient();
+//  }
+
+  private String substring(String text, int end) {
+//    while (end < (text.length() - 1) && text.charAt(end) != ' ') {
+//      end++;
+//    }
+//    return text.substring(0, end).trim();
+	  return text.substring(0, end);
   }
+
+//  private void addVertice(Expression e, PoI p) {
+//    graph.createVertice(e, p);
+//  }
 
   public void printGraph() {
     graph.print();

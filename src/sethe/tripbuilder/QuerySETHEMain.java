@@ -71,14 +71,13 @@ public class QuerySETHEMain {
     for (Query filter : query.getMapFilter().values()) {
       searchTrajectories(filter, query.getDelimiter());
       for (Trajectory t : filter.getMapResultQuery().values()) {
-        //				t.printGraph();
         query.add(t);
       }
     }
   }
 
   /**
-   * Pesquisa as trajetórias que obedecem o regex descrito na query
+   * Search trajectories that follow the regex described in the query
    * @param filter
    * @return
    * @throws SQLException
@@ -89,13 +88,13 @@ public class QuerySETHEMain {
 
     ResultSet rs = st.executeQuery(sql);
     while (rs.next()) {
-      Trajectory t = new Trajectory(delimiter);
+      Trajectory t = new Trajectory(filter, delimiter);
       t.setId(rs.getString(1));
       t.loadText(rs.getString(2), rs.getString(3)); //Poi values, category values
       t.setQuery(filter);
-      searchAspects(t, filter.getAspects());
+      searchAspects(t, filter.getAspects(), delimiter);
 
-      //Calculando as subtrajetórias
+      //Calculating the subtrajectories
       t.calcSubtrajectory();
       //
 
@@ -104,12 +103,18 @@ public class QuerySETHEMain {
     }
   }
 
-  // todo generalizar o split
-  private void searchAspects(Trajectory t, Set<String> aspects)
+  /**
+   * 
+   * @param t
+   * @param aspects
+   * @param delimiter
+   * @throws Exception
+   */
+  private void searchAspects(Trajectory t, Set<String> aspects, String delimiter)
     throws Exception {
     for (String a : aspects) {
       String text = queryAspect(t.getId(), a);
-      t.addAspect(a, text.split(";"));
+      t.addAspect(a, text.split(delimiter));
     }
   }
 
@@ -173,19 +178,24 @@ public class QuerySETHEMain {
     }
   }
 
+  /**
+   * Read the query expressions
+   * @param properties
+   * @return
+   */
   @SuppressWarnings("rawtypes")
   public static CompositeQuery loadQuery(Properties properties) {
-    CompositeQuery query = new CompositeQuery();
+    CompositeQuery cquery = new CompositeQuery();
     String distFun = properties.getProperty("dist_func");
-    String split = ";";
+    String split = " ; ";
 
     String pkColumn = properties.getProperty("pk_column_name");
     String valueColumn = properties.getProperty("value_column_name");
     String delimiter = properties.getProperty("delimiter");
 
-    query.setPkTrajColumnName(pkColumn);
-    query.setValueColumnName(valueColumn);
-    query.setDelimiter(delimiter);
+    cquery.setPkTrajColumnName(pkColumn);
+    cquery.setValueColumnName(valueColumn);
+    cquery.setDelimiter(delimiter);
 
     int arraySize = 0;
 
@@ -201,34 +211,40 @@ public class QuerySETHEMain {
     }
 
     for (String fname : filters.keySet()) {
-      Query f = new Query(fname, query);
-      f.setDistanceFunction(distFun);
+      Query query = new Query(fname, cquery);
+      query.setDistanceFunction(distFun);
       //      f.setQuery(query);
 
       //Getting PoIs
       String p = properties.getProperty(fname + "_asp_poi");
-      String[] arrayPoi = p != null ? p.split(split) : new String[0];
-      if (p != null) arraySize = arrayPoi.length;
+      String[] arrayEPoi = p != null ? p.split(split) : new String[0];
+      if (p != null) arraySize = arrayEPoi.length;
 
       //Getting category
       String c = properties.getProperty(fname + "_asp_cat");
-      String[] arrayCat = c != null ? c.split(split) : new String[0];
-      if (c != null) arraySize = arrayCat.length;
+      String[] arrayECat = c != null ? c.split(split) : new String[0];
+      if (c != null) arraySize = arrayECat.length;
 
-      f.init(arraySize);
+      //PoI Weight
+      String poiw  = properties.getProperty(fname + "_poi_weight");
+      String[] arrayPw = poiw != null ? poiw.split(split) : new String[0];
+
+      query.init(arraySize);
 
       for (int i = 0; i < arraySize; i++) {
-        String cat = arrayCat.length > 0 ? arrayCat[i].trim() : null;
-        String poi = arrayPoi.length > 0 ? arrayPoi[i].trim() : null;
-        f.addExpression(i, cat, poi);
+        String cat = arrayECat.length > 0 ? arrayECat[i].trim() : null;
+        String poi = arrayEPoi.length > 0 ? arrayEPoi[i].trim() : null;
+        double weight = arrayPw.length > 0 ? Double.parseDouble(arrayPw[i]) : 1;
+        query.addExpression(i, cat, poi, weight);
       }
+      query.calcLastExpression();
 
       //Getting proximity
       String proximity = properties.getProperty(fname + "_proximity");
       if (!StringUtils.isEmpty(proximity)) {
         String[] proximityValues = proximity.split(split);
         for (int i = 0; i < proximityValues.length; i++) {
-          f.addProximityExpression(i, proximityValues[i]);
+          query.addProximityExpression(i, proximityValues[i]);
         }
       }
 
@@ -243,28 +259,28 @@ public class QuerySETHEMain {
           String[] aspValues = properties.getProperty(key).split(";");
           key = key.replace(fname + "_asp_", "");
           for (int i = 0; i < aspValues.length; i++) {
-            f.addAspectExpression(i, key, aspValues[i].trim());
+            query.addAspectExpression(i, key, aspValues[i].trim());
           }
         } else if (key.startsWith("weight_")) {
           String asp = key.substring(key.indexOf("_") + 1);
           Double value = Double.parseDouble(properties.getProperty(key));
-          f.addWeight(asp, value);
+          query.addWeight(asp, value);
         } else if (key.startsWith("distance_")) {
           String asp = key.substring(key.indexOf("_") + 1);
           String value = properties.getProperty(key);
-          f.addDistanceFunction(asp, value.trim());
+          query.addDistanceFunction(asp, value.trim());
         } else if (key.startsWith("limit_")) {
           String asp = key.substring(key.indexOf("_") + 1);
           Double value = Double.parseDouble(properties.getProperty(key));
-          f.addLimitAspValue(asp, value);
+          query.addLimitAspValue(asp, value);
         }
       }
 
-      filters.put(fname, f);
+      filters.put(fname, query);
     }
 
-    query.setMapFilter(filters);
+    cquery.setMapFilter(filters);
 
-    return query;
+    return cquery;
   }
 }

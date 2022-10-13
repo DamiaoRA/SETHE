@@ -1,37 +1,43 @@
 package sethe;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class SubTrajectory implements Comparable<SubTrajectory> {
 
   private Trajectory trajectory;
-  private List<PoI> pois;
+//  private List<PoI> pois;
+  private PoI[] pois;
   private Double[] vector;
   private Double[] vectorQuery; //vector of the query
   private Double coefficient;
   private String distanceFunction;
 
   public SubTrajectory() {
-    pois = new ArrayList<PoI>();
+//    pois = new ArrayList<PoI>();
     coefficient = 0d;
   }
 
-  public List<PoI> getPois() {
-    return pois;
-  }
+//  public List<PoI> getPois() {
+//    return pois;
+//  }
+//
+//  public void setPois(List<PoI> pois) {
+//    this.pois = pois;
+//  }
 
-  public void setPois(List<PoI> pois) {
-    this.pois = pois;
-  }
+	public Double getCoefficient() {
+		return coefficient;
+	}
 
-  public Double getCoefficient() {
-    return coefficient;
-  }
+	public PoI[] getPois() {
+		return pois;
+	}
 
-  public void setCoefficient(Double coefficient) {
-    this.coefficient = coefficient;
-  }
+	public void setPois(PoI[] pois) {
+		this.pois = pois;
+	}
+
+	public void setCoefficient(Double coefficient) {
+		this.coefficient = coefficient;
+	}
 
   public Trajectory getTrajectory() {
     return trajectory;
@@ -57,33 +63,66 @@ public class SubTrajectory implements Comparable<SubTrajectory> {
    * @return
    */
   public Double[] createVector(Query filter) {
-    vector = new Double[pois.size() * (filter.getNumAspects()) + pois.size()];
-    vectorQuery = new Double[vector.length];
-    int k = 0;
-    for (int indexPoiSub = 0; indexPoiSub < pois.size(); indexPoiSub++) {
-      PoI p2 = pois.get(indexPoiSub);
-      PoI p1 = indexPoiSub > 0 ? pois.get(indexPoiSub - 1) : null;
-
-      //			calculating aspects coef
-      for (String key : p2.getAspects().keySet()) {
-        String aspect = p2.getAspects().get(key);
-        vector[k] =
-          filter.distance(key, aspect, indexPoiSub, p1, p2, trajectory); //calcula a distancia entre o aspecto e o valor fornecido na consulta
-        vectorQuery[k] = filter.weight(key);
-        k++;
-      }
-
-      //proximity coef
-      int dist = filter.checkProximity(indexPoiSub) && indexPoiSub > 0
-        ? (p2.getPosition() - pois.get(indexPoiSub - 1).getPosition())
-        : 1;
-
-      vector[k] = (1d / dist);
-      vectorQuery[k] = 1d;
-      k++;
-    }
-    return vector;
-  }
+	    vector = new Double[pois.length * (filter.getNumAspects()) + pois.length];
+	    vectorQuery = new Double[vector.length];
+	    int k = 0;
+	    for (int indexPoiSub = 0; indexPoiSub < pois.length; indexPoiSub++) {
+	      PoI p2 = pois[indexPoiSub];
+	      if(p2 != null) {
+		      PoI p1 = indexPoiSub > 0 ? pois[indexPoiSub - 1] : null;
+	
+		      //calculating aspects coef
+		      for (String aspectType : p2.getAspects().keySet()) {
+		        String aspect = p2.getAspects().get(aspectType);
+		        vector[k] =
+		          filter.distance(aspectType, aspect, indexPoiSub, p1, p2, trajectory); //calcula a distancia entre o aspecto e o valor fornecido na consulta
+		        vectorQuery[k] = filter.weight(aspectType);
+		        k++;
+		      }
+	
+		      //proximity coef
+		      int dist = filter.checkProximity(indexPoiSub) && indexPoiSub > 0
+		        ? (p2.getPosition() - pois[indexPoiSub - 1].getPosition())
+		        : 1;
+	
+		      vector[k] = (1d / dist);
+	      } else {
+	    	  vector[k] = 0d;
+	      }
+	      vectorQuery[k] = 1d;
+	      k++;
+	    }
+	    return vector;
+	  }
+  
+//  public Double[] createVector(Query filter) {
+//    vector = new Double[pois.size() * (filter.getNumAspects()) + pois.size()];
+//    vectorQuery = new Double[vector.length];
+//    int k = 0;
+//    for (int indexPoiSub = 0; indexPoiSub < pois.size(); indexPoiSub++) {
+//      PoI p2 = pois.get(indexPoiSub);
+//      PoI p1 = indexPoiSub > 0 ? pois.get(indexPoiSub - 1) : null;
+//
+//      //calculating aspects coef
+//      for (String aspectType : p2.getAspects().keySet()) {
+//        String aspect = p2.getAspects().get(aspectType);
+//        vector[k] =
+//          filter.distance(aspectType, aspect, indexPoiSub, p1, p2, trajectory); //calcula a distancia entre o aspecto e o valor fornecido na consulta
+//        vectorQuery[k] = filter.weight(aspectType);
+//        k++;
+//      }
+//
+//      //proximity coef
+//      int dist = filter.checkProximity(indexPoiSub) && indexPoiSub > 0
+//        ? (p2.getPosition() - pois.get(indexPoiSub - 1).getPosition())
+//        : 1;
+//
+//      vector[k] = (1d / dist);
+//      vectorQuery[k] = 1d;
+//      k++;
+//    }
+//    return vector;
+//  }
 
   public void calcCoefficient(double[] vectorCoef) {
     double sumMin = 0;
