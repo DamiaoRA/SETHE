@@ -178,23 +178,65 @@ public class Vertice {
 	}
 
 	public static void main(String[] args) {
-		int[][] r1 = {{1,2,4},{1,3,4},{1,2,6}};
-		int[] E1 = {1};
-		int[] E3 = {4};
-		int orderE1 = 0;
-		int orderE2 = 1;
-		int orderE3 = 2;
-		
-		Map<String, Object[]> map = new HashMap<String, Object[]>();
-		
-		for(int[] pois : r1) {
-			int p1 = pois[orderE1];
-			int p3 = pois[orderE3];
-			createNewSubsequence(p1, pois[orderE2] ,p3, orderE2, map);
-		}
+		List<PoI[]> subs = new ArrayList<>();
+		PoI p1 = new PoI();p1.setPosition(1);
+		PoI p2 = new PoI();p2.setPosition(3);
+		PoI p3 = new PoI();p3.setPosition(5);
+		PoI p4 = new PoI();p4.setPosition(6);
+		PoI p5 = new PoI();p5.setPosition(9);
+		PoI p6 = new PoI();p6.setPosition(12);
+		PoI[] arr1 = {p1,p2,p4};
+		PoI[] arr2 = {p1,p3,p4};
+		PoI[] arr3 = {p1,p5,p6};
+		int orderPre = 0;
+		int orderPos = 2;
 
-		for(Object[] array : map.values()) {
-			System.out.println(array[0] + " " + array[1] + " "+ array[2]);
+		subs.add(arr1);subs.add(arr2);subs.add(arr3);
+		List<Object[]> newSub = new ArrayList<>();
+		//
+		newSub = createNewSubsequence(subs, orderPre, orderPos);
+		System.out.println(newSub);
+
+//		int[][] r1 = {{1,2,10},{1,3,10},{1,2,6},{1,4,10}};
+//		int[] E1 = {1};
+//		int[] E3 = {4};
+//		int orderE1 = 0;
+//		int orderE2 = 1;
+//		int orderE3 = 2;
+//		
+//		Map<String, Object[]> map = new HashMap<String, Object[]>();
+//		
+//		for(int[] pois : r1) {
+//			int p1 = pois[orderE1];
+//			int p3 = pois[orderE3];
+//			createNewSubsequence(p1, pois[orderE2] ,p3, orderE2, map);
+//		}
+//
+//		for(Object[] array : map.values()) {
+//			System.out.println(array[0] + " " + array[1] + " "+ array[2]);
+//		}
+	}
+
+	private static createNewSubsequence(List<PoI[]> subs, int orderPre, int orderPos) {
+		Map<String, Object[]> map = new HashMap<>();
+		return createNewSubsequence(subs, orderPre, orderPos, map);
+	}
+
+	private static createNewSubsequence(List<PoI[]> subs, int orderPre, int orderPos, Map<String, Object[]> map) {
+		for(PoI[] pois : subs) {
+			String key = pois[orderPre] + "_" + pois[orderPos];
+			Object[] array = map.get(key);
+			if(array == null) {
+				List<PoI> points = new ArrayList<PoI>();
+				array = new Object[pois.length];
+				for (int i = 0; i < pois.length; i++) {
+					array[i] = pois[i];
+				}
+				array[orderPos - 1] = points; 
+				map.put(key, array);
+			}
+
+			((List<PoI>)pois[orderPre]).add();
 		}
 	}
 
