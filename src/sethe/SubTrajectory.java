@@ -10,6 +10,8 @@ public class SubTrajectory implements Comparable<SubTrajectory> {
   private Double coefficient;
   private String distanceFunction;
 
+  private Location[] locations;
+
   public SubTrajectory() {
 //    pois = new ArrayList<PoI>();
     coefficient = 0d;
@@ -142,21 +144,37 @@ public class SubTrajectory implements Comparable<SubTrajectory> {
     this.distanceFunction = distanceFunction;
   }
 
-  public void print() {
-    System.out.println("PoI:");
-    for (PoI p : pois) {
-      System.out.print(p.toStringPoI());
-    }
-
-    System.out.println("\nCat:");
-    for (PoI p : pois) {
-      System.out.print(p.toStringCategory());
-    }
-
-    System.out.println("\n" + coefficient);
-    for (double v : vector) {
-      System.out.print(v + " ");
-    }
-    System.out.println();
+  public Location[] getLocations() {
+	  return locations;
   }
+
+  public void setLocations(Location[] locations) {
+	  this.locations = locations;
+  }
+
+	public void print() {
+		System.out.println("PoI:");
+		for (PoI p : pois) {
+			System.out.print(p.toStringPoI());
+		}
+
+		System.out.println("\nCat:");
+		for (PoI p : pois) {
+			System.out.print(p.toStringCategory());
+		}
+
+		System.out.println("\n" + coefficient);
+		for (double v : vector) {
+			System.out.print(v + " ");
+		}
+		System.out.println();
+	}
+
+	public void addPoIs(Location loc, int order) {
+		(getLocations()[order]).addAllPoIs(loc.getPois());
+	}
+
+	public int getPoIPosition(int order) {
+		return (getLocations()[order]).getPois().get(0).getPosition();
+	}
 }

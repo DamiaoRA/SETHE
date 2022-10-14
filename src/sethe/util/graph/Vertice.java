@@ -8,7 +8,9 @@ import java.util.List;
 import java.util.Map;
 
 import sethe.Expression;
+import sethe.Location;
 import sethe.PoI;
+import sethe.SubTrajectory;
 
 public class Vertice {
 	private Expression expression;
@@ -178,24 +180,47 @@ public class Vertice {
 	}
 
 	public static void main(String[] args) {
-		List<PoI[]> subs = new ArrayList<>();
 		PoI p1 = new PoI();p1.setPosition(1);
 		PoI p2 = new PoI();p2.setPosition(3);
 		PoI p3 = new PoI();p3.setPosition(5);
 		PoI p4 = new PoI();p4.setPosition(6);
 		PoI p5 = new PoI();p5.setPosition(9);
 		PoI p6 = new PoI();p6.setPosition(12);
-		PoI[] arr1 = {p1,p2,p4};
-		PoI[] arr2 = {p1,p3,p4};
-		PoI[] arr3 = {p1,p5,p6};
-		int orderPre = 0;
-		int orderPos = 2;
 
-		subs.add(arr1);subs.add(arr2);subs.add(arr3);
-		List<Object[]> newSub = new ArrayList<>();
+		Location l1 = new Location();l1.addPoI(p1);
+		Location l2 = new Location();l2.addPoI(p2);
+		Location l3 = new Location();l3.addPoI(p3);
+		Location l4 = new Location();l4.addPoI(p4);
+		Location l5 = new Location();l5.addPoI(p5);
+		Location l6 = new Location();l6.addPoI(p6);
+
+		Location[] ls1 = {l1, l2, l4};//1 3 6
+		Location[] ls2 = {l1, l2, l3};//1 3 5
+//		Location[] ls2 = {l1, l3, l4};//1 5 6
+		Location[] ls3 = {l1, l5, l6};//1 9 12
+
+		SubTrajectory s1 = new SubTrajectory();
+		s1.setLocations(ls1);
+
+		SubTrajectory s2 = new SubTrajectory();
+		s2.setLocations(ls2);
+
+		SubTrajectory s3 = new SubTrajectory();
+		s3.setLocations(ls3);
+
+		List<SubTrajectory> subs = new ArrayList<>();
+		subs.add(s1);subs.add(s2);subs.add(s3);
+		
+		List<SubTrajectory> newSubs = new ArrayList<>();
+
 		//
-		newSub = createNewSubsequence(subs, orderPre, orderPos);
-		System.out.println(newSub);
+		newSubs = createNewSubsequence(subs, 0);
+		for(SubTrajectory s : newSubs) {
+			for(Location l : s.getLocations()) {
+				System.out.print(" (" + l + ")");
+			}
+			System.out.println();
+		}
 
 //		int[][] r1 = {{1,2,10},{1,3,10},{1,2,6},{1,4,10}};
 //		int[] E1 = {1};
@@ -217,39 +242,46 @@ public class Vertice {
 //		}
 	}
 
-	private static createNewSubsequence(List<PoI[]> subs, int orderPre, int orderPos) {
-		Map<String, Object[]> map = new HashMap<>();
-		return createNewSubsequence(subs, orderPre, orderPos, map);
-	}
+	/**
+	 * [E1+, E2, E3]
+	 * [E1, E2+, E3]
+	 * [E1, E2, E3+]
+	 * @param listSub
+	 * @param order
+	 */
+	private static List<SubTrajectory> createNewSubsequence(
+			List<SubTrajectory> listSub, int order) {
 
-	private static createNewSubsequence(List<PoI[]> subs, int orderPre, int orderPos, Map<String, Object[]> map) {
-		for(PoI[] pois : subs) {
-			String key = pois[orderPre] + "_" + pois[orderPos];
-			Object[] array = map.get(key);
-			if(array == null) {
-				List<PoI> points = new ArrayList<PoI>();
-				array = new Object[pois.length];
-				for (int i = 0; i < pois.length; i++) {
-					array[i] = pois[i];
-				}
-				array[orderPos - 1] = points; 
-				map.put(key, array);
+		Map<String, SubTrajectory> map = new HashMap<>();
+		for(SubTrajectory subt : listSub) {
+			int size = subt.getLocations().length;
+			String key = "_";
+			key = order > 0 ? subt.getPoIPosition(order - 1) + key : key;
+			key = order < size-1 ? key + subt.getPoIPosition(order + 1) : key;
+
+			SubTrajectory newSub = map.get(key);
+			if(newSub == null) {
+				newSub = subt;
+				map.put(key, newSub);
 			}
-
-			((List<PoI>)pois[orderPre]).add();
+			newSub.addPoIs(subt.getLocations()[order], order);
 		}
+
+		List<SubTrajectory> result = new ArrayList<>(map.values().size());
+		result.addAll(map.values());
+		return result;
 	}
 
-	private static void createNewSubsequence(int p1, int i, int p3, int orderE2, Map<String, Object[]> map) {
-		Object[] array = map.get(p1+"_"+p3);
-		if(array == null) {
-			List<Integer> pontos = new ArrayList<Integer>();
-			array = new Object[3];
-			array[0] = p1;
-			array[1] = pontos;
-			array[2] = p3;
-			map.put(p1+"_"+p3, array);
-		}
-		((List<Integer>)array[orderE2]).add(i);
-	}
+//	private static void createNewSubsequence(int p1, int i, int p3, int orderE2, Map<String, Object[]> map) {
+//		Object[] array = map.get(p1+"_"+p3);
+//		if(array == null) {
+//			List<Integer> pontos = new ArrayList<Integer>();
+//			array = new Object[3];
+//			array[0] = p1;
+//			array[1] = pontos;
+//			array[2] = p3;
+//			map.put(p1+"_"+p3, array);
+//		}
+//		((List<Integer>)array[orderE2]).add(i);
+//	}
 }
