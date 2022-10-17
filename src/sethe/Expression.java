@@ -58,12 +58,12 @@ public class Expression {
 		String text = StringUtils.isEmpty(cat) ? namepoi : cat;
 		char c = text.charAt(text.length() - 1);
 
-		if (c == '?')  {
+		if (text.contains("?")) {//(c == '?')  {
 			isOptional = true;
-			cleanValue = text.substring(0, text.length()-1);
-		} else if(c == '+') {
+			cleanValue = text.replaceAll("\\?", "");//text.substring(0, text.length()-1);
+		} else if (text.contains("+")) {//if(c == '+') {
 			isPlus = true;
-			cleanValue = text.substring(0, text.length()-1);
+			cleanValue = text.replaceAll("\\+", ""); //text.substring(0, text.length()-1);
 		} else {
 			cleanValue = text;
 		}

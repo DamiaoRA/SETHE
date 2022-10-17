@@ -1,10 +1,13 @@
 package sethe;
 
+import sethe.util.graph.Vertice;
+
 public class SubTrajectory implements Comparable<SubTrajectory> {
 
   private Trajectory trajectory;
+  private Vertice[] vertices;
 //  private List<PoI> pois;
-  private PoI[] pois;
+//  private PoI[] pois;
 //  private Location[] pois;
   private Double[] vector;
   private Double[] vectorQuery; //vector of the query
@@ -65,20 +68,18 @@ public class SubTrajectory implements Comparable<SubTrajectory> {
    * @param filter
    * @return
    */
+  
   public Double[] createVector(Query filter) {
-	    vector = new Double[pois.length * (filter.getNumAspects()) + pois.length];
+	    vector = new Double[vertices.length * (filter.getNumAspects()) + vertices.length];
 	    vectorQuery = new Double[vector.length];
 	    int k = 0;
-	    for (int indexPoiSub = 0; indexPoiSub < pois.length; indexPoiSub++) {
-	      PoI p2 = pois[indexPoiSub];
+	    for (int indexPoiSub = 0; indexPoiSub < vertices.length; indexPoiSub++) {
+	      Vertice p2 = vertices[indexPoiSub];
 	      if(p2 != null) {
-	    	  PoI p1 = indexPoiSub > 0 ? pois[indexPoiSub - 1] : null;
+	    	  Vertice p1 = indexPoiSub > 0 ? vertices[indexPoiSub - 1] : null;
 
 		      //calculating aspects coef
 		      for (String aspectType : p2.getAspects().keySet()) {
-//		        String aspect = p2.getAspects().get(aspectType);
-//		        vector[k] =
-//		          filter.distance(aspectType, indexPoiSub, p1, p2, trajectory); //calcula a distancia entre o aspecto e o valor fornecido na consulta
 
 		          String function = filter.searchFunctionName(aspectType);
 		          Double limit = filter.searchLimitValue(aspectType);
@@ -96,11 +97,7 @@ public class SubTrajectory implements Comparable<SubTrajectory> {
 		      //proximity coef
 		      int dist = 1;
 		      if(filter.checkProximity(indexPoiSub) && indexPoiSub > 0)
-		    	  dist = p2.getPosition() - pois[indexPoiSub - 1].getPosition();
-
-//		      int dist = filter.checkProximity(indexPoiSub) && indexPoiSub > 0
-//		        ? (p2.getPosition() - pois[indexPoiSub - 1].getPosition())
-//		        : 1;
+		    	  dist = p2.poiDistance(vertices[indexPoiSub - 1]); //p2.getPosition() - vertices[indexPoiSub - 1].getPosition();
 
 		      vector[k] = (1d / dist);
 	      } else {
@@ -111,6 +108,53 @@ public class SubTrajectory implements Comparable<SubTrajectory> {
 	    }
 	    return vector;
 	  }
+  
+//  public Double[] createVector(Query filter) {
+//	    vector = new Double[pois.length * (filter.getNumAspects()) + pois.length];
+//	    vectorQuery = new Double[vector.length];
+//	    int k = 0;
+//	    for (int indexPoiSub = 0; indexPoiSub < pois.length; indexPoiSub++) {
+//	      PoI p2 = pois[indexPoiSub];
+//	      if(p2 != null) {
+//	    	  PoI p1 = indexPoiSub > 0 ? pois[indexPoiSub - 1] : null;
+//
+//		      //calculating aspects coef
+//		      for (String aspectType : p2.getAspects().keySet()) {
+////		        String aspect = p2.getAspects().get(aspectType);
+////		        vector[k] =
+////		          filter.distance(aspectType, indexPoiSub, p1, p2, trajectory); //calcula a distancia entre o aspecto e o valor fornecido na consulta
+//
+//		          String function = filter.searchFunctionName(aspectType);
+//		          Double limit = filter.searchLimitValue(aspectType);
+//		          Double weight = filter.searchWeightValue(aspectType);
+//		          AspectExpression aspect = filter.searchAspectExpression(aspectType, indexPoiSub);
+//
+//		          vector[k] = Distance.distance(aspect, aspectType, function, 
+//		    			  limit, weight, p1, p2, 
+//		    			  trajectory);
+//
+//		          vectorQuery[k] = filter.weight(aspectType);
+//		        k++;
+//		      }
+//
+//		      //proximity coef
+//		      int dist = 1;
+//		      if(filter.checkProximity(indexPoiSub) && indexPoiSub > 0)
+//		    	  dist = p2.getPosition() - pois[indexPoiSub - 1].getPosition();
+//
+////		      int dist = filter.checkProximity(indexPoiSub) && indexPoiSub > 0
+////		        ? (p2.getPosition() - pois[indexPoiSub - 1].getPosition())
+////		        : 1;
+//
+//		      vector[k] = (1d / dist);
+//	      } else {
+//	    	  vector[k] = 0d;
+//	      }
+//	      vectorQuery[k] = 1d;
+//	      k++;
+//	    }
+//	    return vector;
+//	  }
 
 //  public Double[] createVector(Query filter) {
 //	    vector = new Double[pois.length * (filter.getNumAspects()) + pois.length];
@@ -200,23 +244,49 @@ public class SubTrajectory implements Comparable<SubTrajectory> {
 //	  this.locations = locations;
 //  }
 
+	public Vertice[] getVertices() {
+	return vertices;
+}
+
+public void setVertices(Vertice[] vertices) {
+	this.vertices = vertices;
+}
+
 	public void print() {
 		System.out.println("PoI:");
-		for (PoI p : pois) {
-			System.out.print(p.toStringPoI());
+		for (Vertice v : vertices) {
+			System.out.print(v.toStringPoI());
 		}
-
+	
 		System.out.println("\nCat:");
-		for (PoI p : pois) {
+		for (Vertice p : vertices) {
 			System.out.print(p.toStringCategory());
 		}
-
+	
 		System.out.println("\n" + coefficient);
 		for (double v : vector) {
 			System.out.print(v + " ");
 		}
 		System.out.println();
 	}
+
+//	public void print() {
+//		System.out.println("PoI:");
+//		for (PoI p : pois) {
+//			System.out.print(p.toStringPoI());
+//		}
+//
+//		System.out.println("\nCat:");
+//		for (PoI p : pois) {
+//			System.out.print(p.toStringCategory());
+//		}
+//
+//		System.out.println("\n" + coefficient);
+//		for (double v : vector) {
+//			System.out.print(v + " ");
+//		}
+//		System.out.println();
+//	}
 
 //	public void addPoIs(Location loc, int order) {
 //		(getLocations()[order]).addAllPoIs(loc.getPois());
@@ -226,7 +296,7 @@ public class SubTrajectory implements Comparable<SubTrajectory> {
 //		return (getLocations()[order]).getPois().get(0).getPosition();
 //	}
 
-	public void setPois(PoI[] pois) {
-		this.pois = pois;
-	}
+//	public void setPois(PoI[] pois) {
+//		this.pois = pois;
+//	}
 }

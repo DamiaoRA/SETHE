@@ -30,6 +30,10 @@ public class GraphLevel {
 		newV.addPoi(p);
 		if(fatherLevel != null) {
 			List<Vertice> fathers = getFatherLevel().searchFathers(newV);
+			if(fathers.isEmpty()) {
+				newV = null;
+				return;
+			}
 			newV.setFathers(fathers);
 		}
 		levelVertices.add(newV);
@@ -71,6 +75,12 @@ public class GraphLevel {
 				result.add(vfather);
 			}
 		}
+
+		if(getExpression().isOptional()) {
+			if(fatherLevel != null)
+				return fatherLevel.searchFathers(v);
+		}
+			
 		return result;
 	}
 
@@ -153,7 +163,13 @@ public class GraphLevel {
 		}
 	}
 
-	public void calcSubSequences(PoI[] subs, List<PoI[]> result) {
+//	public void calcSubSequences(PoI[] subs, List<PoI[]> result) {
+//		for(Vertice v : levelVertices) {
+//			v.calcSubSequences(subs, result);
+//		}
+//	}
+
+	public void calcSubSequences(Vertice[] subs, List<Vertice[]> result) {
 		for(Vertice v : levelVertices) {
 			v.calcSubSequences(subs, result);
 		}

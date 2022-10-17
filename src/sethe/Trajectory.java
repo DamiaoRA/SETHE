@@ -7,6 +7,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import sethe.util.graph.Graph;
+import sethe.util.graph.Vertice;
 
 public class Trajectory implements Comparable<Trajectory> {
 
@@ -146,6 +147,8 @@ public class Trajectory implements Comparable<Trajectory> {
   }
 
 	public void calcSubtrajectory() throws Exception {
+		if(id.equals("173065"))
+			System.out.println("Trajectory.calcSubtrajectory()");
 		for (Expression e : query.getArrayExp()) {
 			for(int i = 0; i < pois.length; i++) {
 				String text = "";
@@ -206,12 +209,12 @@ public class Trajectory implements Comparable<Trajectory> {
   }
 
   private void createSubTrajectories() throws Exception {
-	  List<PoI[]> result = graph.extractPoiSubSequences();
+	  List<Vertice[]> result = graph.extractPoiSubSequences();
 
-	  for (PoI[] subs : result) {
+	  for (Vertice[] subs : result) {
 	      SubTrajectory st = new SubTrajectory();
 	      st.setTrajectory(this);
-	      st.setPois(subs);
+	      st.setVertices(subs);
 	      st.setDistanceFunction(query.getDistanceFunction());
 	      st.calcCoefficient(query);
 	      subTrajectories.add(st);
@@ -221,6 +224,23 @@ public class Trajectory implements Comparable<Trajectory> {
 	    if (!subTrajectories.isEmpty()) 
 	    	this.coefficient = subTrajectories.get(subTrajectories.size() - 1).getCoefficient();
   }
+  
+//  private void createSubTrajectories() throws Exception {
+//	  List<PoI[]> result = graph.extractPoiSubSequences();
+//
+//	  for (PoI[] subs : result) {
+//	      SubTrajectory st = new SubTrajectory();
+//	      st.setTrajectory(this);
+//	      st.setPois(subs);
+//	      st.setDistanceFunction(query.getDistanceFunction());
+//	      st.calcCoefficient(query);
+//	      subTrajectories.add(st);
+//	    }
+//
+//	    Collections.sort(subTrajectories);
+//	    if (!subTrajectories.isEmpty()) 
+//	    	this.coefficient = subTrajectories.get(subTrajectories.size() - 1).getCoefficient();
+//  }
 
 //  private void createSubTrajectories() throws Exception {
 //    List<LinkedList<PoI>> ll = graph.createListListPoI();

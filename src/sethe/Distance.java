@@ -3,6 +3,7 @@ package sethe;
 import java.lang.reflect.Method;
 
 import sethe.util.Constants;
+import sethe.util.graph.Vertice;
 
 /**
  * Class encapsulates distance functions.
@@ -11,7 +12,7 @@ import sethe.util.Constants;
 public class Distance {
 
 	public static Double distance(AspectExpression aspQuery, String aspectType, String function, 
-			Double limit, Double weight, PoI p1, PoI p2, Trajectory trajectory) {
+			Double limit, Double weight, Vertice p1, Vertice p2, Trajectory trajectory) {
 
 		String idealValue = aspQuery.getValue();
 		String p2AspectValue = p2.getAspects().get(aspectType);
@@ -23,8 +24,8 @@ public class Distance {
 
 		//
 		if(aspQuery.isUntil()) {
-			int pos1 = p1.getPosition();
-			int pos2 = p2.getPosition();
+			int pos1 = p1.getLastPosition();
+			int pos2 = p2.getFirstPosition();
 
 			Double value = 0d;
 			String tempAspectValue = "";
@@ -40,6 +41,37 @@ public class Distance {
 		}
 		return result;
 	}
+	
+//	public static Double distance(AspectExpression aspQuery, String aspectType, String function, 
+//			Double limit, Double weight, PoI p1, PoI p2, Trajectory trajectory) {
+//
+//		String idealValue = aspQuery.getValue();
+//		String p2AspectValue = p2.getAspects().get(aspectType);
+//
+//		if(idealValue.equals(Constants.ANY_VALUE))
+//			return 1d;
+//
+//		double result = 0d;
+//
+//		//
+//		if(aspQuery.isUntil()) {
+//			int pos1 = p1.getPosition();
+//			int pos2 = p2.getPosition();
+//
+//			Double value = 0d;
+//			String tempAspectValue = "";
+//			for(int i = pos1+1; i <= pos2; i++) {
+//				tempAspectValue = trajectory.getAspectValuePoI(i, aspectType);
+//				value += Distance.calc(function, tempAspectValue, idealValue, weight, limit);
+//			}
+//
+//			result = value/((pos2-pos1));
+//		//
+//		} else {
+//			result = Distance.calc(function, p2AspectValue, idealValue, weight, limit);
+//		}
+//		return result;
+//	}
 	/////
 	public static double calc(String distance, Object value, Object ideal,
 			double weight, double limit) {

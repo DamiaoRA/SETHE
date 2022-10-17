@@ -1,16 +1,13 @@
 package sethe.util.graph;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
 import sethe.Expression;
-import sethe.Location;
 import sethe.PoI;
-import sethe.SubTrajectory;
 
 public class Vertice implements Comparable<Vertice>{
 //	private Expression expression;
@@ -41,6 +38,14 @@ public class Vertice implements Comparable<Vertice>{
 
 	public List<Vertice> getChildren() {
 		return children;
+	}
+
+	public String toStringPoI() {
+		return poi.toStringPoI();
+	}
+
+	public String toStringCategory() {
+		return poi.toStringCategory();
 	}
 
 	/**
@@ -118,11 +123,10 @@ public class Vertice implements Comparable<Vertice>{
 			}
 		}
 
-//		if(children.isEmpty()) {
-		TODO 2
-			return level.getExpression().isFinal();//expression.getOrder() == height;
-//		}
-//		return true;
+		if(children.isEmpty()) {
+			return level.getExpression().isFinal();
+		}
+		return true;
 	}
 	
 	@Deprecated
@@ -145,11 +149,11 @@ public class Vertice implements Comparable<Vertice>{
 		}
 	}
 
-	public void calcSubSequences(PoI[] subs, List<PoI[]> result) {
-		subs[level.getExpression().getOrder()] = poi;
+	public void calcSubSequences(Vertice[] subs, List<Vertice[]> result) {
+		subs[level.getExpression().getOrder()] = this;
 		for(Vertice child : children) {
 			if(getChildren().size() > 1) {
-				PoI[] clone = (PoI[])(subs.clone());//uma nova lista para cada ramo da árvore
+				Vertice[] clone = (Vertice[])(subs.clone());//uma nova lista para cada ramo da árvore
 				child.calcSubSequences(clone, result);
 			} else {
 				child.calcSubSequences(subs, result);
@@ -158,6 +162,20 @@ public class Vertice implements Comparable<Vertice>{
 		if(children.isEmpty())
 			result.add(subs);
 	}
+	
+//	public void calcSubSequences(PoI[] subs, List<PoI[]> result) {
+//		subs[level.getExpression().getOrder()] = poi;
+//		for(Vertice child : children) {
+//			if(getChildren().size() > 1) {
+//				PoI[] clone = (PoI[])(subs.clone());//uma nova lista para cada ramo da árvore
+//				child.calcSubSequences(clone, result);
+//			} else {
+//				child.calcSubSequences(subs, result);
+//			}
+//		}
+//		if(children.isEmpty())
+//			result.add(subs);
+//	}
 
 //	public int getPosition() {
 //		return poi.getPosition();
@@ -220,6 +238,14 @@ public class Vertice implements Comparable<Vertice>{
 		if(poi.getPosition() == o.getFirstPosition())
 			return 0;
 		return 1;
+	}
+
+	public Map<String, String> getAspects() {
+		return poi.getAspects();
+	}
+
+	public int poiDistance(Vertice vertice) {
+		return getFirstPosition() - vertice.getLastPosition();
 	}
 
 //	public static void main(String[] args) {

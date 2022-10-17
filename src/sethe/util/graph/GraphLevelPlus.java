@@ -27,6 +27,10 @@ public class GraphLevelPlus extends GraphLevel {
 		newV.addPoi(p);
 		if(fatherLevel != null) {
 			List<Vertice> fathers = getFatherLevel().searchFathers(newV);
+			if(fathers.isEmpty()) {
+				newV = null;
+				return;
+			}
 			newV.setFathers(fathers);
 		}
 		levelVertices.add(newV);

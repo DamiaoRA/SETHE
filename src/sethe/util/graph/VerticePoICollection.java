@@ -2,6 +2,7 @@ package sethe.util.graph;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import sethe.PoI;
 
@@ -36,6 +37,11 @@ public class VerticePoICollection extends Vertice {
 	@Override
 	public int getLastPosition() {
 		return pois.get(pois.size() - 1).getPosition();
+	}
+
+	@Override
+	public Map<String, String> getAspects() {
+		return pois.get(0).getAspects();
 	}
 
 	@Override

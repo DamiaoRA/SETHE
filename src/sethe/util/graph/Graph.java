@@ -92,9 +92,16 @@ public class Graph {
 //		return ll;
 //	}
 
-	public List<PoI[]> extractPoiSubSequences() {
-		List<PoI[]> result = new ArrayList<PoI[]>();
-		PoI[] subs = new PoI[levels.length];
+//	public List<PoI[]> extractPoiSubSequences() {
+//		List<PoI[]> result = new ArrayList<PoI[]>();
+//		PoI[] subs = new PoI[levels.length];
+//		levels[0].calcSubSequences(subs, result);
+//		return result;
+//	}
+
+	public List<Vertice[]> extractPoiSubSequences() {
+		List<Vertice[]> result = new ArrayList<Vertice[]>();
+		Vertice[] subs = new Vertice[levels.length];
 		levels[0].calcSubSequences(subs, result);
 		return result;
 	}

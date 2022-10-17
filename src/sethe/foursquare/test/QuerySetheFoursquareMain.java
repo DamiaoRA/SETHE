@@ -24,17 +24,10 @@ public class QuerySetheFoursquareMain {
 //        "trajectory_value"
 //      );
 
-	  qt =
-		      new QuerySETHEMain(
-		        "localhost",
-		        "5432",
-		        "postgres",
-		        "lsi123",
-		        "foursquare",
-		        "trajetoria",
-		        "trajectory_id",
-		        "trajectory_value"
-		      );
+//		qt = new QuerySETHEMain("localhost", "5432", "postgres", "lsi123", "foursquare", "trajetoria", "trajectory_id",
+//				"trajectory_value");
+		qt = new QuerySETHEMain("localhost", "5432", "postgres", "postgres", "foursquare", "trajectory", "trajectory_id",
+				"trajectory_value");
 
     List<TimeQ> times = new ArrayList<>();
 //    times.add(queryQ1());
@@ -156,11 +149,11 @@ public class QuerySetheFoursquareMain {
 	private static TimeQ queryQ7() throws Exception {
 		Properties prop = new Properties();
 
-		prop.setProperty("q1_asp_cat",   "^(Food) ; (Food)+ ; (Residence)$");
-		prop.setProperty("q1_proximity", " .*     ; ~ ; ~");
+//		prop.setProperty("q1_asp_cat",   "^(Food) ; ((Food)+) ; (Residence)$");
+//		prop.setProperty("q1_proximity", " .*     ; ~ ; ~");
 
-//		prop.setProperty("q1_asp_cat",   "^(Food) ; (Food)* ; (Food)$");
-//		prop.setProperty("q1_proximity", " .*     ; ~*      ; ~");
+		prop.setProperty("q1_asp_cat",   "^(Food) ; (Residence)? ; (Food)$");
+		prop.setProperty("q1_proximity", " .*     ; ~      ; ~");
 
 		return queryQ(prop);
 	}
