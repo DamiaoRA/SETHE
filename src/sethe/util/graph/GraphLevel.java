@@ -8,51 +8,126 @@ import sethe.Expression;
 import sethe.PoI;
 
 public class GraphLevel {
-	private GraphLevel fatherLevel;
-	private Expression exp;
-	private List<Vertice> levelVertices;
+	protected GraphLevel fatherLevel;
+	protected Expression expression;
+	protected List<Vertice> levelVertices;
 	
 	private Vertice vnull;
 
 	public GraphLevel(Expression exp) {
-		this.exp = exp;
+		this.expression = exp;
 		levelVertices = new ArrayList<Vertice>();
 		if(exp.isOptional()) {
-			vnull = new Vertice();
-			vnull.setExpression(exp);
+			vnull = new Vertice(this);
+//			vnull.setExpression(exp);
 			vnull.setPoi(null);
 			levelVertices.add(vnull);
 		}
 	}
 
-	public void createVertice(PoI p) {
-		if(p != null) {
-			Vertice v = new Vertice();
-			v.setExpression(exp);
-			v.setPoi(p);
-			if(!levelVertices.contains(v)) {
-				levelVertices.add(v);
-				if(exp.getOrder() > 0)
-					fatherLevel.addChild(v);
-			}
+	public void addPoI(PoI p) {
+		Vertice newV = createVertice();
+		newV.addPoi(p);
+		if(fatherLevel != null) {
+			List<Vertice> fathers = getFatherLevel().searchFathers(newV);
+			newV.setFathers(fathers);
 		}
+		levelVertices.add(newV);
 	}
 
-	public void addChild(Vertice vChild) {
-		boolean added = false;
+	//TODO criar outro tipo de level
+	//colocar a factory em expression
+//	public void tryAddPoI(PoI p) {
+//		
+//		seartFathers(newV);
+//		for(Vertice c : levelVertices) {
+//			for(Iterator<Vertice> it = newV.getFathers().iterator; it.hasNext();) {
+//				Vertice f = it.next();
+//				if(c.getFathers(f)) {
+//					c.addPoi(p);
+//					newV.removeFather(f);
+//				}
+//			}
+//		}
+//		if(newV.getFathers().isEmpty())
+//			newV = null;
+//	}
+	//
+
+	
+	
+	protected Vertice createVertice() {
+//		if(expression.isPlus()) {
+//			return new VerticeCollection(this);
+//		}
+		return new Vertice(this);
+	}
+
+	public List<Vertice> searchFathers(Vertice v) {
+		List<Vertice> result = new ArrayList<Vertice>();
 		for(Vertice vfather : levelVertices) {
-			if(vfather.poiIsNull())
-				continue;
-			if(vfather.getPosition() < vChild.getPosition()) {
-				if(!vfather.poiIsNull()) {
-					vfather.getChildren().add(vChild);
-					added = true;
-				}
+			if(vfather.compareTo(v) < 0) {
+				vfather.addChild(v);
+				result.add(vfather);
 			}
 		}
-		if(!added && exp.isOptional())
-			vnull.getChildren().add(vChild);
+		return result;
 	}
+
+//	public void createVertice(PoI p) {
+//		if(p != null) {
+//			Vertice v = createVertice();
+//			v.addPoi(p);
+//			if(fatherLevel != null)
+//				fatherLevel.searchFathers(v);
+//
+//			if(expression.isPlus()) {
+//				for(Vertice vplus : levelVertices) {
+//					Vertice newV = vplus.tryAddPoi(v);
+//					if(newV != null) {
+//						levelVertices.add(newV);
+//					}
+//				}
+//			} else {
+//				levelVertices.add(v);
+//			}
+//			
+//			if(expression.isPlus())
+//			
+//
+//			
+//			
+//			
+//			Vertice v = createVertice(); //new Vertice(this);
+////			v.setExpression(exp);
+//			v.addPoi(p);
+//			if(!levelVertices.contains(v)) {
+//				levelVertices.add(v);
+//				if(expression.getOrder() > 0)
+//					fatherLevel.addChild(v);
+//			}
+//		}
+//	}
+
+	public Expression getExpression() {
+		return expression;
+	}
+
+//	public void addChild(Vertice vChild) {
+//		boolean added = false;
+//		for(Vertice vfather : levelVertices) {
+//			if(vfather.poiIsNull())
+//				continue;
+//			if(vfather.getPosition() < vChild.getPosition()) {
+//				if(!vfather.poiIsNull()) {
+//					vfather.getChildren().add(vChild);
+//					added = true;
+//				}
+//			}
+//		}
+//		if(!added && exp.isOptional())
+//			vnull.getChildren().add(vChild);
+//	}
 
 	public void fix(){
 		for(Iterator<Vertice> it = levelVertices.listIterator();it.hasNext();) {

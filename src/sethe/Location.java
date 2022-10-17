@@ -2,6 +2,7 @@ package sethe;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Location {
 	private List<PoI> pois;
@@ -35,5 +36,9 @@ public class Location {
 			s += " " + p.getPosition();
 		}
 		return s;
+	}
+
+	public Map<String, String> getAspects() {
+		return pois.get(0).getAspects();
 	}
 }

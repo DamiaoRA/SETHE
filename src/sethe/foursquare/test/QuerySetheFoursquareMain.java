@@ -42,8 +42,8 @@ public class QuerySetheFoursquareMain {
 //    times.add(queryQ3());
 //    times.add(queryQ4());
 //    times.add(queryQ5());
-    times.add(queryQ6());
-//    times.add(queryQ7());
+//    times.add(queryQ6());
+    times.add(queryQ7());
 //    times.add(queryQ8());
 //    times.add(queryQ9());
 //    times.add(queryQ10());
@@ -156,8 +156,8 @@ public class QuerySetheFoursquareMain {
 	private static TimeQ queryQ7() throws Exception {
 		Properties prop = new Properties();
 
-		prop.setProperty("q1_asp_cat",   "^(Food) ; ((Food)+)$");
-		prop.setProperty("q1_proximity", " .*     ; ~ ");
+		prop.setProperty("q1_asp_cat",   "^(Food) ; (Food)+ ; (Residence)$");
+		prop.setProperty("q1_proximity", " .*     ; ~ ; ~");
 
 //		prop.setProperty("q1_asp_cat",   "^(Food) ; (Food)* ; (Food)$");
 //		prop.setProperty("q1_proximity", " .*     ; ~*      ; ~");

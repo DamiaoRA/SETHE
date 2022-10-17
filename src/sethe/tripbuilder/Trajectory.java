@@ -1,5 +1,6 @@
 package sethe.tripbuilder;
 
+@Deprecated
 public class Trajectory {
 		private String id;
 		private Stop begin;

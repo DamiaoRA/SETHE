@@ -137,17 +137,37 @@ public class Query {
 	public Double weightPoI() {
 		return 0d;//TODO colocar peso nos PoI na próxima versão
 	}
-
-	public Double distance(String aspectType, String aspectValue, int positionExp, PoI p1, PoI p2, Trajectory trajectory) {
-		String function = mapDistanceFunc.get(aspectType);
-		Double limit = mapLimit.get(aspectType);
-		Double weight = mapWeight.get(aspectType);
-
-		Double result = 0d;
-
-		result = arrayExp[positionExp].distance(aspectType, aspectValue, function, limit, weight, p1, p2, trajectory);
-		return result;
+	
+	public String searchFunctionName(String aspectType) {
+		return mapDistanceFunc.get(aspectType);
 	}
+	
+	public Double searchLimitValue(String aspectType) {
+		return mapLimit.get(aspectType);
+	}
+	
+	public Double searchWeightValue(String aspectType) {
+		return mapWeight.get(aspectType);
+	}
+
+	public String aspectQueryValue(String aspectType, int indexExp) {
+		return arrayExp[indexExp].aspectValue(aspectType);
+	}
+
+	public AspectExpression searchAspectExpression(String aspectType, int indexExp) {
+		return arrayExp[indexExp].searchAspectExpression(aspectType);
+	}
+
+//	public Double distance(String aspectType, int positionExp, PoI p1, PoI p2, Trajectory trajectory) {
+//		String function = mapDistanceFunc.get(aspectType);
+//		Double limit = mapLimit.get(aspectType);
+//		Double weight = mapWeight.get(aspectType);
+//
+//		Double result = 0d;
+//
+//		result = arrayExp[positionExp].distance(aspectType, function, limit, weight, p1, p2, trajectory);
+//		return result;
+//	}
 
 	public int getNumAspects() {
 		return arrayExp[0].getMapAspects().keySet().size();

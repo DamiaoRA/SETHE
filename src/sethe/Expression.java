@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import sethe.util.Constants;
+import sethe.util.StringUtils;
 
 
 /**
@@ -19,6 +20,7 @@ public class Expression {
 	private double weight;
 	private boolean isFinal = false;
 	private boolean isOptional = false;
+	private boolean isPlus = false;
 	private String cleanValue;
 
 	private Map<String, AspectExpression> mapAspects;
@@ -35,16 +37,16 @@ public class Expression {
 		else
 			this.isCategory = true;
 
-		checkOptional(cat, namePoi);
+		check(cat, namePoi);
 
-		if (isCategory)
-			cleanValue = valueCategory;
-		else 
-			cleanValue = valuePoi;
-
-		if(isOptional) {
-			cleanValue = cleanValue.substring(0, cleanValue.length()-1);
-		}
+//		if (isCategory)
+//			cleanValue = valueCategory;
+//		else 
+//			cleanValue = valuePoi;
+//
+//		if(isOptional) {
+//			cleanValue = cleanValue.substring(0, cleanValue.length()-1);
+//		}
 
 		mapAspects = new HashMap<String, AspectExpression>();
 		mapProximity = new HashMap<String, String>();
@@ -52,12 +54,18 @@ public class Expression {
 		isFinal = false;
 	}
 	
-	private void checkOptional(String cat, String namepoi) {
-		if(isCategory) {
-			if (cat.charAt(cat.length() - 1) == '?') 
-				isOptional = true;
-		} else if(namepoi.charAt(namepoi.length() - 1) == '?') {
+	private void check(String cat, String namepoi) {
+		String text = StringUtils.isEmpty(cat) ? namepoi : cat;
+		char c = text.charAt(text.length() - 1);
+
+		if (c == '?')  {
 			isOptional = true;
+			cleanValue = text.substring(0, text.length()-1);
+		} else if(c == '+') {
+			isPlus = true;
+			cleanValue = text.substring(0, text.length()-1);
+		} else {
+			cleanValue = text;
 		}
 	}
 
@@ -150,36 +158,50 @@ public class Expression {
 	public void setMapProximity(Map<String, String> mapProximity) {
 		this.mapProximity = mapProximity;
 	}
-
-	public Double distance(String aspectType, String aspectValue, String function, Double limit, Double weight, PoI p1, PoI p2, Trajectory trajectory) {
+	
+	public String aspectValue(String aspectType) {
 		AspectExpression aspQuery = mapAspects.get(aspectType);
-		String idealValue = aspQuery.getValue();
-
-		if(idealValue.equals(Constants.ANY_VALUE))
-			return 1d;
-
-		double result = 0d;
-
-		//
-		if(aspQuery.isUntil()) {
-			int pos1 = p1.getPosition();
-			int pos2 = p2.getPosition();
-
-			Double value = 0d;
-			String tempAspectValue = "";
-			for(int i = pos1+1; i <= pos2; i++) {
-				tempAspectValue = trajectory.getAspectValuePoI(i, aspectType);
-				value += Distance.calc(function, tempAspectValue, idealValue, weight, limit);
-			}
-
-			result = value/((pos2-pos1));
-		//
-		} else {
-			result = Distance.calc(function, aspectValue, idealValue, weight, limit);
-		}
-		return result;
+		return aspQuery.getValue();
+	}
+	
+	public AspectExpression searchAspectExpression(String aspectType) {
+		AspectExpression aspQuery = mapAspects.get(aspectType);
+		return aspQuery;
 	}
 
+//	public Double distance(String aspectType, String function, 
+//			Double limit, Double weight, PoI p1, PoI p2, Trajectory trajectory) {
+//
+//		AspectExpression aspQuery = mapAspects.get(aspectType);
+//		String idealValue = aspQuery.getValue();
+//		
+//		String p2AspectValue = p2.getAspects().get(aspectType);
+//
+//		if(idealValue.equals(Constants.ANY_VALUE))
+//			return 1d;
+//
+//		double result = 0d;
+//
+//		//
+//		if(aspQuery.isUntil()) {
+//			int pos1 = p1.getPosition();
+//			int pos2 = p2.getPosition();
+//
+//			Double value = 0d;
+//			String tempAspectValue = "";
+//			for(int i = pos1+1; i <= pos2; i++) {
+//				tempAspectValue = trajectory.getAspectValuePoI(i, aspectType);
+//				value += Distance.calc(function, tempAspectValue, idealValue, weight, limit);
+//			}
+//
+//			result = value/((pos2-pos1));
+//		//
+//		} else {
+//			result = Distance.calc(function, p2AspectValue, idealValue, weight, limit);
+//		}
+//		return result;
+//	}
+//
 	private boolean isUntilValue(String aspect) {
 		if(aspect != null && !aspect.isEmpty()) {
 			if(aspect.trim().startsWith(Constants.REPEATED))
@@ -214,6 +236,14 @@ public class Expression {
 
 	public boolean isOptional() {
 		return isOptional;
+	}
+
+	public boolean isPlus() {
+		return isPlus;
+	}
+
+	public void setPLus(boolean isPLus) {
+		this.isPlus = isPLus;
 	}
 
 //	public boolean isOptional() {

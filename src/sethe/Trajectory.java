@@ -146,8 +146,8 @@ public class Trajectory implements Comparable<Trajectory> {
   }
 
 	public void calcSubtrajectory() throws Exception {
-		for(int i = 0; i < pois.length; i++) {
-			for (Expression e : query.getArrayExp()) {
+		for (Expression e : query.getArrayExp()) {
+			for(int i = 0; i < pois.length; i++) {
 				String text = "";
 				if (e.isCategory()) {
 					text = pois[i].getCategory();

@@ -158,7 +158,7 @@ public class QuerySetheTripBuilderMain {
       "q1_asp_poi",
       "  .*              						   ; (Torre_pendente_di_Pisa)$"
     );
-    prop.setProperty("q1_asp_move", " .*  									   ; (?-)Bus");
+    prop.setProperty("q1_asp_move", " .*  				  ; (?-)Bus");
     prop.setProperty("q1_proximity", ".*			      ; .*");
     prop.setProperty("weight_move", "1");
     prop.setProperty("distance_move", "equality");
