@@ -119,7 +119,7 @@ public class Vertice implements Comparable<Vertice>{
 		}
 
 //		if(children.isEmpty()) {
-		TODO
+		TODO 2
 			return level.getExpression().isFinal();//expression.getOrder() == height;
 //		}
 //		return true;
