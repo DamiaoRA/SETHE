@@ -24,10 +24,10 @@ public class QuerySetheFoursquareMain {
 //        "trajectory_value"
 //      );
 
-		qt = new QuerySETHEMain("localhost", "5432", "postgres", "lsi123", "foursquare", "trajetoria", "trajectory_id",
-				"trajectory_value");
-//		qt = new QuerySETHEMain("localhost", "5432", "postgres", "postgres", "foursquare", "trajectory", "trajectory_id",
+//		qt = new QuerySETHEMain("localhost", "5432", "postgres", "lsi123", "foursquare", "trajetoria", "trajectory_id",
 //				"trajectory_value");
+		qt = new QuerySETHEMain("localhost", "5432", "postgres", "postgres", "foursquare", "trajectory", "trajectory_id",
+				"trajectory_value");
 
     List<TimeQ> times = new ArrayList<>();
 //    times.add(queryQ1());
@@ -37,9 +37,9 @@ public class QuerySetheFoursquareMain {
 //    times.add(queryQ5());
 //    times.add(queryQ6());
 //    times.add(queryQ7());
-    times.add(queryQ8());
+//    times.add(queryQ8());
 //    times.add(queryQ9());
-//    times.add(queryQ10());
+    times.add(queryQ10());
     System.out.println();
 
     for (TimeQ time : times) {
@@ -172,24 +172,59 @@ public class QuerySetheFoursquareMain {
 
 		return queryQ(prop);
 	}
-	
+
 	/**
-	 * Trajetórias que começam em uma capela ou um igreja, sempre se move de onibus entre as paradas
+	 * Trajetórias que começam em um Food ou Residence, sempre está chovendo 
+	 * entre as paradas e termina no Central Park.
 	 * @return
 	 * @throws Exception
 	 */
 	private static TimeQ queryQ9() throws Exception {
 		Properties properties = new Properties();
-		properties.setProperty("q1_asp_cat", "^(((\\w*))*(College University|Outdoors Recreation)); .*");
-		properties.setProperty("q1_asp_poi", "  .* ;Hamilton");
-		properties.setProperty("q1_proximity", ".* ; .*");
-		properties.setProperty("q1_asp_weather", " .* ; (?-)Rain");
+		properties.setProperty("q1_asp_cat", "^(Food|Residence); .*");
+		properties.setProperty("q1_asp_poi", "  .*              ;((Central Park)( \\w*)*)$");
+		properties.setProperty("q1_asp_weather", " .*           ; (?-)Rain");
+		properties.setProperty("q1_proximity", ".*              ; .*");
 		properties.setProperty("weight_weather", "1");
 		properties.setProperty("distance_weather", "equality");
 		properties.setProperty("limit_weather", "1");
 
 		return queryQ(properties);
 	}
+
+	/**
+	 * Trajetória que começa em uma torre, caminha para pegar um ônibus para chegar
+	 * em um igreja, e termina em um palácio.
+	 * 
+	 * Trajetória que começa em uma Residence, logo depois para em um lugar de rating alto, 
+	 * depois para em um Food de preço alto e termina em um Shop
+	 * @return
+	 * @throws Exception
+	 */
+	private static TimeQ queryQ10() throws Exception {
+		Properties prop = new Properties();
+
+	    prop.setProperty(
+	      "q1_asp_cat",
+	      "^(Residence) ; .*  ;  Food ; (Shop Service)$"
+	    );
+	    prop.setProperty(
+	  	  "q1_asp_rating",
+	  	  " .*          ; 10   ; .*           ; .*"
+	  	);
+	    prop.setProperty(
+	  	  "q1_asp_price",
+	  	  " .*          ; .*   ; 4           ; .*"
+	  	);
+	    prop.setProperty("weight_rating", "0.7");
+	    prop.setProperty("distance_rating", "proportion");
+	    prop.setProperty("limit_rating", "10");
+
+	    prop.setProperty("weight_price", "0.3");
+	    prop.setProperty("distance_price", "proportion");
+	    prop.setProperty("limit_price", "4");
+	    return queryQ(prop);
+	  }
 
   /**
    * Consulta 3: trajetória que pare em um POI Hotel qualquer, pare em qualquer POI denominado de Bar e finalize em um
@@ -338,17 +373,17 @@ public class QuerySetheFoursquareMain {
    * @return
    * @throws Exception
    */
-  private static TimeQ queryQ10() throws Exception {
-    Properties properties = new Properties();
-    properties.setProperty("q1_asp_poi", "Kennedy Center;.*");
-    properties.setProperty(
-      "q1_asp_cat",
-      ".*;(Event|Professional Other Places)"
-    );
-    properties.setProperty("q1_proximity", "~;.*");
-
-    return queryQ(properties);
-  }
+//  private static TimeQ queryQ10() throws Exception {
+//    Properties properties = new Properties();
+//    properties.setProperty("q1_asp_poi", "Kennedy Center;.*");
+//    properties.setProperty(
+//      "q1_asp_cat",
+//      ".*;(Event|Professional Other Places)"
+//    );
+//    properties.setProperty("q1_proximity", "~;.*");
+//
+//    return queryQ(properties);
+//  }
 
   private static TimeQ queryQ(Properties prop) throws Exception {
     prop.setProperty("schema", "foursquare");

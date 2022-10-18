@@ -47,4 +47,8 @@ public class StringUtils {
 
     return stringCleaned;
   }
+
+	public static boolean isAnyValue(String cat) {
+		return cat.equals(".*") || cat.equals(".");
+	}
 }

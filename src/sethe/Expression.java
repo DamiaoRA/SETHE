@@ -53,25 +53,34 @@ public class Expression {
 		checkProximity = false;
 		isFinal = false;
 	}
-	
-	private void check(String cat, String namepoi) {
-		String text = StringUtils.isEmpty(cat) ? namepoi : cat;
-//		char c = text.charAt(text.length() - 1);
 
-		if (text.contains("?")) {//(c == '?')  {
-			isOptional = true;
-			cleanValue = text.replaceAll("\\?", "");//text.substring(0, text.length()-1);
-		} 
-		if (text.contains("+")) {//if(c == '+') {
-			isPlus = true;
-			cleanValue = text.replaceAll("\\+", ""); //text.substring(0, text.length()-1);
-		} 
-		if(text.contains("*")) {
-			isOptional = true;
-			isPlus = true;
-			cleanValue = text.replaceAll("\\*", ""); //text.substring(0, text.length()-1);
+	private void check(String cat, String namepoi) {
+		String text = StringUtils.isAnyValue(cat) && namepoi !=null ? namepoi : cat;
+
+		if(!StringUtils.isAnyValue(text)) {
+			if (text.contains("?")) {//(c == '?')  {
+				isOptional = true;
+				cleanValue = text.replaceAll("\\?", "");//text.substring(0, text.length()-1);
+			} 
+			if (text.contains("+")) {//if(c == '+') {
+				int i = text.lastIndexOf("+");
+				if(!text.substring(i-3).contains("\\w")) {
+					isPlus = true;
+					cleanValue = text.replaceAll("\\+", ""); //text.substring(0, text.length()-1);
+				}
+			} 
+			if(text.contains("*")) {
+				int i = text.lastIndexOf("*");
+				int k = text.lastIndexOf("\\");
+				if(!text.substring(k, i).contains("\\w")) {
+					isOptional = true;
+					isPlus = true;
+					cleanValue = text.replaceAll("\\*", ""); //text.substring(0, text.length()-1);
+				}
+			}
 		}
-		else {
+
+		if(cleanValue == null) {
 			cleanValue = text;
 		}
 	}
@@ -251,6 +260,10 @@ public class Expression {
 
 	public void setPLus(boolean isPLus) {
 		this.isPlus = isPLus;
+	}
+
+	public boolean isAnyValue() {
+		return StringUtils.isAnyValue(cleanValue);
 	}
 
 //	public boolean isOptional() {

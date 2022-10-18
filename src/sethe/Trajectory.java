@@ -177,13 +177,19 @@ public class Trajectory implements Comparable<Trajectory> {
 				text = textPoi;
 			}
 
-			Pattern pattern = Pattern.compile(e.getCleanValue());
-			Matcher matcher = pattern.matcher(text);
-			while (matcher.find()) {
-				String m = matcher.group().trim();
-				int end = matcher.end();
-				PoI poi = findPoIs(m, end, text, e.isCategory());
-				graph.createVertice(e, poi);
+			if(e.isAnyValue()) {
+				for(PoI p : pois) {
+					graph.createVertice(e, p);
+				}
+			} else {
+				Pattern pattern = Pattern.compile(e.getCleanValue());
+				Matcher matcher = pattern.matcher(text);
+				while (matcher.find()) {
+					String m = matcher.group().trim();
+					int end = matcher.end();
+					PoI poi = findPoIs(m, end, text, e.isCategory());
+					graph.createVertice(e, poi);
+				}
 			}
 		}
 
