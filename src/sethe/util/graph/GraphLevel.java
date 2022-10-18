@@ -12,17 +12,17 @@ public class GraphLevel {
 	protected Expression expression;
 	protected List<Vertice> levelVertices;
 	
-	private Vertice vnull;
+//	private Vertice vnull;
 
 	public GraphLevel(Expression exp) {
 		this.expression = exp;
 		levelVertices = new ArrayList<Vertice>();
-		if(exp.isOptional()) {
-			vnull = new Vertice(this);
-//			vnull.setExpression(exp);
-			vnull.setPoi(null);
-			levelVertices.add(vnull);
-		}
+//		if(exp.isOptional()) {
+//			vnull = new Vertice(this);
+////			vnull.setExpression(exp);
+//			vnull.setPoi(null);
+//			levelVertices.add(vnull);
+//		}
 	}
 
 	public void addPoI(PoI p) {
@@ -69,16 +69,18 @@ public class GraphLevel {
 
 	public List<Vertice> searchFathers(Vertice v) {
 		List<Vertice> result = new ArrayList<Vertice>();
-		for(Vertice vfather : levelVertices) {
-			if(vfather.compareTo(v) < 0) {
-				vfather.addChild(v);
-				result.add(vfather);
+		for(Vertice lv : levelVertices) {
+			if(lv.compareTo(v) < 0) {
+				lv.addChild(v);
+				result.add(lv);
 			}
 		}
 
-		if(getExpression().isOptional()) {
-			if(fatherLevel != null)
-				return fatherLevel.searchFathers(v);
+		if(result.isEmpty()) {
+			if(getExpression().isOptional()) {
+				if(fatherLevel != null)
+					return fatherLevel.searchFathers(v);//searching grandfather
+			}
 		}
 			
 		return result;
@@ -171,7 +173,8 @@ public class GraphLevel {
 
 	public void calcSubSequences(Vertice[] subs, List<Vertice[]> result) {
 		for(Vertice v : levelVertices) {
-			v.calcSubSequences(subs, result);
+			if(v.getFathers().isEmpty())
+				v.calcSubSequences(subs, result);
 		}
 	}
 }

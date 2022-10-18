@@ -102,7 +102,9 @@ public class Graph {
 	public List<Vertice[]> extractPoiSubSequences() {
 		List<Vertice[]> result = new ArrayList<Vertice[]>();
 		Vertice[] subs = new Vertice[levels.length];
-		levels[0].calcSubSequences(subs, result);
+		for(GraphLevel gl : levels) {
+			gl.calcSubSequences(subs, result);
+		}
 		return result;
 	}
 }

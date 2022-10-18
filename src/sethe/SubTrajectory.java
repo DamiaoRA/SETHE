@@ -70,13 +70,16 @@ public class SubTrajectory implements Comparable<SubTrajectory> {
    */
   
   public Double[] createVector(Query filter) {
+	  if(getTrajectory().getId().equals("15153539"))
+		  System.out.println("SubTrajectory.createVector()");
+	  
 	    vector = new Double[vertices.length * (filter.getNumAspects()) + vertices.length];
 	    vectorQuery = new Double[vector.length];
 	    int k = 0;
 	    for (int indexPoiSub = 0; indexPoiSub < vertices.length; indexPoiSub++) {
 	      Vertice p2 = vertices[indexPoiSub];
 	      if(p2 != null) {
-	    	  Vertice p1 = indexPoiSub > 0 ? vertices[indexPoiSub - 1] : null;
+	    	  Vertice p1 = searchVerticeNotNull(indexPoiSub - 1); //indexPoiSub > 0 ? vertices[indexPoiSub - 1] : null;
 
 		      //calculating aspects coef
 		      for (String aspectType : p2.getAspects().keySet()) {
@@ -97,7 +100,7 @@ public class SubTrajectory implements Comparable<SubTrajectory> {
 		      //proximity coef
 		      int dist = 1;
 		      if(filter.checkProximity(indexPoiSub) && indexPoiSub > 0)
-		    	  dist = p2.poiDistance(vertices[indexPoiSub - 1]); //p2.getPosition() - vertices[indexPoiSub - 1].getPosition();
+		    	  dist = p2.poiDistance(p1); //p2.poiDistance(vertices[indexPoiSub - 1]); //p2.getPosition() - vertices[indexPoiSub - 1].getPosition();
 
 		      vector[k] = (1d / dist);
 	      } else {
@@ -108,6 +111,16 @@ public class SubTrajectory implements Comparable<SubTrajectory> {
 	    }
 	    return vector;
 	  }
+  
+  		private Vertice searchVerticeNotNull(int i) {
+  			while (i >= 0) {
+  				Vertice v = vertices[i];
+  				if(v != null)
+  					return v;
+  				i--;
+  			}
+  			return null;
+  		}
   
 //  public Double[] createVector(Query filter) {
 //	    vector = new Double[pois.length * (filter.getNumAspects()) + pois.length];

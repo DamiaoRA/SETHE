@@ -24,10 +24,10 @@ public class QuerySetheFoursquareMain {
 //        "trajectory_value"
 //      );
 
-//		qt = new QuerySETHEMain("localhost", "5432", "postgres", "lsi123", "foursquare", "trajetoria", "trajectory_id",
-//				"trajectory_value");
-		qt = new QuerySETHEMain("localhost", "5432", "postgres", "postgres", "foursquare", "trajectory", "trajectory_id",
+		qt = new QuerySETHEMain("localhost", "5432", "postgres", "lsi123", "foursquare", "trajetoria", "trajectory_id",
 				"trajectory_value");
+//		qt = new QuerySETHEMain("localhost", "5432", "postgres", "postgres", "foursquare", "trajectory", "trajectory_id",
+//				"trajectory_value");
 
     List<TimeQ> times = new ArrayList<>();
 //    times.add(queryQ1());
@@ -36,8 +36,8 @@ public class QuerySetheFoursquareMain {
 //    times.add(queryQ4());
 //    times.add(queryQ5());
 //    times.add(queryQ6());
-    times.add(queryQ7());
-//    times.add(queryQ8());
+//    times.add(queryQ7());
+    times.add(queryQ8());
 //    times.add(queryQ9());
 //    times.add(queryQ10());
     System.out.println();
@@ -149,13 +149,46 @@ public class QuerySetheFoursquareMain {
 	private static TimeQ queryQ7() throws Exception {
 		Properties prop = new Properties();
 
-//		prop.setProperty("q1_asp_cat",   "^(Food) ; ((Food)+) ; (Residence)$");
-//		prop.setProperty("q1_proximity", " .*     ; ~ ; ~");
-
-		prop.setProperty("q1_asp_cat",   "^(Food) ; (Residence)? ; (Food)$");
+		prop.setProperty("q1_asp_cat",   "^(Food) ; (Food)* ; (Food)$");
 		prop.setProperty("q1_proximity", " .*     ; ~      ; ~");
 
 		return queryQ(prop);
+	}
+
+	/**
+	 * Trajetórias que param em um Food, logo depois pega uma residencia em um dia claro.
+	 * @return
+	 * @throws Exception
+	 */
+	private static TimeQ queryQ8() throws Exception {
+		Properties prop = new Properties();
+
+		prop.setProperty("q1_asp_cat",   "(Food) ; (Residence)");
+		prop.setProperty("q1_proximity", " .*     ; ~      ");
+		prop.setProperty("q1_asp_weather", ".*    ;Clear");
+		prop.setProperty("weight_weather", "1");
+		prop.setProperty("distance_weather", "equality");
+		prop.setProperty("limit_weather", "1");
+
+		return queryQ(prop);
+	}
+	
+	/**
+	 * Trajetórias que começam em uma capela ou um igreja, sempre se move de onibus entre as paradas
+	 * @return
+	 * @throws Exception
+	 */
+	private static TimeQ queryQ9() throws Exception {
+		Properties properties = new Properties();
+		properties.setProperty("q1_asp_cat", "^(((\\w*))*(College University|Outdoors Recreation)); .*");
+		properties.setProperty("q1_asp_poi", "  .* ;Hamilton");
+		properties.setProperty("q1_proximity", ".* ; .*");
+		properties.setProperty("q1_asp_weather", " .* ; (?-)Rain");
+		properties.setProperty("weight_weather", "1");
+		properties.setProperty("distance_weather", "equality");
+		properties.setProperty("limit_weather", "1");
+
+		return queryQ(properties);
 	}
 
   /**
@@ -265,16 +298,16 @@ public class QuerySetheFoursquareMain {
    * @return
    * @throws Exception
    */
-  private static TimeQ queryQ8() throws Exception {
-    Properties properties = new Properties();
-    properties.setProperty(
-      "q1_asp_cat",
-      "^(Travel Transport);(\\w*)*;(Shop Service)$"
-    );
-    properties.setProperty("q1_proximity", "~;.*;~");
-
-    return queryQ(properties);
-  }
+//  private static TimeQ queryQ8() throws Exception {
+//    Properties properties = new Properties();
+//    properties.setProperty(
+//      "q1_asp_cat",
+//      "^(Travel Transport);(\\w*)*;(Shop Service)$"
+//    );
+//    properties.setProperty("q1_proximity", "~;.*;~");
+//
+//    return queryQ(properties);
+//  }
 
   /**
    * Consulta 9: trajetória que pare em um College & University ou Outdoors & Recreation, onde a trajetória passa no
@@ -283,21 +316,21 @@ public class QuerySetheFoursquareMain {
    * @return
    * @throws Exception
    */
-  private static TimeQ queryQ9() throws Exception {
-    Properties properties = new Properties();
-    properties.setProperty(
-      "q1_asp_cat",
-      "^(((\\w*))*(College University|Outdoors Recreation)); .*"
-    );
-    properties.setProperty("q1_asp_poi", "  .* ;Hamilton");
-    properties.setProperty("q1_proximity", ".* ; .*");
-    properties.setProperty("q1_asp_weather", " .* ; (?-)Rain");
-    properties.setProperty("weight_weather", "1");
-    properties.setProperty("distance_weather", "equality");
-    properties.setProperty("limit_weather", "1");
-
-    return queryQ(properties);
-  }
+//  private static TimeQ queryQ9() throws Exception {
+//    Properties properties = new Properties();
+//    properties.setProperty(
+//      "q1_asp_cat",
+//      "^(((\\w*))*(College University|Outdoors Recreation)); .*"
+//    );
+//    properties.setProperty("q1_asp_poi", "  .* ;Hamilton");
+//    properties.setProperty("q1_proximity", ".* ; .*");
+//    properties.setProperty("q1_asp_weather", " .* ; (?-)Rain");
+//    properties.setProperty("weight_weather", "1");
+//    properties.setProperty("distance_weather", "equality");
+//    properties.setProperty("limit_weather", "1");
+//
+//    return queryQ(properties);
+//  }
 
   /**
    * Consulta 10: trajetória que passa no POI Kennedy Center e passa na categoria Event ou Professional & Other Places.

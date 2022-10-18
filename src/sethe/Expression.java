@@ -56,15 +56,22 @@ public class Expression {
 	
 	private void check(String cat, String namepoi) {
 		String text = StringUtils.isEmpty(cat) ? namepoi : cat;
-		char c = text.charAt(text.length() - 1);
+//		char c = text.charAt(text.length() - 1);
 
 		if (text.contains("?")) {//(c == '?')  {
 			isOptional = true;
 			cleanValue = text.replaceAll("\\?", "");//text.substring(0, text.length()-1);
-		} else if (text.contains("+")) {//if(c == '+') {
+		} 
+		if (text.contains("+")) {//if(c == '+') {
 			isPlus = true;
 			cleanValue = text.replaceAll("\\+", ""); //text.substring(0, text.length()-1);
-		} else {
+		} 
+		if(text.contains("*")) {
+			isOptional = true;
+			isPlus = true;
+			cleanValue = text.replaceAll("\\*", ""); //text.substring(0, text.length()-1);
+		}
+		else {
 			cleanValue = text;
 		}
 	}

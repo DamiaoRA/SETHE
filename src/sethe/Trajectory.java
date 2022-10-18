@@ -147,23 +147,44 @@ public class Trajectory implements Comparable<Trajectory> {
   }
 
 	public void calcSubtrajectory() throws Exception {
-		if(id.equals("173065"))
-			System.out.println("Trajectory.calcSubtrajectory()");
+//		for (Expression e : query.getArrayExp()) {
+//			for(int i = 0; i < pois.length; i++) {
+//				String text = "";
+//				if (e.isCategory()) {
+//					text = pois[i].getCategory();
+//				} else {
+//					text = pois[i].getName();
+//				}
+//
+//				Pattern pattern = Pattern.compile(e.getCleanValue());
+//				Matcher matcher = pattern.matcher(text);
+//				if (matcher.find()) {
+//					graph.createVertice(e, pois[i]);
+//				}
+//			}			
+//		}
+//
+//		graph.fix();
+//
+//		createSubTrajectories();
+		
 		for (Expression e : query.getArrayExp()) {
-			for(int i = 0; i < pois.length; i++) {
-				String text = "";
-				if (e.isCategory()) {
-					text = pois[i].getCategory();
-				} else {
-					text = pois[i].getName();
-				}
 
-				Pattern pattern = Pattern.compile(e.getCleanValue());
-				Matcher matcher = pattern.matcher(text);
-				if (matcher.find()) {
-					graph.createVertice(e, pois[i]);
-				}
-			}			
+			String text = "";
+			if (e.isCategory()) {
+				text = textCategory;
+			} else {
+				text = textPoi;
+			}
+
+			Pattern pattern = Pattern.compile(e.getCleanValue());
+			Matcher matcher = pattern.matcher(text);
+			while (matcher.find()) {
+				String m = matcher.group().trim();
+				int end = matcher.end();
+				PoI poi = findPoIs(m, end, text, e.isCategory());
+				graph.createVertice(e, poi);
+			}
 		}
 
 		graph.fix();
@@ -193,7 +214,15 @@ public class Trajectory implements Comparable<Trajectory> {
 //    createSubTrajectories();
 //  }
   
-  //TODO talvez não seja mais necessário. Remover essa função pra ganhar desempenho
+  /**
+   * 
+   * @param m
+   * @param end
+   * @param text
+   * @param isCategory
+   * @return
+   * @throws Exception
+   */
   private PoI findPoIs(String m, int end, String text, boolean isCategory)
     throws Exception {
     String subTraj = substring(text, end); //text.substring(0, end).trim();
