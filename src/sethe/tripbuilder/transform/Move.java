@@ -1,4 +1,4 @@
-package sethe.tripbuilder;
+package sethe.tripbuilder.transform;
 
 public class Move {
 	private String id;

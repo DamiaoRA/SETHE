@@ -1,4 +1,4 @@
-package sethe.tripbuilder;
+package sethe;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -13,9 +13,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
-import sethe.CompositeQuery;
-import sethe.Query;
-import sethe.Trajectory;
+
+import sethe.model.CompositeQuery;
+import sethe.model.Query;
+import sethe.model.Trajectory;
 import sethe.util.StringUtils;
 
 /**

@@ -8,7 +8,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
-import sethe.tripbuilder.Trajectory;
 
 /**
  * Stores the trajectories with 1 point extracted from the RDF dataset. 

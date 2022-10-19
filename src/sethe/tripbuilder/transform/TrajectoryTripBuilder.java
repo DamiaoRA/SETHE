@@ -8,10 +8,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
-import sethe.tripbuilder.Move;
-import sethe.tripbuilder.PoI;
-import sethe.tripbuilder.Stop;
-import sethe.tripbuilder.Trajectory;
 
 /**
  * ETL que transforma dados extraídos do tripbuilder em trajetórias textuais

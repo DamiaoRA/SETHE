@@ -1,4 +1,4 @@
-package sethe;
+package sethe.model;
 
 /**
  * Class that represents the regular language expression of an aspect of the trajectory.

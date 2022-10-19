@@ -6,8 +6,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import sethe.Expression;
-import sethe.PoI;
+import sethe.model.Expression;
+import sethe.model.PoI;
 
 public class Vertice implements Comparable<Vertice>{
 //	private Expression expression;

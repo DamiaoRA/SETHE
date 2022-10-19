@@ -1,4 +1,4 @@
-package sethe;
+package sethe.model;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -40,15 +40,6 @@ public class Expression {
 
 		check(cat, namePoi);
 
-//		if (isCategory)
-//			cleanValue = valueCategory;
-//		else 
-//			cleanValue = valuePoi;
-//
-//		if(isOptional) {
-//			cleanValue = cleanValue.substring(0, cleanValue.length()-1);
-//		}
-
 		mapAspects = new HashMap<String, AspectExpression>();
 		mapProximity = new HashMap<String, String>();
 		checkProximity = false;
@@ -63,11 +54,11 @@ public class Expression {
 			text = (StringUtils.isAnyValue(cat) && namepoi !=null) ? namepoi : cat;
 
 		if(!StringUtils.isAnyValue(text)) {
-			if (text.contains("?")) {//(c == '?')  {
+			if (text.contains("?")) {
 				isOptional = true;
-				cleanValue = text.replaceAll("\\?", "");//text.substring(0, text.length()-1);
+				cleanValue = text.replaceAll("\\?", "");
 			} 
-			if (StringUtils.isPlusExpression(text)) { //(text.contains("+")) {//if(c == '+') {
+			if (StringUtils.isPlusExpression(text)) { 
 				int i = text.lastIndexOf("+");
 				StringBuffer sb = new StringBuffer(text);
 				sb.deleteCharAt(i);
@@ -195,39 +186,6 @@ public class Expression {
 		return aspQuery;
 	}
 
-//	public Double distance(String aspectType, String function, 
-//			Double limit, Double weight, PoI p1, PoI p2, Trajectory trajectory) {
-//
-//		AspectExpression aspQuery = mapAspects.get(aspectType);
-//		String idealValue = aspQuery.getValue();
-//		
-//		String p2AspectValue = p2.getAspects().get(aspectType);
-//
-//		if(idealValue.equals(Constants.ANY_VALUE))
-//			return 1d;
-//
-//		double result = 0d;
-//
-//		//
-//		if(aspQuery.isUntil()) {
-//			int pos1 = p1.getPosition();
-//			int pos2 = p2.getPosition();
-//
-//			Double value = 0d;
-//			String tempAspectValue = "";
-//			for(int i = pos1+1; i <= pos2; i++) {
-//				tempAspectValue = trajectory.getAspectValuePoI(i, aspectType);
-//				value += Distance.calc(function, tempAspectValue, idealValue, weight, limit);
-//			}
-//
-//			result = value/((pos2-pos1));
-//		//
-//		} else {
-//			result = Distance.calc(function, p2AspectValue, idealValue, weight, limit);
-//		}
-//		return result;
-//	}
-//
 	private boolean isUntilValue(String aspect) {
 		if(aspect != null && !aspect.isEmpty()) {
 			if(aspect.trim().startsWith(Constants.REPEATED))
@@ -275,14 +233,4 @@ public class Expression {
 	public boolean isAnyValue() {
 		return anyValue;
 	}
-
-//	public boolean isOptional() {
-//		if(isCategory) {
-//			if (valueCategory.charAt(valueCategory.length() - 1) == '?')
-//				return true;
-//		} else if (valuePoi.charAt(valuePoi.length() - 1) == '?') {
-//			return true;
-//		}
-//		return false;
-//	}
 }

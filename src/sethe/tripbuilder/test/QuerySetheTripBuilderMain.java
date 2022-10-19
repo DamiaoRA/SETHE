@@ -3,8 +3,9 @@ package sethe.tripbuilder.test;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-import sethe.CompositeQuery;
-import sethe.tripbuilder.QuerySETHEMain;
+
+import sethe.QuerySETHEMain;
+import sethe.model.CompositeQuery;
 import sethe.util.TimeQ;
 
 /**

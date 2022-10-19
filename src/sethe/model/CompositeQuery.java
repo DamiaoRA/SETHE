@@ -1,4 +1,4 @@
-package sethe;
+package sethe.model;
 
 import java.util.Map;
 import java.util.PriorityQueue;
