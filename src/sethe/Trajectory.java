@@ -169,7 +169,6 @@ public class Trajectory implements Comparable<Trajectory> {
 //		createSubTrajectories();
 		
 		for (Expression e : query.getArrayExp()) {
-
 			String text = "";
 			if (e.isCategory()) {
 				text = textCategory;

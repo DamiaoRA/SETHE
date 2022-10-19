@@ -21,6 +21,7 @@ public class Expression {
 	private boolean isFinal = false;
 	private boolean isOptional = false;
 	private boolean isPlus = false;
+	private boolean anyValue = false;
 	private String cleanValue;
 
 	private Map<String, AspectExpression> mapAspects;
@@ -55,29 +56,38 @@ public class Expression {
 	}
 
 	private void check(String cat, String namepoi) {
-		String text = StringUtils.isAnyValue(cat) && namepoi !=null ? namepoi : cat;
+		String text = "";
+		if(cat == null)
+			text = namepoi;
+		else
+			text = (StringUtils.isAnyValue(cat) && namepoi !=null) ? namepoi : cat;
 
 		if(!StringUtils.isAnyValue(text)) {
 			if (text.contains("?")) {//(c == '?')  {
 				isOptional = true;
 				cleanValue = text.replaceAll("\\?", "");//text.substring(0, text.length()-1);
 			} 
-			if (text.contains("+")) {//if(c == '+') {
+			if (StringUtils.isPlusExpression(text)) { //(text.contains("+")) {//if(c == '+') {
 				int i = text.lastIndexOf("+");
-				if(!text.substring(i-3).contains("\\w")) {
-					isPlus = true;
-					cleanValue = text.replaceAll("\\+", ""); //text.substring(0, text.length()-1);
-				}
+				StringBuffer sb = new StringBuffer(text);
+				sb.deleteCharAt(i);
+				cleanValue = sb.toString();
+				isPlus = true;
 			} 
-			if(text.contains("*")) {
+			if(StringUtils.isPlusAnyExpression(text)) {
 				int i = text.lastIndexOf("*");
-				int k = text.lastIndexOf("\\");
-				if(!text.substring(k, i).contains("\\w")) {
-					isOptional = true;
-					isPlus = true;
-					cleanValue = text.replaceAll("\\*", ""); //text.substring(0, text.length()-1);
-				}
+				StringBuffer sb = new StringBuffer(text);
+				sb.deleteCharAt(i);
+				cleanValue = sb.toString();
+				isOptional = true;
+				isPlus = true;
 			}
+		} else {
+			anyValue = true;
+			if(isCategory)
+				this.valueCategory = text.replace(".*", "\\w*").replace(".+", "\\w+");
+			else
+				this.valuePoi = text.replace(".*", "\\w*").replace(".+", "\\w+");
 		}
 
 		if(cleanValue == null) {
@@ -263,7 +273,7 @@ public class Expression {
 	}
 
 	public boolean isAnyValue() {
-		return StringUtils.isAnyValue(cleanValue);
+		return anyValue;
 	}
 
 //	public boolean isOptional() {

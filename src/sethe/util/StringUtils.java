@@ -49,6 +49,27 @@ public class StringUtils {
   }
 
 	public static boolean isAnyValue(String cat) {
-		return cat.equals(".*") || cat.equals(".");
+		String s = cat.replaceAll("\\(", "");
+		s = s.replaceAll("\\)", "");
+		return s.equals(".*") || s.equals(".") || s.equals(".+");
+	}
+
+	public static boolean isPlusExpression(String text) {
+		int i = text.lastIndexOf("+");
+		if(i > 0) {
+			String result = sanitize(text);
+			result.replace('w', ' ').trim();
+			return result.isEmpty();
+		}
+		return false;
+	}
+	public static boolean isPlusAnyExpression(String text) {
+		int i = text.lastIndexOf("*");
+		if(i > 0) {
+			String result = sanitize(text);
+			result.replace('w', ' ').trim();
+			return result.isEmpty();
+		}
+		return false;
 	}
 }

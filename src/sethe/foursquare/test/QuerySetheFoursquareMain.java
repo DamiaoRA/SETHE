@@ -24,27 +24,26 @@ public class QuerySetheFoursquareMain {
 //        "trajectory_value"
 //      );
 
-//		qt = new QuerySETHEMain("localhost", "5432", "postgres", "lsi123", "foursquare", "trajetoria", "trajectory_id",
-//				"trajectory_value");
-		qt = new QuerySETHEMain("localhost", "5432", "postgres", "postgres", "foursquare", "trajectory", "trajectory_id",
+		qt = new QuerySETHEMain("localhost", "5432", "postgres", "lsi123", "foursquare", "trajetoria", "trajectory_id",
 				"trajectory_value");
+//		qt = new QuerySETHEMain("localhost", "5432", "postgres", "postgres", "foursquare", "trajectory", "trajectory_id",
+//				"trajectory_value");
 
     List<TimeQ> times = new ArrayList<>();
-//    times.add(queryQ1());
-//    times.add(queryQ2());
-//    times.add(queryQ3());
-//    times.add(queryQ4());
-//    times.add(queryQ5());
-//    times.add(queryQ6());
-//    times.add(queryQ7());
-//    times.add(queryQ8());
-//    times.add(queryQ9());
+    times.add(queryQ1());
+    times.add(queryQ2());
+    times.add(queryQ3());
+    times.add(queryQ4());
+    times.add(queryQ5());
+    times.add(queryQ6());
+    times.add(queryQ7());
+    times.add(queryQ8());
+    times.add(queryQ9());
     times.add(queryQ10());
     System.out.println();
 
     for (TimeQ time : times) {
       System.out.println(time.toString());
-      System.out.println("------");
     }
   }
 
@@ -73,7 +72,7 @@ public class QuerySetheFoursquareMain {
     Properties properties = new Properties();
     properties.setProperty(
       "q1_asp_cat",
-      "Food;(Residence|Shop Service) ; (Residence|Shop Service) ; (Food)$"
+      "Food ; (Residence|Shop Service) ; (Residence|Shop Service) ; (Food)$"
     );
     properties.setProperty("q1_proximity", ".* ;  ~ ; .* ; ~");
 
@@ -165,7 +164,7 @@ public class QuerySetheFoursquareMain {
 
 		prop.setProperty("q1_asp_cat",   "(Food) ; (Residence)");
 		prop.setProperty("q1_proximity", " .*     ; ~      ");
-		prop.setProperty("q1_asp_weather", ".*    ;Clear");
+		prop.setProperty("q1_asp_weather", ".*    ; Clear");
 		prop.setProperty("weight_weather", "1");
 		prop.setProperty("distance_weather", "equality");
 		prop.setProperty("limit_weather", "1");
@@ -181,8 +180,8 @@ public class QuerySetheFoursquareMain {
 	 */
 	private static TimeQ queryQ9() throws Exception {
 		Properties properties = new Properties();
-		properties.setProperty("q1_asp_cat", "^(Food|Residence); .*");
-		properties.setProperty("q1_asp_poi", "  .*              ;((Central Park)( \\w*)*)$");
+		properties.setProperty("q1_asp_cat", "^(Food|Residence) ; .*");
+		properties.setProperty("q1_asp_poi", "  .*              ; ((Central Park)( \\w*)*)$");
 		properties.setProperty("q1_asp_weather", " .*           ; (?-)Rain");
 		properties.setProperty("q1_proximity", ".*              ; .*");
 		properties.setProperty("weight_weather", "1");

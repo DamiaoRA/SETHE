@@ -26,16 +26,16 @@ public class QuerySetheTripBuilderMain {
       );
 
     List<TimeQ> times = new ArrayList<TimeQ>();
-//    times.add(queryQ1());
-//    times.add(queryQ2());
-//    times.add(queryQ3());
-//    times.add(queryQ4());
-//    times.add(queryQ5());
+    times.add(queryQ1());
+    times.add(queryQ2());
+    times.add(queryQ3());
+    times.add(queryQ4());
+    times.add(queryQ5());
     times.add(queryQ6());
-//    times.add(queryQ7());
-//    times.add(queryQ8());
-//    times.add(queryQ9());
-//    times.add(queryQ10());
+    times.add(queryQ7());
+    times.add(queryQ8());
+    times.add(queryQ9());
+    times.add(queryQ10());
     System.out.println();
     for (TimeQ t : times) {
       System.out.println(t.toString());
@@ -122,11 +122,16 @@ public class QuerySetheTripBuilderMain {
   private static TimeQ queryQ7() throws Exception {
     Properties prop = new Properties();
 
+//    prop.setProperty(
+//      "q1_asp_cat",
+//      "^(((\\w*);)*(cappelledipisa)(;\\w*)* )(?=(((\\w*);)*)(cappelledipisa)) ; (cappelledipisa)$"
+//    );
+    
     prop.setProperty(
-      "q1_asp_cat",
-      "^(((\\w*);)*(cappelledipisa)(;\\w*)* )(?=(((\\w*);)*)(cappelledipisa)) ; (cappelledipisa)$"
-    );
-    prop.setProperty("q1_proximity", ".*			       												   ; .*");
+    	      "q1_asp_cat",
+    	      "^(((\\w*);)*(cappelledipisa)) ; ((cappelledipisa)+)$"
+    	    );
+    prop.setProperty("q1_proximity", ".*	 ; ~ ");
 
     return queryQ(prop);
   }
@@ -169,10 +174,15 @@ public class QuerySetheTripBuilderMain {
   private static TimeQ queryQ10() throws Exception {
     Properties prop = new Properties();
 
+//    prop.setProperty(
+//      "q1_asp_cat",
+//      "^((\\w*);)*(torridipisa) ; \\w+(\\\\w*;*)* ;  ((\\w*);)*(chiesedipisa)(;(\\w*))* ; (palazzidipisa)(;(\\w*))*$"
+//    );
+    
     prop.setProperty(
-      "q1_asp_cat",
-      "^((\\w*);)*(torridipisa) ; \\w+(\\\\w*;*)* ;  ((\\w*);)*(chiesedipisa)(;(\\w*))* ; (palazzidipisa)(;(\\w*))*$"
-    );
+    	      "q1_asp_cat",
+    	      "^((\\w*);)*(torridipisa) ; .+ ;  ((\\w*);)*(chiesedipisa)(;(\\w*))* ; (palazzidipisa)(;(\\w*))*$"
+    	    );
     prop.setProperty(
       "q1_asp_move",
       " .*              ; Walk          ; Bus                                 ; .*"
@@ -186,6 +196,7 @@ public class QuerySetheTripBuilderMain {
   private static TimeQ queryQ(Properties prop) throws Exception {
     prop.setProperty("schema", "tripbuilder");
     prop.setProperty("dist_func", "jaccard");
+    prop.setProperty("delimiter", " ");
     prop.setProperty("split", " ; ");
 
     CompositeQuery cq = QuerySETHEMain.loadQuery(prop);

@@ -27,7 +27,7 @@ public class QuerySETHEMain {
   private Connection con;
   private Statement st;
   private String schema = "trajSem";
-  private String pkColumnName = "traj_pk";
+  private String pkColumnName = "traj_fk";
   private String valueColumnName = "values";
 
   public QuerySETHEMain(
@@ -187,7 +187,7 @@ public class QuerySETHEMain {
   public static CompositeQuery loadQuery(Properties properties) {
     CompositeQuery cquery = new CompositeQuery();
     String distFun = properties.getProperty("dist_func");
-    String split = ";";
+    String split = " ; ";
 
     String pkColumn = properties.getProperty("pk_column_name");
     String valueColumn = properties.getProperty("value_column_name");
