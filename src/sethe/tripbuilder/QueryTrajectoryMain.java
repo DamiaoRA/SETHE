@@ -14,15 +14,17 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
-import sethe.Query;
-import sethe.CompositeQuery;
-import sethe.Trajectory;
+import sethe.model.CompositeQuery;
+import sethe.model.Query;
+import sethe.model.Trajectory;
 import sethe.util.StringUtils;
 
 /**
  * Consulta a trajetória com base nos PoI ou (categoria de PoI) e usa o contexto para ordenar os resultados
- *
+ * 
+ * @deprecated Usar a classe QuerySETHEMain.java
  */
+@Deprecated 
 public class QueryTrajectoryMain {
 	private Connection con;
 	private Statement st;

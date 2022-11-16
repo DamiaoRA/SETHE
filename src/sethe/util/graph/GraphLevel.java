@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import sethe.Expression;
-import sethe.PoI;
+import sethe.model.Expression;
+import sethe.model.PoI;
 
 public class GraphLevel {
 	protected GraphLevel fatherLevel;

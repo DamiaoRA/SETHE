@@ -1,4 +1,4 @@
-package sethe.tripbuilder;
+package sethe.tripbuilder.transform;
 
 import java.util.ArrayList;
 import java.util.List;

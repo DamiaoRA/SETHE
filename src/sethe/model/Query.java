@@ -1,4 +1,4 @@
-package sethe;
+package sethe.model;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -42,15 +42,8 @@ public class Query {
 
 	public void addExpression(int index, String catExp, String poiExp, double weight) {
 		Expression exp = new Expression(catExp, poiExp);
-		exp.setOrder(index);//listExp.size());
-//		exp.setValueCategory(catExp);
-//		exp.setValuePoi(poiExp);
+		exp.setOrder(index);
 		exp.setWeight(weight);
-//		if(catExp == null || catExp.isEmpty() || catExp.equals(".*"))
-//			exp.setCategory(false);
-//		else
-//			exp.setCategory(true);
-
 		arrayExp[index] = exp;
 	}
 	
@@ -63,8 +56,7 @@ public class Query {
 			if(lastE == null) {
 				arrayExp[i].setIsFinal(true); 		//the last Expression is the always the end
 			} else if(lastE.isFinal() 
-					&& lastE.isOptional() 
-			/* && arrayExp[i].isOptional() */) { //if the previous Expression is final and the current one is optional, then arrayExp[i] is also final.
+					&& lastE.isOptional()) { //if the previous Expression is final and the current one is optional, then arrayExp[i] is also final.
 				arrayExp[i].setIsFinal(true);
 			} else { //there are no more Expression candidates for the final
 				break;
@@ -158,17 +150,6 @@ public class Query {
 		return arrayExp[indexExp].searchAspectExpression(aspectType);
 	}
 
-//	public Double distance(String aspectType, int positionExp, PoI p1, PoI p2, Trajectory trajectory) {
-//		String function = mapDistanceFunc.get(aspectType);
-//		Double limit = mapLimit.get(aspectType);
-//		Double weight = mapWeight.get(aspectType);
-//
-//		Double result = 0d;
-//
-//		result = arrayExp[positionExp].distance(aspectType, function, limit, weight, p1, p2, trajectory);
-//		return result;
-//	}
-
 	public int getNumAspects() {
 		return arrayExp[0].getMapAspects().keySet().size();
 	}
@@ -254,10 +235,6 @@ public class Query {
 	public CompositeQuery getQuery() {
 		return query;
 	}
-
-//	public void setQuery(CompositeQuery query) {
-//		this.query = query;
-//	}
 
 	public Map<String, Trajectory> getMapResultQuery() {
 		return mapResultQuery;

@@ -1,4 +1,4 @@
-package sethe;
+package sethe.model;
 
 import java.sql.Timestamp;
 import java.util.HashMap;

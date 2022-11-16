@@ -2,8 +2,8 @@ package sethe.util.graph;
 
 import java.util.List;
 
-import sethe.Expression;
-import sethe.PoI;
+import sethe.model.Expression;
+import sethe.model.PoI;
 
 /**
  * This class handle vertices of an expression with + symbol

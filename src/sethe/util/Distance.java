@@ -1,8 +1,9 @@
-package sethe;
+package sethe.util;
 
 import java.lang.reflect.Method;
 
-import sethe.util.Constants;
+import sethe.model.AspectExpression;
+import sethe.model.Trajectory;
 import sethe.util.graph.Vertice;
 
 /**

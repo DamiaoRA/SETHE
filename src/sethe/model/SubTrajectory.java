@@ -1,5 +1,6 @@
-package sethe;
+package sethe.model;
 
+import sethe.util.Distance;
 import sethe.util.graph.Vertice;
 
 public class SubTrajectory implements Comparable<SubTrajectory> {

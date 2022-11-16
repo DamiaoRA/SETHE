@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import sethe.PoI;
+import sethe.model.PoI;
 
 public class VerticePoICollection extends Vertice {
 
