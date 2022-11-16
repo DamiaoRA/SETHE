@@ -26,16 +26,16 @@ public class QuerySetheTripBuilderMain {
       );
 
     List<TimeQ> times = new ArrayList<TimeQ>();
-    times.add(queryQ1());
-    times.add(queryQ2());
+//    times.add(queryQ1());
+//    times.add(queryQ2());
     times.add(queryQ3());
-    times.add(queryQ4());
-    times.add(queryQ5());
-    times.add(queryQ6());
-    times.add(queryQ7());
-    times.add(queryQ8());
-    times.add(queryQ9());
-    times.add(queryQ10());
+//    times.add(queryQ4());
+//    times.add(queryQ5());
+//    times.add(queryQ6());
+//    times.add(queryQ7());
+//    times.add(queryQ8());
+//    times.add(queryQ9());
+//    times.add(queryQ10());
     System.out.println();
     for (TimeQ t : times) {
       System.out.println(t.toString());
@@ -71,7 +71,7 @@ public class QuerySetheTripBuilderMain {
     Properties prop = new Properties();
     prop.setProperty(
       "q1_asp_cat",
-      "torridipisa(;(\\w*))* ; ((\\w*);)*museidipisa"
+      "(torridipisa(;(\\w*))*)+ ; ((\\w*);)*museidipisa"
     );
     prop.setProperty("q1_proximity", " .*                  ; ~");
 
@@ -129,9 +129,15 @@ public class QuerySetheTripBuilderMain {
     
     prop.setProperty(
     	      "q1_asp_cat",
-    	      "^(((\\w*);)*(cappelledipisa)) ; ((cappelledipisa)+)$"
+    	      "^(((\\w*);)*(cappelledipisa)) ; (((\\w*);)*(cappelledipisa)(;(\\w*))*)* ; (((\\w*);)*(cappelledipisa))$"
     	    );
-    prop.setProperty("q1_proximity", ".*	 ; ~ ");
+	prop.setProperty("q1_proximity", " .*     ; ~      ; ~");
+
+//    prop.setProperty(
+//  	      "q1_asp_cat",
+//  	      "^(((\\w*);)*(cappelledipisa)) ; ((((\\w*);)*(cappelledipisa))+)$"
+//  	    );
+//	prop.setProperty("q1_proximity", " .*     ; ~   ");
 
     return queryQ(prop);
   }

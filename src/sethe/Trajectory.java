@@ -168,6 +168,9 @@ public class Trajectory implements Comparable<Trajectory> {
 //
 //		createSubTrajectories();
 		
+		if(getId().equals("http://localhost:8080/resource/TP2683"))
+			System.out.println("Trajectory.calcSubtrajectory()");
+		
 		for (Expression e : query.getArrayExp()) {
 			String text = "";
 			if (e.isCategory()) {

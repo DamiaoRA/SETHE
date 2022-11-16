@@ -69,10 +69,7 @@ public class SubTrajectory implements Comparable<SubTrajectory> {
    * @return
    */
   
-  public Double[] createVector(Query filter) {
-	  if(getTrajectory().getId().equals("15153539"))
-		  System.out.println("SubTrajectory.createVector()");
-	  
+  public Double[] createVector(Query filter) { 
 	    vector = new Double[vertices.length * (filter.getNumAspects()) + vertices.length];
 	    vectorQuery = new Double[vector.length];
 	    int k = 0;
@@ -104,7 +101,7 @@ public class SubTrajectory implements Comparable<SubTrajectory> {
 
 		      vector[k] = (1d / dist);
 	      } else {
-	    	  vector[k] = 0d;
+	    	  vector[k] = 0d;//1d;
 	      }
 	      vectorQuery[k] = 1d;
 	      k++;

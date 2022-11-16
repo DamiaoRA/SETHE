@@ -55,21 +55,31 @@ public class StringUtils {
 	}
 
 	public static boolean isPlusExpression(String text) {
-		int i = text.lastIndexOf("+");
-		if(i > 0) {
-			String result = sanitize(text);
-			result.replace('w', ' ').trim();
-			return result.isEmpty();
+		if(text.startsWith("(") && text.endsWith(")+")) {
+			return true;
 		}
 		return false;
+//		int i = text.lastIndexOf("+");
+//		if(i > 0) {
+//			String result = sanitize(text);
+//			result = result.replace('w', ' ').trim();
+//			return !result.isEmpty();
+//		}
+//		return false;
 	}
+
 	public static boolean isPlusAnyExpression(String text) {
-		int i = text.lastIndexOf("*");
-		if(i > 0) {
-			String result = sanitize(text);
-			result.replace('w', ' ').trim();
-			return result.isEmpty();
+		if(text.startsWith("(") && text.endsWith(")*")) {
+			return true;
 		}
 		return false;
+
+//		int i = text.lastIndexOf("*");
+//		if(i > 0) {
+//			String result = sanitize(text);
+//			result = result.replace('w', ' ').trim();
+//			return !result.isEmpty();
+//		}
+//		return false;
 	}
 }
