@@ -15,16 +15,18 @@ public class Distance {
 	public static Double distance(AspectExpression aspQuery, String aspectType, String function, 
 			Double limit, Double weight, Vertice p1, Vertice p2, Trajectory trajectory) {
 
-		String idealValue = aspQuery.getValue();
-		String p2AspectValue = p2.getAspects().get(aspectType);
+		String idealValue = "";
+		String p2AspectValue = "";
+		double result = 0d;
 
 		if(idealValue.equals(Constants.ANY_VALUE))
 			return 1d;
 
-		double result = 0d;
-
-		//
-		if(aspQuery.isUntil()) {
+		//Proximity
+		if(Constants.isProximity(aspectType)) {
+			p2AspectValue = (p2.getFirstPosition() - p1.getLastPosition()) + "";
+			idealValue = "1";
+		} else if(aspQuery.isUntil()) { //Until
 			int pos1 = p1.getLastPosition();
 			int pos2 = p2.getFirstPosition();
 
@@ -36,10 +38,14 @@ public class Distance {
 			}
 
 			result = value/((pos2-pos1));
+			return result;
 		//
 		} else {
-			result = Distance.calc(function, p2AspectValue, idealValue, weight, limit);
+			p2AspectValue = p2.getAspects().get(aspectType);
+			idealValue = aspQuery.getValue();
 		}
+
+		result = Distance.calc(function, p2AspectValue, idealValue, weight, limit);
 		return result;
 	}
 	

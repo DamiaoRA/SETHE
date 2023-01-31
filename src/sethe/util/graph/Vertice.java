@@ -120,6 +120,9 @@ public class Vertice implements Comparable<Vertice>{
 			Vertice v = it.next();
 			if(!v.isComplete()) {//height)) {
 				it.remove();
+
+				GraphLevel l = v.getLevel();
+				l.removeVertice(v);
 			}
 		}
 
@@ -246,6 +249,14 @@ public class Vertice implements Comparable<Vertice>{
 
 	public int poiDistance(Vertice vertice) {
 		return getFirstPosition() - vertice.getLastPosition();
+	}
+
+	public GraphLevel getLevel() {
+		return level;
+	}
+
+	public void setLevel(GraphLevel level) {
+		this.level = level;
 	}
 
 //	public static void main(String[] args) {

@@ -14,4 +14,11 @@ public class Constants {
 	public static final String ANY_VALUE = ".*";
 	public static final String REPEATED = "(?-)";
 	public static final String REPEATED_PATTERN = "\\(\\?\\-\\)";
+	public static final String PROXIMITY = "proximity";
+
+	public static boolean isProximity(String a) {
+		if(a == null)
+			return false;
+		return a.trim().equalsIgnoreCase(PROXIMITY);
+	}
 }

@@ -69,6 +69,9 @@ public class StringUtils {
 	}
 
 	public static boolean isPlusAnyExpression(String text) {
+		if(finishWithStar(text))
+			return false;
+
 		if(text.startsWith("(") && text.endsWith(")*")) {
 			return true;
 		}
@@ -81,5 +84,9 @@ public class StringUtils {
 //			return !result.isEmpty();
 //		}
 //		return false;
+	}
+	
+	private static boolean finishWithStar(String text) {
+		return text.endsWith("(( \\w*))*");
 	}
 }

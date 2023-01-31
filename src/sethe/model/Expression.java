@@ -17,6 +17,7 @@ public class Expression {
 	private String valuePoi;
 	private int order;
 	private boolean isCategory;
+	@Deprecated
 	private double weight;
 	private boolean isFinal = false;
 	private boolean isOptional = false;

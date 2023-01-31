@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 import sethe.util.Constants;
+import sethe.util.StringUtils;
 
 public class Query {
 	
@@ -66,8 +67,12 @@ public class Query {
 	}
 
 	public void addAspectExpression(int order, String asp, String value) {
-		Expression exp = arrayExp[order];
-		exp.addAspect(asp, value);
+		if(Constants.isProximity(asp)) {
+			addProximityExpression(order, value);
+		} else {
+			Expression exp = arrayExp[order];
+			exp.addAspect(asp, value);
+		}
 	}
 
 	public void addProximityExpression(int i, String value) {

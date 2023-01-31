@@ -17,6 +17,7 @@ import java.util.Set;
 import sethe.model.CompositeQuery;
 import sethe.model.Query;
 import sethe.model.Trajectory;
+import sethe.util.Constants;
 import sethe.util.StringUtils;
 
 /**
@@ -98,9 +99,11 @@ public class QuerySETHEMain {
       //Calculating the subtrajectories
       t.calcSubtrajectory();
       //
-
-      filter.addTrajectory(t);
-      filter.getQuery().add(t);
+      
+      if(t.getCoefficient() != 0) {
+	      filter.addTrajectory(t);
+	      filter.getQuery().add(t);
+      }
     }
   }
 
@@ -114,8 +117,10 @@ public class QuerySETHEMain {
   private void searchAspects(Trajectory t, Set<String> aspects, String delimiter)
     throws Exception {
     for (String a : aspects) {
-      String text = queryAspect(t.getId(), a);
-      t.addAspect(a, text.split(delimiter));
+    	if(!Constants.isProximity(a)) {
+	      String text = queryAspect(t.getId(), a);
+	      t.addAspect(a, text.split(delimiter));
+    	}
     }
   }
 
@@ -200,18 +205,18 @@ public class QuerySETHEMain {
 
     int arraySize = 0;
 
-    Map<String, Query> filters = new HashMap<String, Query>();
+    Map<String, Query> queries = new HashMap<String, Query>();
 
-    //Getting filters name
+    //Getting name of the queries
     for (Enumeration e = properties.keys(); e.hasMoreElements();) {
       String key = e.nextElement().toString();
       if (key.contains("_asp")) {
-        String filterName = key.substring(0, key.indexOf("_"));
-        filters.put(filterName, null);
+        String queryName = key.substring(0, key.indexOf("_"));
+        queries.put(queryName, null);
       }
     }
 
-    for (String fname : filters.keySet()) {
+    for (String fname : queries.keySet()) {
       Query query = new Query(fname, cquery);
       query.setDistanceFunction(distFun);
       //      f.setQuery(query);
@@ -227,27 +232,27 @@ public class QuerySETHEMain {
       if (c != null) arraySize = arrayECat.length;
 
       //PoI Weight
-      String poiw  = properties.getProperty(fname + "_poi_weight");
-      String[] arrayPw = poiw != null ? poiw.split(split) : new String[0];
+//      String poiw  = properties.getProperty(fname + "_poi_weight");
+//      String[] arrayPw = poiw != null ? poiw.split(split) : new String[0];
 
       query.init(arraySize);
 
       for (int i = 0; i < arraySize; i++) {
         String cat = arrayECat.length > 0 ? arrayECat[i].trim() : null;
         String poi = arrayEPoi.length > 0 ? arrayEPoi[i].trim() : null;
-        double weight = arrayPw.length > 0 ? Double.parseDouble(arrayPw[i]) : 1;
-        query.addExpression(i, cat, poi, weight);
+//        double weight = arrayPw.length > 0 ? Double.parseDouble(arrayPw[i]) : 1;
+        query.addExpression(i, cat, poi, 0d/*weight*/);
       }
       query.calcLastExpression();
 
       //Getting proximity
-      String proximity = properties.getProperty(fname + "_proximity");
-      if (!StringUtils.isEmpty(proximity)) {
-        String[] proximityValues = proximity.split(split);
-        for (int i = 0; i < proximityValues.length; i++) {
-          query.addProximityExpression(i, proximityValues[i]);
-        }
-      }
+//      String proximity = properties.getProperty(fname + "_proximity");
+//      if (!StringUtils.isEmpty(proximity)) {
+//        String[] proximityValues = proximity.split(split);
+//        for (int i = 0; i < proximityValues.length; i++) {
+//          query.addProximityExpression(i, proximityValues[i]);
+//        }
+//      }
 
       //Getting aspects
       for (Enumeration e = properties.keys(); e.hasMoreElements();) {
@@ -277,10 +282,10 @@ public class QuerySETHEMain {
         }
       }
 
-      filters.put(fname, query);
+      queries.put(fname, query);
     }
 
-    cquery.setMapFilter(filters);
+    cquery.setMapFilter(queries);
 
     return cquery;
   }

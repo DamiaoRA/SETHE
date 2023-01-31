@@ -1,5 +1,6 @@
 package sethe.model;
 
+import sethe.util.Constants;
 import sethe.util.Distance;
 import sethe.util.graph.Vertice;
 
@@ -70,11 +71,15 @@ public class SubTrajectory implements Comparable<SubTrajectory> {
    * @return
    */
   
-  public Double[] createVector(Query filter) { 
+  public Double[] createVector(Query filter) {   
+	  
 	    vector = new Double[vertices.length * (filter.getNumAspects()) + vertices.length];
 	    vectorQuery = new Double[vector.length];
 	    int k = 0;
 	    for (int indexPoiSub = 0; indexPoiSub < vertices.length; indexPoiSub++) {
+	    	if(filter.checkProximity(indexPoiSub))
+	    		System.out.println("SubTrajectory.createVector()");
+
 	      Vertice p2 = vertices[indexPoiSub];
 	      if(p2 != null) {
 	    	  Vertice p1 = searchVerticeNotNull(indexPoiSub - 1); //indexPoiSub > 0 ? vertices[indexPoiSub - 1] : null;
@@ -96,11 +101,18 @@ public class SubTrajectory implements Comparable<SubTrajectory> {
 		      }
 
 		      //proximity coef
-		      int dist = 1;
-		      if(filter.checkProximity(indexPoiSub) && indexPoiSub > 0)
-		    	  dist = p2.poiDistance(p1); //p2.poiDistance(vertices[indexPoiSub - 1]); //p2.getPosition() - vertices[indexPoiSub - 1].getPosition();
+//		      int dist = 1;
+		      if(filter.checkProximity(indexPoiSub)) {
+//		    	  dist = p2.poiDistance(p1);
 
-		      vector[k] = (1d / dist);
+		    	  if(indexPoiSub > 0)
+		    		  vector[k] = score(filter, Constants.PROXIMITY, indexPoiSub, p1, p2);
+		    	  else 
+		    		  vector[k] = 1d;
+		      } else 
+		    	  vector[k] = 1d;
+
+//		      vector[k] = (1d / dist);
 	      } else {
 	    	  vector[k] = 0d;//1d;
 	      }
@@ -109,8 +121,20 @@ public class SubTrajectory implements Comparable<SubTrajectory> {
 	    }
 	    return vector;
 	  }
-  
-  		private Vertice searchVerticeNotNull(int i) {
+
+	  private Double score(Query Q, String aspectType, int indexPoiSub, Vertice p1, Vertice p2) {
+		  String function = Q.searchFunctionName(aspectType);
+	      Double limit = Q.searchLimitValue(aspectType);
+	      Double weight = Q.searchWeightValue(aspectType);
+	      AspectExpression aspect = Q.searchAspectExpression(aspectType, indexPoiSub);
+	
+	      Double score = Distance.distance(aspect, aspectType, function, 
+				  limit, weight, p1, p2, 
+				  trajectory);
+	      return score;
+	  }
+
+  	  private Vertice searchVerticeNotNull(int i) {
   			while (i >= 0) {
   				Vertice v = vertices[i];
   				if(v != null)

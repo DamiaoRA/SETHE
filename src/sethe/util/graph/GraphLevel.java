@@ -177,4 +177,9 @@ public class GraphLevel {
 				v.calcSubSequences(subs, result);
 		}
 	}
+
+	public void removeVertice(Vertice v) {
+		if(levelVertices != null) 
+			levelVertices.remove(v);
+	}
 }

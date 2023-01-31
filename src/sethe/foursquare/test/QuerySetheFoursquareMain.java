@@ -25,10 +25,10 @@ public class QuerySetheFoursquareMain {
 //        "trajectory_value"
 //      );
 
-//		qt = new QuerySETHEMain("localhost", "5432", "postgres", "lsi123", "foursquare", "trajetoria", "trajectory_id",
-//				"trajectory_value");
-		qt = new QuerySETHEMain("localhost", "5432", "postgres", "postgres", "foursquare", "trajectory", "trajectory_id",
+		qt = new QuerySETHEMain("localhost", "5432", "postgres", "lsi123", "foursquare", "trajetoria", "trajectory_id",
 				"trajectory_value");
+//		qt = new QuerySETHEMain("localhost", "5432", "postgres", "postgres", "foursquare", "trajectory", "trajectory_id",
+//				"trajectory_value");
 
     List<TimeQ> times = new ArrayList<>();
     times.add(queryQ1());

@@ -129,6 +129,7 @@ public class Trajectory implements Comparable<Trajectory> {
     Collections.reverse(subTrajectories);
     //		System.out.println(textCategory);
     System.out.println(id + ";" + coefficient);
+    
     //		System.out.println(coefficient);
 
     //		for(PoI p : pois) {
@@ -167,10 +168,7 @@ public class Trajectory implements Comparable<Trajectory> {
 //		graph.fix();
 //
 //		createSubTrajectories();
-		
-		if(getId().equals("http://localhost:8080/resource/TP2683"))
-			System.out.println("Trajectory.calcSubtrajectory()");
-		
+			
 		for (Expression e : query.getArrayExp()) {
 			String text = "";
 			if (e.isCategory()) {
@@ -245,7 +243,7 @@ public class Trajectory implements Comparable<Trajectory> {
     );
   }
 
-  private void createSubTrajectories() throws Exception {
+  private void createSubTrajectories() throws Exception {	  
 	  List<Vertice[]> result = graph.extractPoiSubSequences();
 
 	  for (Vertice[] subs : result) {

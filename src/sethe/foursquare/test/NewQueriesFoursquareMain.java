@@ -44,7 +44,8 @@ public class NewQueriesFoursquareMain {
 	(9) trajetória que começa no shopping ou residência, logo em seguinda para em um local de preço e rating alto e termina no Chase Bank.
 
 	--> começa em um poi, termina na categoria, aspectos
-	(10)trajetórias que começam em um sábado na Times Square, algum tempo depois para em um local bem avaliado e logo em seguida termina em uma residencia ou restaurante. 
+	(10)trajetórias que começam em um sábado na Times Square, algum tempo depois para em um local bem avaliado e logo em seguida 
+	termina em uma residencia ou restaurante. 
 
 	preço
 	rating
@@ -64,3 +65,26 @@ Nightlife Spot
 Event
 	*/
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

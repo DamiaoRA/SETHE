@@ -27,9 +27,9 @@ public class QuerySetheTripBuilderMain {
       );
 
     List<TimeQ> times = new ArrayList<TimeQ>();
-//    times.add(queryQ1());
+    times.add(queryQ1());
 //    times.add(queryQ2());
-    times.add(queryQ3());
+//    times.add(queryQ3());
 //    times.add(queryQ4());
 //    times.add(queryQ5());
 //    times.add(queryQ6());
@@ -49,7 +49,10 @@ public class QuerySetheTripBuilderMain {
       "q1_asp_cat",
       "museidipisa(;(\\w*))* ; ((\\w*);)*cappelledipisa"
     );
-    prop.setProperty("q1_proximity", ".* ; ~");
+    prop.setProperty("q1_asp_proximity", ".* ; ~");
+    prop.setProperty("weight_proximity", "1");
+    prop.setProperty("distance_proximity", "proportion");
+    prop.setProperty("limit_proximity", "10");
 
     return queryQ(prop);
   }
